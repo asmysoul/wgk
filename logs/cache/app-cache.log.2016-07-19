@@ -1,0 +1,83 @@
+16-07-19 09:07:07 Set value of cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT,expiration=30d
+16-07-19 09:07:07 Set value of cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT,expiration=30d
+16-07-19 09:07:07 Set value of cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT,expiration=30d
+16-07-19 09:07:07 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME,expiration=30d
+16-07-19 09:07:07 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME,expiration=30d
+16-07-19 09:07:07 Set value of cache,key=SYS_CONFIGBUYER_AND_SHOP_TIME,expiration=30d
+16-07-19 09:07:07 Set value of cache,key=SYS_CONFIGBUYER_AND_SELLER_TIME,expiration=30d
+16-07-19 09:07:27 Get value from cache,key=USER_1677
+16-07-19 09:07:27 Cache hit missing,key=USER_1677
+16-07-19 09:07:27 Set value of cache,key=USER_1677,expiration=3d
+16-07-19 09:07:28 Get value from cache,key=USER_1677
+16-07-19 09:07:43 Get value from cache,key=USER_1677
+16-07-19 09:07:44 Get value from cache,key=USER_1677
+16-07-19 09:07:49 Get value from cache,key=USER_1677
+16-07-19 09:07:49 Get value from cache,key=USER_1677
+16-07-19 09:07:55 Get value from cache,key=USER_1677
+16-07-19 09:07:55 Get value from cache,key=USER_1677
+16-07-19 09:07:58 Get value from cache,key=USER_1677
+16-07-19 09:07:58 Get value from cache,key=USER_1677
+16-07-19 09:07:58 Get value from cache,key=USER_1677
+16-07-19 09:08:04 Get value from cache,key=USER_1677
+16-07-19 09:08:04 Get value from cache,key=USER_1677
+16-07-19 09:09:45 Get value from cache,key=USER_1677
+16-07-19 09:09:47 Get value from cache,key=USER_1677
+16-07-19 09:10:58 Get value from cache,key=USER_1677
+16-07-19 09:10:59 Get value from cache,key=USER_1677
+16-07-19 09:11:01 Get value from cache,key=USER_1677
+16-07-19 09:11:01 Get value from cache,key=USER_1677
+16-07-19 09:11:01 Get value from cache,key=FILE_UPTOKEN_
+16-07-19 09:11:01 Cache hit missing,key=FILE_UPTOKEN_
+16-07-19 09:11:01 Set value of cache,key=FILE_UPTOKEN_,expiration=3h
+16-07-19 09:19:17 Get value from cache,key=USER_1677
+16-07-19 09:19:18 Get value from cache,key=USER_1677
+16-07-19 09:19:19 Get value from cache,key=USER_1677
+16-07-19 09:19:19 Get value from cache,key=USER_1677
+16-07-19 09:19:19 Get value from cache,key=FILE_UPTOKEN_
+16-07-19 09:20:04 Get value from cache,key=USER_1677
+16-07-19 09:20:06 Get value from cache,key=USER_1677
+16-07-19 09:20:45 Get value from cache,key=USER_1677
+16-07-19 09:20:46 Get value from cache,key=USER_1677
+16-07-19 09:21:59 Get value from cache,key=USER_1677
+16-07-19 09:22:00 Get value from cache,key=USER_1677
+16-07-19 09:23:16 Get value from cache,key=USER_1677
+16-07-19 09:23:17 Get value from cache,key=USER_1677
+16-07-19 09:23:40 Get value from cache,key=USER_1677
+16-07-19 09:23:40 Get value from cache,key=USER_1677
+16-07-19 09:23:56 Get value from cache,key=USER_1677
+16-07-19 09:23:56 Get value from cache,key=USER_1677
+16-07-19 09:23:58 Get value from cache,key=USER_1677
+16-07-19 09:23:58 Get value from cache,key=USER_1677
+16-07-19 09:23:58 Get value from cache,key=FILE_UPTOKEN_
+16-07-19 09:24:19 Get value from cache,key=USER_1677
+16-07-19 09:27:49 Get value from cache,key=USER_1677
+16-07-19 09:27:50 Get value from cache,key=USER_1677
+16-07-19 09:29:35 Get value from cache,key=USER_1677
+16-07-19 09:29:35 Get value from cache,key=USER_1677
+16-07-19 09:29:45 Get value from cache,key=USER_1677
+16-07-19 09:29:45 Get value from cache,key=USER_1677
+16-07-19 09:29:45 Get value from cache,key=FILE_UPTOKEN_
+16-07-19 09:30:24 Get value from cache,key=USER_1677
+16-07-19 09:30:24 Get value from cache,key=USER_1677
+16-07-19 09:30:28 Get value from cache,key=USER_1677
+16-07-19 09:30:29 Get value from cache,key=USER_1677
+16-07-19 09:30:34 Get value from cache,key=USER_1677
+16-07-19 09:30:34 Get value from cache,key=USER_1677
+16-07-19 09:30:34 Get value from cache,key=FILE_UPTOKEN_
+16-07-19 09:45:10 Get value from cache,key=TASK_NUM
+16-07-19 09:45:10 Cache hit missing,key=TASK_NUM
+16-07-19 09:45:10 Get from db and set cache TASK_NUM=428
+16-07-19 09:45:10 Set value of cache,key=TASK_NUM,expiration=1d
+16-07-19 09:45:11 Get value from cache,key=TASK_NUM
+16-07-19 09:45:11 Cache hit TASK_NUM=428
+16-07-19 09:45:18 Get value from cache,key=TASK_NUM
+16-07-19 09:45:18 Cache hit TASK_NUM=428
+16-07-19 09:45:18 Get value from cache,key=TASK_NUM
+16-07-19 09:45:18 Cache hit TASK_NUM=428
+16-07-19 10:33:17 Set value of cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT,expiration=30d
+16-07-19 10:33:17 Set value of cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT,expiration=30d
+16-07-19 10:33:17 Set value of cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT,expiration=30d
+16-07-19 10:33:17 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME,expiration=30d
+16-07-19 10:33:17 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME,expiration=30d
+16-07-19 10:33:17 Set value of cache,key=SYS_CONFIGBUYER_AND_SHOP_TIME,expiration=30d
+16-07-19 10:33:17 Set value of cache,key=SYS_CONFIGBUYER_AND_SELLER_TIME,expiration=30d

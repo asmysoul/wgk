@@ -1,0 +1,66 @@
+#{extends 'frame.html' /}
+#{set title:'公告管理' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/admin/edit-notice.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.pagination.css'}" />
+#{/set}
+
+<div class="contentCard">
+	<div class="contentTitle">
+		编辑公告
+	</div>
+	<div class="contentBody">
+		<form id="form" method="post" action="/admin/notice/save">
+			<input type="hidden" name="n.id" value="${notice?.id}" />
+			<div class="mt15">
+				<span>标题：</span>
+				<input type="text" value="${notice?.title}" style="width:80%;" name="n.title" />
+				<input type="button"  id="btnPickfiles" value="上传图片"/>			
+				<span><a href="#" url="" id="urlData" style="display:none">复制图片链接</a></span>
+				<br /><br />
+				<span>链接：</span>
+				<input type="text" value="${notice?.url}" style="width:80%;" name="n.url" />
+				<br /><br />
+ 				<span>公告对象</span>
+				<select class=" mr-8" id="selRole" name="n.role">
+				<option value="ALL" ${notice?.role?.name() == 'ALL' ? 'selected=true' :''}>全部</option>
+				<option value="BUYER" ${notice?.role?.name() == 'BUYER' ? 'selected=true' :''}>买手</option>
+				<option value="SELLER" ${notice?.role?.name() == 'SELLER' ? 'selected=true' :''}>商家</option>
+				</select>
+				<span>公告类型</span>
+				<select class="mr-8" id="selType" name="n.type">
+				<option value="DEFAULT" ${notice?.type?.name() == 'DEFAULT' ? 'selected=true' :''}>默认</option>
+				<option value="COURSE" ${notice?.type?.name() == 'COURSE' ? 'selected=true' :''}>教程</option>
+				</select>
+			</div>
+			<div class="mt15">
+				<script type="text/plain" id="contentEditor" name="n.content">${notice?.content?.raw()}</script>
+			</div>
+			<div class="mt15">
+				<input type="submit" value="保存" />
+			</div>
+			#{authenticityToken /}
+		</form>
+		<div class="pagin-btm clearFix">
+			<div class="pagination"></div>
+		</div>
+	</div>
+</div>
+
+
+
+
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/ueditor/ueditor.config.js'}"type="text/javascript" charset="utf-8" ></script>
+<script src="@{'/public/javascripts/ueditor/editor_api.js'}"type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8" src="@{'/public/javascripts/ueditor/lang/zh-cn/zh-cn.js'}"></script>
+<script src="@{'/public/javascripts/plupload/plupload.full.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/qiniu.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.zclip.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/admin/notice.editor.js'}" type="text/javascript"></script>
+<script type="text/javascript">
+App.module = 'notice';
+App.QnNoticeFileBucket = '${upload_notice_address}';
+</script>
+#{/set}

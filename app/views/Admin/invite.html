@@ -1,0 +1,86 @@
+#{extends 'frame.html' /}
+#{set title:'邀请注册管理' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/admin/invite.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.pagination.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/datetimepicker/jquery.datetimepicker.css'}" />
+#{/set}
+<div class="contentCard">
+	<div class="contentTitle">邀请注册记录列表</div>
+	<div id="taskFilterPanel">
+		<div class="clearfix mb10">
+			<span class="floatLeft mr10">邀请人</span>
+			<input type="text" id="inviteNick" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">注册用户</span>
+			<input type="text" id="nick" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">注册用户身份</span>
+			<select class="floatLeft mr10" id="type">
+				#{list items:userTypeList, as:'s'}
+				<option value="${s.toString()=='ALL'?'':s.toString()}" selected = "${s.toString()=='ALL'?'selected':''}" >${s.title}</option>
+				#{/list}
+			</select>
+		</div>
+		<div class="clearfix mb10">
+			<span class="floatLeft mr10">充值会员时间</span>
+			<input type="text" id="memberOpenTimeStart" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">-</span>
+			<input type="text" id="memberOpenTimeEnd" class="floatLeft mr10 inputText" />
+			<a class="stdColorButton floatLeft queryBtn" href="javascript:;" id="queryBtn">查询</a>
+		</div>
+	</div>
+	<div class="mt20">
+		<table class="normTable">
+			<thead>
+				<tr>
+					<td style="width:5%">邀请人</td>
+					<td style="width:5%">注册昵称</td>
+					<td style="width:5%">注册身份</td>
+					<td style="width:5%">注册QQ</td>
+					<td style="width:8%">注册用户状态</td>
+					<td style="width:8%">注册时间</td>
+					<td style="width:8%">充值会员时间</td>
+					<td style="width:8%">奖励金币</td>
+				</tr>
+			</thead>
+			<tbody id="accountContainer"></tbody>
+		</table>
+		<div id="noMsg">
+			<div class="warnBox">
+				<span class="iconfont">&#xf00b6;</span>
+				没有注册用户!
+			</div>
+		</div>
+		<div class="pagin-btm clearFix" style="display: none;">
+			<div class="pagination"></div>
+		</div>
+		<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+			<div class="maskLayer"></div>
+			<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />
+		</div>
+	</div>
+</div>
+
+<textarea class="muban" id="rowTemp">
+	{{#results}}
+	<tr data-nick="{{nick}}" data-uid="{{id}}">
+		<td>{{inviteNick}}</td>
+		<td>{{nick}}</td>
+		<td class="usertype">{{usertype}}</td>
+		<td>{{qq}}</td>
+		<td>{{userstatus}}</td>
+		<td>{{regtime}}</td>
+		<td>{{memberTime}}</td>
+		<td>{{rewardIngotStr}}</td>
+	</tr>
+	{{/results}}
+</textarea>
+
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.number.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/datetimepicker/jquery.datetimepicker.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/admin/invite.js'}" type="text/javascript"></script>
+<script type="text/javascript">App.module = 'invite';</script>
+#{/set}

@@ -1,0 +1,452 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="@{'/public/images/frameFonts/iconfont.css'}" media="all" />
+	<link rel="stylesheet" type="text/css" href="@{'/public/images/finallyFont/iconfont.css'}" media="all" />
+	<link rel="stylesheet" type="text/css" href="@{'/public/images/xialaFont/iconfont.css'}" media="all" />
+</head>
+#{extends 'nui.html' /}
+<style type="text/css">
+#topMenu{z-index:2}
+.cela{
+	float:right;margin-top:-26px;
+}
+</style>
+<body>
+<div id="topMenu">
+	<div id="topMenu_content_placeholder">
+		<div id="navigation">
+
+			#{if role=='admin'}
+			<div id="toggle1" class="b_navCell a" onclick="toggle1()" style="background-color:#eee;">
+				<em class="iconfont">&#xe68f;</em>
+				<span class="text">审核管理</span>
+				<em id="openimg1" class="iconfont cela" style="font-size:8px;" >&#xe693;</em>
+				<em id="openimg11" class="iconfont cela" style="font-size:8px;display:none" >&#xe61d;</em>
+			</div>
+			<div id="hide1" class="show" style="display:none">
+				<a class="b_navCell" href="/admin" module="task"> <em class="iconfont">&#xf00be;</em>
+					<span class="text">任务审核</span>
+				</a>
+				
+				<a class="b_navCell" href="/admin2" module="task2"> <em class="iconfont">&#xe60f;</em>
+					<span class="text">推广审核</span>
+				</a>
+			</div>
+			<div id="toggle2" class="b_navCell a b_navCell_line" onclick="toggle2()" style="background-color:#eee; box-shadow: 0px -3px 3px #ddd;">
+				<em class="iconfont">&#xe640;</em>
+				<span class="text">超期管理</span>
+				<em id="openimg2" class="iconfont cela" style="font-size:8px;" >&#xe693;</em>
+				<em id="openimg22" class="iconfont cela" style="font-size:8px;display:none" >&#xe61d;</em>
+			</div>
+			<div id="hide2" class="show" style="display:none">
+				<a class="b_navCell" href="/admin/timeout" module="timeout">
+					<em class="iconfont">&#xf00bf;</em>
+					<span class="text">任务超期</span>
+				</a>
+				
+				<a class="b_navCell" href="/admin/timeout3" module="timeout3">
+					<em class="iconfont">&#xf00bf;</em>
+					<span class="text">浏览超期</span>
+				</a>
+				
+				<a class="b_navCell" href="/admin/timeout2" module="timeout2">
+					<em class="iconfont">&#xe640;</em>
+					<span class="text">推广超期</span>
+				</a>
+			</div>
+			<div id="toggle3" class="b_navCell a b_navCell_line" onclick="toggle3()" style="background-color:#eee; box-shadow: 0px -3px 3px #ddd;">
+				<em class="iconfont">&#xe60e;</em>
+				<span class="text">买家管理</span>
+				<em id="openimg3" class="iconfont cela" style="font-size:8px;" >&#xe693;</em>
+				<em id="openimg33" class="iconfont cela" style="font-size:8px;display:none" >&#xe61d;</em>
+			</div>
+			<div id="hide3" class="show" style="display:none">
+				<a class="b_navCell" href="/admin/buyerTasks" module="buyerTask">
+				<em class="iconfont">&#xf00bf;</em>
+				<span class="text">买手任务</span>
+				</a>
+				
+				<a class="b_navCell" href="/admin/buyerTasks3" module="buyerTask3">
+					<em class="iconfont">&#xf00bf;</em>
+					<span class="text">买手浏览</span>
+				</a>
+				
+				
+				<a class="b_navCell" href="/admin/buyerTasks2" module="buyerTask2">
+					<em class="iconfont">&#xe65d;</em>
+					<span class="text">买手推广</span>
+				</a>
+				<a class="b_navCell" href="/admin/buyer" module="BUYER"> <em class="iconfont">&#xf00d6;</em>
+				<span class="text">买手管理</span>
+				</a>
+				<a class="b_navCell" href="/admin/account" module="account">
+				<em class="iconfont">&#xf00e4;</em>
+				<span class="text">买号管理</span>
+				</a>
+			</div>
+			
+			
+			<a class="b_navCell" href="/admin/tasks" module="tasklist">
+				<em class="iconfont">&#xf00bf;</em>
+				<span class="text">任务管理</span>
+			</a>
+			
+			<a class="b_navCell" href="/admin/tasks2" module="tasklist2">
+				<em class="iconfont">&#xe614;</em>
+				<span class="text">推广管理</span>
+			</a>
+			
+			<a class="b_navCell" href="/admin/tasks3" module="tasklist3">
+				<em class="iconfont">&#xe614;</em>
+				<span class="text">浏览管理</span>
+			</a>
+			
+			
+			
+			
+			
+			<a class="b_navCell" href="/admin/seller" module="SELLER"> <em class="iconfont">&#xf00d6;</em>
+				<span class="text">卖家管理</span>
+			</a>
+			
+			
+			
+			<a class="b_navCell b_navCell_line" href="/admin/account2" module="account2">
+				<em class="iconfont">&#xf00e4;</em>
+				<span class="text">推广号管理</span>
+			</a>
+			
+			<a class="b_navCell b_navCell_line" href="/admin/account3" module="account3">
+				<em class="iconfont">&#xf00e4;</em>
+				<span class="text">浏览号管理</span>
+			</a>
+			
+			
+			<a class="b_navCell" href="/admin/shop" module="shop">
+				<em class="iconfont">&#xe607;</em>
+				<span class="text">店铺管理</span>
+			</a>
+			<a class="b_navCell b_navCell_line" href="/admin/notice" module="notice">
+				<em class="iconfont">&#xf0161;</em>
+				<span class="text">公告管理</span>
+			</a>
+			<a class="b_navCell" href="/admin/money" module="money">
+				<em class="iconfont">&#xf0150;</em>
+				<span class="text">资金管理</span>
+			</a>
+			<a class="b_navCell" href="/admin/fund/account" module="fundAccount">
+				<em class="iconfont">&#xf0032;</em>
+				<span class="text">资金账户</span>
+			</a>
+			<a class="b_navCell b_navCell_line" href="/admin/task/sellerBlance" module="sellerBlance">
+				<em class="iconfont">&#xe607;</em>
+				<span class="text">查看账单</span>
+			</a>
+			#{if false}
+			<a class="b_navCell" href="/admin/activity" module="activity">
+				<em class="iconfont">&#xf0161;</em>
+				<span class="text">活动管理</span>
+			</a>
+			#{/if}
+			<a class="b_navCell" href="/admin/traffic" module="traffic">
+				<em class="iconfont">&#xf00bf;</em>
+				<span class="text">流量记录</span>
+			</a>
+			<a class="b_navCell b_navCell_line" href="/admin/invite" module="invite">
+				<em class="iconfont">&#xf00e4;</em>
+				<span class="text">邀请注册</span>
+			</a>
+			<a class="b_navCell" href="/admin/taskInvite" module="taskInvite">
+				<em class="iconfont">&#xe607;</em>
+				<span class="text">任务奖励</span>
+			</a>
+			#{/if}
+			#{else}
+			#{if role!='kjkd'}
+			#{if role=='flow'}
+			<a class="b_navCell" href="/flow/flowRecord" module="wait">
+				<em class="iconfont">&#xf00d6;</em>
+				<span class="text">待处理</span>
+			</a>
+			<a class="b_navCell" href="/flow/process" module="process">
+				<em class="iconfont">&#xf00d6;</em>
+				<span class="text">处理中</span>
+			</a>
+			<a class="b_navCell" href="/flow/flowFinishedRecord" module="finished">
+				<em class="iconfont">&#xe602;</em>
+				<span class="text">已完成</span>
+			</a>
+			<a class="b_navCell" href="/flow/clickCount" module="flowCount">
+				<em class="iconfont">&#xe602;</em>
+				<span class="text">统计</span>
+			</a>
+			#{/if}
+			#{else}
+			<!-- <a class="b_navCell" href="/user" module="user">
+				<em class="iconfont">&#xf00d6;</em>
+				<span class="text">个人中心</span>
+			</a>
+			 -->
+			#{if user.type.toString()=='BUYER'}
+			
+			<a class="b_navCell" href="/tasks2">
+				<em class="iconfont">&#xe68f;</em>
+                <span class="text">推广任务</span>
+            </a>
+			<a class="b_navCell" href="/buyer/account2" module="buyerAccount2"  style="height:10px">
+				<span class="text">绑定推广号</span>
+			</a>
+			
+			<a class="b_navCell" href="/${user.type.toString().toLowerCase()}/tasks2" module="myTask2"  style="height:10px">
+				
+				<span class="text">我的推广</span>
+			</a>
+			<a class="b_navCell" href="/tasks3">
+				<em class="iconfont">&#xe630;</em>
+                <span class="text">浏览任务</span>
+            </a>
+			<a class="b_navCell" href="/${user.type.toString().toLowerCase()}/tasks3" module="myTask3"  style="height:10px">
+				
+				<span class="text">我的浏览</span>
+			</a>
+			<a class="b_navCell" href="/buyer/account3" module="buyerAccount3"  style="height:10px">
+				<span class="text">绑定浏览号</span>
+			</a>
+			<a class="b_navCell" href="/tasks" >
+				<em class="iconfont">&#xe60e;</em>
+                <span class="text">刷单任务</span>
+            </a>
+			<a class="b_navCell" href="/${user.type.toString().toLowerCase()}/tasks" module="myTask"  style="height:10px">
+				<span class="text">我的任务</span>
+			</a>
+			
+			<a class="b_navCell" href="/buyer/account" module="buyerAccount" style="height:10px">
+				<span class="text">绑定买号</span>
+			</a>
+			
+			<a class="b_navCell" href="/user/money" module="money">
+				<em class="iconfont">&#xf0150;</em>
+				<span class="text">资金管理</span>
+			</a>
+			<a class="b_navCell" href="/user/withdraw" module="withdraw">
+				<em class="iconfont">&#xe885;</em>
+				<span class="text">提现管理</span>
+			</a>
+			<a class="b_navCell b_navCell_line" href="/user/invite" module="invite">
+				<em class="iconfont">&#xe611;</em>
+				<span class="text">邀请好友</span>
+			</a>
+			<a class="b_navCell" href="/user/taskInvite" module="taskInvite">
+				<em class="iconfont">&#xf0032;</em>
+				<span class="text">任务奖励</span>
+			</a>
+			#{if false}
+			<a class="b_navCell" href="/buyer/buyerConfig" module="buyerConfig">
+				<em class="iconfont">&#xf00e4;</em>
+				<span class="text">个性设置</span>
+			</a>
+			#{/if}
+			#{/if}
+			#{if user.type.toString()=='SELLER'}
+			<div id="toggle1" class="b_navCell a" onclick="toggle1()" style="background-color:#eee;">
+				<em class="iconfont">&#xe68f;</em>
+				<span class="text">推广任务</span>
+				<em id="openimg1" class="iconfont cela" style="font-size:8px;" >&#xe693;</em>
+				<em id="openimg11" class="iconfont cela" style="font-size:8px;display:none" >&#xe61d;</em>
+			</div>
+			<div id="hide1" class="show" style="display:none">
+			<a class="b_navCell" href="/user/shop2" module="shop2"  style="height:10px">
+				<span class="text">绑定推广</span>
+			</a>
+			<a class="b_navCell" href="/task/publish2" module="publishTask2" style="height:10px">
+				<span class="text">发布推广</span>
+			</a>
+			<a class="b_navCell" href="/${user.type.toString().toLowerCase()}/tasks2" module="myTask2" style="height:10px">
+				<span class="text">我的推广</span>
+			</a>
+			</div>
+			
+			#{/if}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			#{if user.type.toString()=='SELLER'}
+			<!-- <a class="b_navCell b_navCell_line" href="/${user.type.toString().toLowerCase()}/tasks3" module="myTask3">
+				<em class="iconfont">&#xe602;</em>
+				<span class="text">我的浏览</span>
+			</a>
+			 --> 
+			 <div id="toggle2" class="b_navCell a b_navCell_line" onclick="toggle2()" style="background-color:#eee; box-shadow: 0px -3px 3px #ddd;">
+				<em class="iconfont">&#xe60e;</em>
+				<span class="text">刷单任务</span>
+				<em id="openimg2" class="iconfont cela" style="font-size:8px;" >&#xe693;</em>
+				<em id="openimg22" class="iconfont cela" style="font-size:8px;display:none" >&#xe61d;</em>
+			</div>
+			<div id="hide2" class="show" style="display:none">
+			<a class="b_navCell" href="/user/shop" module="shop" style="height:10px">
+				<span class="text">绑定店铺</span>
+			</a>
+			<a class="b_navCell" href="/task/publish" module="publishTask" style="height:10px">
+				<span class="text">发布刷单</span>
+			</a>
+			<a class="b_navCell" href="/${user.type.toString().toLowerCase()}/tasks" module="myTask" style="height:10px">
+				<span class="text">我的刷单</span>
+			</a>
+			</div>
+			
+			<!-- <a class="b_navCell b_navCell_line" href="/seller/findFlow" module="findFlow">
+				<em class="iconfont">&#xe6b9;</em>
+				<span class="text">查看流量</span>
+			</a>
+			 -->
+			 <div id="toggle3" class="b_navCell a b_navCell_line" onclick="toggle3()" style="background-color:#eee; box-shadow: 0px -3px 3px #ddd;">
+				<em class="iconfont">&#xe6b9;</em>
+				<span class="text">流量任务</span>
+				<em id="openimg3" class="iconfont cela" style="font-size:8px;" >&#xe693;</em>
+				<em id="openimg33" class="iconfont cela" style="font-size:8px;display:none" >&#xe61d;</em>
+			</div>
+			<div id="hide3" class="show" style="display:none">
+			<a class="b_navCell" href="/user/shop3" module="shop3" style="height:10px">
+				<span class="text">绑定流量店铺</span>
+			</a>
+			
+			<a class="b_navCell" href="/task/publish3" module="publishTask3" style="height:10px">
+				<span class="text">发布流量</span>
+			</a>
+
+			<a class="b_navCell" href="/${user.type.toString().toLowerCase()}/tasks3" module="myTask3" style="height:10px">
+				<span class="text">我的流量</span>
+			</a>
+			
+			</div>
+			
+			
+			<div id="toggle6" class="b_navCell a b_navCell_line" onclick="toggle6()" style="background-color:#eee; box-shadow: 0px -3px 3px #ddd;">
+				<em class="iconfont">&#xe602;</em>
+				<span class="text">试用中心</span>
+				<em id="openimg6" class="iconfont cela" style="font-size:8px;" >&#xe693;</em>
+				<em id="openimg66" class="iconfont cela" style="font-size:8px;display:none" >&#xe61d;</em>
+			</div>
+			<div id="hide6" class="show" style="display:none">
+			<a class="b_navCell" href="/user/trialshop" module="trialshop" style="height:10px">
+				<span class="text">绑定试用店铺</span>
+			</a>
+			
+			<a class="b_navCell" href="/seller/publishFlow" module="publishFlow" style="height:10px">
+				<span class="text">发布试用</span>
+			</a>
+			
+			<a class="b_navCell" href="/task/publish3" module="publishTask3" style="height:10px">
+				<span class="text">我的试用</span>
+			</a>
+			</div>
+			
+			
+			<div id="toggle4" class="b_navCell a b_navCell_line" onclick="toggle4()" style="background-color:#eee; box-shadow: 0px -3px 3px #ddd;">
+				<em class="iconfont">&#xe631;</em>
+				<span class="text">财务中心</span>
+				<em id="openimg4" class="iconfont cela" style="font-size:8px;" >&#xe693;</em>
+				<em id="openimg44" class="iconfont cela" style="font-size:8px;display:none" >&#xe61d;</em>
+			</div>
+			<div id="hide4" class="show" style="display:none">
+			<a class="b_navCell b_navCell_line" href="/seller/task/sellerBlance" module="sellerBlance" style="height:10px">
+				<span class="text">查看账单</span>
+			</a>
+			<a class="b_navCell" href="/user/money" module="money" style="height:10px">
+				<span class="text">资金管理</span>
+			</a>
+			<a class="b_navCell" href="/user/withdraw" module="withdraw" style="height:10px">
+				<span class="text">提现管理</span>
+			</a>
+			</div>
+			<div id="toggle5" class="b_navCell a b_navCell_line" onclick="toggle5()" style="background-color:#eee; box-shadow: 0px -3px 3px #ddd;">
+				<em class="iconfont">&#xe674;</em>
+				<span class="text">邀请返利</span>
+				<em id="openimg5" class="iconfont cela" style="font-size:8px;" >&#xe693;</em>
+				<em id="openimg55" class="iconfont cela" style="font-size:8px;display:none" >&#xe61d;</em>
+			</div>
+			<div id="hide5" class="show" style="display:none">
+			<a class="b_navCell b_navCell_line" href="/user/invite" module="invite" style="height:10px">
+				<span class="text">邀请好友</span>
+			</a>
+			<a class="b_navCell" href="/user/taskInvite" module="taskInvite" style="height:10px">
+				<span class="text">任务奖励</span>
+			</a>
+			<a class="b_navCell" href="/user/taskInvite" module="taskInvite" style="height:10px">
+				<span class="text">申请合作</span>
+			</a>
+			</div>
+			#{/if}
+			
+			
+						#{if user.type.toString()!='BUYER'}
+			
+			<a class="b_navCell b_navCell_line" href="/seller/sellerConfig" module="sellerConfig" style="background-color:#eee; box-shadow: 0px -3px 3px #ddd;">
+				<em class="iconfont">&#xe626;</em>
+				<span class="text">限购设置</span>
+			</a>
+			#{/if}
+			#{if false}
+			#{if user.type.toString()=='SELLER'}
+			<a class="b_navCell b_navCell_line" href="/seller/sellerConfig" module="sellerConfig">
+				<em class="iconfont">&#xe607;</em>
+				<span class="text">个性化设置</span>
+			</a>
+			#{/if}
+			#{/if}
+			#{if false}
+			<a class="b_navCell" href="/user/blacklist" module="blacklist">
+				<em class="iconfont">&#xf00e4;</em>
+				<span class="text">黑名单</span>
+			</a>
+			#{/if}
+			#{/else}
+			#{/if}
+			
+			#{else}
+			<a class="b_navCell" href="/express/waitExpressPrint" module="waitExpressPrint">
+				<em class="iconfont">&#xf0199;</em>
+				<span class="text" >待打印订单</span>
+			</a>
+			<a class="b_navCell" href="/express/expressPrinting" module="printingOrders">
+				<em class="iconfont">&#xe607;</em>
+				<span class="text">正在打印订单</span>
+			</a>
+			<a class="b_navCell" href="/express/expressPrintFinish" module="expressPrintFinish">
+				<em class="iconfont">&#xf00c5;</em>
+				<span class="text">已经打印订单</span>
+			</a>
+			#{/else}
+			#{/else}
+			
+		</div>
+		<ul id="anchor_list">
+			<li><a class="anch on" href="#1">个人中心</a></li>
+			<li><a class="anch" href="#1">财务情况</a></li>
+		</ul>
+	</div>
+
+</div>
+<div id="noticContent">
+	<div class="noticContentTitle">
+		<em class="iconfont">󰃖</em>
+		<span>${topNotice.title}</span>
+		<a href='${topNotice.url}' class="blue" target="_black">点击查看详情&gt;</a>
+	</div>
+</div>
+<div id="contentWrapper">
+	<div id="contentInner">#{doLayout /}</div>
+	
+	#{if role!='admin' && role!='kjkd' && request.domain.endsWith('jzniu.cn')}
+	#{/if}
+</div>
+
+</body>
+</html>

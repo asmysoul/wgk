@@ -1,0 +1,912 @@
+[2016-09-08 10:32:23,902] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 10:32:23,998] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 10:33:30,091] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 10:33:30,184] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 10:34:06,765] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-08 10:34:42,943] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b6p1p0h
+Internal Server Error (500) for request GET /buyer/task/perform2/6569
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 206)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:206)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-08 10:36:18,661] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b6p1p0i
+Internal Server Error (500) for request GET /buyer/task/perform2/6570
+
+Template execution error (In /app/views/TaskExecutor/perform2.html around line 92)
+Execution error occured in template /app/views/TaskExecutor/perform2.html. Exception raised was MissingPropertyException : No such property: platform2 for class: vos.BuyerTaskVo2 Possible solutions: platform.
+
+play.exceptions.TemplateExecutionException: No such property: platform2 for class: vos.BuyerTaskVo2
+Possible solutions: platform
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:248)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: groovy.lang.MissingPropertyException: No such property: platform2 for class: vos.BuyerTaskVo2
+Possible solutions: platform
+	at /app/views/TaskCenter/buyerTasks2.html.(line:22)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-08 10:36:41,701] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b6p1p0j
+Internal Server Error (500) for request GET /buyer/task/perform2/6571
+
+Template execution error (In /app/views/TaskExecutor/perform2.html around line 92)
+Execution error occured in template /app/views/TaskExecutor/perform2.html. Exception raised was MissingPropertyException : No such property: platform2 for class: vos.BuyerTaskVo2 Possible solutions: platform.
+
+play.exceptions.TemplateExecutionException: No such property: platform2 for class: vos.BuyerTaskVo2
+Possible solutions: platform
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:248)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: groovy.lang.MissingPropertyException: No such property: platform2 for class: vos.BuyerTaskVo2
+Possible solutions: platform
+	at /app/views/TaskExecutor/perform2.html.(line:92)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-08 10:44:48,388] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 10:44:48,458] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:00:36,726] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:00:36,776] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:00:44,158] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:00:44,223] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:22:03,912] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:22:03,987] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:22:38,262] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:22:38,342] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:23:04,041] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:23:04,129] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:23:51,384] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:23:51,476] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:24:07,039] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 11:24:07,126] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 12:14:49,964] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b6p1p0l
+Internal Server Error (500) for request GET /buyer/task/verifyRefund2?platform=WEIXIN
+
+Template not found (In /app/controllers/TaskExecutor.java around line 853)
+The template TaskExecutor/verifyRefund2.html does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : TaskExecutor/verifyRefund2.html
+	at play.mvc.Controller.renderTemplate(Controller.java:685)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskExecutor.verifyRefund2(TaskExecutor.java:853)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-09-08 12:18:11,326] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 12:22:07,025] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b6p1p0m
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 866)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : Duplicate method confirmRefund(BuyerTask) in type TaskExecutor
+
+play.exceptions.CompilationException: Duplicate method confirmRefund(BuyerTask) in type TaskExecutor
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 12:22:07,202] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b6p1p0o
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 866)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : Duplicate method confirmRefund(BuyerTask) in type TaskExecutor
+
+play.exceptions.CompilationException: Duplicate method confirmRefund(BuyerTask) in type TaskExecutor
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 12:26:42,869] ERROR [play-thread-1] models.BuyerTask2.confirmSellerRefund(BuyerTask2.java:697) - 
+java.lang.NullPointerException
+	at models.BuyerTask2.processRefund(BuyerTask2.java:889)
+	at models.BuyerTask2.confirmSellerRefund(BuyerTask2.java:688)
+	at controllers.TaskExecutor.confirmRefund2(TaskExecutor.java:908)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-09-08 12:26:42,884] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-09-08 12:26:42,884] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 核实退款操作失败~~
+java.lang.RuntimeException: 核实退款操作失败~~
+	at models.BuyerTask2.confirmSellerRefund(BuyerTask2.java:699)
+	at controllers.TaskExecutor.confirmRefund2(TaskExecutor.java:908)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-09-08 12:27:49,550] ERROR [play-thread-1] models.BuyerTask2.confirmSellerRefund(BuyerTask2.java:697) - 
+java.lang.NullPointerException
+	at models.BuyerTask2.processRefund(BuyerTask2.java:889)
+	at models.BuyerTask2.confirmSellerRefund(BuyerTask2.java:688)
+	at controllers.TaskExecutor.confirmRefund2(TaskExecutor.java:908)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-09-08 12:27:49,565] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-09-08 12:27:49,565] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 核实退款操作失败~~
+java.lang.RuntimeException: 核实退款操作失败~~
+	at models.BuyerTask2.confirmSellerRefund(BuyerTask2.java:699)
+	at controllers.TaskExecutor.confirmRefund2(TaskExecutor.java:908)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-09-08 13:23:24,885] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:23:24,984] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:23:38,820] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:23:38,916] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:24:21,987] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:24:22,073] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:24:32,762] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:24:32,845] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:31:20,605] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:31:20,659] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:31:38,422] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:31:38,495] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:37:31,588] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:37:31,636] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:40:50,575] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:40:50,633] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:42:27,108] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:42:27,148] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:43:19,430] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:43:19,470] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:44:03,198] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:44:03,229] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:44:28,631] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:44:28,678] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:44:35,278] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:44:35,309] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:46:25,869] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:46:25,899] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:46:37,920] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 13:46:37,952] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 14:30:37,351] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417e9
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 2225)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error on tokens, delete these tokens
+
+play.exceptions.CompilationException: Syntax error on tokens, delete these tokens
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 14:30:37,523] ERROR [jobs-thread-4] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417eb
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 2225)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error on tokens, delete these tokens
+
+play.exceptions.CompilationException: Syntax error on tokens, delete these tokens
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 14:30:58,301] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417ed
+Error during job execution (jobs.FlowClickTimes)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 2225)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error on tokens, delete these tokens
+
+play.exceptions.CompilationException: Syntax error on tokens, delete these tokens
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 14:31:33,713] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417ef
+Error during job execution (jobs.BuyerTaskCancel)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 2225)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error on tokens, delete these tokens
+
+play.exceptions.CompilationException: Syntax error on tokens, delete these tokens
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 14:31:33,744] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417eh
+Error during job execution (jobs.GetExpressNo)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 2225)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error on tokens, delete these tokens
+
+play.exceptions.CompilationException: Syntax error on tokens, delete these tokens
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 14:31:33,760] ERROR [jobs-thread-4] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417ej
+Error during job execution (jobs.AddKwdForFlow)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 2225)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error on tokens, delete these tokens
+
+play.exceptions.CompilationException: Syntax error on tokens, delete these tokens
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 14:39:43,012] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 14:39:43,059] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 14:42:52,838] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 14:42:52,870] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 14:44:09,449] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 14:44:09,474] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-08 15:00:11,512] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-09-08 15:00:11,512] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+java.lang.NullPointerException
+	at controllers.TaskCenter.sendGood2(TaskCenter.java:1889)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-09-08 15:02:10,300] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417el
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1895)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Return type for the method is missing
+
+play.exceptions.CompilationException: Return type for the method is missing
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 15:02:10,379] ERROR [jobs-thread-5] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417en
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1895)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Return type for the method is missing
+
+play.exceptions.CompilationException: Return type for the method is missing
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 15:02:45,875] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-09-08 15:02:45,875] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+java.lang.NullPointerException
+	at controllers.TaskCenter.sendGood2(TaskCenter.java:1897)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-09-08 15:05:42,351] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417ep
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1888)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : id cannot be resolved to a variable
+
+play.exceptions.CompilationException: id cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 15:05:42,494] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417f1
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1888)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : id cannot be resolved to a variable
+
+play.exceptions.CompilationException: id cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 15:06:17,164] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417f3
+Internal Server Error (500) for request GET /seller/tasks/sendSHENHE/WEIXIN
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-08 15:06:17,164] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417f4
+Error during the 500 response generation
+
+Template execution error (In /app/views/errors/500.html around line 11)
+Execution error occured in template /app/views/errors/500.html. Exception raised was OutOfMemoryError : PermGen space.
+
+play.exceptions.TemplateExecutionException: PermGen space
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.server.PlayHandler.serve500(PlayHandler.java:792)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.Throwable.getStackTraceElement(Native Method)
+	at java.lang.Throwable.getOurStackTrace(Throwable.java:591)
+	at java.lang.Throwable.getStackTrace(Throwable.java:582)
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:71)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:414)
+[2016-09-08 15:06:49,521] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417f5
+Internal Server Error (500) for request GET /buyer/tasks2
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1892)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate local variable id
+
+play.exceptions.CompilationException: Duplicate local variable id
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-08 15:06:49,537] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417f9
+Error during the 500 response generation
+
+Template execution error (In /app/views/errors/500.html around line 11)
+Execution error occured in template /app/views/errors/500.html. Exception raised was OutOfMemoryError : PermGen space.
+
+play.exceptions.TemplateExecutionException: PermGen space
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.server.PlayHandler.serve500(PlayHandler.java:792)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.templates.GroovyTemplate$TClassLoader.defineTemplate(GroovyTemplate.java:79)
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:148)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:224)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:414)
+	at /app/views/errors/500.html.(line:11)
+[2016-09-08 15:07:20,626] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417fa
+Internal Server Error (500) for request GET /buyer/tasks2
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+[2016-09-08 15:07:20,641] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+[2016-09-08 15:08:23,336] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417fb
+Internal Server Error (500) for request GET /buyer/tasks2
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+[2016-09-08 15:08:23,352] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+[2016-09-08 15:09:05,976] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417fc
+Internal Server Error (500) for request GET /buyer/tasks2
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+[2016-09-08 15:09:06,429] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+[2016-09-08 15:09:42,556] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8417fd
+Internal Server Error (500) for request GET /buyer/tasks2
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+[2016-09-08 15:09:42,556] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+[2016-09-08 15:11:23,780] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b89ace8
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1893)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : id cannot be resolved to a variable
+
+play.exceptions.CompilationException: id cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 15:11:23,988] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b89acea
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1893)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : id cannot be resolved to a variable
+
+play.exceptions.CompilationException: id cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 15:16:10,764] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b89acec
+Internal Server Error (500) for request GET /seller/tasks/sendSHENHE/WEIXIN
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1897)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Cannot make a static reference to the non-static method confirmRefund3(long, boolean) from the type TaskCenter
+
+play.exceptions.CompilationException: Cannot make a static reference to the non-static method confirmRefund3(long, boolean) from the type TaskCenter
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-08 15:21:40,347] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-09-08 15:21:40,347] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - Try to read id on null object models.BuyerTask2 (controllers.TaskCenter.sendGood2, line 1890)
+java.lang.NullPointerException: Try to read id on null object models.BuyerTask2 (controllers.TaskCenter.sendGood2, line 1890)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskCenter.sendGood2(TaskCenter.java:1890)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-09-08 15:32:24,174] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8c44od
+Internal Server Error (500) for request GET /buyer/task/6576
+
+Execution exception (In /app/models/BuyerTask.java around line 1095)
+NullPointerException occured : Try to read buyerId on null object vos.BuyerTaskVo (models.BuyerTask.findDetail, line 1095)
+
+play.exceptions.JavaExecutionException: Try to read buyerId on null object vos.BuyerTaskVo (models.BuyerTask.findDetail, line 1095)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read buyerId on null object vos.BuyerTaskVo (models.BuyerTask.findDetail, line 1095)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at models.BuyerTask.findDetail(BuyerTask.java:1095)
+	at controllers.TaskCenter.buyerTaskDetail(TaskCenter.java:1608)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-08 15:50:08,573] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8c44oe
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1969)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+
+play.exceptions.CompilationException: Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 15:50:08,824] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8c44og
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1969)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+
+play.exceptions.CompilationException: Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-08 16:13:13,668] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8hddj4
+Internal Server Error (500) for request GET /seller/tasks/sendSHENHE/WEIXIN
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1994)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : buyerTask4 cannot be resolved
+
+play.exceptions.CompilationException: buyerTask4 cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-08 16:15:11,724] ERROR [main] play.Logger.error(Logger.java:426) - Could not bind on port 80
+[2016-09-08 16:18:47,361] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8i6dfh
+Internal Server Error (500) for request GET /seller/tasks/sendSHENHE/WEIXIN
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1967)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : buyerTask4.status cannot be resolved to a type
+
+play.exceptions.CompilationException: buyerTask4.status cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-08 16:18:50,140] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b8i6dfi
+Internal Server Error (500) for request GET /seller/task/list2?__ts=1473322729721&vo.platform=&vo.status=&vo.itemTitle=&vo.publishTimeStart=&vo.publishTimeEnd=&vo.buyerAccountNick=&vo.orderId=&vo.buyerTaskId=&vo.buyerNick=&vo.pageNo=1&vo.pageSize=20&type=PROCESS
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1967)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : buyerTask4.status cannot be resolved to a type
+
+play.exceptions.CompilationException: buyerTask4.status cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-08 16:31:40,531] ERROR [main] play.Logger.error(Logger.java:426) - Could not bind on port 80

@@ -1,0 +1,88 @@
+#{extends 'frame.html' /}
+#{set title:'管理员用户管理' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/admin/user-manage.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.pagination.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/datePicker.css'}" />
+
+#{/set}
+<div class="contentCard">
+	<div class="contentTitle">后台操作记录列表</div>
+	<div id="taskFilterPanel">
+		<div class="clearfix mb10">
+			<span class="floatLeft mr10">管理员姓名</span>
+			<input type="text" id="adminAccount" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">操作类型</span>
+				<select class="floatLeft mr10 mt4" id="logType">
+					<option value="">全部</option>
+					#{list items:logTypeList, as:'s'}
+					<option value="${s}" >${s.title}</option>
+					#{/list}
+				</select>
+			<span class="floatLeft mr10">备注</span>
+			<input type="text" id="message" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">操作时间</span>
+				<span class="floatLeft mr10 cal-date-input">
+					<input class="inputDate start-date" id="operatorTimeStart" readonly="readonly" value=""  />
+				</span>
+				<span class="floatLeft mr10 med-cal-split">-</span>
+				<span class="floatLeft mr10 cal-date-input">
+					<input class="inputDate end-date" id="operatorTimeEnd" readonly="readonly" value="" />
+				</span>
+			<a class="stdColorButton floatLeft queryBtn" href="javascript:;" id="queryBtn">查询</a>
+		</div>
+	</div>
+	<div class="mt20">
+		<table class="normTable">
+			<thead>
+				<tr>
+					<td style="width:4%">ID</td>
+					<td style="width:5%">管理员姓名</td>
+					<td style="width:5%">操作类型</td>
+					<td style="width:20%">操作内容</td>
+					<td style="width:8%">时间</td>
+				</tr>
+			</thead>
+			<tbody id="accountContainer"></tbody>
+		</table>
+		<div id="noMsg">
+			<div class="warnBox">
+				<span class="iconfont">&#xf00b6;</span>
+				没有用户!
+			</div>
+		</div>
+		<div class="pagin-btm clearFix" style="display: none;">
+			<div class="pagination"></div>
+		</div>
+		<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+			<div class="maskLayer"></div>
+			<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />
+		</div>
+	</div>
+</div>
+
+<!--keyword muban-->
+<textarea class="muban" id="rowTemp">
+	{{#results}}
+	<tr data-name="{{name}}" data-id="{{id}}">
+		<td>{{id}}</td>
+		<td>{{adminAccount}}</td>
+		<td>{{adminLogType}}</td>
+		<td>{{message}}</td>
+		<td>{{operatorTimes}}</td>
+	</tr>
+	{{/results}}
+</textarea>
+
+
+
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/date.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.datePicker.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.number.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/admin/adminOperatorLog.js'}" type="text/javascript"></script>
+<script type="text/javascript">App.module = 'adminOperatorLog';</script>
+#{/set}

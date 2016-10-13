@@ -1,0 +1,208 @@
+[2016-07-21 09:56:35,907] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70nebhno1
+Internal Server Error (500) for request GET /task/publish3
+
+Template not found (In /app/controllers/TaskPublish2.java around line 157)
+The template TaskPublish2/publish2.html does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : TaskPublish2/publish2.html
+	at play.mvc.Controller.renderTemplate(Controller.java:685)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish2.publish2(TaskPublish2.java:157)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-07-21 09:57:10,274] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70nebhno3
+Internal Server Error (500) for request GET /task/publish3
+
+Template not found (In /app/controllers/TaskPublish2.java around line 157)
+The template TaskPublish2/publish3.html does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : TaskPublish2/publish3.html
+	at play.mvc.Controller.renderTemplate(Controller.java:685)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish2.publish3(TaskPublish2.java:157)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-07-21 09:58:31,081] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 09:58:34,569] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 09:58:40,065] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 09:59:42,518] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:00:34,984] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:00:37,293] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:10:13,854] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70nebhno4
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/models/Task2.java around line 566)
+The file /app/models/Task2.java could not be compiled. Error raised is : platform2 cannot be resolved or is not a field
+
+play.exceptions.CompilationException: platform2 cannot be resolved or is not a field
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-21 10:27:38,820] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:27:48,328] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:28:05,410] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:28:15,924] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:28:32,323] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:30:31,462] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:30:58,058] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:32:14,046] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:32:27,451] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:32:46,136] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:36:35,692] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:37:40,945] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:37:48,318] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:38:52,086] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:51:25,713] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:58:27,532] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:19:07,667] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:20:52,780] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:21:03,955] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:22:26,760] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:22:58,676] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:23:13,372] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:23:35,803] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:23:53,223] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:24:50,901] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:25:02,522] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:28:11,900] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:28:33,747] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:29:08,428] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:30:14,318] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:32:30,127] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:33:04,213] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:33:18,836] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:37:58,094] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:39:46,622] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:41:28,205] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:43:14,359] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [tidStr] Required
+[2016-07-21 15:54:05,787] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:54:09,002] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:54:24,482] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:54:29,755] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:54:42,453] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:55:14,194] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:55:17,196] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:55:37,395] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:56:13,389] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:56:36,614] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:57:29,511] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:57:56,602] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:58:01,232] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:00:24,927] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:00:28,805] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:01:53,152] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:02:00,593] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:05:51,105] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:07:03,453] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:07:05,935] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:08:26,185] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:08:29,299] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:08:44,479] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:08:50,672] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:08:52,300] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:08:59,179] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:10:01,760] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:10:40,367] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 17:12:13,521] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 17:16:10,619] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70nghadmb
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 418)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : Incompatible operand types TaskType2 and TaskType
+
+play.exceptions.CompilationException: Incompatible operand types TaskType2 and TaskType
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-21 17:24:40,259] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-07-21 17:24:40,260] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+java.lang.NullPointerException
+	at controllers.TaskPublish.saveTask2(TaskPublish.java:454)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-07-21 17:33:23,919] ERROR [play-thread-1] models.Task2.save(Task2.java:429) - 
+java.lang.NullPointerException
+	at models.Task2.save(Task2.java:393)
+	at controllers.TaskPublish.saveTask2(TaskPublish.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)

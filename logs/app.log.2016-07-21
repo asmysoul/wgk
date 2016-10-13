@@ -1,0 +1,410 @@
+[2016-07-21 09:26:36,442] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-07-21 09:26:37,497] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-07-21 09:26:37,581] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-07-21 09:26:45,315] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-07-21 09:26:45,441] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-07-21 09:26:45,519] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10a9i32hu9fz0zmm4|43900f17, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10a9i32hu9fz0zmm4|43900f17, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-07-21 09:26:45,536] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-07-21 09:26:45,567] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-07-21 09:26:46,347] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-07-21 09:26:46,710] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-21 09:30:50,711] INFO  [jobs-thread-3] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-21 09:40:50,184] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 09:40:50,199] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 09:40:51,807] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 09:40:51,839] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 09:40:51,839] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 09:40:53,898] INFO  [jobs-thread-4] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 09:40:53,898] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 09:50:50,276] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 09:50:50,291] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 09:50:51,902] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 09:50:51,918] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 09:50:53,955] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 09:50:55,984] INFO  [jobs-thread-1] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 09:50:55,984] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 09:56:35,907] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70nebhno1
+Internal Server Error (500) for request GET /task/publish3
+
+Template not found (In /app/controllers/TaskPublish2.java around line 157)
+The template TaskPublish2/publish2.html does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : TaskPublish2/publish2.html
+	at play.mvc.Controller.renderTemplate(Controller.java:685)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish2.publish2(TaskPublish2.java:157)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-07-21 09:57:09,149] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-21 09:57:10,274] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70nebhno3
+Internal Server Error (500) for request GET /task/publish3
+
+Template not found (In /app/controllers/TaskPublish2.java around line 157)
+The template TaskPublish2/publish3.html does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : TaskPublish2/publish3.html
+	at play.mvc.Controller.renderTemplate(Controller.java:685)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish2.publish3(TaskPublish2.java:157)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-07-21 09:58:31,081] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 09:58:34,569] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 09:58:40,065] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 09:59:42,518] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:00:34,984] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:00:37,293] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:05:11,711] INFO  [jobs-thread-8] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-21 10:10:13,854] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70nebhno4
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/models/Task2.java around line 566)
+The file /app/models/Task2.java could not be compiled. Error raised is : platform2 cannot be resolved or is not a field
+
+play.exceptions.CompilationException: platform2 cannot be resolved or is not a field
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-21 10:12:43,852] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-21 10:15:45,715] INFO  [jobs-thread-7] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-21 10:25:45,757] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 10:25:45,773] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 10:25:46,741] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 10:25:46,757] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 10:25:46,772] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 10:25:48,799] INFO  [jobs-thread-8] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 10:25:48,814] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 10:27:38,820] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:27:48,328] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:28:05,410] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:28:15,924] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:28:32,323] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:30:31,462] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:30:58,058] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:32:14,046] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:32:27,451] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:32:46,136] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:34:14,054] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-07-21 10:34:14,974] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-07-21 10:34:15,084] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-07-21 10:34:36,952] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-07-21 10:34:37,091] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-07-21 10:34:37,158] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10a9i34x3yb1khvlbd|125c99f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10a9i34x3yb1khvlbd|125c99f, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-07-21 10:34:37,174] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-07-21 10:34:37,221] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-07-21 10:34:37,954] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-07-21 10:34:38,189] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-21 10:36:35,692] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:37:40,945] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:37:48,318] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:38:52,086] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:44:40,093] INFO  [jobs-thread-8] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-21 10:44:41,532] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 10:44:41,549] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 10:51:25,713] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 10:54:40,067] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 10:54:40,082] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 10:54:41,564] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 10:54:41,579] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 10:54:41,579] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 10:54:43,655] INFO  [jobs-thread-5] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 10:54:43,655] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 10:58:27,532] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 11:04:40,205] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 11:04:40,221] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 11:04:41,686] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 11:04:41,701] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 11:04:43,747] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 11:04:45,775] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 11:04:45,791] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 14:18:58,346] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-07-21 14:18:59,360] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-07-21 14:18:59,485] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-07-21 14:19:29,803] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-07-21 14:19:29,944] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-07-21 14:19:30,038] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10a9i3cyb3u1p6xcod|65fe28a7, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10a9i3cyb3u1p6xcod|65fe28a7, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-07-21 14:19:30,053] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-07-21 14:19:30,100] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-07-21 14:19:30,802] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-07-21 14:19:31,036] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-21 14:29:30,974] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 14:29:30,989] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 14:29:33,169] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 14:29:33,184] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 14:29:33,201] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 14:29:35,276] INFO  [jobs-thread-5] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 14:29:35,291] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 14:39:31,044] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 14:39:31,059] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 14:39:33,244] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 14:39:33,260] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 14:39:35,364] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 14:39:37,393] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 14:39:37,393] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 14:49:31,116] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 14:49:31,131] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 14:49:33,207] INFO  [jobs-thread-6] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-07-21 14:49:33,317] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 14:49:33,333] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 14:49:37,504] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 14:49:39,525] INFO  [jobs-thread-1] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 14:49:39,540] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 14:59:31,176] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 14:59:31,192] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 14:59:33,361] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 14:59:33,377] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 14:59:39,598] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 14:59:41,627] INFO  [jobs-thread-4] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 14:59:41,643] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 15:04:57,205] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-21 15:14:57,244] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 15:14:57,260] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 15:14:58,576] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 15:14:58,592] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 15:14:58,609] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 15:15:00,628] INFO  [jobs-thread-5] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 15:15:00,643] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 15:19:07,667] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:20:52,780] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:21:03,955] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:22:26,760] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:22:58,676] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:23:13,372] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:23:35,803] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:23:53,223] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:24:50,901] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:24:57,332] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 15:24:57,348] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 15:24:58,643] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 15:24:58,659] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 15:25:00,702] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 15:25:02,522] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:25:02,709] INFO  [jobs-thread-5] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 15:25:02,726] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 15:28:11,900] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:28:33,747] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:29:08,428] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:30:14,318] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:32:30,127] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:33:04,213] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:33:18,836] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:34:56,691] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 15:34:56,707] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 15:34:57,878] INFO  [jobs-thread-6] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-07-21 15:34:58,004] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 15:34:58,004] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 15:35:02,051] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 15:35:04,081] INFO  [jobs-thread-6] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 15:35:04,096] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 15:37:58,094] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:39:46,622] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:41:28,205] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:43:14,359] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [tidStr] Required
+[2016-07-21 15:44:56,744] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 15:44:56,760] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 15:44:58,046] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 15:44:58,050] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 15:45:04,152] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 15:45:06,181] INFO  [jobs-thread-3] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 15:45:06,181] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 15:54:05,787] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:54:09,002] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:54:24,482] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:54:29,755] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:54:42,453] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:54:56,831] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 15:54:56,847] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 15:54:58,112] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 15:54:58,128] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 15:55:06,242] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 15:55:08,265] INFO  [jobs-thread-8] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 15:55:08,281] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 15:55:14,194] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:55:17,196] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:55:37,395] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:56:13,389] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:56:36,614] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:57:29,511] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:57:56,602] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 15:58:01,232] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:00:24,927] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:00:28,805] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:01:53,152] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:02:00,593] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:04:56,905] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 16:04:56,905] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 16:04:57,967] INFO  [jobs-thread-5] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-07-21 16:04:58,155] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 16:04:58,155] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 16:05:08,325] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 16:05:10,353] INFO  [jobs-thread-8] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 16:05:10,369] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 16:05:51,105] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:07:03,453] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:07:05,935] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:08:26,185] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:08:29,299] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:08:44,479] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:08:50,672] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:08:52,300] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:08:59,179] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:10:01,760] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:10:40,367] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 16:14:56,963] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 16:14:56,979] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 16:14:58,212] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 16:14:58,228] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 16:15:10,441] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 16:15:12,470] INFO  [jobs-thread-6] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 16:15:12,486] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 16:24:57,051] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 16:24:57,053] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 16:24:58,294] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 16:24:58,298] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 16:25:12,519] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 16:25:14,537] INFO  [jobs-thread-1] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 16:25:14,538] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 16:34:56,828] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 16:34:56,830] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 16:34:57,782] INFO  [jobs-thread-8] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-07-21 16:34:58,054] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 16:34:58,058] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 16:35:14,297] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 16:35:16,304] INFO  [jobs-thread-6] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 16:35:16,305] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 16:44:56,875] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 16:44:56,876] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 16:44:58,111] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 16:44:58,115] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 16:45:16,362] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 16:45:18,375] INFO  [jobs-thread-2] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 16:45:18,378] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 16:54:56,932] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 16:54:56,934] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 16:54:58,165] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 16:54:58,170] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 16:55:18,432] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 16:55:20,441] INFO  [jobs-thread-4] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 16:55:20,442] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 17:04:56,986] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 17:04:56,989] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 17:04:57,859] INFO  [jobs-thread-7] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-07-21 17:04:58,202] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 17:04:58,206] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 17:05:20,509] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 17:05:22,517] INFO  [jobs-thread-3] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 17:05:22,519] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-21 17:12:13,521] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-21 17:14:05,853] INFO  [jobs-thread-4] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-21 17:15:09,000] INFO  [jobs-thread-4] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-21 17:16:10,619] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70nghadmb
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 418)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : Incompatible operand types TaskType2 and TaskType
+
+play.exceptions.CompilationException: Incompatible operand types TaskType2 and TaskType
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-21 17:24:03,168] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-21 17:24:40,259] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-07-21 17:24:40,260] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+java.lang.NullPointerException
+	at controllers.TaskPublish.saveTask2(TaskPublish.java:454)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-07-21 17:33:23,915] INFO  [play-thread-1] com.aton.util.Pandora.<init>(Pandora.java:51) - worker starting. timestamp left shift 22, datacenter id bits 5, worker id bits 5, sequence bits 12, workerid 0
+[2016-07-21 17:33:23,919] ERROR [play-thread-1] models.Task2.save(Task2.java:429) - 
+java.lang.NullPointerException
+	at models.Task2.save(Task2.java:393)
+	at controllers.TaskPublish.saveTask2(TaskPublish.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-07-21 17:34:03,784] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-21 17:34:03,788] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-21 17:34:05,367] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-21 17:34:05,379] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-21 17:34:05,389] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-21 17:34:07,402] INFO  [jobs-thread-8] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-21 17:34:07,404] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!

@@ -1,0 +1,280 @@
+[2016-08-01 09:33:48,965] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@710g8bmm4
+Internal Server Error (500) for request GET /task/publish2
+
+Template compilation error (In /app/views/TaskPublish/publish2.html around line 233)
+The template /app/views/TaskPublish/publish2.html does not compile : unexpected token: style 
+
+play.exceptions.TemplateCompilationException: unexpected token: style 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:186)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:224)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish2(TaskPublish.java:159)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-08-01 09:35:14,702] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@710g8bmm5
+Internal Server Error (500) for request GET /task/publish2
+
+Template compilation error (In /app/views/TaskPublish/publish2.html around line 233)
+The template /app/views/TaskPublish/publish2.html does not compile : unexpected token: style 
+
+play.exceptions.TemplateCompilationException: unexpected token: style 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:186)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:224)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish2(TaskPublish.java:159)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-08-01 09:35:16,624] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@710g8bmm6
+Internal Server Error (500) for request GET /task/publish2
+
+Template compilation error (In /app/views/TaskPublish/publish2.html around line 233)
+The template /app/views/TaskPublish/publish2.html does not compile : unexpected token: style 
+
+play.exceptions.TemplateCompilationException: unexpected token: style 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:186)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:224)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish2(TaskPublish.java:159)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-08-01 10:24:55,788] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@710gf49he
+Internal Server Error (500) for request GET /seller/task2/759937000202567680
+
+Template execution error (In /app/views/TaskCenter/taskDetail2.html around line 161)
+Execution error occured in template /app/views/TaskCenter/taskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.taskDetail2(TaskCenter.java:919)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/taskDetail2.html.(line:161)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-08-01 10:41:21,900] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemUrl] Required
+[2016-08-01 10:42:46,334] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemUrl] Required
+[2016-08-01 13:40:14,377] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@710hel2k5
+Internal Server Error (500) for request GET /seller/task2/758500481503854592
+
+Template execution error (In /app/views/TaskCenter/taskDetail2.html around line 161)
+Execution error occured in template /app/views/TaskCenter/taskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.taskDetail2(TaskCenter.java:919)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/taskDetail2.html.(line:161)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-08-01 13:48:46,858] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@710hel2k6
+Internal Server Error (500) for request GET /seller/task2/759937000202567680
+
+Template execution error (In /app/views/TaskCenter/taskDetail2.html around line 161)
+Execution error occured in template /app/views/TaskCenter/taskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.taskDetail2(TaskCenter.java:919)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/taskDetail2.html.(line:161)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-08-01 13:50:04,282] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@710hel2k7
+Internal Server Error (500) for request GET /seller/task2/759937000202567680
+
+Template execution error (In /app/views/TaskCenter/taskDetail2.html around line 145)
+Execution error occured in template /app/views/TaskCenter/taskDetail2.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.taskDetail2(TaskCenter.java:919)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskCenter/taskDetail2.html.(line:145)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-08-01 13:53:40,583] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 13:53:50,819] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 13:55:52,099] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 14:32:15,176] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-01 14:32:15,373] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-01 15:35:46,142] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@710hel2k8
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1017)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : The method findByPageForSellerTask(TaskSearchVo) in the type BuyerTask is not applicable for the arguments (TaskSearchVo2)
+
+play.exceptions.CompilationException: The method findByPageForSellerTask(TaskSearchVo) in the type BuyerTask is not applicable for the arguments (TaskSearchVo2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-01 15:36:54,684] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 15:37:01,880] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 15:38:57,976] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 15:40:15,606] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 15:41:43,979] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 15:41:52,493] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 15:43:24,519] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 15:46:47,962] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 15:47:23,338] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 16:47:00,620] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 16:47:07,766] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 16:47:10,253] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 16:48:30,153] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 16:48:33,984] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [] Required
+[2016-08-01 16:50:00,243] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@710idinle
+Internal Server Error (500) for request GET /seller/task2/760007955327221760
+
+Template execution error (In /app/views/TaskCenter/taskDetail2.html around line 161)
+Execution error occured in template /app/views/TaskCenter/taskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.taskDetail2(TaskCenter.java:929)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/taskDetail2.html.(line:161)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-08-01 16:50:44,763] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@710idinlf
+Internal Server Error (500) for request GET /seller/task2/760007955327221760
+
+Template execution error (In /app/views/TaskCenter/taskDetail2.html around line 327)
+Execution error occured in template /app/views/TaskCenter/taskDetail2.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.taskDetail2(TaskCenter.java:929)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskCenter/taskDetail2.html.(line:327)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more

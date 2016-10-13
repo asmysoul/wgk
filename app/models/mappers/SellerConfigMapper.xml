@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.SellerConfigMapper">
+	<resultMap id="BaseResultMap" type="models.SellerConfig">
+	</resultMap>
+	<update id="updateBySellerConfig" parameterType="models.SellerConfig">
+		update seller_config
+		<set>
+			<if test="buyerAndSellerTime !=null">
+				buyer_and_seller_time = #{buyerAndSellerTime},
+			</if>
+			<if test="buyerAndShopTime!= null">
+				buyer_and_shop_time = #{buyerAndShopTime},
+			</if>
+			<if test="buyerAcountAndShopTime!= null">
+				buyer_acount_and_shop_time = #{buyerAcountAndShopTime},
+			</if>
+			<if test="buyerAcountAndItemTime!= null">
+				buyer_acount_and_item_time = #{buyerAcountAndItemTime},
+			</if>
+		</set>
+		where seller_id = #{sellerId}
+	</update>
+	
+	<insert id="insert" parameterType="models.SellerConfig">
+		insert into seller_config
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			id,
+			<if test="sellerId != null">
+				seller_id,
+			</if> 
+			<if test="buyerAndSellerTime != null">
+				buyer_and_seller_time,
+			</if>
+			<if test="buyerAndShopTime != null">
+				buyer_and_shop_time,
+			</if>
+			<if test="buyerAcountAndShopTime != null">
+				buyer_acount_and_shop_time,
+			</if>
+			<if test="buyerAcountAndItemTime != null">
+				buyer_acount_and_item_time,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			#{id,jdbcType=BIGINT},
+			<if test="sellerId != null">
+				#{sellerId},
+			</if> 
+			<if test="buyerAndSellerTime != null">
+				#{buyerAndSellerTime},
+			</if>
+			<if test="buyerAndShopTime != null">
+				#{buyerAndShopTime},
+			</if>
+			<if test="buyerAcountAndShopTime != null">
+				#{buyerAcountAndShopTime},
+			</if>
+			<if test="buyerAcountAndItemTime != null">
+				#{buyerAcountAndItemTime},
+			</if>
+		</trim>
+	</insert>
+
+</mapper>
+	

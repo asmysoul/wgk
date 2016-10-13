@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.MemberChargeRecordMapper">
+
+	<resultMap id="BaseResultMap" type="models.MemberChargeRecord"></resultMap>
+	<sql id="whereRecord">
+		<where>
+			<if test="userId != null">
+				and user_id = #{userId}
+			</if>
+			<if test="userNick !=null">
+				and u.nick like '%${userNick}%'
+			</if>
+			<if test="createTimeStart !=null">
+				<![CDATA[ and s.create_time>=#{amountStart} ]]>
+			</if>
+			<if test="createTimeEnd !=null">
+				<![CDATA[ and s.create_time<=#{amountEnd} ]]>
+			</if>
+			<if test="amountStart !=null">
+				<![CDATA[ and s.amount>=#{amountStart} ]]>
+			</if>
+			<if test="amountEnd !=null">
+				<![CDATA[ and s.amount<=#{amountEnd} ]]>
+			</if>
+		</where>
+	</sql>
+	
+	<select id="selectList" resultMap="BaseResultMap">
+		select s.*,u.nick userNick from member_charge_record s
+		left join user u on u.id = s.user_id
+		<include refid="whereRecord"/>
+		order by s.create_time desc
+		limit #{startIndex}, #{pageSize}
+	</select>
+	<select id="count" resultType="java.lang.Integer">
+		select count(1) from member_charge_record s left join user u on u.id = s.user_id
+		<include refid="whereRecord"/>
+	</select>
+</mapper>
+	

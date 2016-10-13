@@ -1,0 +1,46 @@
+#{extends 'frame.html' /}
+#{set title:'接单数量统计' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.pagination.css'}" />
+#{/set}
+
+<div class="contentCard">
+	<div class="contentBody" style="">
+		<table class="normTable">
+		<caption>每日接单数统计</caption>
+			<thead >
+				<tr>
+					<td>用户</td>
+					<td>单数</td>
+				</tr>
+			</thead>
+			<tbody id="orderContainer"></tbody>
+		</table>
+		<div id="noMsg"><div class="warnBox"><span class="iconfont">&#xf00b6;</span>没有任务!</div></div>
+		<div class="pagin-btm clearFix"style="display: none;">
+			<div class="pagination"></div>
+		</div>
+		<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+			<div class="maskLayer"></div>
+			<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />		
+		</div>
+	</div>
+</div>
+<input type="hidden" id="takenTime" value="${takenTime}"></input>
+<input type="hidden" id="type" value="${type}"></input>
+<textarea id="orderTemp" class="muban">
+{{#results}}
+	<tr>
+		<td>{{nick}}</td>
+		<td>{{orderNum}}</td>
+	</tr>
+{{/results}}
+</textarea>
+
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/admin/countOfTasks.js'}" type="text/javascript"></script>
+
+#{/set}

@@ -1,0 +1,62 @@
+.long {
+	width: 450px;
+}
+.taskRow{
+	border:solid 1px #E2E2E2;
+	border-radius: 3px;
+	height: 60px;
+	margin-bottom:10px;
+	position: relative;
+	word-wrap:break-word;
+	word-break:break-all;
+}
+.taskRow td{
+	vertical-align: middle;
+	height: 54px;
+}
+/*========================================================*/
+#modifyShopWnd .modalWnd{
+	width:650px;
+	left:46%;
+	top:40%;
+	margin:-150px 0 0 -250px;
+	position: fixed;
+	z-index: 100;
+}
+#bindShopWnd .modalWnd{
+	width:650px;
+	left:46%;
+	top:40%;
+	margin:-150px 0 0 -250px;
+	position: fixed;
+	z-index: 100;
+}
+#bindShopWnd span.error{
+	line-height: 30px;
+}
+#shopInfoShower{
+	padding-left:15px;
+}
+#btnConfirmSave{
+	background-color: #26AA9F;
+	width: 10%;
+	text-align: center;
+}
+#btnConfirmModify{
+	background-color: #26AA9F;
+	width: 10%;
+	text-align: center;
+}
+#btnConfirmSave:hover{
+	background-color: #2BBFB3;
+}
+.linkUrl a{
+	color:gray;
+}
+#dianpuContainer .linkUrl a:hover{
+	text-decoration:underline;
+}
+.normTable tbody tr td em{
+	height:60px;
+	line-height: 60px;   
+}

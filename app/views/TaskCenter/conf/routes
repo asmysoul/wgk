@@ -1,0 +1,762 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# Secure Tips:
+# 1.修改数据的接口一律使用POST，配合前端token，避免CSRF攻击
+# ~~~~
+
+# Home page
+GET     /                                       Application.login
+GET     /index/data                             Application.fetIndexData
+GET     /result                                 UserCenter.result
+
+#---------------------------------------------------------------------------------------------------------------
+# 注册
+GET     /regist                                 Application.regist
+GET	    /checkRegist                            UserAuthentication.checkRegist
+POST    /regist/sendSms                         UserAuthentication.sendSmsValidCode
+POST    /doRegist                               UserAuthentication.doRegist
+POST	/regist/resend							UserAuthentication.resendRegistMail
+GET		/r/c/{activeCode}						UserAuthentication.confirmRegistMail
+# 登录
+GET     /login                                  Application.login
+POST    /doLogin                                UserAuthentication.doLogin
+GET     /logout                                 UserAuthentication.logout
+# 找回密码
+GET     /findPass	                            Application.findPass
+POST    /doFindPass                      		UserAuthentication.doFindPass
+GET     /r/s/{activeCode}                       UserAuthentication.resetPass
+GET     /resetPass                              UserCenter.resetPass
+GET		/captcha								UserAuthentication.captcha
+
+#---------------------------------------------------------------------------------------------------------------
+# 个人中心页面
+GET     /user/?	                                UserCenter.index
+POST    /user/modify                            UserCenter.modifyUser
+GET     /checkPass                              UserCenter.checkPass
+GET     /user/notice/list                       UserCenter.listUserNotice
+# 邀请好友页面
+GET     /user/invite/?	                        UserCenter.invite
+GET     /user/invite/list                       UserCenter.listInvitedUsers
+# 邀请任务奖励
+GET		/user/taskInvite/?						UserCenter.taskInvite
+GET		/user/taskInvite/list					UserCenter.listTaskRewardLog
+# 资金管理页面
+GET	    /user/money               				UserCenter.money
+GET	    /user/withdraw               			UserCenter.withdraw
+# -退款账号
+GET     /user/money/fundAccount                 UserCenter.fundAccount
+POST    /user/money/fundAccount/save            UserCenter.saveFundAccount
+GET     /user/money/fundAccount/get             UserCenter.getFundAccount
+# -押金充值
+POST    /user/money/recharge            		MoneyManage.recharge
+GET     /user/money/dorecharge                  MoneyManage.doRecharge
+#充值流量
+POST    /user/money/rechargeFlow            		MoneyManage.rechargeFlow
+# -提现
+POST    /user/withdraw/apply            		MoneyManage.applyWithdraw
+
+# -（买手）垫付本金提现
+POST    /buyer/withdraw/apply            		MoneyManage.applyBuyerDepositWithdraw
+# -（买手）垫付本金提现：查看任务
+GET     /buyer/withdraw/deposit/listTask       	MoneyManage.listBuyerDepositWithdrawTask
+
+# -资金记录列表
+GET     /user/money/record/list             	MoneyManage.listRecord
+
+# 绑定店铺页面
+GET     /user/shop                              UserCenter.shop
+GET     /user/shop3                              UserCenter.shop3
+#绑定推广页面
+GET     /user/shop2                              UserCenter.shop2
+
+
+GET     /user/shop/{platform}                   UserCenter.listShops
+GET     /user/shop2/{platform}                   UserCenter.listShops2
+GET     /user/shop3/{platform}                   UserCenter.listShops3
+
+GET		/user/shop/detail/{id}					UserCenter.shopDetail
+GET		/user/shop2/detail/{id}					UserCenter.shopDetail2
+GET		/user/shop3/detail/{id}					UserCenter.shopDetail3
+
+
+GET		/user/vipStatus							UserCenter.getVipStatus
+
+POST    /user/shop/add               			UserCenter.addShop
+#绑定推广
+POST    /user/shop/add2               			UserCenter.addShop2
+#绑定浏览店铺
+POST    /user/shop/add3               			UserCenter.addShop3
+
+GET     /user/region                            UserCenter.region
+
+#修改店铺信息任务
+POST	/user/shop/modify						UserCenter.modifyShop
+#修改店铺信息推广
+POST	/user/shop/modify2						UserCenter.modifyShop2
+#修改店铺信息浏览
+POST	/user/shop/modify3						UserCenter.modifyShop3
+
+
+
+
+
+
+# 黑名单设置
+GET	    /user/blacklist               			UserCenter.blacklist
+
+
+# 绑定买号页面
+GET     /buyer/account                          UserCenter.buyerAccount
+# 绑定推广号页面
+GET     /buyer/account2                          UserCenter.buyerAccount2
+# 绑定浏览号页面
+GET     /buyer/account3                          UserCenter.buyerAccount3
+#----------------商家个性化配置------------------
+GET		/seller/sellerConfig					UserCenter.sellerConfig
+POST	/seller/sellerConfig/modifyLimitMessage	UserCenter.modifyLimitMessage
+#-----------------买手个性化配置------------------
+GET		/buyer/buyerConfig						UserCenter.buyerConfig
+POST	/buyer/buyerConfig/modifyBuyerConfig	UserCenter.modifyBuyerConfig
+# 获取（买手）购买账号
+GET     /buyer/account/taskStatus               UserCenter.accountTaskStatus
+GET     /buyer/account/taskStatus3               UserCenter.accountTaskStatus3
+GET     /buyer/account/taskStatus2               UserCenter.accountTaskStatus2
+POST    /buyer/account/add               		UserCenter.saveBuyerAccount
+POST    /buyer/account/add3               		UserCenter.saveBuyerAccount3
+POST    /buyer/account/add2               		UserCenter.saveBuyerAccount2
+GET     /buyer/account/list     	            UserCenter.listBuyerAccounts
+GET     /buyer/account/list3     	            UserCenter.listBuyerAccounts3
+GET     /buyer/account/list2    	            UserCenter.listBuyerAccounts2
+#加载买号-推广号
+GET     /buyer/account/{platform}     	        UserCenter.listBuyerAccounts
+GET     /buyer/account2/{platform}     	        UserCenter.listBuyerAccounts2
+GET     /buyer/account3/{platform}     	        UserCenter.listBuyerAccounts3
+POST	/buyer/account/modifyOrderNumber		UserCenter.modifyOrderNumber
+POST	/buyer/account/modifyOrderNumber2		UserCenter.modifyOrderNumber2
+POST	/buyer/account/modifyOrderNumber3		UserCenter.modifyOrderNumber3
+
+#----------------------------------------------------------------------------
+# 用户相关的公用接口
+*    /user/upload/token               			UserCenter.fetchUploadToken
+*    /user/upload/token2               			UserCenter.fetchUploadToken2
+#	向第三方支付网关发起请求
+GET		/user/pay			               		MoneyManage.pay
+#发布流量任务----------------------------------------------------------
+GET     /seller/publishFlow	                    TaskPublish.publishFlow
+GET     /seller/publishFlow2	                    TaskPublish.publishFlow2
+GET     /seller/saveFlow	                    TaskPublish.saveFlow
+#	接收来自第三方平台交易结果的通知回调
+GET	    /api/pay/notify							Seaport.payNotify
+#---------------------------------------------------------------------------------------------------------------
+# 任务列表
+GET     /tasks	                                TaskCenter.tasks
+#推广列表
+GET     /tasks2	                                TaskCenter.tasks2
+#浏览列表
+GET     /tasks3	                                TaskCenter.tasks3
+
+GET     /task/list	                            TaskCenter.listTasks
+GET     /task/list3	                            TaskCenter.listTasks3
+GET     /task/list2	                            TaskCenter.listTasks2
+GET		/task/count								TaskCenter.platformCount
+GET		/task/count3								TaskCenter.platformCount3
+GET		/task/count2								TaskCenter.platformCount2
+GET     /task/getBuyerAccount	                TaskCenter.listForTakeBuyerAccounts
+GET		/task/deviceCount						TaskCenter.deviceCount
+GET		/task/deviceCount3						TaskCenter.deviceCount3
+GET		/task/deviceCount2						TaskCenter.deviceCount2
+GET		/task/taskTypeCount						TaskCenter.taskTypeCount
+GET		/task/taskTypeCount3						TaskCenter.taskTypeCount3
+GET		/task/taskTypeCount2						TaskCenter.taskTypeCount2
+#----------------------------------------------------------------------------
+# 我的任务-卖家
+GET     /seller/tasks	                        TaskCenter.sellerTasks
+# 我的浏览-卖家
+GET     /seller/tasks3	                        TaskCenter.sellerTasks3
+# 我的推广-卖家
+GET     /seller/tasks2	                        TaskCenter.sellerTasks2
+
+
+
+#	-加速买手做任务
+#POST 	/seller/task/speed						TaskPublish.speedPerform
+GET     /seller/task/list                       TaskCenter.listSellerTasks
+GET     /seller/task/list3                       TaskCenter.listSellerTasks3
+GET     /seller/task/list2                       TaskCenter.listSellerTasks2
+
+GET 	/seller/buyerTask/list 					TaskCenter.listBuyerTasksForSeller
+GET 	/seller/buyerTask/list3 					TaskCenter.listBuyerTasksForSeller3
+GET 	/seller/buyerTask/list2 					TaskCenter.listBuyerTasksForSeller2
+#----------------卖家对账-----------------------
+GET     /seller/task/blanceList                          TaskCenter.findBuyerTaskBalance
+GET     /seller/task/sellerBlance                        TaskCenter.sellerBlance
+GET     /seller/task/exportSellerBlance                  TaskCenter.exportSellerBlance
+# 撤销任务
+GET    /seller/task/cancelData                 	TaskPublish.fetchCancelTaskInfo
+# 撤销浏览
+GET    /seller/task/cancelData3                 	TaskPublish.fetchCancelTaskInfo3
+# 撤销推广
+GET    /seller/task/cancelData2                 	TaskPublish.fetchCancelTaskInfo2
+POST   /seller/task/cancel                     	TaskPublish.cancel
+POST   /seller/task/cancel3                     	TaskPublish.cancel3 
+POST   /seller/task/cancel2                     	TaskPublish.cancel2                   
+
+# （卖家）任务详情
+GET 	/seller/task/{<[0-9]+>id} 				TaskCenter.taskDetail
+# （卖家）浏览详情
+GET 	/seller/task3/{<[0-9]+>id} 				TaskCenter.taskDetail3
+# （卖家）推广详情
+GET 	/seller/task2/{<[0-9]+>id} 				TaskCenter.taskDetail2
+#	-导出子任务
+POST 	/seller/task/export/{<[0-9]+>taskId}/{isSysRefundTask}	TaskCenter.exportBuyerTasks
+
+#-----------------------------------------------
+# 卖家任务处理
+# 	-进入审核中的任务页面
+GET     /seller/tasks/examine/{status}		    TaskCenter.examine
+GET     /seller/tasks/examine2/{status}		    TaskCenter.examine2
+
+# 	-进入待处理任务页面
+GET 	/seller/tasks/sendGoods/{platform}		TaskCenter.sendGoods
+# 	-进入待处理推广页面
+GET		/seller/tasks/sendSHENHE/{platform}		TaskCenter.sendSHENHE
+#	发货
+GET 	/seller/task/listWaitSendGoods			TaskCenter.listWaitSendGoods
+GET 	/seller/task/listWaitSendGoods2			TaskCenter.listWaitSendGoods2
+
+#发货
+POST    /seller/task/sendGood                   TaskCenter.sendGood
+#审核推广
+POST    /seller/task/sendGood2                   TaskCenter.sendGood2
+
+POST	/admin/seller/task/sendGood				TaskCenter.sendGood
+POST	/admin/seller/task/sendGood3				TaskCenter.sendGood3
+
+#	退款
+GET 	/seller/tasks/refund/{platform}			TaskCenter.refund
+GET 	/seller/tasks2/refund/{platform}			TaskCenter.refund2
+
+GET 	/seller/task/listRefund					TaskCenter.listSellerRefund
+GET 	/seller/task/listRefund2					TaskCenter.listSellerRefund2
+
+GET		/seller/task/count						TaskCenter.sellerTaskCount
+GET		/seller/task/count2						TaskCenter.sellerTaskCount2
+GET		/seller/task/selfCount					TaskCenter.sellerSelfCount
+GET		/seller/task/selfCount2					TaskCenter.sellerSelfCount2
+POST    /seller/task/confirmRefund              TaskCenter.confirmRefund
+POST    /seller/task/confirmRefund2              TaskCenter.confirmRefund2
+POST    /seller/task/confirmRefund3              TaskCenter.confirmRefund3
+#平台退款
+GET 	/seller/tasks/sysRefund					TaskCenter.sysRefund
+GET 	/seller/tasks/sysRefund2					TaskCenter.sysRefund2
+POST    /seller/task/confirmSysRefund           TaskCenter.confirmSysRefund
+POST    /seller/task/confirmSysRefund2           TaskCenter.confirmSysRefund2
+
+#-流量处理接口---------------------------------------------------------------------------
+GET 	/flow/batchFlowFinished				Flow.batchFlowFinished
+GET 	/flow/editFlowFinished				Flow.editFlowFinished
+GET 	/flow/login							Flow.login
+GET 	/flow/flowFinishedRecord			Flow.flowFinishedRecord
+GET 	/flow/flowNotFinishedRecord			Flow.editNotFlowFinished
+GET 	/flow/listTotalCount				Flow.totalTimesCount
+GET 	/flow/flowRecord					Flow.flowRecord
+GET 	/flow/listFlowRecord				Flow.listFlowRecord
+GET 	/flow/process						Flow.flowProcessRecord
+GET 	/flow/clickCount					Flow.clickCount
+GET 	/seller/findFlow					TaskCenter.findFlow
+GET 	/seller/listSellerFlow				TaskCenter.listSellerFlow
+POST 	/flow/doLogin						Flow.doLogin
+# 我的任务-买手
+GET     /buyer/tasks	                        TaskCenter.buyerTasks
+#我的推广-买手
+GET     /buyer/tasks2	                        TaskCenter.buyerTasks2
+#我的浏览-买手
+GET     /buyer/tasks3	                        TaskCenter.buyerTasks3
+GET     /buyer/task/list                        TaskCenter.listBuyerTasks
+GET     /buyer/task/list3                        TaskCenter.listBuyerTasks3
+GET     /buyer/task/list2                        TaskCenter.listBuyerTasks2
+GET		/buyer/tasks/count						TaskCenter.buyerTaskCounts
+#平台退款
+GET 	/buyer/tasks/listRefund					TaskCenter.ListBuyerRefund
+
+# （买手）任务详情
+GET 	/buyer/task/{<[0-9]+>id} 				TaskCenter.buyerTaskDetail
+GET 	/buyer/task2/{<[0-9]+>id} 				TaskCenter.buyerTaskDetail2
+GET 	/buyer/task3/{<[0-9]+>id} 				TaskCenter.buyerTaskDetail3
+# （买手）接手任务
+POST    /task/take			                    TaskExecutor.take
+# （买手）接手浏览
+POST    /task/take3			                    TaskExecutor.take3
+# （买手）接手推广
+POST    /task/take2			                    TaskExecutor.take2
+# （买手）撤销任务
+POST    /buyer/task/cancel                      TaskExecutor.cancelBuyerTask
+# （买手）撤销浏览
+POST    /buyer/task/cancel3                      TaskExecutor.cancelBuyerTask3
+# （买手）撤销推广
+POST    /buyer/task/cancel2                      TaskExecutor.cancelBuyerTask2
+
+# （买手）核实“平台返款”任务退款金额页面
+GET 	/buyer/tasks/sysRefund	 				TaskExecutor.verifySysRefund
+GET 	/buyer/tasks/sysRefund2	 				TaskExecutor.verifySysRefund2
+
+# （买手）核实“平台返款”任务退款金额：确认、驳回
+POST    /buyer/task/sysRefund/confirm           TaskExecutor.confirmSysRefund
+POST	/admin/buyer/task/sysRefund/confirm		TaskExecutor.confirmSysRefund
+POST	/admin/buyer/task/sysRefund/confirm3		TaskExecutor.confirmSysRefund3
+# （买手）撤销已核实过的“平台返款”任务
+POST    /buyer/task/sysRefund/cancel            TaskExecutor.cancelSysRefund
+#---------------------------------------------------------------------------------------------------------------
+# 卖家发布任务
+GET     /task/publish	                        TaskPublish.publish
+# 卖家发布推广
+GET     /task/publish2	                        TaskPublish.publish2
+# 卖家发布浏览单
+GET     /task/publish3	                        TaskPublish.publish3
+
+# -获取商品详情
+GET     /task/item	                        	TaskPublish.getItemInfo
+# -获取商品详情
+GET     /task/item3	                        	TaskPublish.getItemInfo3
+# -创建任务
+POST    /task/save		                        TaskPublish.saveTask
+# -创建浏览
+POST    /task/save3		                        TaskPublish.saveTask3
+# -创建推广
+POST    /task/save2		                        TaskPublish.saveTask2
+# -确认付款--任务
+POST    /task/publish/confirmPay				TaskPublish.confirmPayment
+# -确认付款--浏览
+POST    /task/publish/confirmPay3				TaskPublish.confirmPayment3
+# -确认付款--推广
+POST    /task/publish/confirmPay2				TaskPublish.confirmPayment2
+
+GET     /task/item/imgs			                TaskPublish.getItemImages
+POST    /task/item/imgs/upload                  TaskPublish.uploadItemImages
+
+# 编辑待支付任务
+GET     /task/publish/edit/{<[0-9]+>id}         TaskPublish.edit
+# 编辑待支付浏览
+GET     /task/publish/edit3/{<[0-9]+>id}         TaskPublish.edit3
+# 编辑待支付推广
+GET     /task/publish/edit2/{<[0-9]+>id}         TaskPublish.edit2
+
+# 重新发布任务（复制旧任务的数据作为新任务来发布）
+GET     /task/republish/{<[0-9]+>id}	        TaskPublish.republish
+# 重新发布浏览（复制旧浏览的数据作为新任务来发布）
+GET     /task/republish3/{<[0-9]+>id}	        TaskPublish.republish3
+# 重新发布任务（复制旧任务的数据作为新任务来发布）
+GET     /task/republish2/{<[0-9]+>id}	        TaskPublish.republish2
+
+#---------------------------------------------------------------------------------------------------------------
+# （买手）做任务
+GET 	/buyer/task/perform/{<[0-9]+>id}		TaskExecutor.perform
+# （买手）做推广
+GET 	/buyer/task/perform2/{<[0-9]+>id}		TaskExecutor.perform2
+# （买手）做浏览
+GET 	/buyer/task/perform3/{<[0-9]+>id}		TaskExecutor.perform3
+
+GET 	/buyer/task/perform/checkItem			TaskExecutor.checkItem
+GET 	/buyer/task/perform/checkItem3			TaskExecutor.checkItem3
+
+GET 	/buyer/task/buyerAccount				TaskExecutor.getBuyerAccountForPerform
+GET 	/buyer/task/buyerAccount3				TaskExecutor.getBuyerAccountForPerform3
+
+GET 	/buyer/task/buyerAccount2				TaskExecutor.getBuyerAccountForPerform2
+POST    /buyer/task/saveStep                	TaskExecutor.saveStep
+POST    /buyer/task/saveStep3                	TaskExecutor.saveStep3
+POST    /buyer/task/saveStep2                	TaskExecutor.saveStep2
+GET		/buyer/task/taskDetil					TaskExecutor.getTaskRequest
+GET		/buyer/task/taskDetil3					TaskExecutor.getTaskRequest3
+GET		/buyer/task/taskDetil2				TaskExecutor.getTaskRequest2
+
+#  (买手)确认收货并好评
+GET 	/buyer/task/confirmGoods/{platform}		TaskExecutor.confirmRecv
+#确认收货
+GET 	/buyer/task2/confirmGoods/{platform}		TaskExecutor.confirmRecv2
+
+GET 	/buyer/task/confirmGoods/{platform}/{id}	TaskExecutor.confirmRecv
+GET 	/buyer/task2/confirmGoods/{platform}/{id}	TaskExecutor.confirmRecv2
+POST 	/buyer/task/confirmRecvGoods			TaskExecutor.confirmRecvGoods
+
+POST 	/buyer/task/confirmRecvGoods2			TaskExecutor.confirmRecvGoods2
+
+#  (买手)确认商家已经退款
+GET 	/buyer/task/verifyRefund 				TaskExecutor.verifyRefund
+GET 	/buyer/task/verifyRefund2 				TaskExecutor.verifyRefund2
+
+POST    /buyer/task/confirmRefund               TaskExecutor.confirmRefund
+POST    /buyer/task/confirmRefund2               TaskExecutor.confirmRefund2
+POST    /admin/buyer/task/confirmRefund         TaskExecutor.confirmRefund
+POST    /admin/buyer/task/confirmRefund3         TaskExecutor.confirmRefund3
+
+
+
+#GET 	/buyer/demo								TaskExecutor.demo
+
+#---------------------------------------------------------------------------------------------------------------
+# 会员
+GET 	/user/member							UserCenter.member
+POST    /user/member/charge			            UserCenter.memberCharge
+
+POST 	/buyer/pulse							UserCenter.pulse
+#---------------------------------------------------------------------------------------------------------------
+# 公告
+GET 	/notice/?								NoticeCenter.list
+GET 	/notice/list			            	NoticeCenter.listNotices
+GET 	/notice/{<[0-9]+>id}					NoticeCenter.view
+GET		/notice/topNotice						NoticeCenter.topNotice
+#---------------------------------------------------------------------------------------------------------------
+# 管理员登录
+GET		/admin/login							Admin.login
+POST	/admin/doLogin							AdminAuthentication.doLogin
+GET		/admin/logout							AdminAuthentication.logout
+#--------------------发包裹--------------------------------------------------------
+GET     /admin/fabaoguo/list	                    Admin.listFaBaoGuoOrders
+GET     /admin/fabaoguo/createExpressNo	                    Admin.printOrders
+GET     /admin/fabaoguo/getExpressNo	                    Admin.getExpreeNo
+POST     /admin/fabaoguo/resetOrders	            Admin.resetFaBaoGuoExpressOrder
+POST     /admin/fabaoguo/exportOrders	            Admin.exportFaBaoGuoOrders
+POST     /admin/fabaoguo/uploadOrders	            Admin.uploadFaBaoGuoOrderExpress
+#--------------------------------------------------
+GET     /admin/findSysCount	                    Admin.findSysCount
+GET     /admin/listSysCount	                    Admin.listSysCount
+#---------------------------------------------------------------------------
+GET     /admin/flow/clickCount	                    Admin.clickCount
+GET     /admin/flow/listClickCount	                    Admin.listClickCount
+#系统规则配置
+GET     /admin/sysConfig	                   	    Admin.sysConfig
+GET     /admin/listSysConfig	                    Admin.listSysConfig
+POST     /admin/updateSysConfig	                    Admin.updateSysConfig
+GET     /admin/sysConfig/findConfigById	                    Admin.findConfigById
+# 任务列表
+GET     /admin/task	                            TaskCenter.tasks
+# 浏览列表
+GET     /admin/task3	                            TaskCenter.tasks3
+# 推广列表
+GET     /admin/task2	                            TaskCenter.tasks2
+
+GET     /admin/task/list	                    TaskCenter.listTasks
+GET     /admin/task/list3	                    TaskCenter.listTasks3
+GET     /admin/task/list2	                    TaskCenter.listTasks2
+
+GET		/admin/task/count						TaskCenter.platformCount
+GET		/admin/task/count3						TaskCenter.platformCount3
+GET		/admin/task/count2						TaskCenter.platformCount2
+
+GET		/admin/task/deviceCount					TaskCenter.deviceCount
+GET		/admin/task/deviceCount3					TaskCenter.deviceCount3
+GET		/admin/task/deviceCount2					TaskCenter.deviceCount2
+
+GET		/admin/task/taskTypeCount				TaskCenter.taskTypeCount
+GET		/admin/task/taskTypeCount3				TaskCenter.taskTypeCount3
+GET		/admin/task/taskTypeCount2				TaskCenter.taskTypeCount2
+# 撤销任务
+GET    /admin/task/cancelData                 	TaskPublish.fetchCancelTaskInfo
+# 撤销浏览
+GET    /admin/task/cancelData3                 	TaskPublish.fetchCancelTaskInfo3
+# 撤销推广
+GET    /admin/task/cancelData2                 	TaskPublish.fetchCancelTaskInfo2
+POST   /admin/task/cancel                     	TaskPublish.cancel 
+POST   /admin/task/cancel3                     	TaskPublish.cancel3 
+POST   /admin/task/cancel2                     	TaskPublish.cancel2         
+#------------------------------------------------------------
+GET     /admin/findNewSellerPublishNum	                    Admin.findNewSellerPublishNum
+GET     /admin/findNewBuyerTakenNum	                    Admin.findNewBuyerTakenNum
+GET     /admin/listCountOfTasks	                    Admin.listCountOfTasks
+GET     /admin/countOfTasks	                    Admin.countOfTasks
+# 审核任务
+GET		/admin/?								Admin.index
+# 审核浏览
+GET		/admin3/?								Admin.index3
+# 审核推广
+GET		/admin2/?								Admin.index2
+
+GET     /admin/taskDetail                       Admin.taskDetail
+GET     /admin/taskDetail3                       Admin.taskDetail3
+GET     /admin/taskDetail2                       Admin.taskDetail2
+
+POST    /admin/sellerTask/exmine                Admin.examineTask
+POST    /admin/sellerTask/exmine3                Admin.examineTask3
+POST    /admin/sellerTask/exmine2                Admin.examineTask2
+
+GET     /admin/sellerTask/exmine/list           Admin.listEaxmineTask
+GET     /admin/sellerTask/exmine/list3           Admin.listEaxmineTask3
+GET     /admin/sellerTask/exmine/list2           Admin.listEaxmineTask2
+
+POST	/admin/sellerTask/modifyTaskRequest		Admin.modifyTaskRequest  
+POST	/admin/sellerTask/modifyTaskRequest3		Admin.modifyTaskRequest3    
+# 审核买号
+GET 	/admin/buyerAudit						Admin.buyerAudit
+POST	/admin/buyerAccount/exmine				Admin.examineBuyerAccount
+POST	/admin/buyerAccount/exmine3				Admin.examineBuyerAccount3
+POST	/admin/buyerAccount/exmine2				Admin.examineBuyerAccount2
+GET     /admin/buyerAccount/list                controllers.admins.UserManage.listBuyerAccountWaitEaxmine
+# 快递单处理
+GET 	/admin/buyerTask/updateExpress			Admin.updateExpressNo
+GET 	/admin/buyerTask/updateExpress3			Admin.updateExpressNo3
+GET 	/admin/express							Admin.express
+GET 	/admin/express/listOrders				Admin.listOrders
+#	-导出订单
+POST 	/admin/express/exportOrders				Admin.exportOrders
+#	-重置订单状态到导出前
+POST 	/admin/express/reset					Admin.resetExpressOrder
+#	-导入订单的快递单号
+POST 	/admin/express/upload					Admin.uploadOrderExpress
+#--------商家账单------------------------
+GET     /admin/task/blanceList                          TaskCenter.findBuyerTaskBalance
+GET     /admin/task/sellerBlance                        TaskCenter.sellerBlance
+GET     /admin/task/exportSellerBlance                  TaskCenter.exportSellerBlance
+
+#本金充值
+GET 	/admin/user/rechargeDeposit 				Admin.rechargeDeposit
+# 提现处理
+#	提现页面
+GET 	/admin/handleWithdrawal 				Admin.handleWithdrawal
+GET     /admin/withdraw/list                    MoneyManage.listWithdrawRecord
+GET     /admin/withdraw/account                 MoneyManage.viewWithdrawFundAccount
+POST    /admin/withdraw/confirm                 MoneyManage.confirmWithdraw
+GET 	/admin/resetWithdrawal 				    Admin.resetStatusUserWithdrawRecord
+# -（买手）垫付本金提现：查看任务
+GET     /withdraw/listBuyerTask       	MoneyManage.listBuyerDepositWithdrawTask
+GET     /admin/withdraw/listBuyerTask       	MoneyManage.listBuyerDepositWithdrawTask
+# -(买手) 输出所有申请垫付本金返款（未完成转账部分）
+GET		/admin/withdraw/exportDeposit			MoneyManage.exportAllUntradeBuyerDeposit
+#   后台退款信息导入
+POST   	/admin/withdraw/sysRefund/uploadAllUntradeBuyerDeposit      MoneyManage.uploadAllUntradeBuyerDeposit
+#----------------------------------------------------------------------------
+# 用户管理
+GET 	/admin/? 								Admin.buyer
+GET 	/admin/?								Admin.seller
+GET 	/admin/user/list 						controllers.admins.UserManage.list
+GET		/admin/user/userMsg/?					controllers.admins.UserManage.userMsg
+POST	/admin/user/recharge/?					controllers.admins.UserManage.doRecharge
+POST	/admin/seller/ingotToPledge				controllers.admins.UserManage.ingotToPledge
+POST	/admin/user/edit/?						controllers.admins.UserManage.edit
+POST	/admin/user/editDockingMessage			controllers.admins.UserManage.editDockingMessage
+POST	/admin/user/cancelDocking/?				controllers.admins.UserManage.cancelDocking
+POST	/admin/user/memberDelay					controllers.admins.UserManage.memberDelay				
+GET		/admin/user/dockingMessage/?			controllers.admins.UserManage.userMsg
+GET		/admin/user/memberDueTime				controllers.admins.UserManage.memberDueTime
+GET		/admin/user/balance/?					controllers.admins.UserManage.balance
+POST	/admin/user/paypass/reset/?				controllers.admins.UserManage.resetPayPassword
+POST	/admin/user/cleanIngotCache				controllers.admins.UserManage.cleanIngotCache
+GET		/admin/seller/limitMessage				UserCenter.limitMessage
+POST	/admin/seller/modifyLimitMessage		UserCenter.modifyLimitMessage
+# 买号管理
+GET    /admin/account                           Admin.buyerAccount
+# 浏览号管理
+GET    /admin/account3                           Admin.buyerAccount3
+# 推广号管理
+GET    /admin/account2                           Admin.buyerAccount2
+GET    /admin/listAllAccount                    controllers.admins.UserManage.listBuyerAccount
+GET    /admin/listAllAccount3                    controllers.admins.UserManage.listBuyerAccount3
+GET    /admin/listAllAccount2                    controllers.admins.UserManage.listBuyerAccount2
+#修改买号资料
+POST	/admin/buyerAccount/modify				controllers.admins.UserManage.modifyBuyerAccount
+#修改推广号资料
+POST	/admin/buyerAccount/modify2				controllers.admins.UserManage.modifyBuyerAccount2
+#修改浏览号资料
+POST	/admin/buyerAccount/modify3				controllers.admins.UserManage.modifyBuyerAccount3
+
+#每日解读那任务统计
+GET   /admin/express/listExpressCount						Admin.listExpressCount
+GET   /admin/expressCount						Admin.expressCount
+GET   /admin/searchExpressTotal						Admin.searchExpressTotal
+#-------------------------------------------------------------------------------------------
+# 邀请奖励统计
+GET    /admin/takeTaskCount                     Admin.takeTaskCount
+GET    /admin/listTakeCount                     Admin.listTakeCount
+#商家放单时间统计
+GET	   /admin/sellerPutTime						Admin.sellerPutTime
+GET	   /admin/sellerPutTime/list				Admin.sellerPutTimeList
+GET	   /admin/sellerPutTime/export				Admin.sellerPutTimeExport
+#买手接单记录统计导出
+GET		/admin/buyerTakeTask					Admin.buyerTakeTask
+GET		/admin/buyerTakeTask/list				Admin.buyerTakeTaskList
+GET		/admin/buyerTakeTask/export				Admin.buyerTakeTaskExport
+# 店铺管理
+GET   /admin/shop                               Admin.shop
+GET   /admin/listShop                           controllers.admins.UserManage.listShop
+GET   /admin/updateShop						    Admin.updateShop
+# 公告管理
+GET 	/admin/notice 							Admin.notice
+GET 	/admin/notice/list 						controllers.admins.NoticeManage.list
+GET 	/admin/notice/{<[0-9]+>id}  			NoticeCenter.view
+GET 	/admin/notice/edit			            controllers.admins.NoticeManage.edit
+GET 	/admin/notice/add						controllers.admins.NoticeManage.edit
+POST 	/admin/notice/save 						controllers.admins.NoticeManage.save
+GET     /admin/upload/token                     controllers.admins.NoticeManage.fetchUploadToken
+POST    /admin/notice/display                   controllers.admins.NoticeManage.isDisplay
+POST	/admin/notice/top						controllers.admins.NoticeManage.topShow
+# 资金管理
+GET 	/admin/money 							Admin.money
+GET 	/admin/money/list 						controllers.MoneyManage.listAll
+
+#	-导出卖家押金记录
+GET	  /admin/exportPledge						Admin.exportPledge
+
+# 资金账户管理
+GET    /admin/fund/account                      Admin.fundAccount
+GET    /admin/fund/account/list                 controllers.admins.UserManage.listFundAccount
+POST   /admin/fund/account/save                 controllers.admins.UserManage.saveFundAccount
+
+# 任务管理
+GET   /admin/listTask                           Admin.listSellerTask
+# 浏览管理
+GET   /admin/listTask3                           Admin.listSellerTask3
+# 推广管理
+GET   /admin/listTask2                           Admin.listSellerTask2
+GET   /admin/task/{<[0-9]+>id}                  TaskCenter.taskDetail
+GET   /admin/task3/{<[0-9]+>id}                  TaskCenter.taskDetail3
+GET   /admin/task2/{<[0-9]+>id}                  TaskCenter.taskDetail2
+GET   /admin/buyerTask/list 					TaskCenter.listBuyerTasksForSeller
+GET   /admin/buyerTask/list3 					TaskCenter.listBuyerTasksForSeller3
+
+GET   /admin/buyerTask/{<[0-9]+>id} 			TaskCenter.buyerTaskDetail
+POST  /admin/buyerTask/confirmRefund            TaskCenter.confirmRefund
+GET	  /admin/task/getTaskDetail					TaskCenter.getTaskDetail
+GET	  /admin/task/getTaskDetail3					TaskCenter.getTaskDetail3
+GET	  /admin/task/getTaskDetail2					TaskCenter.getTaskDetail2
+POST  /admin/task/modifyTask					TaskCenter.modifyTask
+POST  /admin/task/modifyTask3					TaskCenter.modifyTask3
+POST  /admin/task/modifyTask2					TaskCenter.modifyTask2
+#	-导出子任务
+POST  /admin/task/export/{<[0-9]+>taskId}/{isSysRefundTask}		TaskCenter.exportBuyerTasks
+GET   /admin/exportTask                          Admin.exportTasks
+GET   /admin/exportTask3                          Admin.exportTasks3
+GET   /admin/exportTask2                          Admin.exportTasks2
+
+#	-导出任务费用明细
+GET  /admin/task/cost/{message}				controllers.admins.TaskManage.exportCostDetails
+
+# 买手任务管理
+GET   /admin/buyerTask/? 						Admin.buyerTasks
+GET   /admin/buyerTask/listAll? 				controllers.admins.TaskManage.listBuyerTask
+GET   /admin/buyerTask/listAll3? 				controllers.admins.TaskManage.listBuyerTask3
+GET   /admin/buyerTask/listAll2? 				controllers.admins.TaskManage.listBuyerTask2
+GET	  /admin/buyerTask/cancel/{id}				controllers.admins.TaskManage.cancelBuyerTask
+GET	  /admin/buyerTask/cancel3/{id}				controllers.admins.TaskManage.cancelBuyerTask3
+GET	  /admin/buyerTask/cancel2/{id}				controllers.admins.TaskManage.cancelBuyerTask2							
+
+# 超级管理员或者管理员权限用户修改各类管理员权限用户信息
+GET   /admin/adminAccount						Admin.adminAccount
+GET   /admin/adminAccount/adminList				controllers.admins.AdminManage.adminList
+GET	  /admin/adminAccount/adminMsg/?			controllers.admins.AdminManage.adminMsg
+POST  /admin/adminAccount/adminModify			controllers.admins.AdminManage.adminModify
+GET	  /admin/adminAccount/adminInsert			controllers.admins.AdminManage.adminInsert
+
+# 超级管理员查看管理员操作记录
+GET	  /admin/adminOperatorLog					Admin.adminOperatorLog
+GET	  /admin/adminOperatorLog/list				controllers.admins.AdminManage.adminOperatorLogList
+#流量充值
+GET	  /admin/user/rechargeFlow					Admin.rechargeFlow
+#超时任务管理
+GET	  /admin/buyerTask/listAllTimeout			controllers.admins.TaskManage.listBuyerTimeoutTask
+#超时浏览管理
+GET	  /admin/buyerTask/listAllTimeout3			controllers.admins.TaskManage.listBuyerTimeoutTask3
+#超时推广管理
+GET	  /admin/buyerTask/listAllTimeout2			controllers.admins.TaskManage.listBuyerTimeoutTask2
+
+POST  /admin/buyerTask/processTimeOut			TaskCenter.confirmRefund
+POST  /admin/buyerTask/processTimeOut3			TaskCenter.confirmRefund3
+
+POST  /admin/buyerTask/processTimeOutPlat		controllers.admins.TaskManage.processTimeOutPlatById
+POST  /admin/buyerTask/processTimeOutPlat3		controllers.admins.TaskManage.processTimeOutPlatById3
+
+GET   /admin/buyerTask/listAllTimeoutCount		controllers.admins.TaskManage.listBuyerTimeoutTaskCount
+GET   /admin/buyerTask/listAllTimeoutCount3		controllers.admins.TaskManage.listBuyerTimeoutTaskCount3
+GET   /admin/buyerTask/listAllTimeoutCount2		controllers.admins.TaskManage.listBuyerTimeoutTaskCount2
+POST  /admin/task/confirmRecvGoods				TaskExecutor.confirmRecvGoods
+POST  /admin/task/confirmRecvGoods3				TaskExecutor.confirmRecvGoods3
+
+#财务对账系统
+GET		/admin/financeReconciliation			Admin.financeReconciliation
+GET		/admin/financeReconciliation/list		Admin.listReconciliation
+GET		/admin/financeReconciliation/adminAmountList		Admin.adminAmountList
+GET		/admin/financeReconciliation/payAmountList			Admin.platAmountList
+#	-导出48小时未退款的任务
+GET		/admin/buyerTask/refund/exportOverdue	controllers.admins.TaskManage.exportRefundOverdueBuyerTasks
+
+# 活动管理
+GET     /admin/activity/?	                    Admin.activity
+POST    /admin/activity/save	                controllers.admins.MarketingManage.saveActivity
+GET     /admin/activity/list	                controllers.admins.MarketingManage.listActivity
+POST    /admin/activity/rule/save	            controllers.admins.MarketingManage.saveInvateRegActivityRule
+# 邀请注册管理
+GET     /admin/invite/?	                        Admin.invite
+GET     /admin/invite/list                      controllers.admins.MarketingManage.listInvitedUsers
+#邀请任务奖励管理
+GET     /admin/taskInvite/?	                    Admin.taskInvite
+GET     /admin/taskInvite/list                  controllers.admins.MarketingManage.listTaskRewardLog
+
+#-----------------------------------------------
+#	-手动触发待扣款转账的“平台返款”型买手任务
+*   /admin/buyerTask/sysRefund/process          controllers.admins.TaskManage.confirmSysRefundBuyerTask
+GET		/admin/adminRegister							Admin.regist
+POST	/admin/doRegister							Admin.doRegist
+# 临时数据接口
+*	  /admin/money/cc		 					MoneyManage.correct
+*	  /admin/sms/code			 				Admin.viewSmsValidCode
+
+# 修改用户绑定银行卡地址，用','分隔开
+GET   /admin/process/updateFundAccountAddress     controllers.admins.TaskManage.updateFundAccountAddress
+# -清理缓存
+*	  /admin/cache/clear/{key}/?				Admin.clearUserCache
+*	  /admin/cache/clear/?						Admin.clearUserCache
+#临时接口
+GET   /admin/delayMember                        Admin.delayMember
+#管理后台获取地区信息
+GET    /admin/region                            UserCenter.region
+#----------------------------------------------------------------------------
+#流量记录管理
+#------------------------------------------------------------------------------------------------------------
+#流量记录管理页面
+GET    /admin/traffic                            Admin.trafficRecord
+GET    /admin/getSellerIdByTask                  Admin.getSellerIdByTask
+GET    /admin/traffic/list                       Admin.listTrafficRecord
+POST   /admin/traffic/addTraffic                 Admin.addTrafficRecord
+GET   /admin/traffic/findTraffic                 Admin.findTrafficById
+GET   /admin/traffic/modifyTraffic                 Admin.modifyTraffic
+#临时接口
+GET    /admin/updateTime                            Admin.updateTrafficTime
+GET    /admin/updateExpress                            Admin.updateExpress
+#获取流量返回次数接口/admin/getTimes?time='2015-02-03'
+GET    /admin/getTimes                          Admin.getReturnTimesByEndTime
+#---------------------------------------------------------------------------------
+# Mock uesr login for dev or debug
+GET		/admin/getcode/{type}/?					controllers.base.MockController.getAuthcode
+# Mock task
+GET		/admin/setBuyerTask/{<[0-9]+>id}?		controllers.base.MockController.setPerformingBuyerTask
+# Mock Tenpay
+*		/mock/tenpay/verifyNofifyId/?			controllers.base.MockController.simpleVerifyNotifyId
+
+#---------------------------------------------------------------------------------------------------------------
+#快递单处理
+GET   	/express/login                           ExpressPrint.login
+POST	/express/doLogin						 ExpressPrint.doLogin
+GET   	/express/expressPrinting                 ExpressPrint.expressPrinting
+GET   	/express/expressPrintFinish              ExpressPrint.expressPrintFinish
+GET   	/express/waitExpressPrint                ExpressPrint.waitExpressPrint
+GET   	/express/orderCount                		 ExpressPrint.orderCount
+# 快递单处理
+GET 	/express/listOrders						 ExpressPrint.listOrders
+#	-重置订单状态到导出前
+POST 	/express/reset							 ExpressPrint.resetExpressOrder
+POST 	/express/resetToPrinting				 ExpressPrint.resetExpressOrderPrinting
+#准备打印订单
+GET 	/express/preparePrintExpress			 ExpressPrint.preparePrintExpress
+#确定打印订单
+GET 	/express/printOrderFinsh			 	 ExpressPrint.printOrderFinsh
+#修改运单号
+GET 	/express/updateById			 	 		 ExpressPrint.updateById
+#---------------------------------------------------------------------------------------------------------------
+# favicon requests
+GET     /favicon.ico                            staticFile:/public/images/favicon.ico
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+GET 	/doc/protocol							staticFile:/public/html/protocol.html
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

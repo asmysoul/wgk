@@ -1,0 +1,261 @@
+[2016-08-08 08:53:29,747] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-08-08 08:53:30,853] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-08-08 08:53:30,984] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-08-08 08:53:50,355] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-08-08 08:53:50,518] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-08-08 08:53:50,628] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10a9isr8udu1goh6vz|35f784d7, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10a9isr8udu1goh6vz|35f784d7, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-08-08 08:53:50,673] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-08-08 08:53:50,724] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-08-08 08:53:51,595] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-08-08 08:53:51,857] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-08 08:53:55,904] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-08 08:56:30,336] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@712f111o6
+Internal Server Error (500) for request GET /admin/timeout2
+
+Template compilation error (In /app/views/Admin/timeout2.html around line 209)
+The template /app/views/Admin/timeout2.html does not compile : expecting ''', found '\n' 
+
+play.exceptions.TemplateCompilationException: expecting ''', found '\n' 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:186)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:224)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.timeout2(Admin.java:1765)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-08-08 08:56:52,159] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@712f111o7
+Internal Server Error (500) for request GET /admin/timeout2
+
+Template compilation error (In /app/views/Admin/timeout2.html around line 209)
+The template /app/views/Admin/timeout2.html does not compile : expecting ''', found '\n' 
+
+play.exceptions.TemplateCompilationException: expecting ''', found '\n' 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:186)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:224)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.timeout2(Admin.java:1765)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-08-08 08:58:32,569] INFO  [play-thread-1] com.aton.util.FaBaoGuoUtil.getInfo(FaBaoGuoUtil.java:85) - execute is faild!!
+[2016-08-08 08:58:32,763] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@712f111o8
+Internal Server Error (500) for request GET /admin/expressCount
+
+Template execution error (In /app/views/Admin/expressCount.html around line 22)
+Execution error occured in template /app/views/Admin/expressCount.html. Exception raised was NullPointerException : Cannot get property 'user_score' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'user_score' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.expressCount(Admin.java:2064)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'user_score' on null object
+	at /app/views/Admin/expressCount.html.(line:22)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-08-08 08:58:34,912] INFO  [play-thread-1] com.aton.util.FaBaoGuoUtil.getInfo(FaBaoGuoUtil.java:85) - execute is faild!!
+[2016-08-08 08:58:35,019] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@712f111o9
+Internal Server Error (500) for request GET /admin/expressCount
+
+Template execution error (In /app/views/Admin/expressCount.html around line 22)
+Execution error occured in template /app/views/Admin/expressCount.html. Exception raised was NullPointerException : Cannot get property 'user_score' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'user_score' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.expressCount(Admin.java:2064)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'user_score' on null object
+	at /app/views/Admin/expressCount.html.(line:22)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-08-08 08:58:39,489] INFO  [play-thread-1] com.aton.util.FaBaoGuoUtil.getInfo(FaBaoGuoUtil.java:85) - execute is faild!!
+[2016-08-08 08:58:39,584] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@712f111oa
+Internal Server Error (500) for request GET /admin/expressCount
+
+Template execution error (In /app/views/Admin/expressCount.html around line 22)
+Execution error occured in template /app/views/Admin/expressCount.html. Exception raised was NullPointerException : Cannot get property 'user_score' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'user_score' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.expressCount(Admin.java:2064)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'user_score' on null object
+	at /app/views/Admin/expressCount.html.(line:22)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-08-08 09:03:51,651] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-08 09:03:51,656] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-08 09:03:54,662] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-08 09:03:54,666] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-08 09:03:54,701] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-08 09:03:56,715] INFO  [jobs-thread-1] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-08 09:03:56,718] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-08 09:04:40,468] INFO  [play-thread-1] com.aton.util.FaBaoGuoUtil.getInfo(FaBaoGuoUtil.java:85) - execute is faild!!
+[2016-08-08 09:04:40,566] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@712f111ob
+Internal Server Error (500) for request GET /admin/expressCount
+
+Template execution error (In /app/views/Admin/expressCount.html around line 22)
+Execution error occured in template /app/views/Admin/expressCount.html. Exception raised was NullPointerException : Cannot get property 'user_score' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'user_score' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.expressCount(Admin.java:2064)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'user_score' on null object
+	at /app/views/Admin/expressCount.html.(line:22)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-08-08 09:13:51,724] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-08 09:13:51,724] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-08 09:13:54,713] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-08 09:13:54,713] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-08 09:13:56,790] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-08 09:13:58,801] INFO  [jobs-thread-4] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-08 09:13:58,817] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-08 09:23:51,809] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-08 09:23:51,809] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-08 09:23:54,682] INFO  [jobs-thread-3] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-08-08 09:23:54,807] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-08 09:23:54,823] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-08 09:23:58,892] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-08 09:24:00,921] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-08 09:24:00,936] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-08 09:33:53,207] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-08 09:33:53,207] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-08 09:33:56,187] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-08 09:33:56,203] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-08 09:34:02,320] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-08 09:34:04,349] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-08 09:34:04,365] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-08 09:43:53,326] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-08 09:43:53,341] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-08 09:43:56,322] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-08 09:43:56,338] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-08 09:44:04,454] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-08 09:44:06,483] INFO  [jobs-thread-6] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-08 09:44:06,498] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-08 09:53:53,423] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-08 09:53:53,439] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-08 09:53:56,108] INFO  [jobs-thread-7] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-08-08 09:53:56,405] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-08 09:53:56,421] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-08 09:54:06,578] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-08 09:54:08,601] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-08 09:54:08,616] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-08 10:03:53,530] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-08 10:03:53,545] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-08 10:03:56,495] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-08 10:03:56,510] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-08 10:04:08,685] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-08 10:04:10,714] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-08 10:04:10,730] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-08 15:09:54,312] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-08 15:09:54,312] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-08 15:09:54,312] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-08 15:09:54,327] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-08 15:09:54,327] INFO  [jobs-thread-8] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-08-08 15:09:54,343] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-08 15:09:54,343] INFO  [jobs-thread-3] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-08 15:09:54,374] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-08 15:19:19,127] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-08-08 15:19:20,154] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-08-08 15:19:20,272] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-08-08 15:19:37,241] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-08-08 15:19:37,347] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-08-08 15:19:37,423] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10a9it50ym2l1wtqj|b8235a1, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10a9it50ym2l1wtqj|b8235a1, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-08-08 15:19:37,441] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-08-08 15:19:37,488] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-08-08 15:19:38,247] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-08-08 15:19:38,476] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-08 15:23:49,573] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-08 15:29:38,308] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-08 15:29:38,308] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-08 15:29:41,397] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-08 15:29:41,412] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-08 15:29:41,429] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-08 15:39:38,360] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-08 15:39:38,360] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-08 15:39:41,448] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-08 15:39:41,481] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-08 15:39:41,481] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-08 15:49:38,441] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-08 15:49:38,456] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-08 15:49:41,448] INFO  [jobs-thread-6] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-08-08 15:49:41,559] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-08 15:49:41,574] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-08 15:49:41,590] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====

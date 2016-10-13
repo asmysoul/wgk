@@ -1,0 +1,16 @@
+#{extends 'frame.html' /}
+#{set title:'个人中心' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/user-center.css'}" />
+#{/set}
+<div class="contentCard">
+	<div class="contentTitle">
+		<span class="iconfont">&#xf00b6;</span>
+		${notice?.title}
+		<span class="floatRight">${notice?.createTime.format("yyyy-MM-dd HH:mm")}</span>
+	</div>
+	<div class="contentBody">${notice?.content.raw()}</div>
+</div>
+#{set 'moreScripts'}
+#{/set}

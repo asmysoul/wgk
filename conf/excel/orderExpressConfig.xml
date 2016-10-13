@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<workbook>
+	<worksheet idx="0">
+		<section startRow="0" endRow="0" />
+		<loop startRow="1" endRow="1" items="results" var="orderExpress"
+			varType="vos.OrderExpress">
+			<section startRow="1" endRow="1">
+				<mapping row="1" col="0">orderExpress.orderId</mapping>
+				<mapping row="1" col="9">orderExpress.expressNo</mapping>
+				<mapping row="1" col="10">orderExpress.number</mapping>
+				<mapping row="1" col="11">orderExpress.tbSellerNick</mapping>
+			</section>
+			<loopbreakcondition>
+				<rowcheck offset="0">
+					<cellcheck offset="0" />
+				</rowcheck>
+			</loopbreakcondition>
+		</loop>
+	</worksheet>
+</workbook>

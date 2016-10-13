@@ -1,0 +1,240 @@
+#{extends 'frame.html' /}
+#{set title:'管理员用户管理' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/admin/user-manage.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.pagination.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/datePicker.css'}" />
+
+#{/set}
+<div class="contentCard">
+	#{if admin.type.toString()=='SUPERADMIN'}
+	<div class="contentTitle">管理员列表</div>
+	<div id="taskFilterPanel">
+		<div class="clearfix mb10">
+			<span class="floatLeft mr10">管理员姓名</span>
+			<input type="text" id="name" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">管理员类型</span>
+				<select class="floatLeft mr10 mt4" id="type">
+					<option value="">全部</option>
+					#{list items:adminUserList, as:'s'}
+					<option value="${s}" >${s.title}</option>
+					#{/list}
+				</select>
+			<span class="floatLeft mr10">手机</span>
+			<input type="text" id="mobile" class="floatLeft mr10 inputText" />
+				<span class="floatLeft mr10">管理员状态</span>
+				<select class="floatLeft mr10 mt4" id="status">
+					<option value="">全部</option>
+					#{list items:adminStatusList, as:'s'}
+					<option value="${s}" >${s.title}</option>
+					#{/list}
+				</select>
+			<a class="stdColorButton floatLeft queryBtn" href="javascript:;" id="queryBtn">查询</a>
+			<a class="stdColorButton floatLeft queryBtn" href="javascript:;" id="addAdminBtn">增加管理员用户</a>
+		</div>
+	</div>
+	#{/if}
+	<div class="mt20">
+		<table class="normTable">
+			<thead>
+				<tr>
+					<td style="width:3%">ID</td>
+					<td style="width:4%">姓名</td>
+					<td style="width:8%">身份</td>
+					<td style="width:8%">QQ</td>
+					<td style="width:8%">Email</td>
+					<td style="width:8%">手机</td>
+					<td style="width:8%">状态</td>
+					<td style="width:8%">信息</td>
+					<td style="width:8%">操作</td>
+				</tr>
+			</thead>
+			<tbody id="accountContainer"></tbody>
+		</table>
+		<div id="noMsg">
+			<div class="warnBox">
+				<span class="iconfont">&#xf00b6;</span>
+				没有用户!
+			</div>
+		</div>
+		<div class="pagin-btm clearFix" style="display: none;">
+			<div class="pagination"></div>
+		</div>
+		<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+			<div class="maskLayer"></div>
+			<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />
+		</div>
+	</div>
+</div>
+
+<!--keyword muban-->
+<textarea class="muban" id="rowTemp">
+	{{#results}}
+	<tr data-name="{{name}}" data-id="{{id}}">
+		<td>{{id}}</td>
+		<td>{{name}}</td>
+		<td class="usertype">{{admintype}}</td>
+		<td>{{qq}}</td>
+		<td>{{email}}</td>
+		<td>{{mobile}}</td>
+		<td>{{adminStatus}}</td>
+		<td>{{message}}</td>
+		<td>
+		#{if admin.type.toString()=='SUPERADMIN'}
+			<input type="button" class="modifyMsg blue bold" href="javascript:;"  data-uid="{{id}}" value="修改管理员信息" />
+		#{/if}
+		#{else}
+			<input type="button" class="modifyMsg blue bold" href="javascript:;"  data-uid="{{id}}" value="修改个人信息" />
+		#{/else}
+		</td>
+	</tr>
+	{{/results}}
+</textarea>
+<!--修改管理员信息窗口-->
+<div class="popWrapper modifyMsgWnd" id="modifyMsgWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:void(0);" class="wnd_Close_Icon close" title="关闭窗口"></a>
+		#{if admin.type.toString()=='SUPERADMIN'}
+		<h3 class="topTile">超级管理员修改管理员信息</h3>
+		#{/if}
+		#{else}
+		<h3 class="topTile">修改个人资料</h3>
+		#{/else}
+		<div class="modalWndInner" style="width:500px">
+			<form id="changeMsgForm">
+				<div class="panelLine">
+					<span class="floatLeft mr10">ID：</span>
+					<span id="oldId"></span>
+			    </div>	
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">姓名：</span>
+			    #{if admin.type.toString()=='SUPERADMIN'}
+			    	<input type="text" class="txtmodifyMsg bold required inputText" style="width:260px;color:red" name="modifyName" id="oldName"/>
+			    #{/if}
+			    #{else}
+			    	<input type="text" class="txtmodifyMsg bold required inputText" style="width:260px;color:red" name="modifyName" id="oldName" readonly="readonly"/>
+			    #{/else}
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">密码：</span>
+			    	<input type="text" class="txtmodifyMsg bold required inputText" style="width:260px;color:red" name="modifyPass" id="oldPass"/>
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">类型：</span>
+			    #{if admin.type.toString()=='SUPERADMIN'}
+			    		<select class="floatLeft mr10 mt4" id="oldType" name="modifyType">
+			    #{/if}
+			    #{else}
+			    		<select class="floatLeft mr10 mt4" id="oldType" name="modifyType" disabled=false>
+			    #{/else}
+							
+							#{list items:adminUserList, as:'s'}
+							<option value="${s}" >${s.title}</option>
+							#{/list}
+						</select>
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">QQ：</span>
+			    	<input type="text" class="txtmodifyMsg bold required inputText" style="width:260px;color:red" name="modifyQq" id="oldQq"/>
+			    </div>		
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">Email：</span>
+			    	<input type="text" class="txtmodifyMsg bold required inputText" style="width:260px;color:red" name="modifyEmail" id="oldEmail"/>
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">手机：</span>
+			    	<input type="text" class="txtmodifyMsg bold required inputText" style="width:260px;color:red" name="modifyMobile" id="oldMobile"/>
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">状态：</span>
+			    	#{if admin.type.toString()=='SUPERADMIN'}
+			    		<select class="floatLeft mr10 mt4" id="oldStatus">	
+			    	#{/if}
+			    	#{else}
+			    		<select class="floatLeft mr10 mt4" id="oldStatus" disabled=false>
+			    	#{/else}
+							
+							#{list items:adminStatusList, as:'s'}
+							<option value="${s}" >${s.title}</option>
+							#{/list}
+						</select>
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">信息：</span>
+			    	<input type="text" class="txtmodifyMsg bold required inputText" style="width:260px;color:red" name="modifyMsg" id="oldMsg"/>
+			    </div>		    				    		    
+			</form>
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="btnModifyMsg" href="javascript:;" class="botButton stdColorButton">确认</a>
+		</div>
+	</div>
+</div>
+
+<!--增加管理员账号窗口-->
+<div class="popWrapper addAdminWnd" id="addAdminWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:void(0);" class="wnd_Close_Icon close" title="关闭窗口"></a>
+		<h3 class="topTile">超级管理员增加管理员账号</h3>
+		<div class="modalWndInner" style="width:500px">
+			<form id="addAdminForm">
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">姓名：</span>
+			    	<input type="text" class="txtAdminMsg bold required inputText" style="width:260px;color:red" name="adminName" id="newName"/>
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">密码：</span>
+			    	<input type="text" class="txtAdminMsg bold required inputText" style="width:260px;color:red" name="adminPass" id="newPass"/>
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">类型：</span>
+			    		<select class="floatLeft mr10 mt4" id="newType" name="adminType">
+							<option value="ADMIN" >管理员</option>
+							<option value="FINANCE" >财务</option>
+							<option value="SERVICE" >客服</option>
+						</select>
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">QQ：</span>
+			    	<input type="text" class="txtAdminMsg bold required inputText" style="width:260px;color:red" name="adminQq" id="newQq"/>
+			    </div>		
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">Email：</span>
+			    	<input type="text" class="txtAdminMsg bold required inputText" style="width:260px;color:red" name="adminEmail" id="newEmail"/>
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">手机：</span>
+			    	<input type="text" class="txtAdminMsg bold required inputText" style="width:260px;color:red" name="adminMobile" id="newMobile"/>
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">状态：</span>
+			    		<select class="floatLeft mr10 mt4" id="newStatus">
+							<option value="VALID">可登录账号</option>
+							<option value="INVALID" >不可登录账号</option>
+						</select>
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">信息：</span>
+			    	<input type="text" class="txtAdminMsg bold required inputText" style="width:260px;color:red" name="adminMsg" id="newMsg"/>
+			    </div>			    				    		    
+			</form>
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="btnAddAccount" href="javascript:;" class="botButton stdColorButton">增加</a>
+		</div>
+	</div>
+</div>
+
+
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/date.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.datePicker.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.number.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/admin/adminUser.js'}" type="text/javascript"></script>
+<script type="text/javascript">App.module = 'adminAccount';</script>
+#{/set}

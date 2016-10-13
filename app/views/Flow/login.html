@@ -1,0 +1,33 @@
+#{extends 'nui.html' /}
+#{set title:'管理后台登录' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/login.css'}" />
+#{/set}
+<div id="centerBox">
+	<div class="leftPart floatLeft"></div>
+	<div class="formBlock floatLeft">
+		<div class="formBlockTitle tc f18 blue">管理员登录</div>
+		#{if msg} <font color="red">${msg}</font>
+		#{/if}
+		<form id="fm" method="post" action="/flow/doLogin">
+			#{authenticityToken/}
+			<label>用户名</label>
+			<div class="panelLine sec clearfix">
+				<input class="inputText floatLeft required long" type="text" name="usr" />
+			</div>
+			<label>密&nbsp;&nbsp;&nbsp;码</label>
+			<div class="panelLine sec clearfix">
+				<input class="inputText floatLeft required long" type="password" name="pass" />
+			</div>
+			<div class="buttonSection clearfix tc">
+				<input type="submit" class="inputBtn" value="登&nbsp;&nbsp;录" style="padding:5px 10px;" />
+			</div>
+		</form>
+
+	</div>
+	<div class="clearFix"></div>
+</div>
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/admin/login.js'}" type="text/javascript"></script>
+#{/set}

@@ -1,0 +1,2369 @@
+[2016-09-12 08:49:42,598] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-09-12 08:49:42,599] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - Try to read userId on null object models.BuyerAccount (models.BuyerAccount.includeAccount, line 347)
+java.lang.NullPointerException: Try to read userId on null object models.BuyerAccount (models.BuyerAccount.includeAccount, line 347)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at models.BuyerAccount.includeAccount(BuyerAccount.java:347)
+	at controllers.UserCenter.modifyOrderNumber(UserCenter.java:1421)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-09-12 09:06:08,221] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-09-12 09:06:08,221] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - Try to read userId on null object models.BuyerAccount (models.BuyerAccount.includeAccount, line 347)
+java.lang.NullPointerException: Try to read userId on null object models.BuyerAccount (models.BuyerAccount.includeAccount, line 347)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at models.BuyerAccount.includeAccount(BuyerAccount.java:347)
+	at controllers.UserCenter.modifyOrderNumber3(UserCenter.java:1455)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-09-12 09:09:12,882] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-09-12 09:09:12,882] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - Try to read userId on null object models.BuyerAccount (models.BuyerAccount.includeAccount, line 347)
+java.lang.NullPointerException: Try to read userId on null object models.BuyerAccount (models.BuyerAccount.includeAccount, line 347)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at models.BuyerAccount.includeAccount(BuyerAccount.java:347)
+	at controllers.UserCenter.modifyOrderNumber3(UserCenter.java:1455)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-09-12 09:29:13,507] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9ijeo4
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1136)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Platform3 cannot be resolved
+
+play.exceptions.CompilationException: Platform3 cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 09:29:13,730] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9ijeo6
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1136)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Platform3 cannot be resolved
+
+play.exceptions.CompilationException: Platform3 cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 09:31:55,835] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9ijeo8
+Internal Server Error (500) for request GET /buyer/tasks3
+
+Execution exception (In /app/models/BuyerTask3.java around line 378)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'waguke.task3' doesn't exist ### The error may exist in models/mappers/BuyerTaskMapper3.java (best guess) ### The error may involve models.mappers.BuyerTaskMapper3.countWaitingTasksByBuyerId-Inline ### The error occurred while setting parameters ### SQL: select    bt.status,   t.platform,   count(1) count from   buyer_task3 bt    join task3 t on t.id = bt.task_id  where bt.buyer_id = ?    and (     bt.status = 'WAIT_PAY'      or bt.status = 'RECIEVED'      or bt.status = 'WAIT_CONFIRM'      or bt.status = 'REFUNDING'   ) group by bt.status,t.platform ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'waguke.task3' doesn't exist
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'waguke.task3' doesn't exist
+### The error may exist in models/mappers/BuyerTaskMapper3.java (best guess)
+### The error may involve models.mappers.BuyerTaskMapper3.countWaitingTasksByBuyerId-Inline
+### The error occurred while setting parameters
+### SQL: select    bt.status,   t.platform,   count(1) count from   buyer_task3 bt    join task3 t on t.id = bt.task_id  where bt.buyer_id = ?    and (     bt.status = 'WAIT_PAY'      or bt.status = 'RECIEVED'      or bt.status = 'WAIT_CONFIRM'      or bt.status = 'REFUNDING'   ) group by bt.status,t.platform
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'waguke.task3' doesn't exist
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'waguke.task3' doesn't exist
+### The error may exist in models/mappers/BuyerTaskMapper3.java (best guess)
+### The error may involve models.mappers.BuyerTaskMapper3.countWaitingTasksByBuyerId-Inline
+### The error occurred while setting parameters
+### SQL: select    bt.status,   t.platform,   count(1) count from   buyer_task3 bt    join task3 t on t.id = bt.task_id  where bt.buyer_id = ?    and (     bt.status = 'WAIT_PAY'      or bt.status = 'RECIEVED'      or bt.status = 'WAIT_CONFIRM'      or bt.status = 'REFUNDING'   ) group by bt.status,t.platform
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'waguke.task3' doesn't exist
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy59.countWaitingTasksByBuyerId(Unknown Source)
+	at models.BuyerTask3.findWaitingTaskCountInfo(BuyerTask3.java:378)
+	at controllers.TaskCenter.buyerTasks3(TaskCenter.java:1132)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'waguke.task3' doesn't exist
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-12 09:42:59,589] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9ijeo9
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 145)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : TaskType3 cannot be resolved
+
+play.exceptions.CompilationException: TaskType3 cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 09:42:59,659] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9ijeob
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 145)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : TaskType3 cannot be resolved
+
+play.exceptions.CompilationException: TaskType3 cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 09:45:32,285] ERROR [play-thread-1]  - 
+
+@71c9ijeod
+Internal Server Error (500) for request GET /buyer/tasks3
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-12 09:45:35,194] ERROR [play-thread-1]  - Oops. Error in Logger !
+java.lang.OutOfMemoryError: PermGen space
+[2016-09-12 09:51:59,398] ERROR [jobs-thread-4] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7cb
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 279)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate method taskTypeCount(Platform, String) in type TaskCenter
+
+play.exceptions.CompilationException: Duplicate method taskTypeCount(Platform, String) in type TaskCenter
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 09:51:59,639] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7cd
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 279)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate method taskTypeCount(Platform, String) in type TaskCenter
+
+play.exceptions.CompilationException: Duplicate method taskTypeCount(Platform, String) in type TaskCenter
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 09:58:18,610] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7cf
+task.deviceCount3 action not found
+
+Action not found
+Action task.deviceCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.deviceCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 09:58:18,674] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7cg
+task.taskTypeCount3 action not found
+
+Action not found
+Action task.taskTypeCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.taskTypeCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 09:58:25,118] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7ch
+task.deviceCount3 action not found
+
+Action not found
+Action task.deviceCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.deviceCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 09:58:25,164] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7ci
+task.taskTypeCount3 action not found
+
+Action not found
+Action task.taskTypeCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.taskTypeCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:00:05,957] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7cj
+task.deviceCount3 action not found
+
+Action not found
+Action task.deviceCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.deviceCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:00:05,996] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7ck
+task.taskTypeCount3 action not found
+
+Action not found
+Action task.taskTypeCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.taskTypeCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:00:12,198] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7cl
+task.deviceCount3 action not found
+
+Action not found
+Action task.deviceCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.deviceCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:00:12,242] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7cm
+task.taskTypeCount3 action not found
+
+Action not found
+Action task.taskTypeCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.taskTypeCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:00:14,072] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7cn
+task.deviceCount3 action not found
+
+Action not found
+Action task.deviceCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.deviceCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:00:14,114] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7co
+task.taskTypeCount3 action not found
+
+Action not found
+Action task.taskTypeCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.taskTypeCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:01:18,280] ERROR [jobs-thread-4] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7cp
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 1623)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : Task3 cannot be resolved
+
+play.exceptions.CompilationException: Task3 cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:01:18,533] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7d1
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 1623)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : Task3 cannot be resolved
+
+play.exceptions.CompilationException: Task3 cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:01:45,407] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9lj7d3
+Internal Server Error (500) for request GET /tasks3
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-12 10:02:39,001] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hgd
+task.deviceCount3 action not found
+
+Action not found
+Action task.deviceCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.deviceCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:02:39,082] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hge
+task.taskTypeCount3 action not found
+
+Action not found
+Action task.taskTypeCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.taskTypeCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:02:46,008] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hgf
+task.deviceCount3 action not found
+
+Action not found
+Action task.deviceCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.deviceCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:02:46,051] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hgg
+task.taskTypeCount3 action not found
+
+Action not found
+Action task.taskTypeCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.taskTypeCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:02:48,119] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hgh
+task.deviceCount3 action not found
+
+Action not found
+Action task.deviceCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.deviceCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:02:48,223] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hgi
+task.taskTypeCount3 action not found
+
+Action not found
+Action task.taskTypeCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.taskTypeCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:04:35,567] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hgj
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 1093)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : Duplicate method take(BuyerTask) in type TaskExecutor
+
+play.exceptions.CompilationException: Duplicate method take(BuyerTask) in type TaskExecutor
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:04:35,758] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hgl
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 1093)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : Duplicate method take(BuyerTask) in type TaskExecutor
+
+play.exceptions.CompilationException: Duplicate method take(BuyerTask) in type TaskExecutor
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:12:32,321] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hgn
+Error during job execution (jobs.AddKwdForFlow)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 1278)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : collectionType cannot be resolved or is not a field
+
+play.exceptions.CompilationException: collectionType cannot be resolved or is not a field
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:12:35,464] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hgp
+Error during job execution (jobs.BuyerTaskCancel)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 1278)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : collectionType cannot be resolved or is not a field
+
+play.exceptions.CompilationException: collectionType cannot be resolved or is not a field
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:12:35,606] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hh1
+Error during job execution (jobs.GetExpressNo)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 1278)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : collectionType cannot be resolved or is not a field
+
+play.exceptions.CompilationException: collectionType cannot be resolved or is not a field
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:25:09,846] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hh3
+task.deviceCount3 action not found
+
+Action not found
+Action task.deviceCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.deviceCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:25:09,958] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hh4
+task.taskTypeCount3 action not found
+
+Action not found
+Action task.taskTypeCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.taskTypeCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:27:09,328] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hh5
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 220)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : mobileOrdernum cannot be resolved or is not a field
+
+play.exceptions.CompilationException: mobileOrdernum cannot be resolved or is not a field
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:27:09,399] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hh7
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 220)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : mobileOrdernum cannot be resolved or is not a field
+
+play.exceptions.CompilationException: mobileOrdernum cannot be resolved or is not a field
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:35:07,025] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hh9
+Error during job execution (jobs.AddKwdForFlow)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 468)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : The method isTakeTasks(BuyerTask, Task) in the type TaskCenter is not applicable for the arguments (BuyerTask3, Task3)
+
+play.exceptions.CompilationException: The method isTakeTasks(BuyerTask, Task) in the type TaskCenter is not applicable for the arguments (BuyerTask3, Task3)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:35:09,308] ERROR [jobs-thread-4] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hhb
+Error during job execution (jobs.BuyerTaskCancel)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 468)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : The method isTakeTasks(BuyerTask, Task) in the type TaskCenter is not applicable for the arguments (BuyerTask3, Task3)
+
+play.exceptions.CompilationException: The method isTakeTasks(BuyerTask, Task) in the type TaskCenter is not applicable for the arguments (BuyerTask3, Task3)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:35:09,419] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hhd
+Error during job execution (jobs.GetExpressNo)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 468)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : The method isTakeTasks(BuyerTask, Task) in the type TaskCenter is not applicable for the arguments (BuyerTask3, Task3)
+
+play.exceptions.CompilationException: The method isTakeTasks(BuyerTask, Task) in the type TaskCenter is not applicable for the arguments (BuyerTask3, Task3)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:42:53,184] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hhf
+task.deviceCount3 action not found
+
+Action not found
+Action task.deviceCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.deviceCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:42:53,277] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hhg
+task.taskTypeCount3 action not found
+
+Action not found
+Action task.taskTypeCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.taskTypeCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:43:50,161] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hhh
+task.deviceCount3 action not found
+
+Action not found
+Action task.deviceCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.deviceCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:43:50,209] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hhi
+task.taskTypeCount3 action not found
+
+Action not found
+Action task.taskTypeCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.taskTypeCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:44:29,650] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hhj
+task.deviceCount3 action not found
+
+Action not found
+Action task.deviceCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.deviceCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:44:29,689] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hhk
+task.taskTypeCount3 action not found
+
+Action not found
+Action task.taskTypeCount3 could not be found. Error raised is Controller controllers.task not found
+
+play.exceptions.ActionNotFoundException: Action task.taskTypeCount3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.task not found
+	... 3 more
+[2016-09-12 10:44:52,098] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-12 10:44:52,253] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-12 10:47:52,731] ERROR [jobs-thread-9] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hhl
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/Admin.java around line 786)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method buyerAccount() in type Admin
+
+play.exceptions.CompilationException: Duplicate method buyerAccount() in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:47:52,871] ERROR [jobs-thread-5] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hhn
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/Admin.java around line 786)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method buyerAccount() in type Admin
+
+play.exceptions.CompilationException: Duplicate method buyerAccount() in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:48:24,181] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hi0
+Internal Server Error (500) for request GET /admin/account3
+
+Template not found (In /app/controllers/Admin.java around line 797)
+The template Admin/buyerAccount3.html does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : Admin/buyerAccount3.html
+	at play.mvc.Controller.renderTemplate(Controller.java:685)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.buyerAccount3(Admin.java:797)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-09-12 10:53:22,787] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hi1
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/admins/UserManage.java around line 240)
+The file /app/controllers/admins/UserManage.java could not be compiled. Error raised is : The method fetchAndRenderBuyerAccountPage(BuyerAccountSearchVo) in the type UserManage is not applicable for the arguments (BuyerAccountSearchVo3)
+
+play.exceptions.CompilationException: The method fetchAndRenderBuyerAccountPage(BuyerAccountSearchVo) in the type UserManage is not applicable for the arguments (BuyerAccountSearchVo3)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 10:53:22,857] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71c9n3hi3
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/admins/UserManage.java around line 240)
+The file /app/controllers/admins/UserManage.java could not be compiled. Error raised is : The method fetchAndRenderBuyerAccountPage(BuyerAccountSearchVo) in the type UserManage is not applicable for the arguments (BuyerAccountSearchVo3)
+
+play.exceptions.CompilationException: The method fetchAndRenderBuyerAccountPage(BuyerAccountSearchVo) in the type UserManage is not applicable for the arguments (BuyerAccountSearchVo3)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 11:01:27,544] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ca4mb99
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/Admin.java around line 561)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method examineBuyerAccount(BuyerAccount) in type Admin
+
+play.exceptions.CompilationException: Duplicate method examineBuyerAccount(BuyerAccount) in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 11:01:27,849] ERROR [jobs-thread-9] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ca4mb9b
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/Admin.java around line 561)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method examineBuyerAccount(BuyerAccount) in type Admin
+
+play.exceptions.CompilationException: Duplicate method examineBuyerAccount(BuyerAccount) in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 11:07:53,075] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ca4mb9d
+admin.timeout3 action not found
+
+Action not found
+Action admin.timeout3 could not be found. Error raised is No method public static void timeout3() was found in class controllers.admin
+
+play.exceptions.ActionNotFoundException: Action admin.timeout3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void timeout3() was found in class controllers.admin
+	... 3 more
+[2016-09-12 11:08:54,848] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ca4mb9e
+admin.timeout3 action not found
+
+Action not found
+Action admin.timeout3 could not be found. Error raised is No method public static void timeout3() was found in class controllers.admin
+
+play.exceptions.ActionNotFoundException: Action admin.timeout3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void timeout3() was found in class controllers.admin
+	... 3 more
+[2016-09-12 11:09:50,261] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ca4mb9f
+admin.timeout3 action not found
+
+Action not found
+Action admin.timeout3 could not be found. Error raised is No method public static void timeout3() was found in class controllers.admin
+
+play.exceptions.ActionNotFoundException: Action admin.timeout3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void timeout3() was found in class controllers.admin
+	... 3 more
+[2016-09-12 11:10:07,453] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ca4mb9g
+admin.timeout3 action not found
+
+Action not found
+Action admin.timeout3 could not be found. Error raised is No method public static void timeout3() was found in class controllers.admin
+
+play.exceptions.ActionNotFoundException: Action admin.timeout3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void timeout3() was found in class controllers.admin
+	... 3 more
+[2016-09-12 11:11:08,199] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ca4mb9h
+admin.timeout3 action not found
+
+Action not found
+Action admin.timeout3 could not be found. Error raised is No method public static void timeout3() was found in class controllers.admin
+
+play.exceptions.ActionNotFoundException: Action admin.timeout3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void timeout3() was found in class controllers.admin
+	... 3 more
+[2016-09-12 11:13:20,526] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ca4mb9i
+admin.timeout3 action not found
+
+Action not found
+Action admin.timeout3 could not be found. Error raised is No method public static void timeout3() was found in class controllers.admin
+
+play.exceptions.ActionNotFoundException: Action admin.timeout3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void timeout3() was found in class controllers.admin
+	... 3 more
+[2016-09-12 11:21:09,704] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ca4mb9j
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/models/AdminRefundRecord.java around line 30)
+The file /app/models/AdminRefundRecord.java could not be compiled. Error raised is : Duplicate method newInstance(BuyerTask) in type AdminRefundRecord
+
+play.exceptions.CompilationException: Duplicate method newInstance(BuyerTask) in type AdminRefundRecord
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 11:21:09,728] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ca4mb9l
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/models/AdminRefundRecord.java around line 30)
+The file /app/models/AdminRefundRecord.java could not be compiled. Error raised is : Duplicate method newInstance(BuyerTask) in type AdminRefundRecord
+
+play.exceptions.CompilationException: Duplicate method newInstance(BuyerTask) in type AdminRefundRecord
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 14:12:49,672] ERROR [main] play.Logger.error(Logger.java:426) - Could not bind on port 80
+[2016-09-12 14:13:38,387] ERROR [main] play.Logger.error(Logger.java:426) - Could not bind on port 80
+[2016-09-12 14:14:45,122] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb4678h
+Internal Server Error (500) for request GET /admin/timeout3
+
+Execution exception (In /app/com/aton/base/secure/Secure.java around line 96)
+NullPointerException occured : Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at com.aton.base.secure.Secure.checkAuthentication(Secure.java:96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:477)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:311)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:141)
+	... 1 more
+[2016-09-12 14:14:52,472] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb4678i
+Internal Server Error (500) for request GET /admin/
+
+Execution exception (In /app/com/aton/base/secure/Secure.java around line 96)
+NullPointerException occured : Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at com.aton.base.secure.Secure.checkAuthentication(Secure.java:96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:477)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:311)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:141)
+	... 1 more
+[2016-09-12 14:15:21,688] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb4678j
+Internal Server Error (500) for request GET /admin/
+
+Execution exception (In /app/com/aton/base/secure/Secure.java around line 96)
+NullPointerException occured : Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at com.aton.base.secure.Secure.checkAuthentication(Secure.java:96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:477)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:311)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:141)
+	... 1 more
+[2016-09-12 14:16:44,412] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb4d1lf
+Internal Server Error (500) for request GET /admin/
+
+Execution exception (In /app/com/aton/base/secure/Secure.java around line 96)
+NullPointerException occured : Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at com.aton.base.secure.Secure.checkAuthentication(Secure.java:96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:477)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:311)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:141)
+	... 1 more
+[2016-09-12 14:17:40,616] ERROR [jobs-thread-9] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb4d1lg
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/com/aton/base/secure/Secure.java around line 85)
+The file /app/com/aton/base/secure/Secure.java could not be compiled. Error raised is : The method findTopNotice() in the type Notice is not applicable for the arguments (List&lt;Notice.Role>)
+
+play.exceptions.CompilationException: The method findTopNotice() in the type Notice is not applicable for the arguments (List<Notice.Role>)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 14:17:40,711] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb4d1li
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/com/aton/base/secure/Secure.java around line 85)
+The file /app/com/aton/base/secure/Secure.java could not be compiled. Error raised is : The method findTopNotice() in the type Notice is not applicable for the arguments (List&lt;Notice.Role>)
+
+play.exceptions.CompilationException: The method findTopNotice() in the type Notice is not applicable for the arguments (List<Notice.Role>)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 14:20:01,255] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb4d1lk
+Internal Server Error (500) for request GET /admin/
+
+Execution exception (In /app/com/aton/base/secure/Secure.java around line 103)
+NullPointerException occured : Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 103)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 103)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 103)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at com.aton.base.secure.Secure.checkAuthentication(Secure.java:103)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:477)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:311)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:141)
+	... 1 more
+[2016-09-12 14:22:51,979] ERROR [main] play.Logger.error(Logger.java:426) - Could not bind on port 80
+[2016-09-12 14:29:15,392] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb63kgn
+Internal Server Error (500) for request GET /admin/
+
+Execution exception (In /app/com/aton/base/secure/Secure.java around line 96)
+NullPointerException occured : Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at com.aton.base.secure.Secure.checkAuthentication(Secure.java:96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:477)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:311)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:141)
+	... 1 more
+[2016-09-12 14:29:15,822] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb63kgo
+Internal Server Error (500) for request GET /admin/
+
+Execution exception (In /app/com/aton/base/secure/Secure.java around line 96)
+NullPointerException occured : Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at com.aton.base.secure.Secure.checkAuthentication(Secure.java:96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:477)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:311)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:141)
+	... 1 more
+[2016-09-12 14:31:07,365] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb6a4a3
+Internal Server Error (500) for request GET /admin/
+
+Template execution error (In /app/views/nui.html around line 36)
+Execution error occured in template /app/views/nui.html. Exception raised was NullPointerException : Cannot get property 'name' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'name' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:295)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:295)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.index(Admin.java:183)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'name' on null object
+	at /app/views/nui.html.(line:36)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 15 more
+[2016-09-12 14:32:51,104] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb6g0l2
+Internal Server Error (500) for request GET /admin/index
+
+Execution exception (In /app/com/aton/base/secure/Secure.java around line 96)
+NullPointerException occured : Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at com.aton.base.secure.Secure.checkAuthentication(Secure.java:96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:477)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:311)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:141)
+	... 1 more
+[2016-09-12 14:34:07,748] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb6g0l3
+Internal Server Error (500) for request GET /admin/
+
+Execution exception (In /app/com/aton/base/secure/Secure.java around line 96)
+NullPointerException occured : Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.AdminUser (com.aton.base.secure.Secure.checkAuthentication, line 96)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at com.aton.base.secure.Secure.checkAuthentication(Secure.java:96)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:477)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:311)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:141)
+	... 1 more
+[2016-09-12 14:35:32,516] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-12 14:40:54,303] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb6g0l4
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 1136)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : BuyerTaskProcessor3 cannot be resolved
+
+play.exceptions.CompilationException: BuyerTaskProcessor3 cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 14:40:54,576] ERROR [jobs-thread-5] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cb6g0l6
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 1136)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : BuyerTaskProcessor3 cannot be resolved
+
+play.exceptions.CompilationException: BuyerTaskProcessor3 cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 15:09:06,763] ERROR [jobs-thread-6]  - 
+
+@71cb6g0l8
+Error during job execution (jobs.TaskKeeper)
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.jobs.Job.onException(Job.java:154)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	... 1 more
+[2016-09-12 15:26:12,948] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbdg6cl
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 963)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : CancelTaskVo3 cannot be resolved to a type
+
+play.exceptions.CompilationException: CancelTaskVo3 cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 15:26:13,101] ERROR [jobs-thread-5] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbdg6cn
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 963)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : CancelTaskVo3 cannot be resolved to a type
+
+play.exceptions.CompilationException: CancelTaskVo3 cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 15:33:10,833] ERROR [jobs-thread-9] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbdg6cp
+Error during job execution (jobs.AddKwdForFlow)
+
+Compilation error (In /app/models/Task3.java around line 1673)
+The file /app/models/Task3.java could not be compiled. Error raised is : Type mismatch: cannot convert from CancelTaskVo to CancelTaskVo3
+
+play.exceptions.CompilationException: Type mismatch: cannot convert from CancelTaskVo to CancelTaskVo3
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 15:33:12,354] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbdg6d1
+Error during job execution (jobs.BuyerTaskCancel)
+
+Compilation error (In /app/models/Task3.java around line 1673)
+The file /app/models/Task3.java could not be compiled. Error raised is : Type mismatch: cannot convert from CancelTaskVo to CancelTaskVo3
+
+play.exceptions.CompilationException: Type mismatch: cannot convert from CancelTaskVo to CancelTaskVo3
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 15:33:12,515] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbdg6d3
+Error during job execution (jobs.GetExpressNo)
+
+Compilation error (In /app/models/Task3.java around line 1673)
+The file /app/models/Task3.java could not be compiled. Error raised is : Type mismatch: cannot convert from CancelTaskVo to CancelTaskVo3
+
+play.exceptions.CompilationException: Type mismatch: cannot convert from CancelTaskVo to CancelTaskVo3
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 15:53:12,411] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbdg6d5
+Error during job execution (jobs.FlowClickTimes)
+
+Compilation error (In /app/models/Task3.java around line 1673)
+The file /app/models/Task3.java could not be compiled. Error raised is : Type mismatch: cannot convert from CancelTaskVo to CancelTaskVo3
+
+play.exceptions.CompilationException: Type mismatch: cannot convert from CancelTaskVo to CancelTaskVo3
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 16:07:28,531] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbdg6d7
+Internal Server Error (500) for request GET /admin/tasks3
+
+Compilation error (In /app/models/Task3.java around line 1673)
+The file /app/models/Task3.java could not be compiled. Error raised is : Type mismatch: cannot convert from CancelTaskVo to CancelTaskVo3
+
+play.exceptions.CompilationException: Type mismatch: cannot convert from CancelTaskVo to CancelTaskVo3
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-12 16:08:03,237] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbdg6d8
+Internal Server Error (500) for request GET /admin/tasks3
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-12 16:08:03,237] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2398)
+	at java.lang.Class.getConstructor0(Class.java:2708)
+	at java.lang.Class.newInstance0(Class.java:328)
+	at java.lang.Class.newInstance(Class.java:310)
+	at sun.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:381)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.reflect.MethodAccessorGenerator.generate(MethodAccessorGenerator.java:377)
+	at sun.reflect.MethodAccessorGenerator.generateSerializationConstructor(MethodAccessorGenerator.java:95)
+	at sun.reflect.ReflectionFactory.newConstructorForSerialization(ReflectionFactory.java:313)
+	at java.io.ObjectStreamClass.getSerializableConstructor(ObjectStreamClass.java:1322)
+	at java.io.ObjectStreamClass.access$1500(ObjectStreamClass.java:50)
+	at java.io.ObjectStreamClass$2.run(ObjectStreamClass.java:435)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.io.ObjectStreamClass.<init>(ObjectStreamClass.java:411)
+	at java.io.ObjectStreamClass.lookup(ObjectStreamClass.java:308)
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:545)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1729)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at java.util.HashMap.readObject(HashMap.java:1029)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:969)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1852)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1756)
+[2016-09-12 16:15:47,894] ERROR [jobs-thread-8]  - 
+
+@71cbk3d7l
+Error during job execution (jobs.TaskKeeper)
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.jobs.Job.onException(Job.java:154)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	... 1 more
+[2016-09-12 16:32:27,211] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbm87bk
+Internal Server Error (500) for request GET /admin3
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-12 16:32:27,211] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbm87bl
+Error during the 500 response generation
+
+Template execution error (In /app/views/errors/500.html around line 11)
+Execution error occured in template /app/views/errors/500.html. Exception raised was OutOfMemoryError : PermGen space.
+
+play.exceptions.TemplateExecutionException: PermGen space
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.server.PlayHandler.serve500(PlayHandler.java:792)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.templates.GroovyTemplate$TClassLoader.defineTemplate(GroovyTemplate.java:79)
+	at play.templates.GroovyTemplate.directLoad(GroovyTemplate.java:92)
+	at play.templates.BaseTemplate.loadFromCache(BaseTemplate.java:56)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:81)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:383)
+[2016-09-12 16:35:50,269] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbmjnop
+admin.task3 action not found
+
+Action not found
+Action admin.task3 could not be found. Error raised is No method public static void task3() was found in class controllers.admin
+
+play.exceptions.ActionNotFoundException: Action admin.task3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void task3() was found in class controllers.admin
+	... 3 more
+[2016-09-12 16:45:03,774] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-12 16:46:10,591] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbmjnp0
+seller.tasks3 action not found
+
+Action not found
+Action seller.tasks3 could not be found. Error raised is Controller controllers.seller not found
+
+play.exceptions.ActionNotFoundException: Action seller.tasks3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.seller not found
+	... 3 more
+[2016-09-12 16:50:48,730] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbmjnp1
+seller.tasks3 action not found
+
+Action not found
+Action seller.tasks3 could not be found. Error raised is Controller controllers.seller not found
+
+play.exceptions.ActionNotFoundException: Action seller.tasks3 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.seller not found
+	... 3 more
+[2016-09-12 16:57:11,348] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbmjnp2
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1323)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate method listSellerTasks(TaskSearchVo, String) in type TaskCenter
+
+play.exceptions.CompilationException: Duplicate method listSellerTasks(TaskSearchVo, String) in type TaskCenter
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 16:57:11,658] ERROR [jobs-thread-4] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbmjnp4
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1323)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate method listSellerTasks(TaskSearchVo, String) in type TaskCenter
+
+play.exceptions.CompilationException: Duplicate method listSellerTasks(TaskSearchVo, String) in type TaskCenter
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 16:58:58,311] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbmjnp6
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 947)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : Duplicate method fetchCancelTaskInfo(long) in type TaskPublish
+
+play.exceptions.CompilationException: Duplicate method fetchCancelTaskInfo(long) in type TaskPublish
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 16:58:58,414] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbmjnp8
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 947)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : Duplicate method fetchCancelTaskInfo(long) in type TaskPublish
+
+play.exceptions.CompilationException: Duplicate method fetchCancelTaskInfo(long) in type TaskPublish
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 17:05:49,912] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbmjnpa
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 40)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:199)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskPublish/publish3.html.(line:40)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:07:44,993] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbmjnpb
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 40)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:202)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskPublish/publish3.html.(line:40)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:08:54,015] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbmjnpc
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 40)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:202)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskPublish/publish3.html.(line:40)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:16:02,059] ERROR [jobs-thread-9] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbmjnpd
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 350)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : Duplicate method getItemInfo(String, Platform, TaskType) in type TaskPublish
+
+play.exceptions.CompilationException: Duplicate method getItemInfo(String, Platform, TaskType) in type TaskPublish
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 17:16:02,192] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cbmjnpf
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 350)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : Duplicate method getItemInfo(String, Platform, TaskType) in type TaskPublish
+
+play.exceptions.CompilationException: Duplicate method getItemInfo(String, Platform, TaskType) in type TaskPublish
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 17:19:30,547] ERROR [play-thread-1]  - 
+
+@71cbmjnph
+Internal Server Error (500) for request GET /task/publish3
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2398)
+	at java.lang.Class.getConstructor0(Class.java:2708)
+	at java.lang.Class.newInstance0(Class.java:328)
+	at java.lang.Class.newInstance(Class.java:310)
+	at play.jobs.JobsPlugin.afterApplicationStart(JobsPlugin.java:165)
+	at play.plugins.PluginCollection.afterApplicationStart(PluginCollection.java:521)
+	at play.Play.start(Play.java:558)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-12 17:19:33,076] ERROR [play-thread-1]  - Oops. Error in Logger !
+java.lang.OutOfMemoryError: PermGen space
+[2016-09-12 17:20:11,674] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8dp
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 40)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:202)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskPublish/publish3.html.(line:40)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:21:10,436] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8e0
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 38)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:202)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskPublish/publish3.html.(line:38)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:22:02,738] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8e1
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 38)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:202)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskPublish/publish3.html.(line:38)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:22:13,877] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8e2
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 38)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:202)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskPublish/publish3.html.(line:38)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:22:27,984] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8e3
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 98)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot get property 'platform' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'platform' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:202)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'platform' on null object
+	at /app/views/TaskPublish/publish3.html.(line:98)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:22:54,570] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8e4
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 40)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:202)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskPublish/publish3.html.(line:40)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:24:43,287] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8e5
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 40)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:204)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskPublish/publish3.html.(line:40)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:24:46,166] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8e6
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 40)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:204)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskPublish/publish3.html.(line:40)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:25:02,262] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8e7
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 39)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:204)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskPublish/publish3.html.(line:39)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:25:22,767] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8e8
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 40)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:204)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskPublish/publish3.html.(line:40)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:25:25,911] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8e9
+Internal Server Error (500) for request GET /task/publish3
+
+Template execution error (In /app/views/TaskPublish/publish3.html around line 40)
+Execution error occured in template /app/views/TaskPublish/publish3.html. Exception raised was NullPointerException : Cannot invoke method div() on null object.
+
+play.exceptions.TemplateExecutionException: Cannot invoke method div() on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish3(TaskPublish.java:204)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot invoke method div() on null object
+	at /app/views/TaskPublish/publish3.html.(line:40)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-12 17:31:40,111] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.expressType] Required
+[2016-09-12 17:38:18,354] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.expressType] Required
+[2016-09-12 17:40:17,447] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8ea
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 518)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : Incompatible operand types TaskType3 and TaskType
+
+play.exceptions.CompilationException: Incompatible operand types TaskType3 and TaskType
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 17:40:17,545] ERROR [jobs-thread-4] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8ec
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 518)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : Incompatible operand types TaskType3 and TaskType
+
+play.exceptions.CompilationException: Incompatible operand types TaskType3 and TaskType
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 17:43:15,071] ERROR [jobs-thread-9] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8ee
+Error during job execution (jobs.AddKwdForFlow)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 528)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : Incompatible operand types Platform3 and Platform
+
+play.exceptions.CompilationException: Incompatible operand types Platform3 and Platform
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 17:43:16,956] ERROR [jobs-thread-9] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8eg
+Error during job execution (jobs.BuyerTaskCancel)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 528)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : Incompatible operand types Platform3 and Platform
+
+play.exceptions.CompilationException: Incompatible operand types Platform3 and Platform
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-12 17:43:17,055] ERROR [jobs-thread-4] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71cc2f8ei
+Error during job execution (jobs.GetExpressNo)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 528)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : Incompatible operand types Platform3 and Platform
+
+play.exceptions.CompilationException: Incompatible operand types Platform3 and Platform
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)

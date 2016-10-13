@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.TrafficRecordMapper">
+	<resultMap type="models.TrafficRecord" id="BaseResultMap"></resultMap>
+
+	<select id="listTraffics" resultMap="BaseResultMap">
+		select
+		t.id,t.type,t.kwd,t.nid,t.shop_type
+		shopType,t.times,t.path1,t.path2,t.path3,t.sleep_time
+		sleepTime,t.click_start clickStart,t.click_end clickEnd,t.begin_time
+		beginTime,t.end_time endTime,t.kid,t.taskId,t.status
+		,t.return_times,u.nick userNick ,t.user_id userId from traffic_record
+		t
+		left join user u on u.id=t.user_id
+		<where>
+			<if test="id >0">
+				and t.id=#{id}
+			</if>
+			<if test="kwd !=null">
+				and t.kwd=#{kwd}
+			</if>
+			<if test="type !=null">
+				and t.type=#{type}
+			</if>
+			<if test="status !=null">
+				and t.status=#{status}
+			</if>
+			<if test="userId >0">
+				and t.user_id=#{userId}
+			</if>
+			<if test="userNick !=null">
+				and u.nick=#{userNick}
+			</if>
+			<if test="taskId >0">
+				and t.taskId=#{taskId}
+			</if>
+			<if test="beginTime !=null">
+				and t.begin_time >=#{beginTime}
+			</if>
+			<if test="endTime !=null">
+				and t.end_time &lt;=#{endTime}
+			</if>
+		</where>
+		order by t.create_time desc
+		limit #{startIndex}, #{pageSize}
+	</select>
+
+	<select id="findByStatus" resultMap="BaseResultMap">
+		select
+		t.id,t.type,t.kwd,t.nid,t.shop_type
+		shopType,t.times,t.path1,t.path2,t.path3,t.sleep_time
+		sleepTime,t.click_start clickStart,t.click_end clickEnd,t.begin_time
+		beginTime,t.end_time endTime,t.kid,t.taskId,t.status
+		,t.return_times,u.nick userNick ,t.user_id userId from traffic_record
+		t left join user u on u.id=t.user_id where t.status=#{status} and t.end_time>=#{nowTime} and t.type!='TAOBAOMOBILE'
+	</select>
+	
+	<select id="searchByStatus" resultMap="BaseResultMap">
+		select t.id,t.type,t.kwd,t.nid,t.shop_type shopType,t.times,t.path1,t.path2,t.path3,t.sleep_time
+		sleepTime,t.click_start clickStart,t.click_end clickEnd,t.begin_time
+		beginTime,t.end_time endTime,t.kid,t.taskId,t.status
+		,t.return_times,u.nick userNick ,t.user_id userId from traffic_record
+		t left join user u on u.id=t.user_id where t.status='PROCESSING' and t.end_time &lt; #{nowTime} and t.type!='TAOBAOMOBILE'
+	</select>
+
+
+	<select id="listCount" resultType="java.lang.Integer">
+		select count(1) from traffic_record t
+		left join user u on
+		u.id=t.user_id
+		<where>
+			<if test="id >0">
+				and t.id=#{id}
+			</if>
+			<if test="kwd !=null">
+				and t.kwd=#{kwd}
+			</if>
+			<if test="type !=null">
+				and t.type=#{type}
+			</if>
+			<if test="status !=null">
+				and t.status=#{status}
+			</if>
+			<if test="userId >0">
+				and t.user_id=#{userId}
+			</if>
+			<if test="userNick !=null">
+				and u.nick=#{userNick}
+			</if>
+			<if test="taskId >0">
+				and t.taskId=#{taskId}
+			</if>
+			<if test="beginTime !=null">
+				and t.begin_time >=#{beginTime}
+			</if>
+			<if test="endTime !=null">
+				and t.end_time &lt;=#{endTime}
+			</if>
+		</where>
+	</select>
+
+	<update id="modifyTraffic" parameterType="vos.TrafficRecordVo">
+		update traffic_record
+		<set>
+			modify_time = #{modifyTime},
+			<if test="kwd !=null">
+				kwd=#{kwd},
+			</if>
+			<if test="shopType !=null">
+				shop_type=#{shopType},
+			</if>
+			<if test="times >0">
+				times=#{times},
+			</if>
+			<if test="nid >0">
+				nid=#{nid},
+			</if>
+			<if test="path1>0">
+				path1=#{path1},
+			</if>
+			<if test="path1 >0">
+				path2=#{path2},
+			</if>
+			<if test="path3 >0">
+				path3=#{path3},
+			</if>
+			<if test="kid >0">
+				kid=#{kid},
+			</if>
+			<if test="sleepTime >0">
+				sleep_time=#{sleepTime},
+			</if>
+			<if test="clickStart >0">
+				click_start=#{clickStart},
+			</if>
+			<if test="clickEnd >0">
+				click_end=#{clickEnd},
+			</if>
+			<if test="beginTime !=null">
+				begin_time=#{beginTime},
+			</if>
+			<if test="endTime !=null">
+				end_time=#{endTime},
+			</if>
+			<if test="status !=null">
+				status=#{status},
+			</if>
+			<if test="returnTimes >0">
+				return_times=#{returnTimes},
+			</if>
+		</set>
+		where id=#{id}
+	</update>
+	
+	<update id="updateTraffic" parameterType="vos.TrafficRecordVo">
+		update traffic_record
+		<set>
+			modify_time = #{modifyTime},
+			<if test="kwd !=null">
+				kwd=#{kwd},
+			</if>
+			<if test="shopType !=null">
+				shop_type=#{shopType},
+			</if>
+			<if test="times >0">
+				times=#{times},
+			</if>
+			<if test="nid >0">
+				nid=#{nid},
+			</if>
+			<if test="path1>0">
+				path1=#{path1},
+			</if>
+			<if test="path1 >0">
+				path2=#{path2},
+			</if>
+			<if test="path3 >0">
+				path3=#{path3},
+			</if>
+			<if test="kid >0">
+				kid=#{kid},
+			</if>
+			<if test="sleepTime >0">
+				sleep_time=#{sleepTime},
+			</if>
+			<if test="clickStart >0">
+				click_start=#{clickStart},
+			</if>
+			<if test="clickEnd >0">
+				click_end=#{clickEnd},
+			</if>
+			<if test="beginTime !=null">
+				begin_time=#{beginTime},
+			</if>
+			<if test="endTime !=null">
+				end_time=#{endTime},
+			</if>
+			<if test="status !=null">
+				status=#{status},
+			</if>
+			<if test="returnTimes !=null">
+				return_times=#{returnTimes},
+			</if>
+		</set>
+		where id=#{id}
+	</update>
+
+</mapper>
+	

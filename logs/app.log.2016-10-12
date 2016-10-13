@@ -1,0 +1,600 @@
+[2016-10-12 08:46:15,242] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator\Desktop\wgk
+[2016-10-12 08:46:17,975] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-10-12 08:46:18,151] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 8080 (Waiting a first request to start) ...
+[2016-10-12 08:46:46,994] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-10-12 08:46:47,333] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-10-12 08:46:47,619] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge1639j1eli35o4g8bbe|dfa76ac, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge1639j1eli35o4g8bbe|dfa76ac, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-10-12 08:46:47,716] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-10-12 08:46:47,840] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-10-12 08:46:49,703] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-10-12 08:46:50,515] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-10-12 08:46:59,608] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-10-12 08:56:49,941] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 08:56:49,957] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 08:56:56,645] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 08:56:56,695] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 08:56:56,866] INFO  [jobs-thread-9] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 09:06:50,209] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 09:06:50,212] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 09:06:56,916] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 09:06:56,925] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 09:06:57,117] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 09:16:50,449] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 09:16:50,452] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 09:16:56,689] INFO  [jobs-thread-9] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 09:16:57,139] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 09:16:57,147] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 09:16:57,342] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 09:26:50,696] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 09:26:50,699] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 09:26:57,381] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 09:26:57,395] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 09:26:57,590] INFO  [jobs-thread-10] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 09:36:50,932] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 09:36:50,934] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 09:36:57,610] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 09:36:57,618] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 09:36:57,857] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 09:46:51,237] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 09:46:51,239] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 09:46:56,963] INFO  [jobs-thread-10] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 09:46:57,846] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 09:46:57,854] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 09:46:58,078] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 09:56:51,457] INFO  [jobs-thread-9] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 09:56:51,459] INFO  [jobs-thread-9] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 09:56:58,081] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 09:56:58,093] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 09:56:58,328] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 10:06:51,680] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 10:06:51,696] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 10:06:58,322] INFO  [jobs-thread-9] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 10:06:58,322] INFO  [jobs-thread-9] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 10:06:58,572] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 10:16:51,906] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 10:16:51,906] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 10:16:57,229] INFO  [jobs-thread-5] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 10:16:58,604] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 10:16:58,604] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 10:16:58,822] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 10:26:52,130] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 10:26:52,130] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 10:26:58,839] INFO  [jobs-thread-9] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 10:26:58,855] INFO  [jobs-thread-9] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 10:26:59,058] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 10:36:52,369] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 10:36:52,369] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 10:36:59,097] INFO  [jobs-thread-9] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 10:36:59,112] INFO  [jobs-thread-9] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 10:36:59,269] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 10:46:52,626] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 10:46:52,626] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 10:46:57,494] INFO  [jobs-thread-7] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 10:46:59,336] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 10:46:59,351] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 10:46:59,541] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 10:56:52,858] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 10:56:52,874] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 10:56:59,572] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 10:56:59,588] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 10:56:59,761] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 11:06:53,348] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 11:06:53,348] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 11:06:59,811] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 11:06:59,811] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 11:06:59,999] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 11:16:53,569] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 11:16:53,585] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 11:16:57,751] INFO  [jobs-thread-7] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 11:17:00,045] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 11:17:00,061] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 11:17:00,233] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 11:26:53,822] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 11:26:53,822] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 11:27:00,290] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 11:27:00,306] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 11:27:00,479] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 11:36:54,023] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 11:36:54,023] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 11:37:00,552] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 11:37:00,552] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 11:37:00,736] INFO  [jobs-thread-9] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 11:46:54,265] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 11:46:54,265] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 11:46:58,010] INFO  [jobs-thread-3] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 11:47:00,816] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 11:47:00,831] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 11:47:01,060] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 11:56:54,484] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 11:56:54,484] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 11:57:01,038] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 11:57:01,038] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 11:57:01,289] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 12:06:54,757] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 12:06:54,757] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 12:07:01,273] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 12:07:01,289] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 12:07:01,514] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 12:16:54,986] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 12:16:54,988] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 12:16:58,273] INFO  [jobs-thread-7] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 12:17:01,534] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 12:17:01,541] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 12:17:01,735] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 12:26:55,228] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 12:26:55,230] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 12:27:01,764] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 12:27:01,772] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 12:27:01,951] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 12:36:55,479] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 12:36:55,481] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 12:37:02,005] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 12:37:02,019] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 12:37:02,193] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 12:46:55,708] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 12:46:55,710] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 12:46:58,538] INFO  [jobs-thread-2] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 12:47:02,261] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 12:47:02,269] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 12:47:02,449] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 12:56:55,936] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 12:56:55,938] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 12:57:02,500] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 12:57:02,508] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 12:57:02,696] INFO  [jobs-thread-9] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 13:06:56,212] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 13:06:56,215] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 13:07:02,819] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 13:07:02,827] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 13:07:03,058] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 13:16:56,488] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 13:16:56,491] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 13:16:58,838] INFO  [jobs-thread-9] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 13:17:03,088] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 13:17:03,096] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 13:17:03,327] INFO  [jobs-thread-10] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 13:26:56,830] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 13:26:56,832] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 13:27:03,379] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 13:27:03,389] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 13:27:03,624] INFO  [jobs-thread-9] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 13:36:57,162] INFO  [jobs-thread-9] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 13:36:57,164] INFO  [jobs-thread-9] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 13:37:03,741] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 13:37:03,753] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 13:37:04,069] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 13:46:57,582] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 13:46:57,584] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 13:46:59,204] INFO  [jobs-thread-9] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 13:47:04,109] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 13:47:04,121] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 13:47:04,407] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 13:54:52,308] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-10-12 13:54:52,740] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-10-12 13:56:57,930] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 13:56:57,933] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 13:57:04,469] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 13:57:04,483] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 13:57:04,792] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 14:06:58,313] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 14:06:58,315] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 14:07:04,843] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 14:07:04,850] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 14:07:05,168] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 14:16:58,892] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 14:16:58,895] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 14:16:59,676] INFO  [jobs-thread-7] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 14:17:05,219] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 14:17:05,233] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 14:17:05,552] INFO  [jobs-thread-9] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 14:26:59,258] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 14:26:59,260] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 14:27:05,571] INFO  [jobs-thread-9] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 14:27:05,579] INFO  [jobs-thread-9] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 14:27:05,900] INFO  [jobs-thread-10] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 14:36:59,577] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 14:36:59,588] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 14:37:05,934] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 14:37:05,946] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 14:37:06,243] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 14:46:59,934] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 14:46:59,936] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 14:47:00,274] INFO  [jobs-thread-1] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 14:47:06,282] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 14:47:06,290] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 14:47:06,616] INFO  [jobs-thread-9] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 14:57:00,372] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 14:57:00,375] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 14:57:06,658] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 14:57:06,669] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 14:57:06,988] INFO  [jobs-thread-10] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 15:07:00,604] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 15:07:00,606] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 15:07:06,884] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 15:07:06,891] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 15:07:07,245] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 15:17:00,548] INFO  [jobs-thread-4] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 15:17:00,833] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 15:17:00,845] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 15:17:07,120] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 15:17:07,127] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 15:17:07,515] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 15:20:43,268] INFO  [jobs-thread-2] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-10-12 15:30:43,248] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 15:30:43,258] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 15:30:47,250] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 15:30:47,260] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 15:30:47,451] INFO  [jobs-thread-9] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 15:32:21,061] INFO  [play-thread-1] com.aton.util.Pandora.<init>(Pandora.java:51) - worker starting. timestamp left shift 22, datacenter id bits 5, worker id bits 5, sequence bits 12, workerid 0
+[2016-10-12 15:40:43,487] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 15:40:43,497] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 15:40:47,488] INFO  [jobs-thread-9] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 15:40:47,498] INFO  [jobs-thread-9] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 15:40:47,689] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 15:44:28,408] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71klk2a8o
+Internal Server Error (500) for request GET /buyer/task/perform2/6646
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+
+play.exceptions.JavaExecutionException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-12 15:50:43,729] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 15:50:43,729] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 15:50:47,285] INFO  [jobs-thread-7] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 15:50:47,708] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 15:50:47,718] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 15:50:47,918] INFO  [jobs-thread-9] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 16:00:43,958] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 16:00:43,968] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 16:00:47,951] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 16:00:47,951] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 16:00:48,142] INFO  [jobs-thread-10] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 16:04:38,235] INFO  [play-thread-1] models.Task.examine(Task.java:1474) - flow into taskId=786114782540333056
+[2016-10-12 16:04:44,925] INFO  [play-thread-1] models.Task.examine(Task.java:1474) - flow into taskId=786113542913785856
+[2016-10-12 16:06:14,984] INFO  [play-thread-1] models.Task.examine(Task.java:1474) - flow into taskId=786115676812083200
+[2016-10-12 16:09:07,045] INFO  [play-thread-1] controllers.UserCenter.checkBeforeSaveBuyerAccount3(UserCenter.java:1287) - Buyer=1678-maimai save buyerAccount: Check Duplicate
+[2016-10-12 16:10:44,197] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 16:10:44,200] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 16:10:48,222] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 16:10:48,232] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 16:10:48,448] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 16:20:44,436] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 16:20:44,436] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 16:20:47,568] INFO  [jobs-thread-3] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 16:20:48,439] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 16:20:48,449] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 16:20:48,679] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 16:30:44,671] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 16:30:44,671] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 16:30:48,673] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 16:30:48,683] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 16:30:48,914] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 16:40:44,873] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 16:40:44,873] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 16:40:48,924] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 16:40:48,924] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 16:40:49,175] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 16:50:45,100] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 16:50:45,100] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 16:50:47,813] INFO  [jobs-thread-9] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 16:50:49,145] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 16:50:49,161] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 16:50:49,396] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 16:58:11,629] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71klk2a8p
+Internal Server Error (500) for request GET /buyer/task/perform2/6649
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+
+play.exceptions.JavaExecutionException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-12 16:58:19,857] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71klk2a90
+Internal Server Error (500) for request GET /buyer/task/perform2/6649
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+
+play.exceptions.JavaExecutionException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-12 17:00:34,056] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71klk2a91
+Internal Server Error (500) for request GET /buyer/task/perform2/6649
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+
+play.exceptions.JavaExecutionException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-12 17:00:42,962] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71klk2a92
+Internal Server Error (500) for request GET /buyer/task/perform2/6649
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+
+play.exceptions.JavaExecutionException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-12 17:00:45,343] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 17:00:45,343] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 17:00:49,381] INFO  [jobs-thread-9] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 17:00:49,381] INFO  [jobs-thread-9] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 17:00:49,681] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 17:10:45,654] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 17:10:45,654] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 17:10:49,677] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 17:10:49,693] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 17:10:50,021] INFO  [jobs-thread-10] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 17:20:45,939] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 17:20:45,939] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 17:20:48,166] INFO  [jobs-thread-8] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 17:20:49,978] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 17:20:49,994] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 17:20:50,327] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 17:30:46,254] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 17:30:46,254] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 17:30:50,297] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 17:30:50,313] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 17:30:50,657] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 17:40:46,564] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 17:40:46,564] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 17:40:50,629] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 17:40:50,629] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 17:40:50,989] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 17:50:46,881] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 17:50:46,881] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 17:50:48,525] INFO  [jobs-thread-1] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 17:50:50,936] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 17:50:50,952] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 17:50:51,286] INFO  [jobs-thread-10] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 18:00:47,172] INFO  [jobs-thread-9] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 18:00:47,187] INFO  [jobs-thread-9] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 18:00:51,268] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 18:00:51,268] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 18:00:51,596] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 18:10:47,505] INFO  [jobs-thread-9] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 18:10:47,505] INFO  [jobs-thread-9] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 18:10:51,560] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 18:10:51,560] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 18:10:51,920] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 18:20:47,803] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 18:20:47,803] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 18:20:48,855] INFO  [jobs-thread-6] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 18:20:51,899] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 18:20:51,899] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 18:20:52,243] INFO  [jobs-thread-9] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 18:30:48,124] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 18:30:48,126] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 18:30:52,220] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 18:30:52,220] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 18:30:52,580] INFO  [jobs-thread-10] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 18:40:48,452] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 18:40:48,452] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 18:40:52,556] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 18:40:52,556] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 18:40:52,900] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 18:50:48,791] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 18:50:48,791] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 18:50:49,182] INFO  [jobs-thread-5] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 18:50:52,866] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 18:50:52,882] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 18:50:53,226] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 19:00:49,099] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 19:00:49,114] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 19:00:53,170] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 19:00:53,185] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 19:00:53,546] INFO  [jobs-thread-10] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 19:10:49,402] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 19:10:49,402] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 19:10:53,467] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 19:10:53,482] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 19:10:53,885] INFO  [jobs-thread-9] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 19:20:49,549] INFO  [jobs-thread-3] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 19:20:49,800] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 19:20:49,816] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 19:20:53,796] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 19:20:53,823] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 19:20:54,213] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 19:30:50,125] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 19:30:50,125] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 19:30:54,125] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 19:30:54,140] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 19:30:54,517] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 19:40:50,502] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 19:40:50,502] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 19:40:54,453] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 19:40:54,453] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 19:40:54,903] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 19:50:49,934] INFO  [jobs-thread-6] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 19:50:50,863] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 19:50:50,863] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 19:50:54,833] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 19:50:54,843] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 19:50:55,265] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 19:54:57,044] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-10-12 20:00:51,238] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 20:00:51,238] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 20:00:55,196] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 20:00:55,206] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 20:00:55,639] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 20:10:51,598] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 20:10:51,598] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 20:10:55,545] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 20:10:55,555] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 20:10:55,995] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 20:20:50,338] INFO  [jobs-thread-3] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 20:20:51,937] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 20:20:51,937] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 20:20:55,960] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 20:20:55,960] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 20:20:56,350] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 20:30:52,297] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 20:30:52,297] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 20:30:56,327] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 20:30:56,337] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 20:30:56,737] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 20:40:52,642] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 20:40:52,652] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 20:40:56,691] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 20:40:56,701] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 20:40:57,132] INFO  [jobs-thread-10] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 20:50:50,730] INFO  [jobs-thread-1] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 20:50:53,006] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 20:50:53,006] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 20:50:57,046] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 20:50:57,056] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 20:50:57,497] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 21:00:53,354] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 21:00:53,354] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 21:00:57,401] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 21:00:57,411] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 21:00:57,882] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 21:10:53,688] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 21:10:53,688] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 21:10:57,780] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 21:10:57,790] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 21:10:58,262] INFO  [jobs-thread-9] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 21:20:51,112] INFO  [jobs-thread-9] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 21:20:54,026] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 21:20:54,026] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 21:20:58,120] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 21:20:58,130] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 21:20:58,611] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 21:30:54,353] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 21:30:54,363] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 21:30:58,506] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 21:30:58,506] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 21:30:58,967] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 21:40:54,715] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 21:40:54,715] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 21:40:58,843] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 21:40:58,843] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 21:40:59,334] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 21:50:51,482] INFO  [jobs-thread-10] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 21:50:55,072] INFO  [jobs-thread-9] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 21:50:55,072] INFO  [jobs-thread-9] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 21:50:59,202] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 21:50:59,212] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 21:50:59,693] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 22:00:55,435] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 22:00:55,435] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 22:00:59,573] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 22:00:59,583] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 22:01:00,077] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 22:10:55,790] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 22:10:55,800] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 22:10:59,942] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 22:10:59,952] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 22:11:00,483] INFO  [jobs-thread-10] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 22:20:51,920] INFO  [jobs-thread-9] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 22:20:56,138] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 22:20:56,148] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 22:21:00,307] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 22:21:00,307] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 22:21:00,833] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 22:30:56,582] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 22:30:56,582] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 22:31:00,649] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 22:31:00,659] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 22:31:01,190] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 22:40:56,932] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 22:40:56,942] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 22:41:01,111] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 22:41:01,121] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 22:41:01,551] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 22:50:52,319] INFO  [jobs-thread-6] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 22:50:57,276] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 22:50:57,276] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 22:51:01,467] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 22:51:01,467] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 22:51:01,913] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 23:00:57,617] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 23:00:57,627] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 23:01:01,801] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 23:01:01,801] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 23:01:02,264] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 23:10:57,968] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 23:10:57,978] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 23:11:02,175] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 23:11:02,185] INFO  [jobs-thread-10] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 23:11:02,676] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 23:20:52,722] INFO  [jobs-thread-9] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 23:20:58,315] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 23:20:58,315] INFO  [jobs-thread-10] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 23:21:02,621] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 23:21:02,631] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 23:21:03,032] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 23:30:58,670] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 23:30:58,670] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 23:31:02,978] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 23:31:02,988] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 23:31:03,389] INFO  [jobs-thread-9] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 23:40:59,018] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 23:40:59,028] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 23:41:03,319] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 23:41:03,329] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 23:41:03,780] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-10-12 23:50:53,121] INFO  [jobs-thread-4] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-10-12 23:50:59,376] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-10-12 23:50:59,376] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-10-12 23:51:03,668] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-10-12 23:51:03,678] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-10-12 23:51:04,137] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====

@@ -1,0 +1,234 @@
+.overview-wrapper{
+
+}
+.overview-box{
+	border:solid 1px #E2E5EA;
+	border-radius: 3px;
+	width: 300px;
+	margin-right:20px;
+	margin-bottom: 20px;
+}
+.overview-box .caption,.overview-box .num-list{
+	margin: 15px;
+}
+.overview-box .no-data{
+	margin-left: 15px;
+	padding-bottom: 20px;
+	color: #A3A3A3;
+}
+.overview-box .info{
+	background-color: #E9EEF6;
+	border-top: solid 1px #EDF1F4;
+	color:#636F83;
+	padding:4px 15px;
+}
+.overview-box .num-list{
+	border:solid 1px #E2E5EA;
+	padding:5px 15px 5px 0;
+	line-height: 30px;
+}
+.overview-box .num-list .item{
+	color:#828BA1;	
+	border-left: solid 1px #D3D7DF;
+	padding-left:15px;
+	margin-left: 15px;
+}
+.overview-box .num-list .item:hover{
+	color: #AD6BAE;
+}
+.overview-box .num-list strong{
+	font-size: 20px;
+	font-weight: 700;
+	margin-left: 8px;
+}
+.overview-box .num-list .item:first-child{
+	border:none;
+	padding-left: 0;
+}
+/*---------------------------*/
+#taskFilterPanel{
+	height: 34px;
+	padding-left: 10px;
+}
+#taskFilterPanel .stdColorButton{
+	line-height: 14px;
+}
+.taskWrapper{
+
+}
+.taskCell{
+	border-bottom:solid 1px #DEDEDE;
+	padding:10px 0;
+}
+.taskCell:first-child{
+	border-top:solid 1px #DEDEDE;	
+}
+.taskCell:hover{
+	background-color: #fefce8;
+}
+.taskCell .normTable thead td {
+	padding: 0 8px;
+}
+.normTable tbody tr td {
+	line-height: 30px;
+}
+.taskCell .title{
+	height: 40px;
+	line-height: 30px;
+	padding:0 10px;
+}
+.taskCell .shop{
+	color: #111;
+}
+.taskCell .taskNo{
+	
+}
+.taskCell .operation{
+	float:right;
+}
+.taskCell .operation .btn{
+	color:#4083A9;
+}
+.taskCell .operation .btn:hover{
+	color:#AD6BAE;
+}
+.taskCell .view-detail{
+	color:#4083A9;
+}
+.taskCell .view-detail:hover{
+	color:#D94E75;
+}
+
+.taskCell .body{
+	padding:0 10px;
+
+}
+.taskCell .body td{
+	color: #666;
+}
+.taskCell .cap{
+	color: #888;
+	font-size: 12px;
+}
+.taskCell .body .item-list{
+	width: 300px;
+}
+.taskCell .body .item-list .item-box{
+	position: relative;
+	padding-left: 90px;
+	height: 90px;
+}
+.item-box .pic{
+	width:80px;
+	height: 80px;
+	position: absolute;
+	left:5px;
+	top:5px;
+}
+.item-box .pic img{
+	width:80px;
+	height: 80px;
+	border:solid 1px #DEDEDE;
+}
+.item-box .title a{
+	text-align: left;
+	color:#5d5d5d;
+	font-weight: 700;
+	line-height: 24px;	
+	color:#3E88BE;
+}
+/*--------------------这块是买家端的----------------------*/
+.taskCell .body .nick{
+	width: 150px;
+	vertical-align: middle;
+}
+.taskCell .body .price{
+	width: 100px;
+	color:#B77E5E;
+	vertical-align: middle;
+}
+.taskCell .body .commission{
+	width: 100px;
+	color:#B77E5E;
+	vertical-align: middle;
+}
+.taskCell .body .status{
+	width: 200px;
+	vertical-align: middle;
+}
+/*------------------这块是卖家端的------------------------*/
+.taskCell .body .doing{
+	width: 200px;
+	color:#EB423E;	
+}
+.taskCell .body .waiting{
+	width: 60px;
+	color:#248BB3;
+}
+.taskCell .body .finished{
+	width: 60px;
+	color:#3DBA80;
+}
+/*--------------------------------------------*/
+#boostWnd .modalWnd{
+	width:620px;
+	left:50%;
+	top:40%;
+	margin:-150px 0 0 -300px;
+	position: fixed;
+	z-index: 100;
+}
+#shopInfoShower{
+	padding-left:10px;
+}
+.panelLine .num-list-flag{
+	background-color: #445C71;
+	color:#fff;
+	padding:0 6px;
+	margin-right: 8px;
+	line-height: 20px;
+	margin-top: 7px;
+	border-radius: 2px;
+}
+.panelLine .rad{
+	margin-top: 12px;
+	margin-right: 5px;
+}
+.middle{
+	width: 150px;
+}
+.short{
+	width:80px;
+}
+.wndBotButtonSection .btnPrev{
+	float: left;
+}
+.wndBotButtonSection .btnPrev,.wndBotButtonSection .btnNext{
+	background-color: #39A6BC;
+}
+.wndBotButtonSection .btnPay{
+	background-color: #E15E23;	
+}
+/*----------------------------------------------*/
+#cancelWnd .modalWnd{
+	width:400px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+.bankListWrapper{
+	height:310px;
+}
+.sec{
+	margin-bottom: 10px;
+}
+.rad0{
+	margin-top: 7px;
+}
+.wid{
+	width:121px;
+}
+
+

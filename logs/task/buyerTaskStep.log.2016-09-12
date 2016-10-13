@@ -1,0 +1,11 @@
+16-09-12 09:22:27 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=773775548928229376-6595 with status=WAIT_PAY
+16-09-12 09:22:30 Buyer=1678-maimai perform buyerTask=6595 save step=CHOOSE_ITEM
+16-09-12 09:22:30 Fetch and Check Buyer=1678 last perform step of buyerTask=6595
+16-09-12 09:22:30 [Buyer=1678-maimai perform buyerTask=6595 save step=CHOOSE_ITEM] Current SESSION taskId=6595 step=货比三家
+16-09-12 09:25:21 Buyer=1678-maimai cancle buyerTask=773775548928229376-6595
+16-09-12 09:25:36 Buyer=1678-maimai take Task=773775548928229376
+16-09-12 09:25:36 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=773775548928229376-6596 with status=RECIEVED
+16-09-12 09:25:39 Buyer=1678-maimai perform buyerTask=6596 save step=CHOOSE_ITEM
+16-09-12 09:25:39 Fetch and Check Buyer=1678 last perform step of buyerTask=6596
+16-09-12 09:25:39 Sessoin current taskStep=CHOOSE_ITEM ,buyer=1678,buyerTask=6596
+16-09-12 09:25:39 Buyer=1678-maimai perform save step=CHOOSE_ITEM of buyerTask=773775548928229376-6596 with status=RECIEVED

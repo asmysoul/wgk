@@ -1,0 +1,59 @@
+#taskFilterPanel{
+	padding-left: 20px;
+	padding-top: 10px;
+}
+#taskFilterPanel .stdColorButton{
+	line-height: 14px;
+}
+/*-----------------------------------*/
+.normTable{
+	margin-top: 10px;
+}
+.normTable tbody td{
+	border-bottom: solid 1px #DEDEDE;
+	vertical-align: middle;
+}
+.normTable thead td{
+	background: #DEDEDE;
+	border-bottom: solid 1px #BBB;
+	color: #999;
+}
+.item-box .pic{
+	width:80px;
+	height: 80px;
+	position: absolute;
+	left:5px;
+	top:5px;
+}
+.item-box .pic img{
+	width:80px;
+	height: 80px;
+	border:solid 1px #DEDEDE;
+}
+.item-box .title{
+	text-align: left;
+	color:#5d5d5d;
+	line-height: 24px;	
+	color:#3E88BE;
+}
+.item-list .item-box{
+	position: relative;
+	padding-left: 90px;
+	height: 90px;
+}
+.normTable .tl{
+	text-align: left;
+}
+.normTable .view-detail{
+	color:#76B3C7;
+}
+.view-detail:hover{
+	text-decoration: underline;
+}
+.tdLeft {
+  float: left;
+}
+.task-id {
+  font-weight: 700;
+  font-size: 20px;
+}

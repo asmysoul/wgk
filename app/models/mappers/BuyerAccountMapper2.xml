@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.BuyerAccountMapper2">
+	<resultMap id="BaseResultMap" type="models.BuyerAccount2">
+	</resultMap>
+	
+	<!-- 
+		1、相同任务平台，买号昵称不能重复
+		2、该用户所属买号范围内，收货人信息不能重复
+	  -->
+	<select id="selectForCheckDuplicate" resultMap="BaseResultMap">
+		select ba.id from
+		  buyer_account2 ba 
+		<where>
+		  <if test="nick != null">
+		  ba.nick = #{nick} and ba.platform = #{platform}
+		  </if>
+		  or (
+		    ba.user_id = #{userId} and ba.platform = #{platform}
+		    <if test="id != null and id>0">
+			  and id != #{id}
+		  	</if>
+		    and (
+		      ba.consignee = #{consignee}
+		      or ba.mobile = #{mobile} 
+		      or (
+		        ba.state = #{state} 
+		        and ba.city = #{city} 
+		      <if test="region != null">
+		        and region = #{region}
+		      </if>
+		        and ba.address = #{address} 
+		      	)
+		   	  )
+		  	) 
+		</where>
+		limit 1
+	</select>
+ 
+	<select id="count" resultType="java.lang.Integer">
+		select count(1) from buyer_account2
+		<where>
+			<if test="userId != null">
+				user_id = #{userId}
+			</if>
+			<if test="platform != null">
+				and platform = #{platform}
+			</if>
+			<if test="status != null">
+				and status = #{status}
+			</if>
+			<if test="accountId != null">
+				and id = #{accountId}
+			</if>
+		</where>
+	</select>
+
+	<select id="selectBySearch" resultMap="BaseResultMap">
+	select
+		ba.id, ba.nick, ba.platform, ba.state, ba.city, ba.region, ba.address,
+		ba.mobile, ba.status, ba.consignee,ba.memo, ba.create_time, ba.modify_time
+	<if test="userId == null">
+		,u.nick userNick
+	</if>
+	from buyer_account2 ba
+	<if test="userId == null">
+		join user u on u.id = ba.user_id
+	</if>
+	<where>
+		<if test="userId != null">
+			ba.user_id = #{userId}
+		</if>
+		<if test="platform != null">
+			and ba.platform = #{platform}
+		</if>
+		<if test="status != null">
+			and ba.status = #{status}
+		</if>
+		<if test="accountId != null">
+			and ba.id = #{accountId}
+		</if>
+		<if test="userNick != null">
+			and u.nick like '%${userNick}%'
+		</if>
+		<if test="accountNick != null">
+			and ba.nick like '%${accountNick}%'
+		</if>
+	</where>
+		order by order_number
+	<if test="pageSize > 1">
+		limit #{startIndex},#{pageSize}
+	</if>
+	</select>
+
+	<select id="selectById" resultMap="BaseResultMap">
+		select * from buyer_account2 where id = #{id}
+	</select>
+
+	<update id="updateById" parameterType="models.BuyerAccount2">
+		update buyer_account2 set
+		modify_time = #{modifyTime}
+		<if test="nick != null and nick!=''">
+			,nick = #{nick}
+		</if>
+		<if test="consignee != null and consignee!=''">
+			,consignee = #{consignee}
+		</if>
+		<if test="state != null and state!=''">
+			,state = #{state}
+		</if>
+		<if test="city != null and city!=''">
+			,city = #{city}
+		</if>
+		<if test="region != null">
+			,region = #{region}
+		</if>
+		<if test="address != null and address!=''">
+			,address = #{address}
+		</if>
+		<if test="mobile != null and mobile!=''">
+			,mobile = #{mobile}
+		</if>
+		<if test="status != null">
+			,status = #{status}
+		</if>
+		<if test="memo != null">
+			,memo = #{memo}
+		</if>
+		where id = #{id}
+	</update>
+	<update id="updateBuyerAccount" parameterType= "models.BuyerAccount2">
+		update buyer_account2 set 
+		<if test="nick !=null">
+			nick = #{nick}
+		</if>
+		<if test="consignee !=null">
+			,
+			consignee = #{consignee}
+		</if>
+		<if test="state != null">
+			,
+			state = #{state}
+		</if>
+		<if test="city != null">
+			,
+			city = #{city}
+		</if>
+		<if test="region != null">
+			,
+			region = #{region}
+		</if>
+		<if test="address != null">
+			,
+			address = #{address}
+		</if>
+		<if test="mobile != null">
+			,
+			mobile = #{mobile}
+		</if>
+		where id = #{id}
+	</update>
+
+</mapper>
+	

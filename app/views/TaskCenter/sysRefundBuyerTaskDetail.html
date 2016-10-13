@@ -1,0 +1,461 @@
+#{extends 'frame.html' /}
+#{set title:'买手任务详情' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/task-detail.css'}" />
+#{/set}
+
+<!-- 顶部任务进度条 -->
+<div class="contentCard">
+	<div class="contentTitle">
+		<span class="iconfont">&#xf00e8;</span>
+		任务进度
+	</div>
+	<div class="contentBody" style="padding:20px 40px;">
+		<div style="height:10px;"></div>
+		<div class="stepWrapper">
+			<div class="stepWaiting" style="position:absolute;top:0;left:-5px;">
+				#{if taskInfo.takeTime}
+				<div class="stepFinish" stepbasic="1"></div>
+				#{/if}
+				#{else}
+				<span class="stepNum">1</span>
+				#{/else}
+				<div class="caption tcap" style="width:48px;margin-left:-24px;">接手任务</div>
+				<div class="caption bcap" style="width:80px;margin-left:-40px;">
+					<span class="date">${taskInfo?.takeTime?.format("yyyy-MM-dd")}</span>
+					<span class="time">${taskInfo?.takeTime?.format("HH:mm")}</span>
+				</div>
+			</div>
+			#{list items:taskStepList, as:'step'}
+			<div class="stepWaiting" style="margin-left:9%;">
+				#{if step.isValid}
+				<div class="stepFinish" stepbasic="${step_index +1}"></div>
+				#{/if}
+				#{else}
+				<span class="stepNum">${step_index +1}</span>
+				#{/else}
+				<div class="caption tcap" style="width:70px;margin-left:-24px;">
+				#{if step?.type?.toString()=='REFUND'}
+					商家核实返款金额
+				#{/if}
+				#{elseif step?.type?.toString()=='CONFIRM_REFUND'}
+					买手核实返款金额
+				#{/elseif}
+				#{else}
+					${step?.type?.title}
+				#{/else}
+				</div>
+				<div class="caption bcap" style="width:80px;margin-left:-40px;">
+				#{if step?.type?.toString()=='REFUND' || step?.type?.toString()=='CONFIRM_REFUND'}
+					#{if step?.isValid}
+					<span class="date">${step?.modifyTime?.format("yyyy-MM-dd")}</span>
+					<span class="time">${step?.modifyTime?.format("HH:mm")}</span>
+					#{/if}
+				#{/if}
+				#{else}
+					<span class="date">${step?.createTime?.format("yyyy-MM-dd")}</span>
+					<span class="time">${step?.createTime?.format("HH:mm")}</span>
+				#{/else}
+				</div>
+			</div>	
+			#{/list}
+			<div class="stepWaiting" style="position:absolute;top:0;right:-5px;">
+				#{if taskInfo.finishTime}
+				<div class="stepFinish" stepbasic="9"></div>
+				#{/if}
+				#{else}
+				<span class="stepNum" id="last_jhs_step">9</span>
+				#{/else}
+				<div class="caption tcap" style="width:48px;margin-left:-24px;">任务完成</div>
+				<div class="caption bcap" style="width:80px;margin-left:-40px;">
+					<span class="date">${taskInfo?.finishTime?.format("yyyy-MM-dd")}</span>
+					<span class="time">${taskInfo?.finishTime?.format("HH:mm")}</span>
+				</div>
+			</div>
+		</div>
+		<div style="height:30px;"></div>
+	</div>
+</div>
+
+<!-- 上部任务信息、状态 -->
+<div id="taskInfoCols" class="clearfix" style="height:530px">
+	<div class="contentCard leftPart floatLeft">
+		<div class="contentTitle">
+			<span class="iconfont">&#xf0142;</span>
+			任务信息
+		</div>
+		<div class="contentBody" style="height:400px;">
+			<div class="panelLine">
+				<span class="lbl">订单号</span>
+				<span>${taskInfo?.orderId}</span>
+			</div>
+			<div class="panelLine">
+				<span class="lbl">下单终端</span>
+				<span>
+					#{if taskInfo?.device?.name() == "PC"}
+					<span class="iconfont">&#xf0099;</span>
+					电脑
+				#{/if}
+				#{else}
+					<span class="iconfont">&#xf0099;</span>
+					移动端
+				#{/else}
+				</span>
+			</div>
+			<div class="panelLine">
+				<span class="lbl">买号</span>
+				<span>${taskInfo?.buyerAccountNick}</span>
+			</div>
+			<div class="panelLine">
+				<span class="lbl">垫付本金</span>
+				#{if taskInfo.itemPrice!= null && taskInfo.itemBuyNum != null}
+				<span>${taskInfo.itemPrice * (taskInfo.itemBuyNum)/100}元</span>
+				#{/if}
+			</div>
+			<div class="panelLine">
+				<span class="lbl">经验值</span>
+				<span>${taskType}</span>
+			</div>
+			<div class="panelLine">
+				<span class="lbl">返款方式</span>
+				<span>${taskInfo?.refundAccountType?.title}</span>
+			</div>
+			<div class="panelLine" style="height: 50px;">
+				<span class="lbl">快递方式</span>
+				
+				<span>${taskInfo?.expressType.title}</span>
+				
+			</div>
+			<div class="panelLine">
+				<span class="lbl">返款金额</span>
+				#{if taskInfo.paidFee}
+				<span>${taskInfo?.paidFee/100}元</span>
+				#{/if}
+			</div>
+			<div class="panelLine sec">
+				<span class="lbl">返款账号</span>
+				<span>${taskInfo?.refundAccountNo}</span>
+			</div>
+			<div class="panelLine">
+				<span class="lbl">任务编号</span>
+				<span>${taskInfo?.taskIdStr}-${taskInfo?.id}</span>
+			</div>
+			<div class="panelLine">
+				<span class="lbl">任务接手时间</span>
+				<span>${taskInfo?.takeTime?.format("yyyy-MM-dd HH:mm")}</span>
+			</div>
+			#{if role=='admin'}
+			<div class="panelLine">
+				<span class="lbl">买手账号</span>
+				<span>${taskInfo?.buyerNick}</span>
+			</div>
+			#{/if}
+		</div>
+	</div>
+	<!-- 任务状态 -->
+	<div class="contentCard ${taskInfo?.sysRefund?'withdrawImg':''}">
+		<div class="contentTitle">
+			<span class="iconfont">&#xf0025;</span>
+			任务状态明细
+		</div>
+		<div class="contentBody delt-info" style="height:400px;">
+			<div class="state" step="1" style="display:none;">
+				<h4>任务状态：${taskInfo?.status.title}</h4>
+				<p class="mb">
+					【注意】平台将在6小时之后自动撤销未
+					<span class="red bold">下单支付</span>的任务！
+				</p>
+				#{if user?.isBuyer()}
+				<p class="mb">
+					<a class="stdColorButton" href="/buyer/task/perform/${taskInfo?.id}">立即去做任务</a>
+				</p>
+				#{/if}
+			</div>
+
+			<div class="state" step="5" style="display:none;">
+				<h4>任务状态：${taskInfo?.status.title}</h4>
+				#{if taskInfo?.status.toString()=='EXPRESS_PRINT' && (role=='admin' || user?.isBuyer())}
+				<p class="mb">
+					<a class="stdColorButton" href="javascript:;">提醒商家发货</a>
+				</p>
+				#{/if}
+			</div>
+			<div class="state" step="6" style="display:none;">
+				<h4>任务状态：${taskInfo?.status.title}</h4>
+				<p class="mb">商家已操作虚拟发货，请待快递状态变为已签收后再确认收货并好评后可操作</p>
+				#{if user?.isBuyer()}
+				<p class="mb">
+					<a class="stdColorButton" href="/buyer/task/confirmGoods/${taskInfo?.platform}">确认收货</a>
+				</p>
+				#{/if}
+			</div>
+			<div class="state" step="7" style="display:none;">
+				<h4>任务状态：${taskInfo?.status.title}</h4>
+				<h4>买手已确认收货，待商家核实返款金额</h4>
+				<p class="mb">
+					返款本金：
+					<span class="red">#{if taskInfo.paidFee}${taskInfo.paidFee/100}#{/if}</span>
+					元
+				</p>
+			</div>
+			<div class="state" step="8" style="display:none;">
+				<h4>任务状态：${taskInfo?.status.title}</h4>
+				<h4>${taskInfo?.status.title}</h4>
+				<p class="mb">
+					本任务的返款本金：
+					#{if taskInfo?.paidFee}
+					<span class="red mlr-4">${(taskInfo.paidFee/100.0).format('###0.00')}</span>
+					#{/if}
+					元，任务佣金：
+					<span class="red mlr-4">${(taskInfo?.rewardIngot/100.0).format('###0.00')}</span>
+					金币
+				</p>
+				#{if user?.isBuyer() && taskInfo?.status.toString()=='WAIT_SYS_REFUND'}
+				<p class="mb">
+					<a class="stdColorButton mr-10" href="javascript:;" data-tid="${taskInfo?.id}" id="J_cancelSysRefund">撤销确认</a>
+					<span class="grey mlr-4">撤销确认后，任务将变为未确认状态</span>
+				</p>
+				#{/if}
+			</div>
+			<div class="state" step="9" style="display:none;">
+				<h4>任务状态：已完成</h4>
+			</div>
+			<div class="state">
+				<h4>
+					卖家任务要求:
+				</h4>
+				<p class="mb">
+					<span class="red">${taskInfo?.taskRequest}</span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 中部任务进展 -->
+<div class="contentCard">
+	<div class="contentTitle">
+		<span class="iconfont">&#x3434;</span>
+		任务进展
+	</div>
+	<div class="contentBody" id="stepDetailList">
+	#{list items:taskStepList, as:'step'}
+		<div class="stepDetailCell ${step.isValid?'finished':''}">
+			<div class="iconfont">&#xf0156;</div>
+			<div class="stepTitle">
+				<span class="bold mr-20">
+				#{if step?.type?.toString()=='REFUND'}
+					商家核实返款金额
+				#{/if}
+				#{elseif step?.type?.toString()=='CONFIRM_REFUND'}
+					买手核实返款金额
+				#{/elseif}
+				#{else}
+					${step.type.title}
+				#{/else}
+				</span>
+			#{if step?.isValid}
+				#{if step?.type?.toString()=='REFUND' || step?.type?.toString()=='CONFIRM_REFUND'}
+				<span class="date">${step?.modifyTime?.format('yyyy-MM-dd HH:mm:ss')}</span>
+				#{/if}
+				#{else}
+				<span class="date">${step?.createTime?.format('yyyy-MM-dd HH:mm:ss')}</span>
+				#{/else}
+			#{/if}
+			#{else}
+				<span class="red">未开始</span>
+			#{/else}
+			</div>
+			#{if step.isValid}
+			<div class="stepEsContent">
+				#{if step.type?.toString()=='CHOOSE_ITEM'}
+				<ul>
+					#{list step?.stepVo?.itemUrls, as:'url'}
+					<li>${url}</li>
+					#{/list}
+				</ul>
+				#{/if}
+				#{if step.type?.toString()=='VIEW_AND_INQUIRY'}
+				<ul>
+					<li>店铺内浏览：</li>
+					#{list step?.stepVo?.itemUrls, as:'url'}
+						#{if url.contains("http://")}
+						<li><span><a href="${url}"target="_blank"><img class="chartImg" src="${url}"></a></span>&nbsp;</li>
+						#{/}
+						#{else}
+							<li>${url}</li>
+						#{/}
+					#{/list}
+				</ul>
+				
+				<ul>	
+					<li>聊天截图如下：</li>
+					#{list step?.stepVo?.picUrls, as:'url'}
+					<span><a href="${url}"target="_blank"><img class="chartImg" src="${url}"></a></span>&nbsp;
+					#{/list}
+				</ul>
+				#{/if}
+				#{if step.type?.toString()=='ORDER_AND_PAY'}
+				<p>
+					<span>买手已完成，订单号&nbsp;&nbsp;</span>
+					<span class="mr-20 orderod red">${taskInfo.orderId}</span> 付款截图如下：
+				</p>
+				<br />
+				<p>
+					#{list step?.stepVo?.picUrls, as:'url'}
+					<span><a href="${url}"target="_blank"><img class="chartImg" src="${url}"></a></span>
+					#{/list}
+				</p>
+				#{/if}
+				#{if step.type?.toString()=='SEND_GOODS'}
+				<ul>
+					<li>卖家已完成发货</li>
+					<li>
+						<span class="mr-4 express">快递方式</span>
+						<span class="red">${taskInfo?.expressType.title}</span>
+					</li>
+					<li>
+						<span class="mr-4 serialnum">快递单号</span>
+						<span class="red">${taskInfo?.expressNo}</span>
+					</li>
+				</ul>
+				#{/if}
+				#{if step.type?.toString()=='CONFIRM_AND_COMMENT'}
+				<p>
+					买手已确认收货并好评&nbsp;&nbsp;
+					好评内容如下：
+				</p>
+				#{list step?.stepVo?.picUrls, as:'url'}
+				<span><a href="${url}" target="_blank"><img class="chartImg" src="${url}"></a></span>
+				#{/list}
+				#{/if}
+				#{if step.type?.toString()=='REFUND'}
+				<ul>
+					<li>
+						商家已核实并确认返款金额：
+						#{if taskInfo?.paidFee}
+						<span class="red">${(taskInfo.paidFee/100.0).format('###0.00')}</span>元
+						#{/if}
+					</li>
+				</ul>
+				#{/if}
+				#{if step.type?.toString()=='CONFIRM_REFUND'}
+				<ul>
+					<li>
+						买手已核实并确认返款金额：
+						#{if taskInfo?.paidFee}
+						<span class="red">${(taskInfo.paidFee/100.0).format('###0.00')}</span>元
+						#{/if}
+					</li>
+				</ul>
+				#{/if}
+			</div>
+			#{/if}
+		</div>
+	#{/list}
+		<div class="stepDetailCell ${taskInfo?.status.toString()=='FINISHED'?'finished':''}">
+			<div class="iconfont">&#xf0156;</div>
+				<div class="stepTitle">
+				<span class="bold">平台自动返款</span>
+				#{if taskInfo?.status.toString()=='FINISHED'}
+				<span class="date">${taskInfo?.finishTime?.format('yyyy-MM-dd HH:mm:ss')}</span>
+				<div class="stepEsContent">
+					<ul>
+						<li>
+							平台返还买手本金：
+							<span class="red">${(taskInfo.paidFee/100.0).format('###0.00')}</span>元
+						</li>
+						<li>
+							发放佣金：
+							<span class="red">${(taskInfo.rewardIngot/100.0).format('###0.00')}</span>元
+						</li>
+					</ul>
+				</div>
+				#{/if}
+				#{else}
+				<span class="red">未开始</span>
+				#{/else}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="contentCard">
+	<div class="contentTitle">
+		优质评价
+	</div>
+	<div class="contentBody">
+		<div id="itemInfo" class="clearfix">
+			<div class="contInfo floatLeft">
+				<div class="price-box pt10">
+					<span class="mr-4 lb">评价关键词</span>
+					<span class="black val"><span class="red">${taskInfo.goodCommentWords}</span></span>
+					
+				</div>
+				#{if taskInfo?.goodCommentImg}
+				<div class="price-box pt10">
+					<span class="mr-4 lb">评价图片</span>
+				<br/>
+				#{list items:taskInfo?.goodCommentImg?.split(','), as:'cw'}
+							<img id="imgComment1" class="floatLeft ml20" width="200" height="200" name="imgComment1" src="${cw}">
+					#{/list}
+					
+				</div>
+				#{/if}
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- 底部任务商品 -->
+<div class="contentCard">
+	<div class="contentTitle">
+		<span class="iconfont">&#xf0179;</span>
+		商品信息
+	</div>
+	<div class="contentBody">
+		<div id="itemInfo" class="clearfix">
+			<div class="summary">
+				<div>买手实付款</div>
+				<br/>
+				<div class="orange sum">#{if taskInfo.paidFee}${taskInfo.paidFee/100}#{/if}</div>
+			</div>
+			<div class="picBox floatLeft">
+				<img src="${taskInfo?.itemPic}" />
+			</div>
+			<div class="contInfo floatLeft">
+				#{if user?.type.toString()=='BUYER'}
+				<p class="title">*********************************************</p>
+				#{/if}
+				#{else}
+				<p class="title">${taskInfo.itemTitle}</p>
+				#{/else}
+				<div class="price-box">
+					<span class="mr-4 lb">单价(元)</span>
+					<span class="black val">${taskInfo.itemPrice/100}</span>
+					<span class="mr-4 lb">数量</span>
+					<span class="black val">${taskInfo.itemBuyNum}</span>
+					<span class="mr-4 lb">运费(元)</span>
+					#{if taskInfo.isFreeShipping}
+					<span class="black val">10</span>
+					#{/if}
+					#{else}
+					<span class="blanck val">0</span>
+					#{/else}
+				</div>
+			</div>
+			
+
+		</div>
+	</div>
+</div>
+
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script type="text/javascript">
+	App.module = '${role=='admin'?'tasklist':'myTask'}';
+	App.platform='${taskInfo?.platform}';
+	App.taskType='${taskInfo?.taskType}';
+</script>
+<script src="@{'/public/javascripts/task/sysRefundBuyerTaskDetail.js'}" type="text/javascript"></script>
+#{/set}

@@ -1,0 +1,41 @@
+#{extends 'nui.html' /}
+#{set title:'重设密码' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/resetPass.css'}" />
+#{/set}
+<div id="centerBox">
+	<div class="contentCard">
+		<div class="contentTitle">
+			<span class="iconfont">&#xf0101;</span>
+			重设密码
+		</div>
+		<div class="contentBody" id="step-1-form">
+			<div class="panelLine sec">
+				<span class="ls floatLeft lbl">注册邮箱</span>
+				<span>${email}</span>
+			</div>
+			<form id="resetForm" action="/user/modify" method="post">
+				#{authenticityToken/}
+				<div class="panelLine sec">
+					<span class="ls floatLeft lbl">密码</span>
+					<input type="password" class="inputText floatLeft ls long success required" id="txtPass" name="user.password"/>
+				</div>
+				<div class="panelLine sec">
+					<span class="ls floatLeft lbl">确认密码</span>
+					<input type="password" class="inputText floatLeft ls long success required" id="txtConfirmPass" name="password2"/>
+				</div>
+			</form>
+			<div class="buttonSection clearfix" style="margin-top: 20px;padding-left:84px;">
+				<a href="javascript:;" class="stdColorButton" id="btnModifyPass">
+					确认
+					<span class="iconfont">&#xf016d;</span>
+				</a>
+			</div>
+		</div>
+
+	</div>
+</div>
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/user/resetPass.js'}" type="text/javascript"></script>
+#{/set}

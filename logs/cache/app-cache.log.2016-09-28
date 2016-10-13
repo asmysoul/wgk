@@ -1,0 +1,7 @@
+16-09-28 10:08:12 Set value of cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT,expiration=30d
+16-09-28 10:08:12 Set value of cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT,expiration=30d
+16-09-28 10:08:12 Set value of cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT,expiration=30d
+16-09-28 10:08:12 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME,expiration=30d
+16-09-28 10:08:12 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME,expiration=30d
+16-09-28 10:08:12 Set value of cache,key=SYS_CONFIGBUYER_AND_SHOP_TIME,expiration=30d
+16-09-28 10:08:12 Set value of cache,key=SYS_CONFIGBUYER_AND_SELLER_TIME,expiration=30d

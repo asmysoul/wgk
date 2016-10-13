@@ -1,0 +1,120 @@
+[2016-07-12 15:48:22,169] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-07-12 16:41:40,701] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70l316fpn
+Application.login action not found
+
+Action not found
+Action Application.login could not be found. Error raised is Controller controllers.Application not found
+
+play.exceptions.ActionNotFoundException: Action Application.login not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.Application not found
+	... 3 more
+[2016-07-12 16:41:50,484] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70l316fpp
+Internal Server Error (500) for request GET /admin
+
+Template not found (In /app/controllers/Admin.java around line 1817)
+The template Admin/index.html does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : Admin/index.html
+	at play.mvc.Controller.renderTemplate(Controller.java:685)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.index(Admin.java:1817)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-07-12 16:44:30,675] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70l316g00
+Application.login action not found
+
+Action not found
+Action Application.login could not be found. Error raised is Controller controllers.Application not found
+
+play.exceptions.ActionNotFoundException: Action Application.login not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.Application not found
+	... 3 more
+[2016-07-12 16:44:31,206] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70l316g01
+Application.login action not found
+
+Action not found
+Action Application.login could not be found. Error raised is Controller controllers.Application not found
+
+play.exceptions.ActionNotFoundException: Action Application.login not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.Application not found
+	... 3 more
+[2016-07-12 16:45:29,232] ERROR [main] play.Logger.error(Logger.java:426) - Could not bind on port 80
+[2016-07-12 16:49:00,468] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70l316g02
+Internal Server Error (500) for request GET /admin
+
+Template execution error (In /app/views/frame.html around line 99)
+Execution error occured in template /app/views/frame.html. Exception raised was NullPointerException : Cannot get property 'type' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'type' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:295)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.index(Admin.java:1817)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'type' on null object
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 14 more
+[2016-07-12 16:49:44,802] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70l316g03
+Internal Server Error (500) for request GET /admin
+
+Template execution error (In /app/views/frame.html around line 99)
+Execution error occured in template /app/views/frame.html. Exception raised was NullPointerException : Cannot get property 'type' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'type' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:295)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.index(Admin.java:1817)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'type' on null object
+	at /app/views/frame.html.(line:99)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 14 more

@@ -1,0 +1,87 @@
+#{extends 'nui.html' /}
+#{set title:'找回密码' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/findPass.css'}" />
+#{/set}
+<div id="centerBox">
+	<div class="formBlock">
+		<div class="contentTitle">
+			找回登录密码
+		</div>
+		<div class="contentBody" id="formSection">
+			<div>
+				#{if email}
+				#{authenticityToken /}
+				<div id="registResult" class="mt10 mb30">
+					<div class="panelLine sec">
+						<span class="ls floatLeft bold">
+							<span class="mr20 grey">验证邮件已发送到你的邮箱</span>
+							<span class="email">${email}</span>
+						</span>
+					</div>
+					<div class="panelLine sec">点击邮件里的链接重新设置您账号的密码</div>
+
+					<div class="buttonSection" style="margin-top:20px;">
+						<a href="http://mail.${email?.split('@')[1]}" target="_blank" class="stdColorButton" id="btnViewMail">
+							查看邮箱&nbsp;
+							<span class="iconfont">&#xf016d;</span>
+						</a>
+					</div>
+
+					<div id="question-box" class="f12">
+						<div>没有收到验证邮件？</div>
+						<div>
+							<p>
+								1. 到广告邮件、垃圾邮件目录里找找看
+								<br />
+								2. 不小心填错了Email？
+								<a href="/findPass" class="blue mr10">重新填一下</a>
+								<a href="/regist" class="blue">再申请一个</a>
+								<br />
+							</p>
+						</div>
+					</div>
+				</div>
+				#{/if}
+				#{else}
+				<form id="passForm" action="/doFindPass" method="post">
+					#{authenticityToken/}
+				#{if msg}
+					<div class="warnBox" style="color:red">${msg}</div>
+					#{/if}
+					<div class="panelLine sec">
+						<span class="ls floatLeft lbl">注册邮箱</span>
+						<input type="text" class="inputText floatLeft ls long required" id="txtEmail" name="email"/>
+					</div>
+					<div class="panelLine sec">
+						<span class="ls floatLeft lbl">验证码</span>
+						<input type="password" class="inputText floatLeft ls long success required" id="txtCaptcha"  name="validCode"/>
+					</div>
+				</form>
+				<div class="clearfix">
+					<span class="ls floatLeft lbl">&nbsp;</span>
+					<iframe src="" name="captcha_id" style="height:50px; width:150px; display:none;" scrolling="no" id="capIframe"></iframe>
+					<img class="floatLeft firstCap" alt="" src="@{UserAuthentication.captcha}" />
+					<div class="floatLeft capNext">
+						<span>
+							<a href="/captcha" target="captcha_id" id="changeCaptcha">看不清楚？换一张</a>
+						</span>
+					</div>
+				</div>
+
+				<div class="buttonSection clearfix" style="margin-top: 20px;padding-left:84px;">
+					<a href="javascript:;" class="stdColorButton" id="btnBeginToVerify">
+						下一步
+						<span class="iconfont">&#xf016d;</span>
+					</a>
+				</div>
+				#{/else}
+			</div>
+		</div>
+
+	</div>
+</div>
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/user/findPass.js'}" type="text/javascript"></script>
+#{/set}

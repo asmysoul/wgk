@@ -1,0 +1,34 @@
+[2016-09-14 13:44:41,303] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\Appcan\wgk
+[2016-09-14 13:44:43,170] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-09-14 13:44:43,307] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-09-14 13:45:04,659] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-09-14 13:45:04,819] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-09-14 13:45:04,910] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10j9javtuc91ka9vj7|702d2da4, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10j9javtuc91ka9vj7|702d2da4, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-09-14 13:45:04,933] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-09-14 13:45:04,976] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-09-14 13:45:06,039] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-09-14 13:45:06,361] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-09-14 13:45:15,218] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-14 13:55:06,159] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-09-14 13:55:06,178] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-09-14 13:55:09,717] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-09-14 13:55:09,748] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-09-14 13:55:09,806] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-09-14 14:05:06,317] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-09-14 14:05:06,322] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-09-14 14:05:09,840] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-09-14 14:05:09,861] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-09-14 14:05:09,918] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-09-14 14:15:06,403] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-09-14 14:15:06,418] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-09-14 14:15:09,659] INFO  [jobs-thread-8] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-09-14 14:15:09,910] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-09-14 14:15:09,926] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-09-14 14:15:09,972] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-09-14 14:20:15,345] INFO  [jobs-thread-2] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-09-14 14:24:48,833] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-14 14:30:15,441] INFO  [jobs-thread-9] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-09-14 14:30:15,448] INFO  [jobs-thread-9] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-09-14 14:30:17,633] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-09-14 14:30:17,665] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-09-14 14:30:17,712] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====

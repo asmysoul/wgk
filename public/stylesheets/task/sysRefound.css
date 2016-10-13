@@ -1,0 +1,181 @@
+.num{
+	font-size: 20px;
+	line-height: 24px;
+}
+.announceList{
+
+}
+.announceList li{
+	line-height: 35px;
+}
+.announceCell .title{
+	color:#555;
+}
+.announceCell .title:hover{
+	color:#0F9EE2;
+	text-decoration: underline;
+}
+.announceCell .date{
+	float:right;
+}
+/*====================================================*/
+.searchPanel{
+	height: 52px;
+	padding-left: 10px;
+	border-bottom:dashed 1px #DEDEDE;
+}
+.searchPanel .stdColorButton{
+	line-height: 14px;
+}
+/*====================================================*/
+.taskTypeSwitchWrapper{
+	padding-top: 15px;
+	background-color: #F3F1F1;
+	height: 40px;
+	position: relative;
+	z-index: 4;
+}
+.taskTab{
+	margin-left: 20px;
+	color:#BFBFBF;
+	line-height: 39px;
+	float: left;
+	padding:0 10px;
+}
+.taskTypeSwitchWrapper .focus,.taskTab:hover{
+	background-color:#FFF;
+	border-top:solid 1px #DADADA;
+	border-left:solid 1px #DADADA;
+	border-right:solid 1px #DADADA;
+	color:#FB8A73;
+	position: relative;
+	top: 1px;
+}
+/*====================================================*/
+.taskWrapper{
+	border-top:solid 1px #DADADA;
+	position: relative;
+	z-index: 1;
+}
+.taskCell:first-child{
+	border-top:none;
+}
+.taskCell{
+	border-top:solid 1px #DEDEDE;
+	border-bottom:solid 1px #DEDEDE;
+}
+.taskCell:hover{
+	background-color: #fefce8;
+}
+.taskCell .title{
+	height: 40px;
+	line-height: 40px;
+	padding:0 10px;
+}
+.taskCell .shop{
+	float: left;
+	color: #111;
+}
+.taskCell .taskNo{
+	float: right;
+}
+.btnViewTask{
+	margin-left: 10px;
+}
+.btnViewTask:hover{
+	text-decoration: underline;
+}
+.taskCell .body{
+
+}
+.taskCell .body td{
+	color: #777;
+
+}
+.taskCell .body tbody td{
+	
+}
+.taskCell .cap{
+	color: #888;
+	font-size: 12px;
+}
+.tdLeft{
+	float:left;
+}
+.taskCell .body .item-list{
+	width: 200px;
+}
+.taskCell .body .item-list .item-box{
+	position: relative;
+	padding-left: 90px;
+	height: 90px;
+}
+.item-box .pic{
+	width:80px;
+	height: 80px;
+	position: absolute;
+	left:5px;
+	top:5px;
+}
+td img{
+	width:80px;
+	height: 80px;
+	border:solid 1px #DEDEDE;
+}
+.item-box .title{
+	text-align: left;
+	color:#5d5d5d;
+	font-weight: 700;
+	line-height: 24px;	
+	color:#3E88BE;
+}
+.taskCell .body .nick{
+	width: 140px;
+}
+.taskCell .body .orderid{
+	width: 100px;
+}
+.taskCell .body .buyer{
+	width: 60px;
+}
+.taskCell .body .pic{
+	width: 100px;
+}
+.taskCell .body .price{
+	width: 100px;
+	color:#B77E5E;
+}
+.taskCell .body .opera{
+	width: 100px;
+}
+/*--------------------------------------------------*/
+.refound-panel{
+	padding: 8px 0 0 10px;
+	height: 32px;
+	background-color: #F4F4F4;
+	margin-top: 14px;
+}
+.refound-panel .inputText{
+	width: 260px;
+}
+.refound-panel  .stdColorButton{
+	padding: 0 12px;
+	background-color: #F5930A;
+}
+.refound-panel  .stdColorButton:hover{
+	background-color: #F69F25;
+}
+.qWhatOrderid{
+	color:#666;
+	font-size: 12px;
+	margin-top: 2px;
+	margin-left: 20px;
+}
+.qWhatOrderid:hover{
+
+}
+.qWhatOrderid .iconfont{
+	margin-right: 2px;
+	font-size: 14px;
+}
+

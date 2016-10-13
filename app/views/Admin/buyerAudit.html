@@ -1,0 +1,96 @@
+#{extends 'frame.html' /}
+#{set title:'审核任务' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/admin/buyer-audit.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.pagination.css'}" />
+#{/set}
+#{authenticityToken /}
+<div class="contentCard">
+	<div class="contentTitle">待审的买号</div>
+	<div>
+		<table class="normTable">
+			<thead>
+				<tr>
+					<td>所属账号</td>
+					<td>平台</td>
+					<td>买号</td>
+					<td>收货信息</td>
+					<td>联系电话</td>
+					<td>创建时间</td>
+					<td>修改时间</td>
+					<td>接单统计</td>
+					<td>审核不通过原因</td>
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody id="accountContainer"></tbody>
+		</table>
+		<div id="noMsg">
+			<div class="warnBox">
+				<span class="iconfont">&#xf00b6;</span>
+				没有待审核的买号
+			</div>
+		</div>
+		<div class="pagin-btm clearFix" style="display: none;">
+			<div class="pagination"></div>
+		</div>
+	</div>
+	<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+		<div class="maskLayer"></div>
+		<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />
+	</div>
+</div>
+
+<!--拒绝理由窗口-->
+<div class="popWrapper" id="refuseReasonWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:;" class="wnd_Close_Icon" title="关闭窗口"></a>
+		<h3 class="topTile">拒绝买号审核</h3>
+		<div class="modalWndInner">
+			<div id="reasonShower">
+				<textarea class="inputText" id="txtReason"></textarea>
+			</div>
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="btnRefuse" href="javascript:;" class="botButton" bid="">确认</a>
+		</div>
+	</div>
+
+</div>
+#{authenticityToken /}
+<!--keyword muban-->
+<textarea class="muban" id="trowTemp">
+	{{#results}}
+	<tr bid="{{id}}">
+		<td>{{userNick}}</td>
+		<td> <i class="plat_small {{platIcon}}"></i>
+			{{platformName}}
+		</td>
+		<td>{{nick}}</td>
+		<td>
+			{{consignee}}&nbsp;{{state}}&nbsp;{{city}}&nbsp;{{region}}&nbsp;{{address}}
+		</td>
+		<td>{{mobile}}</td>
+		<td>{{createtime}}</td>
+		<td>{{modifytime}}</td>
+		<td>总：{{totalTakenNum}}单,月:{{mouthTakenNum}}单,周 {{weekTakenNum}}单</td>
+		<td class="">
+						{{#memos}}
+						<span class="">{{content}}[{{dateTimeStr}}]</span><br/>
+						{{/memos}}
+		</td>
+		<td>
+			<a class="stdColorButton access" href="javascript:;">通过</a>
+			<a class="stdColorButton refuse" href="javascript:;">拒绝</a>
+		</td>
+	</tr>
+	{{/results}}
+</textarea>
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/admin/buyer-audit.js'}" type="text/javascript"></script>
+<script type="text/javascript">App.module = 'buyer';</script>
+#{/set}

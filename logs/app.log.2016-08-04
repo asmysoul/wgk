@@ -1,0 +1,1177 @@
+[2016-08-04 09:01:18,074] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-08-04 09:01:19,173] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-08-04 09:01:19,305] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-08-04 09:01:33,573] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-08-04 09:01:33,739] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-08-04 09:01:33,844] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10a9in1rd4yf8x4hf|10b28f30, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10a9in1rd4yf8x4hf|10b28f30, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-08-04 09:01:33,884] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-08-04 09:01:33,944] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-08-04 09:01:35,328] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-08-04 09:01:35,572] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-04 09:01:38,303] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-04 09:11:35,383] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 09:11:35,393] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 09:11:38,312] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 09:11:38,321] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 09:11:38,343] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 09:11:40,530] INFO  [jobs-thread-4] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 09:11:40,540] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 09:21:35,467] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 09:21:35,477] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 09:21:38,382] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 09:21:38,392] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 09:21:40,603] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 09:21:42,632] INFO  [jobs-thread-4] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 09:21:42,642] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 09:31:35,533] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 09:31:35,536] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 09:31:38,338] INFO  [jobs-thread-5] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-08-04 09:31:38,442] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 09:31:38,447] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 09:31:42,690] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 09:31:44,698] INFO  [jobs-thread-1] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 09:31:44,699] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 09:41:35,666] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 09:41:35,670] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 09:41:38,557] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 09:41:38,561] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 09:41:44,823] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 09:41:46,866] INFO  [jobs-thread-4] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 09:41:46,873] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 09:51:35,862] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 09:51:35,872] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 09:51:38,722] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 09:51:38,732] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 09:51:47,062] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 09:51:49,083] INFO  [jobs-thread-3] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 09:51:49,093] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 10:01:35,946] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 10:01:35,956] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 10:01:38,541] INFO  [jobs-thread-1] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-08-04 10:01:38,820] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 10:01:38,820] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 10:01:49,176] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 10:01:51,193] INFO  [jobs-thread-2] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 10:01:51,203] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 10:11:21,526] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemPic] Must be checked
+[2016-08-04 10:11:36,032] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 10:11:36,032] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 10:11:38,899] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 10:11:38,909] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 10:11:51,309] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 10:11:53,319] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 10:11:53,329] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 10:12:18,985] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemPic] Must be checked
+[2016-08-04 10:13:46,243] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemPic] Must be checked
+[2016-08-04 10:14:11,433] INFO  [play-thread-1] com.aton.util.Pandora.<init>(Pandora.java:51) - worker starting. timestamp left shift 22, datacenter id bits 5, worker id bits 5, sequence bits 12, workerid 0
+[2016-08-04 10:21:36,152] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 10:21:36,152] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 10:21:39,035] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 10:21:39,045] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 10:21:53,447] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 10:21:55,473] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 10:21:55,473] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 10:31:36,265] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 10:31:36,265] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 10:31:38,655] INFO  [jobs-thread-7] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-08-04 10:31:39,136] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 10:31:39,146] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 10:31:55,564] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 10:31:57,574] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 10:31:57,576] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 10:41:36,402] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 10:41:36,404] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 10:41:39,263] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 10:41:39,267] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 10:41:57,681] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 10:41:59,689] INFO  [jobs-thread-1] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 10:41:59,691] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 10:51:35,727] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 10:51:35,731] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 10:51:38,578] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 10:51:38,588] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 10:51:59,025] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 10:52:01,041] INFO  [jobs-thread-8] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 10:52:01,051] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 11:01:35,820] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 11:01:35,830] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 11:01:38,001] INFO  [jobs-thread-1] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-08-04 11:01:38,650] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 11:01:38,654] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 11:02:01,129] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 11:02:03,139] INFO  [jobs-thread-1] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 11:02:03,140] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 11:04:45,416] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffie7
+Internal Server Error (500) for request GET /task/publish
+
+Template compilation error (In /app/views/frame.html around line 104)
+The template /app/views/frame.html does not compile : #{else} is not closed.
+
+play.exceptions.TemplateCompilationException: #{else} is not closed.
+	at play.templates.GroovyTemplateCompiler.endTag(GroovyTemplateCompiler.java:334)
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:93)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:42)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:28)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:89)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at play.templates.FastTags._extends(FastTags.java:353)
+	at play.templates.FastTags$_extends.call(Unknown Source)
+	at /app/views/TaskCenter/tasks.html.(line:1)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish(TaskPublish.java:98)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-08-04 11:11:35,911] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 11:11:35,921] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 11:11:38,731] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 11:11:38,741] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 11:12:03,235] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 11:12:05,245] INFO  [jobs-thread-6] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 11:12:05,246] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 11:16:30,140] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-04 11:21:35,961] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 11:21:35,971] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 11:21:38,793] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 11:21:38,814] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 11:22:05,300] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 11:22:07,325] INFO  [jobs-thread-1] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 11:22:07,335] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 11:22:39,000] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-04 11:22:56,296] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffie8
+admin.tasks2 action not found
+
+Action not found
+Action admin.tasks2 could not be found. Error raised is No method public static void tasks2() was found in class controllers.admin
+
+play.exceptions.ActionNotFoundException: Action admin.tasks2 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void tasks2() was found in class controllers.admin
+	... 3 more
+[2016-08-04 11:24:13,457] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffie9
+admin.tasks2 action not found
+
+Action not found
+Action admin.tasks2 could not be found. Error raised is No method public static void tasks2() was found in class controllers.admin
+
+play.exceptions.ActionNotFoundException: Action admin.tasks2 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void tasks2() was found in class controllers.admin
+	... 3 more
+[2016-08-04 11:29:52,285] INFO  [jobs-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-04 11:39:52,276] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 11:39:52,281] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 11:39:54,496] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 11:39:54,506] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 11:39:54,517] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 11:39:56,539] INFO  [jobs-thread-8] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 11:39:56,549] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 11:49:52,835] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 11:49:52,845] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 11:49:55,080] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 11:49:55,090] INFO  [jobs-thread-1] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 11:49:57,119] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 11:49:59,136] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 11:49:59,146] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 11:59:52,943] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 11:59:52,953] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 11:59:55,015] INFO  [jobs-thread-6] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-08-04 11:59:55,186] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 11:59:55,196] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 11:59:59,230] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 12:00:01,230] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 12:00:01,240] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 12:09:53,040] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 12:09:53,050] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 12:09:55,269] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 12:09:55,279] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 12:10:01,336] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 12:10:03,352] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 12:10:03,362] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 12:19:53,195] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 12:19:53,205] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 12:19:55,369] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 12:19:55,379] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 12:20:03,452] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 12:20:05,462] INFO  [jobs-thread-4] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 12:20:05,472] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 12:29:53,266] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 12:29:53,276] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 12:29:55,122] INFO  [jobs-thread-6] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-08-04 12:29:55,483] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 12:29:55,493] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 12:30:05,578] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 12:30:07,600] INFO  [jobs-thread-6] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 12:30:07,610] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 12:39:53,352] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 12:39:53,362] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 12:39:55,573] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 12:39:55,583] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 12:40:07,701] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 12:40:09,719] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 12:40:09,719] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 12:49:52,603] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 12:49:52,605] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 12:49:54,810] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 12:49:54,820] INFO  [jobs-thread-4] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 12:50:08,944] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 12:50:10,970] INFO  [jobs-thread-2] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 12:50:10,980] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 12:59:52,686] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 12:59:52,696] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 12:59:54,397] INFO  [jobs-thread-2] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-08-04 12:59:54,947] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 12:59:54,947] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 13:00:11,088] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 13:00:13,106] INFO  [jobs-thread-2] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 13:00:13,116] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 13:09:52,803] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 13:09:52,813] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 13:09:55,043] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 13:09:55,053] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 13:10:13,192] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 13:10:15,212] INFO  [jobs-thread-5] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 13:10:15,222] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 13:19:52,906] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 13:19:52,916] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 13:19:55,149] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 13:19:55,159] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 13:20:15,329] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 13:20:17,339] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 13:20:17,349] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 13:29:53,013] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 13:29:53,024] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 13:29:54,527] INFO  [jobs-thread-6] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-08-04 13:29:55,272] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 13:29:55,282] INFO  [jobs-thread-6] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 13:30:17,441] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 13:30:19,459] INFO  [jobs-thread-6] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 13:30:19,469] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 13:36:12,118] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-04 13:39:53,259] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiea
+Error during job execution (jobs.AddKwdForFlow)
+
+Compilation error (In /app/controllers/Admin.java around line 862)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method listSellerTask(TaskSearchVo) in type Admin
+
+play.exceptions.CompilationException: Duplicate method listSellerTask(TaskSearchVo) in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 13:39:55,546] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiec
+Error during job execution (jobs.BuyerTaskCancel)
+
+Compilation error (In /app/controllers/Admin.java around line 862)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method listSellerTask(TaskSearchVo) in type Admin
+
+play.exceptions.CompilationException: Duplicate method listSellerTask(TaskSearchVo) in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 13:40:06,141] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiee
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/Admin.java around line 862)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method listSellerTask(TaskSearchVo) in type Admin
+
+play.exceptions.CompilationException: Duplicate method listSellerTask(TaskSearchVo) in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 13:40:21,102] INFO  [jobs-thread-6] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-04 13:40:22,544] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 13:40:24,564] INFO  [jobs-thread-6] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 13:40:24,574] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 13:42:22,808] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffieg
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 820)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : Duplicate method fetchCancelTaskInfo(long) in type TaskPublish
+
+play.exceptions.CompilationException: Duplicate method fetchCancelTaskInfo(long) in type TaskPublish
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 13:50:23,131] INFO  [jobs-thread-8] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-04 13:50:24,462] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 13:50:24,473] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 13:51:24,635] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiei
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/Admin.java around line 1151)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method exportTasks(TaskSearchVo, int) in type Admin
+
+play.exceptions.CompilationException: Duplicate method exportTasks(TaskSearchVo, int) in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 13:52:28,681] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-04 13:53:23,436] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [expressWeight] Required
+[2016-08-04 13:53:49,935] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiek
+Internal Server Error (500) for request GET /admin/exportTask2?count=50&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task2.java around line 1129)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper2.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy72.selectSimple(Unknown Source)
+	at models.Task2.findByPage(Task2.java:1129)
+	at controllers.Admin.exportTasks2(Admin.java:1208)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 13:53:59,099] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiel
+Internal Server Error (500) for request GET /admin/exportTask2?count=50&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task2.java around line 1129)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper2.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy72.selectSimple(Unknown Source)
+	at models.Task2.findByPage(Task2.java:1129)
+	at controllers.Admin.exportTasks2(Admin.java:1208)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 13:55:39,948] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiem
+Internal Server Error (500) for request GET /admin/exportTask2?count=50&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task2.java around line 1129)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper2.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy72.selectSimple(Unknown Source)
+	at models.Task2.findByPage(Task2.java:1129)
+	at controllers.Admin.exportTasks2(Admin.java:1208)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 13:58:12,750] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffien
+Internal Server Error (500) for request GET /admin/exportTask2?count=10&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task2.java around line 1129)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper2.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy72.selectSimple(Unknown Source)
+	at models.Task2.findByPage(Task2.java:1129)
+	at controllers.Admin.exportTasks2(Admin.java:1208)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 13:58:17,145] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffieo
+Internal Server Error (500) for request GET /admin/exportTask2?count=10&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task2.java around line 1129)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper2.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy72.selectSimple(Unknown Source)
+	at models.Task2.findByPage(Task2.java:1129)
+	at controllers.Admin.exportTasks2(Admin.java:1208)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 14:02:28,720] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 14:02:29,301] INFO  [jobs-thread-6] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 14:02:30,446] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 14:02:30,458] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 14:02:30,464] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 14:02:32,483] INFO  [jobs-thread-5] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 14:02:32,493] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 14:03:31,162] ERROR [jobs-thread-5] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiep
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1165)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate method taskDetail2(Long) in type TaskCenter
+
+play.exceptions.CompilationException: Duplicate method taskDetail2(Long) in type TaskCenter
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 14:05:03,066] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [expressWeight] Required
+[2016-08-04 14:06:32,537] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffif1
+Internal Server Error (500) for request GET /admin/tasks2
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-08-04 14:06:32,538] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2398)
+	at java.lang.Class.getConstructor0(Class.java:2708)
+	at java.lang.Class.newInstance0(Class.java:328)
+	at java.lang.Class.newInstance(Class.java:310)
+	at sun.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:381)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.reflect.MethodAccessorGenerator.generate(MethodAccessorGenerator.java:377)
+	at sun.reflect.MethodAccessorGenerator.generateSerializationConstructor(MethodAccessorGenerator.java:95)
+	at sun.reflect.ReflectionFactory.newConstructorForSerialization(ReflectionFactory.java:313)
+	at java.io.ObjectStreamClass.getSerializableConstructor(ObjectStreamClass.java:1322)
+	at java.io.ObjectStreamClass.access$1500(ObjectStreamClass.java:50)
+	at java.io.ObjectStreamClass$2.run(ObjectStreamClass.java:435)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.io.ObjectStreamClass.<init>(ObjectStreamClass.java:411)
+	at java.io.ObjectStreamClass.lookup(ObjectStreamClass.java:308)
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:545)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1729)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at java.util.HashMap.readObject(HashMap.java:1029)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:969)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1852)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1756)
+[2016-08-04 14:06:36,666] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffif2
+Internal Server Error (500) for request GET /admin/tasks2
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:82)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at play.plugins.PluginCollection.reloadApplicationPlugins(PluginCollection.java:204)
+	at play.Play.start(Play.java:482)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-08-04 14:06:37,135] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+	at sun.misc.Unsafe.defineClass(Native Method)
+	at sun.reflect.ClassDefiner.defineClass(ClassDefiner.java:45)
+	at sun.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:381)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.reflect.MethodAccessorGenerator.generate(MethodAccessorGenerator.java:377)
+	at sun.reflect.MethodAccessorGenerator.generateSerializationConstructor(MethodAccessorGenerator.java:95)
+	at sun.reflect.ReflectionFactory.newConstructorForSerialization(ReflectionFactory.java:313)
+	at java.io.ObjectStreamClass.getSerializableConstructor(ObjectStreamClass.java:1322)
+	at java.io.ObjectStreamClass.access$1500(ObjectStreamClass.java:50)
+	at java.io.ObjectStreamClass$2.run(ObjectStreamClass.java:435)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.io.ObjectStreamClass.<init>(ObjectStreamClass.java:411)
+	at java.io.ObjectStreamClass.lookup(ObjectStreamClass.java:308)
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:545)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1729)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at java.util.HashMap.readObject(HashMap.java:1029)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:969)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1852)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1756)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at play.utils.Java.deserialize(Java.java:361)
+[2016-08-04 14:08:00,492] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-08-04 14:08:01,423] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-08-04 14:08:01,554] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-08-04 14:10:02,926] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-08-04 14:10:03,070] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-08-04 14:10:03,189] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10a9incs31d1jws6oy|28c5119e, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10a9incs31d1jws6oy|28c5119e, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-08-04 14:10:03,216] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-08-04 14:10:03,256] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-08-04 14:10:04,357] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-08-04 14:10:04,637] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-04 14:10:29,554] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpb
+Internal Server Error (500) for request GET /admin/exportTask2?count=50&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task2.java around line 1129)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper2.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy36.selectSimple(Unknown Source)
+	at models.Task2.findByPage(Task2.java:1129)
+	at controllers.Admin.exportTasks2(Admin.java:1208)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 14:10:54,585] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpc
+Internal Server Error (500) for request GET /admin/exportTask?count=50&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task.java around line 1067)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy31.selectSimple(Unknown Source)
+	at models.Task.findByPage(Task.java:1067)
+	at controllers.Admin.exportTasks(Admin.java:1166)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 14:16:08,376] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpd
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/Admin.java around line 813)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method buyerTasks() in type Admin
+
+play.exceptions.CompilationException: Duplicate method buyerTasks() in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 14:18:53,177] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-04 14:24:55,790] ERROR [jobs-thread-4] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpf
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/admins/TaskManage.java around line 152)
+The file /app/controllers/admins/TaskManage.java could not be compiled. Error raised is : The method findByPageForAdmin(TaskSearchVo) in the type BuyerTask is not applicable for the arguments (TaskSearchVo2)
+
+play.exceptions.CompilationException: The method findByPageForAdmin(TaskSearchVo) in the type BuyerTask is not applicable for the arguments (TaskSearchVo2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 14:25:39,937] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-04 14:27:42,374] INFO  [jobs-thread-6] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-04 14:35:45,769] INFO  [jobs-thread-5] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-04 14:40:47,401] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjph
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/admins/TaskManage.java around line 268)
+The file /app/controllers/admins/TaskManage.java could not be compiled. Error raised is : The method findByPageForAdmin(TaskSearchVo) in the type BuyerTask is not applicable for the arguments (TaskSearchVo2)
+
+play.exceptions.CompilationException: The method findByPageForAdmin(TaskSearchVo) in the type BuyerTask is not applicable for the arguments (TaskSearchVo2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 14:41:15,844] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-04 14:44:00,141] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpj
+Internal Server Error (500) for request GET /admin/timeout2
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-08-04 14:44:00,141] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2300)
+	at java.lang.Class.getDeclaredField(Class.java:1882)
+	at java.io.ObjectStreamClass.getDeclaredSUID(ObjectStreamClass.java:1605)
+	at java.io.ObjectStreamClass.access$700(ObjectStreamClass.java:50)
+	at java.io.ObjectStreamClass$2.run(ObjectStreamClass.java:423)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.io.ObjectStreamClass.<init>(ObjectStreamClass.java:411)
+	at java.io.ObjectStreamClass.lookup(ObjectStreamClass.java:308)
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:545)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1729)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at java.util.HashMap.readObject(HashMap.java:1029)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:969)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1852)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1756)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at play.utils.Java.deserialize(Java.java:361)
+	at play.templates.GroovyTemplate.directLoad(GroovyTemplate.java:87)
+	at play.templates.BaseTemplate.loadFromCache(BaseTemplate.java:56)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:81)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at play.server.PlayHandler.serve500(PlayHandler.java:792)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:247)
+[2016-08-04 14:44:57,891] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpk
+Internal Server Error (500) for request GET /admin/buyerTask/listAllTimeoutCount?__ts=1470293094487&vo.platform=&vo.device=&vo.type=sllerGood&vo.buyerNick=&vo.sellerNick=&vo.buyerAccountNick=&vo.orderId=&vo.shopName=&vo.taskId=&vo.buyerTaskId=
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-08-04 14:44:58,343] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2398)
+	at java.lang.Class.getConstructor0(Class.java:2708)
+	at java.lang.Class.newInstance0(Class.java:328)
+	at java.lang.Class.newInstance(Class.java:310)
+	at sun.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:381)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.reflect.MethodAccessorGenerator.generate(MethodAccessorGenerator.java:377)
+	at sun.reflect.MethodAccessorGenerator.generateSerializationConstructor(MethodAccessorGenerator.java:95)
+	at sun.reflect.ReflectionFactory.newConstructorForSerialization(ReflectionFactory.java:313)
+	at java.io.ObjectStreamClass.getSerializableConstructor(ObjectStreamClass.java:1322)
+	at java.io.ObjectStreamClass.access$1500(ObjectStreamClass.java:50)
+	at java.io.ObjectStreamClass$2.run(ObjectStreamClass.java:435)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.io.ObjectStreamClass.<init>(ObjectStreamClass.java:411)
+	at java.io.ObjectStreamClass.lookup(ObjectStreamClass.java:308)
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:545)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1729)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at java.util.HashMap.readObject(HashMap.java:1029)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:969)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1852)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1756)
+[2016-08-04 14:45:01,323] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpl
+Internal Server Error (500) for request GET /admin/buyerTask/listAllTimeout?__ts=1470293094503&vo.platform=&vo.device=&vo.type=sllerGood&vo.buyerNick=&vo.sellerNick=&vo.buyerAccountNick=&vo.orderId=&vo.shopName=&vo.taskId=&vo.buyerTaskId=&vo.pageNo=1&vo.pageSize=20
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+[2016-08-04 14:45:01,763] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+[2016-08-04 14:46:32,084] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-08-04 14:46:33,055] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-08-04 14:46:33,167] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-08-04 14:46:47,355] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-08-04 14:46:47,486] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-08-04 14:46:47,576] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10a9ine3byy1j2hzgo|6531767b, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10a9ine3byy1j2hzgo|6531767b, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-08-04 14:46:47,596] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-08-04 14:46:47,636] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-08-04 14:46:48,355] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-08-04 14:46:48,575] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-08-04 14:56:48,417] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 14:56:48,427] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 14:56:51,184] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 14:56:51,194] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 14:56:51,205] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 14:56:53,300] INFO  [jobs-thread-5] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 14:56:53,310] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 15:06:48,501] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 15:06:48,501] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 15:06:51,268] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 15:06:51,273] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 15:06:53,377] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 15:06:55,397] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 15:06:55,407] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 15:09:29,667] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-04 15:16:48,570] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 15:16:48,580] INFO  [jobs-thread-4] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 15:16:51,207] INFO  [jobs-thread-4] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-08-04 15:16:51,308] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 15:16:51,308] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 15:16:55,473] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 15:16:57,488] INFO  [jobs-thread-3] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 15:16:57,498] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 15:26:48,624] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-08-04 15:26:48,624] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-08-04 15:26:51,370] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-08-04 15:26:51,380] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-08-04 15:26:57,556] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-08-04 15:26:59,579] INFO  [jobs-thread-8] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-08-04 15:26:59,589] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-08-04 15:47:47,888] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-08-04 15:47:49,029] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-08-04 15:47:49,158] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...

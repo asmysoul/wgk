@@ -1,0 +1,63 @@
+.long {
+	width: 350px;
+}
+.contentTitle a:hover {
+	color: #DE4F54;
+	font-weight: 600;
+}
+.taskRow{
+	border:solid 1px #E2E2E2;
+	border-radius: 3px;
+	/* height: 60px; */
+	margin-bottom:10px;
+	position: relative;
+}
+.taskRow td{
+	vertical-align: middle;
+	height: 54px;
+}
+.normTable tbody tr .r_commision{
+	width: 300px;
+	line-height: 27px;
+}
+.modifyBtn:hover{
+	color: #C8270E;
+}
+/*========================================================*/
+#addAccountWnd .modalWnd,#bindAccountWnd .modalWnd ,#orderNumberWnd .modalWnd{
+	width:650px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -325px;
+	position: fixed;
+	z-index: 100;
+}
+#shopInfoShower{
+	padding-left:10px;
+}
+#shopInfoShower label{
+	width:100px;
+}
+.btnConfirmSave{
+	background-color: #26AA9F;
+	width: 80px;
+	text-align: center;
+}
+.btnConfirmSave:hover{
+	background-color: #2BBFB3;
+}
+.linkUrl a{
+	color:gray;
+}
+#dianpuContainer .linkUrl a:hover{
+	text-decoration:underline;
+}
+.panelLine{
+	padding-bottom: 5px;
+}
+.examined{
+	color: #0CB074;
+}
+.unexamined{
+	color: #F47562;
+}

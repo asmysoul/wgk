@@ -1,0 +1,60 @@
+.body{
+    text-align: center;
+    overflow: hidden; 
+    position: relative; 
+    z-index:1;
+    padding-top: 70px;
+}
+.box{
+	width: 200px;
+}
+.contentBody{
+	width: 1000px;
+	margin: 0px auto;
+}
+.InformationPanel{	
+	height: 70px;
+}
+em{
+	font-size: 35px;
+	height: 40px;
+	margin-top: 5px;
+	display: block;
+	color: #E52700;
+	line-height: 40px;
+}
+.procedure{
+	height: 200px;
+}
+.title{
+	height: 30px;
+	font-family: Microsoft YaHei;
+	font-weight: 700;	
+}
+.nowing-con{
+	width: 300px;
+	
+}
+.nowingBody{
+	border: 1px solid #E0E0E0;
+	background-color: #fff;
+	overflow: hidden;
+	padding-bottom: 25px;
+}
+.nowing-con h3{
+    font-size: 25px;
+	height: 40px;
+	margin-top: 5px;
+	display: block;
+	color: #E52700;
+	line-height: 40px;
+	font-weight: 700;
+}
+.jcarousel-skin-tango{
+	width:1200px;
+}
+#wrap{
+    color:#404040;
+    width: 1100px;
+    margin: 0 auto;
+}

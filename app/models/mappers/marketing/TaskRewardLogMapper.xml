@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.marketing.TaskRewardLogMapper">
+
+	<resultMap id="BaseResultMap" type="models.marketing.TaskRewardLog"></resultMap>
+	<!-- 显示列表 -->
+	<sql id="where">
+		<where>
+			<if test="id !=null">
+				and u.id=#{id}
+			</if>
+			<if test="userNick !=null">
+				and u.nick=#{userNick}
+			</if>
+			<if test="inviteUserNick !=null">
+				and i.nick=#{inviteUserNick}
+			</if>
+			<if test="taskFinishedTimeStart !=null">
+				<![CDATA[ and a.task_finished_time>=#{taskFinishedTimeStart} ]]>
+			</if>
+			<if test="taskFinishedTimeEnd !=null">
+				<![CDATA[ and a.task_finished_time<=#{taskFinishedTimeEnd} ]]>
+			</if>
+
+		</where>
+	</sql>
+	<select id="count" resultType="java.lang.Integer">
+		select count(1)
+		from
+		task_reward_log a
+		left join
+		user u on a.user_id =
+		u.id
+		left join
+		user i on a.invite_user_id = i.id
+		<include refid="where" />
+	</select>
+	<select id="selectList" resultMap="BaseResultMap">
+		SELECT
+		a.id,
+		a.invite_user_id,
+		i.nick inviteNick,
+		a.user_id,
+		u.nick,
+		a.task_id,
+		a.memo,
+		a.task_finished_time,
+		a.reward_ingot
+		from
+		task_reward_log a
+		left join
+		user u on
+		a.user_id = u.id
+		left join
+		user i on a.invite_user_id = i.id
+		<where>
+			<if test="id !=null">
+				and u.id=#{id}
+			</if>
+			<if test="userNick !=null">
+				and u.nick=#{userNick}
+			</if>
+			<if test="inviteUserNick !=null">
+				and i.nick=#{inviteUserNick}
+			</if>
+			<if test="taskFinishedTimeStart !=null">
+				<![CDATA[ and a.task_finished_time>=#{taskFinishedTimeStart} ]]>
+			</if>
+			<if test="taskFinishedTimeEnd !=null">
+				<![CDATA[ and a.task_finished_time<=#{taskFinishedTimeEnd} ]]>
+			</if>
+
+		</where>
+		order by
+		a.task_finished_time desc
+		limit #{startIndex}, #{pageSize}
+
+
+	</select>
+	
+	
+</mapper>
+	

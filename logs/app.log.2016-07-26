@@ -1,0 +1,762 @@
+[2016-07-26 13:39:09,904] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-07-26 13:39:11,335] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-07-26 13:39:11,523] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-07-26 13:39:59,449] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-07-26 13:39:59,638] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-07-26 13:39:59,762] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10a9iagqrgp127pu40|39c26db4, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10a9iagqrgp127pu40|39c26db4, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-07-26 13:39:59,778] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-07-26 13:39:59,825] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-07-26 13:40:00,777] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-07-26 13:40:01,073] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-26 13:45:05,774] INFO  [jobs-thread-8] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-26 13:47:47,488] INFO  [play-thread-1] controllers.UserCenter.addShop2(UserCenter.java:486) - ---------------------ww----
+[2016-07-26 13:47:57,749] INFO  [play-thread-1] controllers.UserCenter.addShop2(UserCenter.java:486) - ---------------------ww----
+[2016-07-26 13:55:06,827] INFO  [jobs-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-26 13:55:08,273] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 13:55:08,283] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 13:57:48,775] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p00i8ij
+Internal Server Error (500) for request GET /seller/tasks/examine2/WAIT_EXAMINE
+
+Template not found (In /app/controllers/TaskCenter.java around line 945)
+The template TaskCenter/examine2.html does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : TaskCenter/examine2.html
+	at play.mvc.Controller.renderTemplate(Controller.java:685)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.examine2(TaskCenter.java:945)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-07-26 13:58:50,891] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-26 14:05:06,845] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 14:05:06,855] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 14:05:08,331] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 14:05:08,341] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 14:05:08,352] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 14:05:10,461] INFO  [jobs-thread-1] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 14:05:10,471] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 14:09:09,695] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p00i8ik
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 633)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : The method findVoByPage(TaskSearchVo) in the type Task is not applicable for the arguments (TaskSearchVo2)
+
+play.exceptions.CompilationException: The method findVoByPage(TaskSearchVo) in the type Task is not applicable for the arguments (TaskSearchVo2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-26 14:10:25,539] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-26 14:10:27,305] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-07-26 14:10:27,305] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy77.countForSeller(Unknown Source)
+	at models.Task2.findVoByPage(Task2.java:969)
+	at controllers.TaskCenter.listSellerTasks2(TaskCenter.java:644)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:380)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:170)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:152)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:48)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:97)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:116)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:1657)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:92)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:49)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:333)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:413)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:395)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:48)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:33)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:54)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:40)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:278)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 33 more
+[2016-07-26 14:10:36,401] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-07-26 14:10:36,401] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy77.countForSeller(Unknown Source)
+	at models.Task2.findVoByPage(Task2.java:969)
+	at controllers.TaskCenter.listSellerTasks2(TaskCenter.java:644)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:380)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:170)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:152)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:48)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:97)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:116)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:1657)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:92)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:49)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:333)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:413)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:395)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:48)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:33)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:54)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:40)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:278)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 33 more
+[2016-07-26 14:10:51,402] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-07-26 14:10:51,402] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy77.countForSeller(Unknown Source)
+	at models.Task2.findVoByPage(Task2.java:969)
+	at controllers.TaskCenter.listSellerTasks2(TaskCenter.java:644)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:380)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:170)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:152)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:48)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:97)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:116)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:1657)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:92)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:49)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:333)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:413)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:395)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:48)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:33)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:54)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:40)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:278)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 33 more
+[2016-07-26 14:11:13,875] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-07-26 14:11:13,875] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy77.countForSeller(Unknown Source)
+	at models.Task2.findVoByPage(Task2.java:969)
+	at controllers.TaskCenter.listSellerTasks2(TaskCenter.java:644)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:380)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:170)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:152)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:48)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:97)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:116)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:1657)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:92)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:49)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:333)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:413)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:395)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:48)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:33)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:54)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:40)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:278)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 33 more
+[2016-07-26 14:12:47,347] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-07-26 14:12:48,502] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-07-26 14:12:48,625] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-07-26 14:13:13,249] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-07-26 14:13:13,380] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-07-26 14:13:13,460] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10a9iahxhvu143w7w4|7be9f9e9, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10a9iahxhvu143w7w4|7be9f9e9, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-07-26 14:13:13,490] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-07-26 14:13:13,540] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-07-26 14:13:14,480] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-07-26 14:13:14,778] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-26 14:13:29,816] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-07-26 14:13:29,816] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy41.countForSeller(Unknown Source)
+	at models.Task2.findVoByPage(Task2.java:969)
+	at controllers.TaskCenter.listSellerTasks2(TaskCenter.java:644)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:380)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:170)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:152)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:48)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:97)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:116)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:1657)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:92)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:49)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:333)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:413)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:395)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:48)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:33)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:54)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:40)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:278)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 33 more
+[2016-07-26 14:17:35,483] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-07-26 14:17:36,370] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-07-26 14:17:36,451] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-07-26 14:17:54,231] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-07-26 14:17:54,324] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-07-26 14:17:54,429] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10a9iai3ioyjw491q|4c53ccba, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10a9iai3ioyjw491q|4c53ccba, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-07-26 14:17:54,454] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-07-26 14:17:54,484] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-07-26 14:17:55,256] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-07-26 14:17:55,487] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-26 14:21:59,278] INFO  [play-thread-1] com.aton.util.Pandora.<init>(Pandora.java:51) - worker starting. timestamp left shift 22, datacenter id bits 5, worker id bits 5, sequence bits 12, workerid 0
+[2016-07-26 14:27:55,368] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 14:27:55,388] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 14:27:58,753] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 14:27:58,763] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 14:27:58,785] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 14:28:00,904] INFO  [jobs-thread-8] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 14:28:00,914] INFO  [jobs-thread-8] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 14:28:59,527] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p04kk5l
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 757)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate method taskDetail(Long) in type TaskCenter
+
+play.exceptions.CompilationException: Duplicate method taskDetail(Long) in type TaskCenter
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-26 14:31:36,989] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-26 14:31:45,463] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p04kk5n
+Internal Server Error (500) for request GET /seller/task2/757823259042381824
+
+Template execution error (In /app/views/TaskCenter/taskDetail2.html around line 161)
+Execution error occured in template /app/views/TaskCenter/taskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.taskDetail2(TaskCenter.java:900)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/taskDetail2.html.(line:161)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-07-26 14:34:19,936] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p04kk5o
+Internal Server Error (500) for request GET /seller/task2/756413098700570624
+
+Template execution error (In /app/views/TaskCenter/taskDetail2.html around line 161)
+Execution error occured in template /app/views/TaskCenter/taskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.taskDetail2(TaskCenter.java:900)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/taskDetail2.html.(line:161)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-07-26 14:34:25,808] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p04kk5p
+Internal Server Error (500) for request GET /seller/task2/756415293533716480
+
+Template execution error (In /app/views/TaskCenter/taskDetail2.html around line 161)
+Execution error occured in template /app/views/TaskCenter/taskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.taskDetail2(TaskCenter.java:900)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/taskDetail2.html.(line:161)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-07-26 14:41:36,524] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 14:41:36,534] INFO  [jobs-thread-8] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 14:41:38,134] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 14:41:38,144] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 14:41:38,154] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 14:41:40,175] INFO  [jobs-thread-2] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 14:41:40,182] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 14:51:36,595] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 14:51:36,605] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 14:51:38,203] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 14:51:38,213] INFO  [jobs-thread-3] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 14:51:40,249] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 14:51:42,262] INFO  [jobs-thread-4] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 14:51:42,263] INFO  [jobs-thread-4] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 15:01:36,682] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 15:01:36,682] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 15:01:38,170] INFO  [jobs-thread-2] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-07-26 15:01:38,284] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 15:01:38,290] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 15:01:42,310] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 15:01:44,320] INFO  [jobs-thread-2] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 15:01:44,330] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 15:11:36,740] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 15:11:36,750] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 15:11:38,352] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 15:11:38,362] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 15:11:44,386] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 15:11:46,412] INFO  [jobs-thread-5] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 15:11:46,422] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 15:21:37,287] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 15:21:37,297] INFO  [jobs-thread-2] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 15:21:38,426] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 15:21:38,436] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 15:21:46,466] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 15:21:48,485] INFO  [jobs-thread-6] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 15:21:48,485] INFO  [jobs-thread-6] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 15:25:20,999] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-26 15:35:21,048] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 15:35:21,058] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 15:35:22,414] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 15:35:22,418] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 15:35:22,437] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 15:35:24,444] INFO  [jobs-thread-1] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 15:35:24,446] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 15:45:20,079] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 15:45:20,089] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 15:45:21,439] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 15:45:21,449] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 15:45:23,450] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 15:45:25,468] INFO  [jobs-thread-3] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 15:45:25,478] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 15:50:27,411] INFO  [play-thread-1] com.aton.util.Pandora.<init>(Pandora.java:51) - worker starting. timestamp left shift 22, datacenter id bits 5, worker id bits 5, sequence bits 12, workerid 0
+[2016-07-26 15:55:20,173] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 15:55:20,180] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 15:55:21,390] INFO  [jobs-thread-7] jobs.FlowClickTimes.doJob(FlowClickTimes.java:36) - =====FlowClickTimes Started=====
+[2016-07-26 15:55:21,517] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 15:55:21,522] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 15:55:25,554] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 15:55:27,569] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 15:55:27,570] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 16:05:20,251] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 16:05:20,255] INFO  [jobs-thread-7] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 16:05:21,567] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 16:05:21,585] INFO  [jobs-thread-7] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 16:05:27,613] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 16:05:29,626] INFO  [jobs-thread-7] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 16:05:29,627] INFO  [jobs-thread-7] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 16:15:20,330] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 16:15:20,332] INFO  [jobs-thread-3] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 16:15:21,634] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 16:15:21,640] INFO  [jobs-thread-2] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 16:15:29,679] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 16:15:31,688] INFO  [jobs-thread-2] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 16:15:31,690] INFO  [jobs-thread-2] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 16:21:15,490] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-26 16:31:15,491] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 16:31:15,507] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 16:31:17,166] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 16:31:17,184] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 16:31:17,201] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 16:31:19,215] INFO  [jobs-thread-3] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 16:31:19,216] INFO  [jobs-thread-3] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 16:39:18,631] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p04kk60
+Error during job execution (jobs.Bootstrap)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 289)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : The method findByUrl(String, Platform, TaskType) in the type Item is not applicable for the arguments (String, Platform2, TaskType2)
+
+play.exceptions.CompilationException: The method findByUrl(String, Platform, TaskType) in the type Item is not applicable for the arguments (String, Platform2, TaskType2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-26 16:39:18,631] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p04kk61
+Error during job execution (jobs.TaskKeeper)
+
+Oops: CompilationException
+An unexpected error occured caused by exception CompilationException: The method findByUrl(String, Platform, TaskType) in the type Item is not applicable for the arguments (String, Platform2, TaskType2)
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.jobs.Job.onException(Job.java:157)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: play.exceptions.CompilationException: The method findByUrl(String, Platform, TaskType) in the type Item is not applicable for the arguments (String, Platform2, TaskType2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	... 1 more
+[2016-07-26 16:45:26,489] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-07-26 16:45:27,382] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-07-26 16:45:27,502] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-07-26 16:45:42,651] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-07-26 16:45:42,786] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-07-26 16:45:42,862] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10a9iandllz1qazc5n|25846d05, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10a9iandllz1qazc5n|25846d05, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-07-26 16:45:42,882] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-07-26 16:45:42,933] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-07-26 16:45:43,806] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-07-26 16:45:44,029] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-26 16:49:48,168] ERROR [jobs-thread-5] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p0n7c5d
+Error during job execution (jobs.TaskKeeper)
+
+Oops: ClassNotFoundException
+An unexpected error occured caused by exception ClassNotFoundException: models.Item2
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.classloading.ApplicationClasses.getAnnotatedClasses(ApplicationClasses.java:100)
+	at play.classloading.ApplicationClassloader.getAnnotatedClasses(ApplicationClassloader.java:491)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:127)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:515)
+	at play.Play.start(Play.java:537)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+Caused by: java.lang.ClassNotFoundException: models.Item2
+	at java.lang.ClassLoader.findClass(ClassLoader.java:358)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:91)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at play.classloading.ApplicationClasses.getAnnotatedClasses(ApplicationClasses.java:98)
+	... 8 more
+[2016-07-26 16:52:31,560] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p0n7c5f
+Internal Server Error (500) for request GET /seller/tasks2
+
+Oops: ClassNotFoundException
+An unexpected error occured caused by exception ClassNotFoundException: models.Item2
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.classloading.ApplicationClasses.getAnnotatedClasses(ApplicationClasses.java:100)
+	at play.classloading.ApplicationClassloader.getAnnotatedClasses(ApplicationClassloader.java:491)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:127)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:515)
+	at play.Play.start(Play.java:537)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.ClassNotFoundException: models.Item2
+	at java.lang.ClassLoader.findClass(ClassLoader.java:358)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:91)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at play.classloading.ApplicationClasses.getAnnotatedClasses(ApplicationClasses.java:98)
+	... 7 more
+[2016-07-26 16:54:56,499] INFO  [main] play.Logger.info(Logger.java:308) - Starting C:\Users\Administrator.SC-201606081350\Desktop\wugake\wgk
+[2016-07-26 16:54:57,345] WARN  [main] play.Logger.warn(Logger.java:367) - You're running Play! in DEV mode
+[2016-07-26 16:54:57,426] INFO  [main] play.Logger.info(Logger.java:308) - Listening for HTTP on port 80 (Waiting a first request to start) ...
+[2016-07-26 16:55:08,587] INFO  [MLog-Init-Reporter] com.mchange.v2.log.MLog$1.run(MLog.java:124) - MLog clients using log4j logging.
+[2016-07-26 16:55:08,664] INFO  [play-thread-1] com.mchange.v2.c3p0.C3P0Registry.banner(C3P0Registry.java:248) - Initializing c3p0-0.9.5 [built 02-January-2015 13:25:04 -0500; debug? true; trace: 10]
+[2016-07-26 16:55:08,737] INFO  [play-thread-1] com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:522) - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 10, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 1000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge10a9ianpqa722z05h|41ed8741, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge10a9ianpqa722z05h|41ed8741, idleConnectionTestPeriod -> 10, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> /* ping */ SELECT 1, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> true, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+[2016-07-26 16:55:08,754] WARN  [play-thread-1] com.mchange.v2.resourcepool.BasicResourcePool.<init>(BasicResourcePool.java:288) - Bad pool size config, start 3 < min 10. Using 10 as start.
+[2016-07-26 16:55:08,791] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Connected to jdbc:mysql://localhost:3306/waguke?autoReconnect=true&useUnicode=true&characterEncoding=utf-8 for default
+[2016-07-26 16:55:09,449] INFO  [play-thread-1] play.Logger.info(Logger.java:308) - Application 'wgk' is now started !
+[2016-07-26 16:55:09,686] INFO  [play-thread-1] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-26 17:05:09,489] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 17:05:09,495] INFO  [jobs-thread-1] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 17:05:12,247] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 17:05:12,255] INFO  [jobs-thread-8] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 17:05:12,267] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 17:05:14,356] INFO  [jobs-thread-5] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 17:05:14,358] INFO  [jobs-thread-5] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 17:15:09,540] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:38) - =====AddFlow Started=====
+[2016-07-26 17:15:09,544] INFO  [jobs-thread-5] jobs.AddKwdForFlow.doJob(AddKwdForFlow.java:40) - 流量任务条数0
+[2016-07-26 17:15:12,306] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:38) - cancel buyerTask start
+[2016-07-26 17:15:12,312] INFO  [jobs-thread-5] jobs.BuyerTaskCancel.doJob(BuyerTaskCancel.java:49) - cancel buyerTask end
+[2016-07-26 17:15:14,415] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:49) - =====GetExpressNo Started=====
+[2016-07-26 17:15:16,427] INFO  [jobs-thread-1] com.aton.util.FaBaoGuoUtil.execute(FaBaoGuoUtil.java:63) - execute is faild!!
+[2016-07-26 17:15:16,429] INFO  [jobs-thread-1] jobs.GetExpressNo.doJob(GetExpressNo.java:59) - fa bao guo return null!
+[2016-07-26 17:17:21,210] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemUrl] Required
+[2016-07-26 17:17:26,893] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemUrl] Required
+[2016-07-26 17:23:15,502] INFO  [jobs-thread-4] jobs.Bootstrap.doJob(Bootstrap.java:20) - =====App Started=====
+[2016-07-26 17:23:49,224] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemUrl] Required
+[2016-07-26 17:25:37,509] INFO  [play-thread-1] com.aton.util.Pandora.<init>(Pandora.java:51) - worker starting. timestamp left shift 22, datacenter id bits 5, worker id bits 5, sequence bits 12, workerid 0

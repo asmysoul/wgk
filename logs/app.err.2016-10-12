@@ -1,0 +1,104 @@
+[2016-10-12 08:46:59,608] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-10-12 13:54:52,308] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-10-12 13:54:52,740] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-10-12 15:44:28,408] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71klk2a8o
+Internal Server Error (500) for request GET /buyer/task/perform2/6646
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+
+play.exceptions.JavaExecutionException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-12 16:58:11,629] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71klk2a8p
+Internal Server Error (500) for request GET /buyer/task/perform2/6649
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+
+play.exceptions.JavaExecutionException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-12 16:58:19,857] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71klk2a90
+Internal Server Error (500) for request GET /buyer/task/perform2/6649
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+
+play.exceptions.JavaExecutionException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-12 17:00:34,056] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71klk2a91
+Internal Server Error (500) for request GET /buyer/task/perform2/6649
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+
+play.exceptions.JavaExecutionException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-12 17:00:42,962] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71klk2a92
+Internal Server Error (500) for request GET /buyer/task/perform2/6649
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+
+play.exceptions.JavaExecutionException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read itemSubwayPic on null object vos.BuyerTaskVo2 (controllers.TaskExecutor.perform2, line 281)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-12 19:54:57,044] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null

@@ -1,0 +1,56 @@
+#{extends 'nui.html' /}
+#{set title:'管理后台登录' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/login.css'}" />
+#{/set}
+<div id="centerBox">
+	<div class="leftPart floatLeft"></div>
+	<div class="formBlock floatLeft">
+		<div class="formBlockTitle tc f18 blue">管理员登录</div>
+		#{if msg} <font color="red">${msg}</font> #{/if}
+		<form id="loginForm" method="post" action="/admin/doLogin">
+			#{authenticityToken/} <label>用户名</label>
+			<div class="panelLine sec clearfix">
+				<input class="inputText floatLeft required long" value="${name}" type="text"
+					name="name" />
+			</div>
+			<label>密&nbsp;&nbsp;&nbsp;码</label>
+			<div class="panelLine sec clearfix">
+				<input class="inputText floatLeft required long" type="password"
+					name="pass" />
+			</div>
+			#{if code}
+			<label>验证码</label>
+			<div class="panelLine sec clearfix">
+				<input type="text"
+					class="inputText floatLeft ls long success required"
+					id="txtCaptcha" name="validCode" />
+				<div>
+					<span class="ls floatLeft lbl">&nbsp;</span>
+					
+					<img class="floatLeft firstCap" alt=""
+						src="@{UserAuthentication.captcha}" />
+					<div class="capNext" style="float: right;">
+						<span> <a href="/captcha" target="captcha_id"
+							id="changeCaptcha">看不清楚？换一张</a>
+						</span>
+					</div>
+					<iframe src="" name="captcha_id"
+						style="height: 50px; width: 150px; display: none;" scrolling="no"
+						id="capIframe"></iframe>
+				</div>
+			</div>
+			#{/if}
+			<div class="buttonSection clearfix tc">
+				<input type="submit" class="inputBtn" value="登&nbsp;&nbsp;录"
+					style="padding: 5px 10px;" />
+			</div>
+		</form>
+		
+	</div>
+	<div class="clearFix"></div>
+</div>
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/admin/login.js'}" type="text/javascript"></script>
+#{/set}

@@ -1,0 +1,117 @@
+16-09-13 15:09:26 Buyer=1678-maimai take Task=775574954111401984
+16-09-13 15:22:44 Buyer=1678-maimai cancle buyerTask=775574954111401984-1
+16-09-13 15:22:54 Buyer=1678-maimai take Task=775574954111401984
+16-09-13 15:24:30 Buyer=1678-maimai cancle buyerTask=773775548928229376-6596
+16-09-13 15:24:42 Buyer=1678-maimai cancle buyerTask=775574954111401984-2
+16-09-13 15:24:50 Buyer=1678-maimai take Task=775574954111401984
+16-09-13 15:28:04 Buyer=1678-maimai cancle buyerTask=775574954111401984-3
+16-09-13 15:28:13 Buyer=1678-maimai take Task=775574954111401984
+16-09-13 15:31:33 Buyer=1678-maimai cancle buyerTask=775574954111401984-4
+16-09-13 15:31:38 Buyer=1678-maimai take Task=775574954111401984
+16-09-13 15:31:38 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=775574954111401984-5 with status=RECIEVED
+16-09-13 15:47:34 Buyer=1678-maimai cancle buyerTask=775574954111401984-5
+16-09-13 15:49:35 Buyer=1678-maimai take Task=775574954111401984
+16-09-13 15:49:35 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=775574954111401984-6 with status=RECIEVED
+16-09-13 15:51:04 Buyer=1678-maimai cancle buyerTask=775574954111401984-6
+16-09-13 15:51:10 Buyer=1678-maimai take Task=775574954111401984
+16-09-13 15:51:10 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=775574954111401984-7 with status=RECIEVED
+16-09-13 15:52:22 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=775574954111401984-7 with status=RECIEVED
+16-09-13 15:52:47 Buyer=1678-maimai perform buyerTask=7 save step=CHOOSE_ITEM
+16-09-13 15:52:47 [Buyer=1678-maimai perform buyerTask=7 save step=CHOOSE_ITEM] Current SESSION taskId=0 step=货比三家
+16-09-13 15:53:07 Buyer=1678-maimai perform buyerTask=7 save step=CHOOSE_ITEM
+16-09-13 15:53:07 [Buyer=1678-maimai perform buyerTask=7 save step=CHOOSE_ITEM] Current SESSION taskId=0 step=货比三家
+16-09-13 15:54:29 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=775574954111401984-7 with status=RECIEVED
+16-09-13 15:55:01 Buyer=1678-maimai perform buyerTask=7 save step=CHOOSE_ITEM
+16-09-13 15:55:01 [Buyer=1678-maimai perform buyerTask=7 save step=CHOOSE_ITEM] Current SESSION taskId=0 step=货比三家
+16-09-13 15:58:22 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=775574954111401984-7 with status=RECIEVED
+16-09-13 16:00:02 Buyer=1678-maimai perform buyerTask=7 save step=CHOOSE_ITEM
+16-09-13 16:00:02 [Buyer=1678-maimai perform buyerTask=7 save step=CHOOSE_ITEM] Current SESSION taskId=0 step=货比三家
+16-09-13 16:02:06 Buyer=1678-maimai cancle buyerTask=775574954111401984-7
+16-09-13 16:02:15 Buyer=1678-maimai take Task=775574954111401984
+16-09-13 16:02:16 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=775574954111401984-8 with status=RECIEVED
+16-09-13 16:02:44 Buyer=1678-maimai perform buyerTask=8 save step=CHOOSE_ITEM
+16-09-13 16:02:44 [Buyer=1678-maimai perform buyerTask=8 save step=CHOOSE_ITEM] Current SESSION taskId=0 step=货比三家
+16-09-13 16:05:31 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=775574954111401984-8 with status=RECIEVED
+16-09-13 16:05:49 Buyer=1678-maimai perform buyerTask=8 save step=CHOOSE_ITEM
+16-09-13 16:05:49 [Buyer=1678-maimai perform buyerTask=8 save step=CHOOSE_ITEM] Current SESSION taskId=0 step=货比三家
+16-09-13 16:06:36 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=775574954111401984-8 with status=RECIEVED
+16-09-13 16:06:51 Buyer=1678-maimai perform buyerTask=8 save step=CHOOSE_ITEM
+16-09-13 16:06:51 Fetch and Check Buyer=1678 last perform step of buyerTask=8
+16-09-13 16:06:51 Sessoin current taskStep=CHOOSE_ITEM ,buyer=1678,buyerTask=8
+16-09-13 16:06:51 Buyer=1678-maimai perform save step=CHOOSE_ITEM of buyerTask=775574954111401984-8 with status=RECIEVED
+16-09-13 16:07:05 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:09:56 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:10:00 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:10:03 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:10:33 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:22:10 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:22:24 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:22:46 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:22:54 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:24:33 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:24:44 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:26:41 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:26:53 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:39:52 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:39:59 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:40:22 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:40:24 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:40:36 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:40:46 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:41:24 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:41:28 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:41:29 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:43:05 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:43:16 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:43:59 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:44:02 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:44:06 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:44:26 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:51:41 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:52:13 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:52:24 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:52:48 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:53:47 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:53:57 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:54:25 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:54:32 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:55:38 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:55:54 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:57:31 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:57:46 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 16:58:56 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 16:59:15 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:01:01 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 17:01:05 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:01:36 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 17:01:48 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:02:03 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 17:02:07 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:02:37 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 17:02:40 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:03:41 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 17:03:49 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:04:36 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 17:04:55 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:06:59 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 17:07:08 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:08:19 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:09:10 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 17:09:21 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:09:40 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 17:09:45 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:09:59 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:10:22 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 17:10:31 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:10:46 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:10:57 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 17:11:03 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:13:16 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:16:29 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 17:16:40 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:17:14 Buyer=1678-maimai begin to perform step=VIEW_AND_INQUIRY of buyerTask=775574954111401984-8 with status=WAIT_PAY
+16-09-13 17:17:23 Buyer=1678-maimai perform buyerTask=8 save step=CONFIRM_REFUND
+16-09-13 17:17:23 Fetch and Check Buyer=1678 last perform step of buyerTask=8
+16-09-13 17:17:23 Sessoin current taskStep=VIEW_AND_INQUIRY ,buyer=1678,buyerTask=8
+16-09-13 17:17:23 Buyer=1678 last perform step=275649[CHOOSE_ITEM] of buyerTask=8
+16-09-13 17:17:23 Buyer=1678-maimai perform save step=CONFIRM_REFUND of buyerTask=775574954111401984-8 with status=WAIT_PAY

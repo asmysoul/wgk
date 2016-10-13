@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="defaultExecutorType" value="REUSE" />
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+	<typeAliases>
+		<package name="models" />
+	</typeAliases>
+	<environments default="default">
+		<environment id="default">
+			<transactionManager type="JDBC" />
+			<dataSource type="com.aton.db.DefaultDataSourceFactory" />
+		</environment>
+	</environments>
+	<mappers>
+		<mapper class="models.mappers.AdminMapper" />
+		<mapper class="models.mappers.UserMapper" />
+		<mapper class="models.mappers.TaskMapper" />
+		<mapper class="models.mappers.TaskMapper3" />
+		<mapper class="models.mappers.TaskMapper2" />
+		<mapper class="models.mappers.TaskItemSearchPlanMapper" />
+		<mapper class="models.mappers.TaskItemSearchPlanMapper3" />
+		<mapper class="models.mappers.BuyerTaskMapper" />
+		<mapper class="models.mappers.BuyerTaskMapper3" />
+		<mapper class="models.mappers.BuyerTaskMapper2" />
+		<mapper class="models.mappers.BuyerTaskStepMapper" />
+		<mapper class="models.mappers.BuyerTaskStepMapper3" />
+		<mapper class="models.mappers.BuyerTaskStepMapper2" />
+		<mapper class="models.mappers.NoticeMapper" />
+		
+		<mapper class="models.mappers.ShopMapper" />
+		<mapper class="models.mappers.ShopMapper2" />
+		<mapper class="models.mappers.ShopMapper3" />
+		<mapper class="models.mappers.BuyerAccountMapper" />
+		<mapper class="models.mappers.BuyerAccountMapper3" />
+		<mapper class="models.mappers.BuyerAccountMapper2" />
+		<mapper class="models.mappers.FundAccountMapper" />
+		
+		<mapper class="models.mappers.fund.BuyerDepositRecordMapper" />
+		<mapper class="models.mappers.BuyerExperienceRecordMapper" />
+		<mapper class="models.mappers.MemberChargeRecordMapper" />
+		<mapper class="models.mappers.SellerPledgeRecordMapper" />
+		<mapper class="models.mappers.UserIngotRecordMapper" />
+		<mapper class="models.mappers.UserFlowRecordMapper" />
+		<mapper class="models.mappers.UserWithdrawRecordMapper" />
+		<mapper class="models.mappers.AdminOperatorLogMapper" />
+		<mapper class="models.mappers.AdminTradeLogMapper" />
+		
+		<mapper class="models.mappers.marketing.TaskRewardLogMapper" />
+		
+		<mapper class="models.mappers.RegionMapper" />
+		<mapper class="models.mappers.TaskExamineLogMapper" />
+		<mapper class="models.mappers.TaskOrderMessageMapper" />
+		<mapper class="models.mappers.TaskOrderMessageMapper3" />
+		<mapper class="models.mappers.TrafficRecordMapper" />
+		<!-- 平台为买手退款 -->
+		<mapper class="models.mappers.AdminRefundRecordMapper" />
+		<mapper class="models.mappers.PayTradeLogMapper" />
+		
+		<mapper class="models.mappers.marketing.ActivityMapper" />
+		<mapper class="models.mappers.marketing.UserInvitedRecordMapper" />
+		<mapper class="models.mappers.SysConfigMapper" />
+		<mapper class="models.mappers.SellerConfigMapper" />
+		<mapper class="models.mappers.BuyerConfigMapper" />
+		
+	</mappers>
+</configuration>

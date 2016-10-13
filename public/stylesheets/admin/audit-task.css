@@ -1,0 +1,114 @@
+
+
+/*-------====================================--------------*/
+#taskDetailPanel{
+	
+}
+.infoLine{
+	padding-left: 95px;
+	line-height: 32px;
+}
+.lbl{
+	font-weight: 700;
+	margin-left: -95px;
+}
+.item-pic,.item-pic img{
+	width: 120px;
+	height: 120px;
+}
+.item-pic{
+	border:solid 1px #DEDEDE;
+}
+
+.normTable tbody td{
+	border-bottom: solid 1px #DEDEDE;
+	vertical-align: middle;
+}
+.normTable thead td{
+	background: #DEDEDE;
+	border-bottom: solid 1px #BBB;
+	color: #999;
+}
+.access,.refuse{
+	border-radius: 2px;
+	padding : 10px 15px;
+}
+.access{
+	background-color:#069E2A;
+}
+.access:hover{
+	background-color:#07B630;
+}
+.refuse{
+	background-color:#D93B41;
+}
+.refuse:hover{
+	background-color:#DE4F54;
+}
+.dingdan{
+	height:100px;
+}
+.dingdan a{
+	color:#555;
+	height:100px;
+}
+/*-----------------------------*/
+#taskFilterPanel{
+	height: 34px;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+#taskFilterPanel .stdColorButton{
+	line-height: 14px;
+}
+
+.item-box .pic{
+	width:80px;
+	height: 80px;
+	position: absolute;
+	left:5px;
+	top:5px;
+}
+.item-box .pic img{
+	width:80px;
+	height: 80px;
+	border:solid 1px #DEDEDE;
+}
+.item-box .title{
+	text-align: left;
+	color:#5d5d5d;
+	font-weight: 700;
+	line-height: 24px;	
+	color:#3E88BE;
+}
+.item-list .item-box{
+	position: relative;
+	padding-left: 90px;
+	height: 90px;
+}
+#refuseReasonWnd .modalWnd{
+	width:400px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+#txtReason{
+	height: 70px;
+	width: 346px;
+}
+#btnRefuse{
+	background-color: #FD7037;
+}
+#btnRefuse:hover{
+	background-color: #FD804E;
+}
+.smalltdColorButton { padding:3px 5px;  color:#FFF; background-color:#4D92CB;border-radius: 2px;}
+
+
+
+
+
+
+

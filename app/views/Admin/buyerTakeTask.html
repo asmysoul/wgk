@@ -1,0 +1,94 @@
+#{extends 'frame.html' /}
+#{set title:'资金管理' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/admin/buyerTakeTask.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.pagination.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/datePicker.css'}" />
+#{/set}
+
+<div class="contentCard">
+	<div class="contentTitle">买手接任务记录</div>
+	<div id="taskFilterPanel">
+		<div class="clearfix mb10">
+			<span class="floatLeft mr10">买手昵称</span>
+			<input type="text" id="buyerNick" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">对接客服</span>
+			<input type="text" id="adminName" class="floatLeft mr10 inputText" />
+		</div>
+		<div class="clearfix mb10">
+			<div class="cal-content">
+				<span class="floatLeft mr10">任务接手时间</span>
+				<span class="floatLeft mr10 cal-date-input">
+					<input class="inputDate start-date" id="takeTaskTimeStart" readonly="readonly" value=""  />
+				</span>
+				<span class="floatLeft mr10 med-cal-split">-</span>
+				<span class="floatLeft mr10 cal-date-input">
+					<input class="inputDate end-date" id="takeTaskTimeEnd" readonly="readonly" value="" />
+				</span>
+				<span class="floatLeft mr10">买手注册时间</span>
+				<span class="floatLeft mr10 cal-date-input">
+					<input class="inputDate start-date" id="buyerCreateTimeStart" readonly="readonly" value=""  />
+				</span>
+				<span class="floatLeft mr10 med-cal-split">-</span>
+				<span class="floatLeft mr10 cal-date-input">
+					<input class="inputDate end-date" id="buyerCreateTimeEnd" readonly="readonly" value="" />
+				</span>
+				<a class="stdColorButton floatLeft queryBtn" href="javascript:;" id="queryBtn">查询</a>
+				<div style="margin-left: 2px;" class="floatLeft">&nbsp;</div>
+				<a class="stdColorButton floatLeft queryBtn" id="exportBtn" href="javascript:;" target="_blank">导出</a>
+			</div>
+		</div>
+		<div class="">
+		<div class="foundTypeSwitchWrapper">
+			<a class="foundTab focus" href="javascript:;" type="maxTime">按接单最后时间排序</a>
+			<a class="foundTab" href="javascript:;" type="cc">按接单总数排序</a>
+		</div>
+		<div class="foundRecordWrapper" style="overflow: hidden;" id="recordContainer"></div>
+		<!--这里是分页区域-->
+		<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+			<div class="maskLayer"></div>
+			<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />
+		</div>
+		<div class="pagin-btm clearFix">
+			<div class="pagination"></div>
+		</div>
+	</div>
+</div>
+</div>
+<textarea id="recordTemp" class="muban">
+	<table class="normTable">
+		<thead>
+			<tr>
+				<td width="10%">买手ID</td>
+				<td width="18%">买手昵称</td>
+				<td width="10%">对接客服</td>
+				<td width="18%">注册时间</td>
+				<td width="18%">最后接任务时间</td>
+				<td width="18%">总共接单数</td>
+			</tr>
+		</thead>
+		<tbody>
+			{{#results}}
+			<tr>
+				<td>{{id}}</td>
+				<td>{{nick}}</td>
+				<td>{{name}}</td>
+				<td>{{createTimeStr}}</td>
+				<td>{{maxTimeStr}}</td>
+				<td>{{cc}}单</td>
+			</tr>
+			{{/results}}
+		</tbody>
+	</table>
+</textarea>
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/date.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.datePicker.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.number.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+
+<script src="@{'/public/javascripts/admin/buyerTakeTask.js'}" type="text/javascript"></script>
+<script type="text/javascript">App.module = 'buyerTakeTask';</script>
+#{/set}

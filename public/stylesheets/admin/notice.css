@@ -1,0 +1,33 @@
+#taskFilterPanel{
+	padding-left: 20px;
+	padding-top: 10px;
+}
+#taskFilterPanel .stdColorButton{
+	line-height: 14px;
+}
+#txtTitle{
+	width: 300px;
+}
+/*-----------------------------------*/
+.normTable{
+	margin-top: 10px;
+}
+.normTable tbody td{
+	border-bottom: solid 1px #DEDEDE;
+	vertical-align: middle;
+}
+.normTable thead td{
+	background: #DEDEDE;
+	border-bottom: solid 1px #BBB;
+	color: #999;
+}
+.btnRowView,.btnRowEdit,.btnRowDelete,.btnRowDisplay,.btnShowTop{
+	padding: 2px 2px;
+}
+
+#noticeListTable tbody .tdTitle:hover{
+	text-decoration: underline;
+}
+.tdLeft{
+	float:left;
+}

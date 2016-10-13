@@ -1,0 +1,146 @@
+
+
+table.jCalendar {
+    border-collapse: separate;
+    border-spacing: 2px;
+    background-color:#F5F5F5;
+}
+table.jCalendar th {
+	color: #3071A7;
+	font-weight: bold;
+	padding: 3px 5px;
+}
+
+table.jCalendar td {
+	color: #000;
+	padding: 5px;
+	text-align: center;
+}
+table.jCalendar td.other-month {
+	color: #aaa;
+}
+table.jCalendar td.today {
+	background: #53AFC9;
+	color: #fff;
+	border-radius: 4px;
+}
+table.jCalendar td.today:hover {
+	color:#fff;
+}
+table.jCalendar td.selected {
+	background: #E66B6B;
+	color: #fff;
+	border-radius: 4px;
+}
+table.jCalendar td.selected.dp-hover {
+	background: #DE3F3F;
+	color:#fff;
+}
+table.jCalendar td.dp-hover,
+table.jCalendar tr.activeWeekHover td {
+	color: #FF8263;
+}
+table.jCalendar tr.selectedWeek td {
+	background: #f66;
+	color: #fff;
+}
+table.jCalendar td.disabled, table.jCalendar td.disabled.dp-hover {
+	color: #111;
+}
+table.jCalendar td.unselectable,
+table.jCalendar td.unselectable:hover,
+table.jCalendar td.unselectable.dp-hover {
+	color: #111;
+}
+
+/* For the popup */
+
+/* NOTE - you will probably want to style a.dp-choose-date - see how I did it in demo.css */
+
+div.dp-popup {
+	position: relative;
+	background: #FFF;
+	border:solid 1px #999;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.18);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,.18);
+	box-shadow: 0 0 10px rgba(0,0,0,.18);
+	font-size: 12px;
+	font-family: Microsoft YaHei,Verdana,SimSun,sans-serif;
+	line-height: 1.2em;
+	overflow:hidden;
+}
+div#dp-popup {
+	position: absolute;
+	z-index: 199;
+	overflow:hidden;
+}
+div.dp-popup h2 {
+	font-size: 12px;
+	line-height:34px;
+	text-align: center;
+	padding: 0;
+	z-index:14;
+	background-color: #E9EAF0;
+	color:#4C5373;
+}
+a#dp-close {
+	font-size: 11px;
+	padding: 4px 0;
+	text-align: center;
+	display: block;
+}
+a#dp-close:hover {
+	text-decoration: underline;
+}
+div.dp-popup a {
+	color: #000;
+	text-decoration: none;
+	padding: 3px 2px 0;
+}
+div.dp-popup div.dp-nav-prev {
+	position: absolute;
+	top: 0;
+	left: 4px;
+	width: 60px;
+	z-index:10;
+	line-height:25px;
+}
+div.dp-popup div.dp-nav-prev a {
+	float: left;
+}
+div.dp-popup div.dp-calendar {
+	z-index:10;
+}
+/* Opera needs the rules to be this specific otherwise it doesn't change the cursor back to pointer after you have disabled and re-enabled a link */
+div.dp-popup div.dp-nav-prev a, div.dp-popup div.dp-nav-next a {
+	cursor: pointer;
+}
+div.dp-popup div.dp-nav-prev a.disabled, div.dp-popup div.dp-nav-next a.disabled {
+	cursor: default;
+}
+div.dp-popup div.dp-nav-next {
+	position: absolute;
+	top: 0;
+	right: 4px;
+	width: 60px;
+	z-index:10;
+	line-height:25px;
+}
+div.dp-popup div.dp-nav-next a {
+	float: right;
+}
+div.dp-popup a.disabled {
+	cursor: default;
+	color: #aaa;
+}
+div.dp-popup td {
+	cursor: pointer;
+}
+div.dp-popup td.disabled {
+	cursor: default;
+}
+/*------------------------------------*/
+.dp-choose-date
+{
+	display: none;
+}

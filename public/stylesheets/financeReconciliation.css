@@ -1,0 +1,5 @@
+.normTable1{ border-collapse: collapse; table-layout:fixed; width: 100%;}
+.normTable1 td{ padding:3px 8px; vertical-align: top; text-align: center; }
+.normTable1 thead td{ }
+.normTable1 tbody tr td{ overflow:hidden; line-height: 34px; }
+.normTable1 tbody tr th{ line-height: 34px; padding:3px 8px; text-align: left;}

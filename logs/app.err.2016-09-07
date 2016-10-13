@@ -1,0 +1,451 @@
+[2016-09-07 09:02:59,744] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ap5p1b9
+Internal Server Error (500) for request GET /buyer/task2/6550
+
+Template execution error (In /app/views/TaskCenter/buyerTaskDetail2.html around line 404)
+Execution error occured in template /app/views/TaskCenter/buyerTaskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.buyerTaskDetail2(TaskCenter.java:1707)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/buyerTaskDetail2.html.(line:404)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-07 09:03:10,576] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ap5p1ba
+Internal Server Error (500) for request GET /buyer/task2/6549
+
+Template execution error (In /app/views/TaskCenter/buyerTaskDetail2.html around line 404)
+Execution error occured in template /app/views/TaskCenter/buyerTaskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.buyerTaskDetail2(TaskCenter.java:1707)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/buyerTaskDetail2.html.(line:404)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-07 09:03:38,208] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ap5p1bb
+Internal Server Error (500) for request GET /buyer/task2/6550
+
+Template execution error (In /app/views/TaskCenter/buyerTaskDetail2.html around line 404)
+Execution error occured in template /app/views/TaskCenter/buyerTaskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.buyerTaskDetail2(TaskCenter.java:1707)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/buyerTaskDetail2.html.(line:404)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-07 09:04:34,867] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ap5p1bc
+Internal Server Error (500) for request GET /buyer/task2/6550
+
+Template execution error (In /app/views/TaskCenter/buyerTaskDetail2.html around line 404)
+Execution error occured in template /app/views/TaskCenter/buyerTaskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.buyerTaskDetail2(TaskCenter.java:1707)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/buyerTaskDetail2.html.(line:404)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-07 09:26:00,708] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-07 09:31:49,299] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ap5p1bd
+Internal Server Error (500) for request GET /buyer/task/perform2/6564
+
+Template execution error (In /app/views/TaskExecutor/perform2.html around line 177)
+Execution error occured in template /app/views/TaskExecutor/perform2.html. Exception raised was MissingMethodException : No signature of method: Template_1013.$() is applicable for argument types: (Template_1013$_run_closure1_closure3) values: [Template_1013$_run_closure1_closure3@50270db9] Possible solutions: _(java.lang.String), is(java.lang.Object), run(), run(), any(), get(java.lang.String).
+
+play.exceptions.TemplateExecutionException: No signature of method: Template_1013.$() is applicable for argument types: (Template_1013$_run_closure1_closure3) values: [Template_1013$_run_closure1_closure3@50270db9]
+Possible solutions: _(java.lang.String), is(java.lang.Object), run(), run(), any(), get(java.lang.String)
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:236)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: groovy.lang.MissingMethodException: No signature of method: Template_1013.$() is applicable for argument types: (Template_1013$_run_closure1_closure3) values: [Template_1013$_run_closure1_closure3@50270db9]
+Possible solutions: _(java.lang.String), is(java.lang.Object), run(), run(), any(), get(java.lang.String)
+	at /app/views/TaskExecutor/perform2.html.(line:177)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-07 09:33:07,229] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ap5p1be
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 236)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : key cannot be resolved to a variable
+
+play.exceptions.CompilationException: key cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-07 09:33:07,308] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ap5p1bg
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskExecutor.java around line 236)
+The file /app/controllers/TaskExecutor.java could not be compiled. Error raised is : key cannot be resolved to a variable
+
+play.exceptions.CompilationException: key cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-07 09:51:08,774] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ap5p1bi
+Internal Server Error (500) for request GET /buyer/task/perform2/6564
+
+Template execution error (In /app/views/TaskExecutor/perform2.html around line 178)
+Execution error occured in template /app/views/TaskExecutor/perform2.html. Exception raised was MissingMethodException : No signature of method: java.util.ArrayList.split() is applicable for argument types: (java.lang.String) values: [,] Possible solutions: split(groovy.lang.Closure), split(groovy.lang.Closure), wait(), sort(), toList(), asList().
+
+play.exceptions.TemplateExecutionException: No signature of method: java.util.ArrayList.split() is applicable for argument types: (java.lang.String) values: [,]
+Possible solutions: split(groovy.lang.Closure), split(groovy.lang.Closure), wait(), sort(), toList(), asList()
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:260)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: groovy.lang.MissingMethodException: No signature of method: java.util.ArrayList.split() is applicable for argument types: (java.lang.String) values: [,]
+Possible solutions: split(groovy.lang.Closure), split(groovy.lang.Closure), wait(), sort(), toList(), asList()
+	at /app/views/TaskExecutor/perform2.html.(line:178)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-07 09:51:57,466] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ap5p1bj
+Internal Server Error (500) for request GET /buyer/task/perform2/6564
+
+Template execution error (In /app/views/TaskExecutor/perform2.html around line 178)
+Execution error occured in template /app/views/TaskExecutor/perform2.html. Exception raised was MissingMethodException : No signature of method: java.util.ArrayList.split() is applicable for argument types: (java.lang.String) values: [,] Possible solutions: split(groovy.lang.Closure), split(groovy.lang.Closure), wait(), sort(), toList(), asList().
+
+play.exceptions.TemplateExecutionException: No signature of method: java.util.ArrayList.split() is applicable for argument types: (java.lang.String) values: [,]
+Possible solutions: split(groovy.lang.Closure), split(groovy.lang.Closure), wait(), sort(), toList(), asList()
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:260)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: groovy.lang.MissingMethodException: No signature of method: java.util.ArrayList.split() is applicable for argument types: (java.lang.String) values: [,]
+Possible solutions: split(groovy.lang.Closure), split(groovy.lang.Closure), wait(), sort(), toList(), asList()
+	at /app/views/TaskExecutor/perform2.html.(line:178)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-07 11:25:03,148] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71apog01k
+Internal Server Error (500) for request GET /buyer/task/perform2/6565
+
+Template execution error (In /app/views/TaskExecutor/perform2.html around line 169)
+Execution error occured in template /app/views/TaskExecutor/perform2.html. Exception raised was MissingPropertyException : Exception evaluating property 'item0' for java.util.Arrays$ArrayList, Reason: groovy.lang.MissingPropertyException: No such property: item0 for class: java.lang.String.
+
+play.exceptions.TemplateExecutionException: Exception evaluating property 'item0' for java.util.Arrays$ArrayList, Reason: groovy.lang.MissingPropertyException: No such property: item0 for class: java.lang.String
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:260)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: groovy.lang.MissingPropertyException: Exception evaluating property 'item0' for java.util.Arrays$ArrayList, Reason: groovy.lang.MissingPropertyException: No such property: item0 for class: java.lang.String
+	at /app/views/TaskExecutor/perform2.html.(line:169)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-07 11:25:13,971] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71apog01l
+Internal Server Error (500) for request GET /buyer/task/perform2/6565
+
+Template execution error (In /app/views/TaskExecutor/perform2.html around line 175)
+Execution error occured in template /app/views/TaskExecutor/perform2.html. Exception raised was MissingPropertyException : Exception evaluating property 'item0' for java.util.Arrays$ArrayList, Reason: groovy.lang.MissingPropertyException: No such property: item0 for class: java.lang.String.
+
+play.exceptions.TemplateExecutionException: Exception evaluating property 'item0' for java.util.Arrays$ArrayList, Reason: groovy.lang.MissingPropertyException: No such property: item0 for class: java.lang.String
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:260)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: groovy.lang.MissingPropertyException: Exception evaluating property 'item0' for java.util.Arrays$ArrayList, Reason: groovy.lang.MissingPropertyException: No such property: item0 for class: java.lang.String
+	at /app/views/TaskExecutor/perform2.html.(line:175)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-09-07 14:29:27,886] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71apog01m
+Internal Server Error (500) for request GET /buyer/task/perform2/6565?itemTitle=%E5%88%86%E4%BA%AB%E6%96%87%E5%AD%97&itemUrl=https%3A%2F%2Fitem.taobao.com%2Fitem.htm%3Fspm%3Da1z10.1-c.w5003-14925813381.5.HkBvdr%26id%3D535543339132%26scene%3Dtaobao_shop&itemTitle=%E5%88%86%E4%BA%AB%E6%96%87%E5%AD%97&itemUrl5=&itemUrl6=&orderId=&payNum=
+
+Execution exception (In /app/models/BuyerTask2.java around line 1045)
+NullPointerException occured : Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1045)
+
+play.exceptions.JavaExecutionException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1045)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1045)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at models.BuyerTask2.findForPerforming(BuyerTask2.java:1045)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:205)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-07 14:33:28,747] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71apog01n
+Internal Server Error (500) for request GET /buyer/task/perform2/6566
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 206)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:206)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-07 15:27:59,840] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-07 15:31:52,409] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-07 15:31:52,533] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-07 15:42:21,019] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71apog01o
+Error during job execution (jobs.TaskKeeper)
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.jobs.Job.onException(Job.java:154)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	... 1 more
+[2016-09-07 15:55:23,977] ERROR [jobs-thread-9]  - Oops. Error in Logger !
+java.lang.OutOfMemoryError: PermGen space
+[2016-09-07 16:07:18,881] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b19hcn1
+Internal Server Error (500) for request GET /buyer/tasks
+
+Compilation error (In /app/models/BuyerTask2.java around line 52)
+The file /app/models/BuyerTask2.java could not be compiled. Error raised is : The import vos.TaskSearchVo2.SearchModule cannot be resolved
+
+play.exceptions.CompilationException: The import vos.TaskSearchVo2.SearchModule cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:428)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-07 16:07:22,711] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b19hcn2
+Internal Server Error (500) for request GET /admin/tasks
+
+Compilation error (In /app/models/BuyerTask2.java around line 52)
+The file /app/models/BuyerTask2.java could not be compiled. Error raised is : The import vos.TaskSearchVo2.SearchModule cannot be resolved
+
+play.exceptions.CompilationException: The import vos.TaskSearchVo2.SearchModule cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-07 16:08:27,866] ERROR [main] play.Logger.error(Logger.java:426) - Could not bind on port 80
+[2016-09-07 16:18:51,743] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b19hcn3
+Internal Server Error (500) for request GET /buyer/task/6568
+
+Execution exception (In /app/models/BuyerTask.java around line 1095)
+NullPointerException occured : Try to read buyerId on null object vos.BuyerTaskVo (models.BuyerTask.findDetail, line 1095)
+
+play.exceptions.JavaExecutionException: Try to read buyerId on null object vos.BuyerTaskVo (models.BuyerTask.findDetail, line 1095)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read buyerId on null object vos.BuyerTaskVo (models.BuyerTask.findDetail, line 1095)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at models.BuyerTask.findDetail(BuyerTask.java:1095)
+	at controllers.TaskCenter.buyerTaskDetail(TaskCenter.java:1604)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-07 16:36:37,316] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-07 16:36:37,428] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-07 16:36:40,167] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71b19hcn4
+Internal Server Error (500) for request GET /buyer/task/6568
+
+Execution exception (In /app/models/BuyerTask.java around line 1095)
+NullPointerException occured : Try to read buyerId on null object vos.BuyerTaskVo (models.BuyerTask.findDetail, line 1095)
+
+play.exceptions.JavaExecutionException: Try to read buyerId on null object vos.BuyerTaskVo (models.BuyerTask.findDetail, line 1095)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read buyerId on null object vos.BuyerTaskVo (models.BuyerTask.findDetail, line 1095)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at models.BuyerTask.findDetail(BuyerTask.java:1095)
+	at controllers.TaskCenter.buyerTaskDetail(TaskCenter.java:1604)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-07 17:09:41,673] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-07 17:14:21,606] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-09-07 17:14:21,662] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value

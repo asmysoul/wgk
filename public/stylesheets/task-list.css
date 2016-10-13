@@ -1,0 +1,260 @@
+.filterBlock{
+	float: left;
+	margin-right: 20px;
+	padding: 5px;
+}
+.filterBlock .secondTile{
+	margin-bottom: 5px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.checkTextBtn{
+	padding: 8px 20px;
+	font-size: 18px;
+	color: #888;
+	font-weight: bold;
+}
+.contentBody {
+	padding: 0px;
+}
+.taskTypeTab{
+	padding-left:20px;
+	padding-right: 20px;
+}
+.taskTableTitle{
+	color:#AFB9C1;
+	font-family: "Microsoft Yahei";
+}
+.taskRow{
+	border-top:solid 1px #E2E2E2;
+	border-radius: 3px;
+	height: 60px;
+	position: relative;
+
+}
+.taskRow:hover{
+	background-color: #fefce8;
+}
+.withdrawImg{
+background: url(/public/images/st_icon.png) no-repeat 0% 100%;	
+}
+.taskRow td{
+	vertical-align: middle;
+	height: 54px;
+}
+.r_sysRefund{
+	float: left;
+	color: blue;
+	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.sysRefund{
+	width: 80px;
+}
+.r_seller{
+	width: 100px;
+}
+.r_percount{
+	width: 80px;
+}
+.r_price{
+	width: 100px;
+}
+.r_commision{
+	width: 100px;
+}
+.r_type{
+	width: 120px;
+}
+.r_amount{
+	width: 80px;
+}
+.r_percent{
+	width: 50px;
+}
+.r_op{
+	width: 120px;
+}
+.ui-progressbar-mid{display:block;width:44px;height:44px;line-height:44px;font-size:8px;text-align:center;background:url(/public/images/progressbar_mid.png);}.ui-progressbar-mid em{font-size:14px}.ui-progressbar-mid-0{background-position:0 0}.ui-progressbar-mid-1{background-position:-54px 0}.ui-progressbar-mid-2{background-position:-108px 0}.ui-progressbar-mid-3{background-position:-162px 0}.ui-progressbar-mid-4{background-position:-216px 0}.ui-progressbar-mid-5{background-position:-270px 0}.ui-progressbar-mid-6{background-position:-324px 0}.ui-progressbar-mid-7{background-position:-378px 0}.ui-progressbar-mid-8{background-position:-432px 0}.ui-progressbar-mid-9{background-position:-486px 0}.ui-progressbar-mid-10{background-position:-540px 0}.ui-progressbar-mid-11{background-position:-594px 0}.ui-progressbar-mid-12{background-position:-648px 0}.ui-progressbar-mid-13{background-position:-702px 0}.ui-progressbar-mid-14{background-position:-756px 0}.ui-progressbar-mid-15{background-position:-810px 0}.ui-progressbar-mid-16{background-position:-864px 0}.ui-progressbar-mid-17{background-position:-918px 0}.ui-progressbar-mid-18{background-position:-972px 0}.ui-progressbar-mid-19{background-position:-1026px 0}.ui-progressbar-mid-20{background-position:-1080px 0}.ui-progressbar-mid-21{background-position:-1134px 0}.ui-progressbar-mid-22{background-position:-1188px 0}.ui-progressbar-mid-23{background-position:-1242px 0}.ui-progressbar-mid-24{background-position:-1296px 0}.ui-progressbar-mid-25{background-position:-1350px 0}.ui-progressbar-mid-26{background-position:-1404px 0}.ui-progressbar-mid-27{background-position:-1458px 0}.ui-progressbar-mid-28{background-position:-1512px 0}.ui-progressbar-mid-29{background-position:-1566px 0}.ui-progressbar-mid-30{background-position:-1620px 0}.ui-progressbar-mid-31{background-position:-1674px 0}.ui-progressbar-mid-32{background-position:-1728px 0}.ui-progressbar-mid-33{background-position:-1782px 0}.ui-progressbar-mid-34{background-position:-1836px 0}.ui-progressbar-mid-35{background-position:-1890px 0}.ui-progressbar-mid-36{background-position:-1944px 0}.ui-progressbar-mid-37{background-position:-1998px 0}.ui-progressbar-mid-38{background-position:-2052px 0}.ui-progressbar-mid-39{background-position:-2106px 0}.ui-progressbar-mid-40{background-position:-2160px 0}.ui-progressbar-mid-41{background-position:-2214px 0}.ui-progressbar-mid-42{background-position:-2268px 0}.ui-progressbar-mid-43{background-position:-2322px 0}.ui-progressbar-mid-44{background-position:-2376px 0}.ui-progressbar-mid-45{background-position:-2430px 0}.ui-progressbar-mid-46{background-position:-2484px 0}.ui-progressbar-mid-47{background-position:-2538px 0}.ui-progressbar-mid-48{background-position:-2592px 0}.ui-progressbar-mid-49{background-position:-2646px 0}.ui-progressbar-mid-50{background-position:-2700px 0}.ui-progressbar-mid-51{background-position:-2754px 0}.ui-progressbar-mid-52{background-position:-2808px 0}.ui-progressbar-mid-53{background-position:-2862px 0}.ui-progressbar-mid-54{background-position:-2916px 0}.ui-progressbar-mid-55{background-position:-2970px 0}.ui-progressbar-mid-56{background-position:-3024px 0}.ui-progressbar-mid-57{background-position:-3078px 0}.ui-progressbar-mid-58{background-position:-3132px 0}.ui-progressbar-mid-59{background-position:-3186px 0}.ui-progressbar-mid-60{background-position:-3240px 0}.ui-progressbar-mid-61{background-position:-3294px 0}.ui-progressbar-mid-62{background-position:-3348px 0}.ui-progressbar-mid-63{background-position:-3402px 0}.ui-progressbar-mid-64{background-position:-3456px 0}.ui-progressbar-mid-65{background-position:-3510px 0}.ui-progressbar-mid-66{background-position:-3564px 0}.ui-progressbar-mid-67{background-position:-3618px 0}.ui-progressbar-mid-68{background-position:-3672px 0}.ui-progressbar-mid-69{background-position:-3726px 0}.ui-progressbar-mid-70{background-position:-3780px 0}.ui-progressbar-mid-71{background-position:-3834px 0}.ui-progressbar-mid-72{background-position:-3888px 0}.ui-progressbar-mid-73{background-position:-3942px 0}.ui-progressbar-mid-74{background-position:-3996px 0}.ui-progressbar-mid-75{background-position:-4050px 0}.ui-progressbar-mid-76{background-position:-4104px 0}.ui-progressbar-mid-77{background-position:-4158px 0}.ui-progressbar-mid-78{background-position:-4212px 0}.ui-progressbar-mid-79{background-position:-4266px 0}.ui-progressbar-mid-80{background-position:-4320px 0}.ui-progressbar-mid-81{background-position:-4374px 0}.ui-progressbar-mid-82{background-position:-4428px 0}.ui-progressbar-mid-83{background-position:-4482px 0}.ui-progressbar-mid-84{background-position:-4536px 0}.ui-progressbar-mid-85{background-position:-4590px 0}.ui-progressbar-mid-86{background-position:-4644px 0}.ui-progressbar-mid-87{background-position:-4698px 0}.ui-progressbar-mid-88{background-position:-4752px 0}.ui-progressbar-mid-89{background-position:-4806px 0}.ui-progressbar-mid-90{background-position:-4860px 0}.ui-progressbar-mid-91{background-position:-4914px 0}.ui-progressbar-mid-92{background-position:-4968px 0}.ui-progressbar-mid-93{background-position:-5022px 0}.ui-progressbar-mid-94{background-position:-5076px 0}.ui-progressbar-mid-95{background-position:-5130px 0}.ui-progressbar-mid-96{background-position:-5184px 0}.ui-progressbar-mid-97{background-position:-5238px 0}.ui-progressbar-mid-98{background-position:-5292px 0}.ui-progressbar-mid-99{background-position:-5346px 0}.ui-progressbar-mid-100{background-position:-5400px 0}.ui-progressbar-small{display:block;margin:8px auto;padding-left:2px;width:32px;height:34px;line-height:34px;text-align:center;font-size:8px;background:url(/public/images/progressbar_small.png)}.ui-progressbar-small em{font-size:8px}.ui-progressbar-small-0{background-position:0 0}.ui-progressbar-small-1{background-position:-44px 0}.ui-progressbar-small-2{background-position:-88px 0}.ui-progressbar-small-3{background-position:-132px 0}.ui-progressbar-small-4{background-position:-176px 0}.ui-progressbar-small-5{background-position:-220px 0}.ui-progressbar-small-6{background-position:-264px 0}.ui-progressbar-small-7{background-position:-308px 0}.ui-progressbar-small-8{background-position:-352px 0}.ui-progressbar-small-9{background-position:-396px 0}.ui-progressbar-small-10{background-position:-440px 0}.ui-progressbar-small-11{background-position:-484px 0}.ui-progressbar-small-12{background-position:-528px 0}.ui-progressbar-small-13{background-position:-572px 0}.ui-progressbar-small-14{background-position:-616px 0}.ui-progressbar-small-15{background-position:-660px 0}.ui-progressbar-small-16{background-position:-704px 0}.ui-progressbar-small-17{background-position:-748px 0}.ui-progressbar-small-18{background-position:-792px 0}.ui-progressbar-small-19{background-position:-836px 0}.ui-progressbar-small-20{background-position:-880px 0}.ui-progressbar-small-21{background-position:-924px 0}.ui-progressbar-small-22{background-position:-968px 0}.ui-progressbar-small-23{background-position:-1012px 0}.ui-progressbar-small-24{background-position:-1056px 0}.ui-progressbar-small-25{background-position:-1100px 0}.ui-progressbar-small-26{background-position:-1144px 0}.ui-progressbar-small-27{background-position:-1188px 0}.ui-progressbar-small-28{background-position:-1232px 0}.ui-progressbar-small-29{background-position:-1276px 0}.ui-progressbar-small-30{background-position:-1320px 0}.ui-progressbar-small-31{background-position:-1364px 0}.ui-progressbar-small-32{background-position:-1408px 0}.ui-progressbar-small-33{background-position:-1452px 0}.ui-progressbar-small-34{background-position:-1496px 0}.ui-progressbar-small-35{background-position:-1540px 0}.ui-progressbar-small-36{background-position:-1584px 0}.ui-progressbar-small-37{background-position:-1628px 0}.ui-progressbar-small-38{background-position:-1672px 0}.ui-progressbar-small-39{background-position:-1716px 0}.ui-progressbar-small-40{background-position:-1760px 0}.ui-progressbar-small-41{background-position:-1804px 0}.ui-progressbar-small-42{background-position:-1848px 0}.ui-progressbar-small-43{background-position:-1892px 0}.ui-progressbar-small-44{background-position:-1936px 0}.ui-progressbar-small-45{background-position:-1980px 0}.ui-progressbar-small-46{background-position:-2024px 0}.ui-progressbar-small-47{background-position:-2068px 0}.ui-progressbar-small-48{background-position:-2112px 0}.ui-progressbar-small-49{background-position:-2156px 0}.ui-progressbar-small-50{background-position:-2200px 0}.ui-progressbar-small-51{background-position:-2244px 0}.ui-progressbar-small-52{background-position:-2288px 0}.ui-progressbar-small-53{background-position:-2332px 0}.ui-progressbar-small-54{background-position:-2376px 0}.ui-progressbar-small-55{background-position:-2420px 0}.ui-progressbar-small-56{background-position:-2464px 0}.ui-progressbar-small-57{background-position:-2508px 0}.ui-progressbar-small-58{background-position:-2552px 0}.ui-progressbar-small-59{background-position:-2596px 0}.ui-progressbar-small-60{background-position:-2640px 0}.ui-progressbar-small-61{background-position:-2684px 0}.ui-progressbar-small-62{background-position:-2728px 0}.ui-progressbar-small-63{background-position:-2772px 0}.ui-progressbar-small-64{background-position:-2816px 0}.ui-progressbar-small-65{background-position:-2860px 0}.ui-progressbar-small-66{background-position:-2904px 0}.ui-progressbar-small-67{background-position:-2948px 0}.ui-progressbar-small-68{background-position:-2992px 0}.ui-progressbar-small-69{background-position:-3036px 0}.ui-progressbar-small-70{background-position:-3080px 0}.ui-progressbar-small-71{background-position:-3124px 0}.ui-progressbar-small-72{background-position:-3168px 0}.ui-progressbar-small-73{background-position:-3212px 0}.ui-progressbar-small-74{background-position:-3256px 0}.ui-progressbar-small-75{background-position:-3300px 0}.ui-progressbar-small-76{background-position:-3344px 0}.ui-progressbar-small-77{background-position:-3388px 0}.ui-progressbar-small-78{background-position:-3432px 0}.ui-progressbar-small-79{background-position:-3476px 0}.ui-progressbar-small-80{background-position:-3520px 0}.ui-progressbar-small-81{background-position:-3564px 0}.ui-progressbar-small-82{background-position:-3608px 0}.ui-progressbar-small-83{background-position:-3652px 0}.ui-progressbar-small-84{background-position:-3696px 0}.ui-progressbar-small-85{background-position:-3740px 0}.ui-progressbar-small-86{background-position:-3784px 0}.ui-progressbar-small-87{background-position:-3828px 0}.ui-progressbar-small-88{background-position:-3872px 0}.ui-progressbar-small-89{background-position:-3916px 0}.ui-progressbar-small-90{background-position:-3960px 0}.ui-progressbar-small-91{background-position:-4004px 0}.ui-progressbar-small-92{background-position:-4048px 0}.ui-progressbar-small-93{background-position:-4092px 0}.ui-progressbar-small-94{background-position:-4136px 0}.ui-progressbar-small-95{background-position:-4180px 0}.ui-progressbar-small-96{background-position:-4224px 0}.ui-progressbar-small-97{background-position:-4268px 0}.ui-progressbar-small-98{background-position:-4312px 0}.ui-progressbar-small-99{background-position:-4356px 0}.ui-progressbar-small-100{background-position:-4400px 0}.ui-progressbar-circle{display:block;width:80px;height:80px;line-height:80px;border-radius:50%;text-align:center;font-size:16px}.ui-progressbar-circle-ready{color:#83a700;border:8px solid #83a700;box-shadow:0 0 8px -2px #83a700;text-shadow:0 0 2px #83a700}.ui-progressbar-circle-ready:hover{color:#83a700}.ui-progressbar-circle-failed{color:#464646;border:8px solid #464646;box-shadow:0 0 8px -2px #464646;text-shadow:0 0 2px #464646}.ui-progressbar-circle-failed:hover{color:#46464}.ui-progressbar-circle-closed{color:#0697da;border:8px solid #0697da;box-shadow:0 0 8px -2px #0697da;text-shadow:0 0 2px #0697da}.ui-progressbar-circle-closed:hover{color:#0697da}.ui-progressbar-circle-guaranteed{color:#167aa8;border:8px solid #167aa8;box-shadow:0 0 8px -2px #167aa8;text-shadow:0 0 2px #167aa8}.ui-progressbar-circle-guaranteed:hover{color:#167aa8}.ui-progressbar-circle-join,a.ui-progressbar-circle-join{color:#83a700;border:8px solid #83a700}.ui-progressbar-circle-join:hover{color:#728f07;border:8px solid #728f07}.ui-progressbar-large{display:block;width:96px;height:96px;line-height:96px;text-align:center;font-size:16px;background:url(/public/images/progressbar_large.png)}.ui-progressbar-large em{font-size:34px}.ui-progressbar-large-0{background-position:0 0}.ui-progressbar-large-1{background-position:-106px 0}.ui-progressbar-large-2{background-position:-212px 0}.ui-progressbar-large-3{background-position:-318px 0}.ui-progressbar-large-4{background-position:-424px 0}.ui-progressbar-large-5{background-position:-530px 0}.ui-progressbar-large-6{background-position:-636px 0}.ui-progressbar-large-7{background-position:-742px 0}.ui-progressbar-large-8{background-position:-848px 0}.ui-progressbar-large-9{background-position:-954px 0}.ui-progressbar-large-10{background-position:-1060px 0}.ui-progressbar-large-11{background-position:-1166px 0}.ui-progressbar-large-12{background-position:-1272px 0}.ui-progressbar-large-13{background-position:-1378px 0}.ui-progressbar-large-14{background-position:-1484px 0}.ui-progressbar-large-15{background-position:-1590px 0}.ui-progressbar-large-16{background-position:-1696px 0}.ui-progressbar-large-17{background-position:-1802px 0}.ui-progressbar-large-18{background-position:-1908px 0}.ui-progressbar-large-19{background-position:-2014px 0}.ui-progressbar-large-20{background-position:-2120px 0}.ui-progressbar-large-21{background-position:-2226px 0}.ui-progressbar-large-22{background-position:-2332px 0}.ui-progressbar-large-23{background-position:-2438px 0}.ui-progressbar-large-24{background-position:-2544px 0}.ui-progressbar-large-25{background-position:-2650px 0}.ui-progressbar-large-26{background-position:-2756px 0}.ui-progressbar-large-27{background-position:-2862px 0}.ui-progressbar-large-28{background-position:-2968px 0}.ui-progressbar-large-29{background-position:-3074px 0}.ui-progressbar-large-30{background-position:-3180px 0}.ui-progressbar-large-31{background-position:-3286px 0}.ui-progressbar-large-32{background-position:-3392px 0}.ui-progressbar-large-33{background-position:-3498px 0}.ui-progressbar-large-34{background-position:-3604px 0}.ui-progressbar-large-35{background-position:-3710px 0}.ui-progressbar-large-36{background-position:-3816px 0}.ui-progressbar-large-37{background-position:-3922px 0}.ui-progressbar-large-38{background-position:-4028px 0}.ui-progressbar-large-39{background-position:-4134px 0}.ui-progressbar-large-40{background-position:-4240px 0}.ui-progressbar-large-41{background-position:-4346px 0}.ui-progressbar-large-42{background-position:-4452px 0}.ui-progressbar-large-43{background-position:-4558px 0}.ui-progressbar-large-44{background-position:-4664px 0}.ui-progressbar-large-45{background-position:-4770px 0}.ui-progressbar-large-46{background-position:-4876px 0}.ui-progressbar-large-47{background-position:-4982px 0}.ui-progressbar-large-48{background-position:-5088px 0}.ui-progressbar-large-49{background-position:-5194px 0}.ui-progressbar-large-50{background-position:-5300px 0}.ui-progressbar-large-51{background-position:-5406px 0}.ui-progressbar-large-52{background-position:-5512px 0}.ui-progressbar-large-53{background-position:-5618px 0}.ui-progressbar-large-54{background-position:-5724px 0}.ui-progressbar-large-55{background-position:-5830px 0}.ui-progressbar-large-56{background-position:-5936px 0}.ui-progressbar-large-57{background-position:-6042px 0}.ui-progressbar-large-58{background-position:-6148px 0}.ui-progressbar-large-59{background-position:-6254px 0}.ui-progressbar-large-60{background-position:-6360px 0}.ui-progressbar-large-61{background-position:-6466px 0}.ui-progressbar-large-62{background-position:-6572px 0}.ui-progressbar-large-63{background-position:-6678px 0}.ui-progressbar-large-64{background-position:-6784px 0}.ui-progressbar-large-65{background-position:-6890px 0}.ui-progressbar-large-66{background-position:-6996px 0}.ui-progressbar-large-67{background-position:-7102px 0}.ui-progressbar-large-68{background-position:-7208px 0}.ui-progressbar-large-69{background-position:-7314px 0}.ui-progressbar-large-70{background-position:-7420px 0}.ui-progressbar-large-71{background-position:-7526px 0}.ui-progressbar-large-72{background-position:-7632px 0}.ui-progressbar-large-73{background-position:-7738px 0}.ui-progressbar-large-74{background-position:-7844px 0}.ui-progressbar-large-75{background-position:-7950px 0}.ui-progressbar-large-76{background-position:-8056px 0}.ui-progressbar-large-77{background-position:-8162px 0}.ui-progressbar-large-78{background-position:-8268px 0}.ui-progressbar-large-79{background-position:-8374px 0}.ui-progressbar-large-80{background-position:-8480px 0}.ui-progressbar-large-81{background-position:-8586px 0}.ui-progressbar-large-82{background-position:-8692px 0}.ui-progressbar-large-83{background-position:-8798px 0}.ui-progressbar-large-84{background-position:-8904px 0}.ui-progressbar-large-85{background-position:-9010px 0}.ui-progressbar-large-86{background-position:-9116px 0}.ui-progressbar-large-87{background-position:-9222px 0}.ui-progressbar-large-88{background-position:-9328px 0}.ui-progressbar-large-89{background-position:-9434px 0}.ui-progressbar-large-90{background-position:-9540px 0}.ui-progressbar-large-91{background-position:-9646px 0}.ui-progressbar-large-92{background-position:-9752px 0}.ui-progressbar-large-93{background-position:-9858px 0}.ui-progressbar-large-94{background-position:-9964px 0}.ui-progressbar-large-95{background-position:-10070px 0}.ui-progressbar-large-96{background-position:-10176px 0}.ui-progressbar-large-97{background-position:-10282px 0}.ui-progressbar-large-98{background-position:-10388px 0}.ui-progressbar-large-99{background-position:-10494px 0}.ui-progressbar-large-100{background-position:-10600px 0}
+
+.taskCover{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	z-index: 3;
+	display: none;
+}
+.taskCover .bg{
+	width: 100%;
+	height: 60px;
+	background: #000;
+	-moz-opacity: 0.8;
+	opacity:.8;
+	filter: alpha(opacity=80);
+}
+.btnTakeIt{
+	display: block;
+	width: 80px;
+	line-height: 24px;
+	text-align: center;
+	height: 24px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	z-index: 5;
+	margin: -17px 0 0 -47px;
+	border:solid 1px #25A89C;
+	border-radius: 2px;
+	background: none;
+	color:#25A89C;
+}
+
+
+.btnTakeIt:hover{
+	background-color:#25A89C;
+	color: #FFF;
+}
+
+.showReason:hover{
+	background-color:#25A89C;
+	color: #FFF;
+}
+.showReason{
+	display: block;
+	line-height: 24px;
+	text-align: center;
+	height: 24px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	z-index: 5;
+	margin: -17px 0 0 -47px;
+	border:solid 1px #25A89C;
+	border-radius: 2px;
+	background: none;
+	color:#25A89C;
+}
+/*========================================================*/
+.modalWnd{
+	width:500px;
+	left:50%;
+	top:40%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+
+#buyerAccountPicker{
+
+}
+#buyerAccountPicker .checkTextBtn{
+	margin:0 10px 10px 0;
+}
+#taskInfoShower{
+	margin-top: 20px;
+}
+.infoBlock{
+	display: inline-block;
+	margin-right: 25px;
+	margin-bottom: 25px;
+}
+#takePickerWnd  label{
+	display: block;
+	color:#C4C4C4;
+	font-size: 13px;
+	font-family: "Microsoft Yahei";
+}
+#takeRequiredWnd  label{
+	display: block;
+	color:#C4C4C4;
+	font-size: 13px;
+	font-family: "Microsoft Yahei";
+}
+#btnConfirmTake{
+	background-color: #439ED7;
+}
+#btnConfirmTake:hover{
+	background-color: #439ED7;
+}
+#btnCancleTake{
+	background-color: #439ED7;
+}
+#btnSureTake{
+	background-color: #439ED7;
+}
+.v-tag-red {
+  border: 1px solid #fe7a6d;
+}
+.v-tag-red .v-tag-tit {
+  color: #fe7a6d;
+}
+.v-tag-blue {
+  border: 1px solid #52a9fa;
+}
+.v-tag-blue .v-tag-tit {
+  color: #52a9fa;
+}
+.v-tag {
+  float: left;
+  margin: 2px 5px 2px 0;
+  white-space: nowrap;
+  background: #fff;
+  line-height: 16px;
+  border-radius: 2px;
+  padding: 0 2px;
+  cursor: pointer;
+}
+.pi-btn {
+  color: #fff;
+  background-color: #828282;
+  border-color: #696969;
+  box-shadow: 0 2px 0 #696969;
+}
+.pi-btn {
+  display: inline-block;
+  padding: 10px 1.5em;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 0 solid transparent;
+  border-radius: 3px;
+  border: 0;
+  width: auto;
+  _width: 0;
+  overflow: visible!ie;
+  font-weight: 700;
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.pi-btn-primary {
+  color: #fff;
+  background-color: #63b8f0;
+  border-color: #34a3ec;
+  box-shadow: 0 2px 0 #34a3ec;
+}
+.normTable td {
+  padding: 3px 1px;
+}
+.contentCard{
+	border:solid 0px #d1d1d1;
+}
+.prc {
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}

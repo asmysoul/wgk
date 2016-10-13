@@ -1,0 +1,260 @@
+#{extends 'frame.html' /}
+#{set title:'会员中心' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/member.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/datetimepicker/jquery.datetimepicker.js'}" />
+#{/set}
+<div class="contentCard">
+	<div class="contentBody clearfix">
+		<div class="thirdTile clearfix">
+			<span class="floatLeft mr-4">账号</span>
+			<span class="floatLeft sellerid mr-8 blue">${user.nick}</span>
+			<span class="floatLeft mr-4">您的当前会员级别</span>
+			<span class="floatLeft red mr-8">VIP会员</span>
+			<span class="floatLeft mr-4">会员有效期剩余</span>
+			<span class="floatLeft red mr-4">${daysRemaining>0?daysRemaining:0}</span>
+			<span class="floatLeft">天</span>
+		</div>
+	</div>
+
+</div>
+
+#{if user.type.toString()=='SELLER'}
+<div class="contentCard">
+	<div class="contentTitle">
+		商家会员充值
+	</div>
+	<div class="contentBody clearfix">
+		<div class="secondTile">选择开通时间</div>
+		<div class="panelLine" id="memberPeriod">
+		    <div class="floatLeft">
+				<input type="radio" class="floatLeft rad" name="r_period" checked="checked" value="1" />
+				<span class="floatLeft mr-8">1个月</span>
+				<span class="floatLeft red mr-4">60</span>
+				<span class="floatLeft mr-20">元</span>
+			</div>
+			<div class="floatLeft">
+				<input type="radio" class="floatLeft rad" name="r_period" value="3" />
+				<span class="floatLeft mr-8">3个月</span>
+				<span class="floatLeft red mr-4">180</span>
+				<span class="floatLeft mr-20">元</span>
+			</div>
+			<div class="floatLeft">
+				<input type="radio" class="floatLeft rad" name="r_period" value="6" />
+				<span class="floatLeft mr-8">6个月</span>
+				<span class="floatLeft red mr-4">300</span>
+				<span class="floatLeft mr-4">元</span>
+			</div>
+			<div class="floatLeft">
+				<input type="radio" class="floatLeft rad" name="r_period" value="12" />
+				<span class="floatLeft mr-8">12个月</span>
+				<span class="floatLeft red mr-4">600</span>
+				<span class="floatLeft mr-4">元</span>
+			</div>
+			<div class="floatLeft">
+				<input type="radio" class="floatLeft rad" name="r_period" value="24" />
+				<span class="floatLeft mr-8">24个月</span>
+				<span class="floatLeft red mr-4">1100</span>
+				<span class="floatLeft mr-4">元</span>
+			</div>
+		</div>
+		<div class="panelLine">
+			<span class="iconfont mr-4">&#x3434;</span>
+			您已经选择购买
+			<span class="mr-4 orange">商家VIP</span>
+			<span class="mr-4 mon"></span>
+			<span class="mr-4">个月。有效期至</span>
+			<span class="grey date">${user?.dueTime?.format('yyyy-MM-dd')}</span>
+		</div>
+		<div class="secondTile" style="margin-top:15px;" >选择支付方式</div>
+		<div id="payType">
+			<div class="panelLine sec" >
+				<input type="checkbox"  class="floatLeft rad ckIngot" name="r_paymethod" checked="checked" />
+				<span class="floatLeft mr-20">使用金币支付</span>
+				<span class="floatLeft grey" >
+					(可用金币
+					<span class="center-sp red ingot seller">${(user.ingot/100).format("##0.00")}</span>
+					个)
+				</span>
+			</div>
+			<div class="panelLine sec">
+				<input type="checkbox" class="floatLeft rad ckPledge" name="r_paymethod" checked="checked" />
+				<span class="floatLeft mr-20">使用押金支付</span>
+				<span class="floatLeft grey">
+					(可用押金
+					<span class="center-sp red pledge">${(user.pledge/100).format("##0.00")}</span>
+					元)
+				</span>
+			</div>
+			<div class="panelLine sec"style="display:none">
+				<span class="floatLeft ls red ">余额不足，请选择银行卡支付</span>
+			</div>
+			<div class="clearfix bankListWrapper" id="platformSelect">
+				#{list payPlatforms, as: 'p'}
+				<div class="floatLeft panelLine sec pay checkTextBtn">
+					<input  class="floatLeft rad ls" type="radio" name="pay_type" value="${p}" />
+					<div class="wid floatLeft ls rad0"><img src="/public/images/bank/${p}.gif" /></div>
+				</div>
+				#{/list}
+			</div>
+		</div>
+		<div class="buttonSection">
+			<a href="javascript:;" class="stdColorButton" id="btnConfirmCharge">
+				确认付款&nbsp;&nbsp;
+				<span class="iconfont">&#xf00ee;</span>
+			</a>
+		</div>
+	</div>
+</div>
+#{/if}
+
+#{if user.type.toString()=='BUYER'}
+<div class="contentCard">
+	<div class="contentTitle">
+		买手会员充值
+	</div>
+	<div class="contentBody clearfix">
+		<div class="secondTile">选择开通时间</div>
+		<div id="memberPeriod">
+			<div class="panelLine">
+			    <div class="floatLeft">
+					<input type="radio" class="floatLeft rad" name="r_period" checked="checked" value="1" />
+					<span class="floatLeft mr-8">1个月</span>
+					<span class="floatLeft red mr-4">10</span>
+					<span class="floatLeft mr-20">元</span>
+				</div>
+				<div class="floatLeft">
+					<input type="radio" class="floatLeft rad" name="r_period" value="3" />
+					<span class="floatLeft mr-8">3个月</span>
+					<span class="floatLeft red mr-4">20</span>
+					<span class="floatLeft mr-20">元</span>
+				</div>
+				<div class="floatLeft">
+					<input type="radio" class="floatLeft rad" name="r_period" value="6" />
+					<span class="floatLeft mr-8">6个月</span>
+					<span class="floatLeft red mr-4">40</span>
+					<span class="floatLeft mr-20">元</span>
+				</div>
+				<div class="floatLeft">
+					<input type="radio" class="floatLeft rad" name="r_period" value="9" />
+					<span class="floatLeft mr-8">9个月</span>
+					<span class="floatLeft red mr-4">50</span>
+					<span class="floatLeft mr-20">元</span>
+				</div>
+				<div class="floatLeft">
+					<input type="radio" class="floatLeft rad" name="r_period" value="12" />
+					<span class="floatLeft mr-8">12个月</span>
+					<span class="floatLeft red mr-4">70</span>
+					<span class="floatLeft mr-20">元</span>
+				</div>
+				<div class="floatLeft">
+					<input type="radio" class="floatLeft rad" name="r_period" value="24" />
+					<span class="floatLeft mr-8">24个月</span>
+					<span class="floatLeft red mr-4">120</span>
+					<span class="floatLeft mr-20">元</span>
+				</div>
+			</div>
+		</div>
+		<div class="panelLine">
+			<span class="iconfont mr-4">&#x3434;</span>
+			您已经选择购买
+			<span class="mr-4 orange">买手VIP</span>
+			<span class="mr-4 mon"></span>
+			<span class="mr-4">个月。</span>
+			<span class="red">有效期至</span>
+			<span class="red date">${user?.dueTime?.format('yyyy-MM-dd')}</span>
+		</div>
+		<div class="secondTile" style="margin-top:15px;">选择支付方式</div>
+		<div id="payType">
+			<div class="panelLine">
+				<input type="checkbox" class="floatLeft rad ckIngot" name="r_paymethod" checked="checked" />
+				<span class="floatLeft mr-20">使用金币支付</span>
+				<span class="floatLeft grey">
+					(可用金币
+					<span class="center-sp red ingot buyer">${(user.ingot/100).format('##0.00')}</span>
+					个)
+				</span>
+			</div>
+			<div class="panelLine sec" style="display:none">
+				<span class="floatLeft ls red ">余额不足，请选择银行卡支付</span>
+			</div>
+			<div class="clearfix bankListWrapper" id="platformSelect">
+				#{list payPlatforms, as: 'p'}
+				<div class="floatLeft panelLine sec pay checkTextBtn">
+					<input  class="floatLeft rad ls" type="radio" name="pay_type" value="${p}" />				
+					<div class="wid floatLeft ls rad0" title="${p.title}">
+						<img src="/public/images/bank/${p}.gif" />				
+					</div>
+				</div>
+				#{/list}
+			</div>
+		</div>
+		<div class="buttonSection">
+			<a href="javascript:;" class="stdColorButton" id="btnConfirmCharge">
+				确认付款&nbsp;&nbsp;
+				<span class="iconfont">&#xf00ee;</span>
+			</a>
+		</div>
+	</div>
+</div>
+#{/if}
+
+<div class="contentCard">
+	<div class="contentTitle">
+		常见问题
+	</div>
+	<div class="contentBody clearfix">
+		<ul class="mb20">
+			<li>问：我续费升级会员等级之后，我原来会员等级的剩余有效期怎么办？</li>
+			<li>答：升级会员等级之后，原来会员的剩余有效期会折算成新的会员等级有效期，可以继续使用；</li>
+		</ul>
+		<ul>
+			<li>问：会员续费能使用支付宝付费吗？</li>
+			<li>答：为了保证交易的安全性，平台不能够使用支付宝付款，只能使用网上银行付款。</li>
+
+		</ul>
+	</div>
+</div>
+
+<!-- 银行支付弹出模态窗口 -->
+<div class="popWrapper bankPayment" id="bankPayment">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:;" class="wnd_Close_Icon" id="modifyclose" title="关闭窗口"></a>
+		<h3 class="topTile">请到打开的新窗口进行银行卡支付：</h3>
+		<div class="modalWndInner">
+			<hr size="1"color="black" noshade="noshade" />
+			<div id="bankInfoShower">
+				<div class="panelLine">
+					<p>支付小贴士：</p>
+				</div>
+				<div class="panelLine">
+					<p>1. 付款未完成前请不要关闭本页面，您在银行端完成付款后本页面会自动刷新。</p>
+				</div>
+				<div style="margin-bottom:20px;">
+					<p>2. 如果银行页面没有打开，请您设置您的浏览器为允许弹出，并确保已经安装了银行的 ActiveX 安全控件， 然后点击下面的“返回支付页面，重新选择”按钮，重新支付。
+					</p>
+				</div>
+			</div>
+			<div class="wndBotButtonSection">
+				<a id="btnbankpay" href="javascript:;" class="botButton btnConfirmSave">已完成付款</a>
+				<a href="javascript:;" class="return" id="btnpayerror">返回重新选择付款方式</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 区域选择模板-->
+<textarea id="quyuTemp" class="muban">
+	{{#results}}
+	<option rid="{{id}}">{{name}}</option>
+	{{/results}}
+</textarea>
+
+#{authenticityToken/}
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/user/member.js'}" type="text/javascript"></script>
+<script src="@{'/public/datetimepicker/jquery.datetimepicker.js'}"type="text/javascript"></script>
+#{/set}

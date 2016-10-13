@@ -1,0 +1,1478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.TaskMapper">
+
+	<resultMap id="BaseResultMap" type="models.Task"></resultMap>
+	<resultMap id="VoResultMap" type = "vos.SellerTaskVo"></resultMap>
+	<resultMap id="sysCountResultMap" type = "vos.SearchSystemCountVo"></resultMap>
+	<resultMap id="VoSellerPutTimeMap" type = "vos.SellerPutTimeVo"></resultMap>
+	<resultMap id="VoBuyerTakeTaskMap" type = "vos.BuyerTakeTaskVo"></resultMap>
+	<!--app专用appppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp  -->
+	<!-- 任务列表页面 -->
+	<select id="selectAllList" resultMap="BaseResultMap">
+		select distinct 
+			t.id,
+			u.nick sellerNick,
+			t.item_buy_num,
+			t.item_price,
+			t.seller_id,
+			t.speed_task_ingot,
+			t.create_time,
+			t.base_order_ingot,
+			t.extra_reward_ingot,
+			t.pc_order_num,
+			t.pc_taken_count,
+			t.mobile_order_num,
+			t.mobile_taken_count,
+			t.type,
+			t.sys_express,
+			t.express_type,
+			t.good_comment_img,
+			t.status,
+			t.sys_refund
+		from task t left join user u on u.id = t.seller_id
+		<where>
+			<if test="status !=null">
+				t.status=#{status}
+			</if>
+			<if test="platform !=null and platform.name() == 'TAOBAO'">
+				and t.platform in ('TAOBAO','TMALL')
+			</if>
+			<if test="platform !=null and platform.name() != 'TAOBAO'">
+				and t.platform = #{platform}
+			</if>
+			<if test="device !=null and device.name() =='MOBILE'">
+				and (t.mobile_taken_count &lt; t.mobile_order_num or DATE_FORMAT(t.examine_time, '%Y-%m-%d') >#{modifyTimeEnd})
+				and t.mobile_order_num > 0
+			</if>
+		</where>
+	</select>
+	
+	
+	
+	
+	
+	
+	
+	<select id="findSellerPublishCount" resultMap="BaseResultMap">
+	SELECT
+	t.seller_id,t.seller_nick,t.total_order_num
+	FROM
+	`user` u
+	RIGHT JOIN task t ON u.id = t.seller_id
+	WHERE
+	u.type = 'SELLER'
+	AND DATE_FORMAT(t.publish_time, '%Y-%m-%d') = #{createTime}
+	AND t. STATUS != 'CANCLED'
+	AND seller_id NOT IN (
+	SELECT
+	seller_id
+	FROM
+	task
+	WHERE
+	DATE_FORMAT(publish_time, '%Y-%m-%d')  &lt; #{createTime}
+	)
+	</select>
+	
+	<select id="findSysCountVo" resultMap="sysCountResultMap">
+	SELECT
+	COUNT(b.id) AS
+	totalTask,
+	(
+	SELECT
+	COUNT(1)
+	FROM
+	`user`
+	WHERE
+	type = 'SELLER'
+	) AS sellerCount,
+	COUNT(DISTINCT b.seller_id) AS
+	publishedSeller,
+	(
+	SELECT
+	COUNT(1)
+	FROM
+	`user`
+	WHERE
+	type = 'BUYER'
+	) AS buyerCount,
+	COUNT(DISTINCT b.buyer_id) AS takenBuyer,
+	SUM(b.paid_fee) / 100 AS buyerPayIngo,
+	SUM(
+
+	IF (
+	b.device = 'PC',
+	t.base_order_ingot,
+	t.base_order_ingot + 50
+	)
+	) / 100 AS sellerOutIngot,
+	SUM(t.base_order_ingot * 0.1) / 100 AS
+	sysOutIngot,
+	SUM(
+
+	IF (
+	b.device = 'PC',
+	t.base_order_ingot * 0.9,
+	t.base_order_ingot * 0.9 + 50
+	)
+	) / 100 AS buyerIngot,
+	SUM(IF(t.sys_express = '1', 5, 0)) AS
+	expressIngot,
+	SUM(IF(t.sys_express = '0', 2, 0)) AS sysServiceIngot,
+	SUM(
+
+	IF (
+	t.sys_refund = '1',
+	t.item_price * 0.006 / 100,
+	0
+	)
+	) AS sysRefoundIngot,
+	SUM(t.extra_reward_ingot) AS extraIngot,
+	SUM(
+
+	IF (
+	t.buy_time_interval IS NULL,
+	0,
+	t.buy_time_interval
+	)
+	) AS buyTimeIntervalIngot,
+	(
+	SELECT
+	SUM(t.speed_task_ingot)
+	FROM
+	task t
+	WHERE
+	t. STATUS IN (
+	'WAIT_PUBLISH',
+	'PUBLISHED',
+	'CANCLED',
+	'FINISHED'
+	)
+	AND (
+	t.pc_taken_count + t.mobile_taken_count != 0
+	OR (
+	t.pc_taken_count + t.mobile_taken_count = 0
+	AND t.`status` != 'CANCLED'
+	)
+	)
+	)  speedFinishedIngot,
+	(
+	SELECT
+	SUM(IF(t.speed_examine = 0, 0, 5))
+	FROM
+	task t
+	WHERE
+	t. STATUS IN (
+	'WAIT_PUBLISH',
+	'PUBLISHED',
+	'CANCLED',
+	'FINISHED'
+	)
+	AND (
+	t.pc_taken_count + t.mobile_taken_count != 0
+	OR (
+	t.pc_taken_count + t.mobile_taken_count = 0
+	AND t.`status` != 'CANCLED'
+	)
+	)
+	) AS speedExamineIngot,
+	(
+	SELECT
+	SUM(
+
+	IF (
+	t.publish_timer_interval = 0,
+	0,
+	5
+	)
+	)
+	FROM
+	task t
+	WHERE
+	t. STATUS IN (
+	'WAIT_PUBLISH',
+	'PUBLISHED',
+	'CANCLED',
+	'FINISHED'
+	)
+	AND (
+	t.pc_taken_count + t.mobile_taken_count != 0
+	OR (
+	t.pc_taken_count + t.mobile_taken_count = 0
+	AND t.`status` != 'CANCLED'
+	)
+	)
+	) AS fixedTimeIngot,
+	(
+	SELECT
+	SUM(amount / 100)
+	FROM
+	user_withdraw_record uw
+	LEFT JOIN `user` u ON u.id = uw.user_id
+	WHERE
+	uw.`status` = 'FINISHED'
+	AND u.type = 'BUYER'
+	) AS buyerWidthdraw,
+	(
+	SELECT
+	SUM(amount / 100)
+	FROM
+	user_withdraw_record uw
+	LEFT JOIN `user` u ON u.id = uw.user_id
+	WHERE
+	uw.`status` = 'FINISHED'
+	AND u.type = 'BUYER'
+	AND uw.is_buyer_deposit = 1
+	) AS buyerIngotWidthdraw
+	FROM
+	buyer_task b
+	LEFT JOIN task t ON b.task_id = t.id
+	WHERE
+	b.`status` != 'CANCLED'
+</select>
+
+	<!-- 查询单表数据 -->
+	<select id="countSimple" resultType="java.lang.Integer">
+		select count(1) from task t
+		<include refid="whereForSimple"/>
+	</select>
+	<select id="selectSimple" resultMap="BaseResultMap">
+		select ${fields} from task t left join user u on t.seller_id=u.id 
+		left join admin a on u.admin_id=a.id
+		<include refid="whereForSimple"/>
+		order by t.create_time desc
+		limit #{startIndex}, #{pageSize}
+	</select>
+	<sql id="whereForSimple">
+		<where>
+			<if test="platform !=null">
+				and t.platform=#{platform}
+			</if>
+			<if test="device != null and device.name() =='PC'">
+				and t.mobile_order_num = 0
+			</if>
+			<if test="device != null and device.name() =='MOBILE'">
+				and t.mobile_order_num > 0
+			</if>
+			<if test="status != null">
+				and t.status = #{status}
+			</if>
+			<if test="shopName != null">
+				and t.shop_name = #{shopName}
+			</if>
+			<if test="sellerNick != null">
+				and t.seller_nick = #{sellerNick}
+			</if>
+			<if test="taskId != null">
+				and t.id = #{taskId}
+			</if>
+			<if test="sellerId != null">
+				and t.seller_id = #{sellerId}
+			</if>
+			<if test="isSysRefundTask != null">
+				and t.sys_refund = #{isSysRefundTask}
+			</if>
+			<if test="publishTimeStart != null">
+				and t.publish_time >= #{publishTimeStart}
+			</if>
+			<if test="publishTimeEnd != null">
+				and t.publish_time &lt;= #{publishTimeEnd}
+			</if>
+			<if test="statusList != null">
+			and t.status in 
+				<foreach collection="statusList" item="status" open="(" close=")" separator="," >
+     			#{status}
+     			</foreach>
+		    </if>
+		</where>
+	</sql>
+	
+	<!-- 任务列表页面 -->
+	<select id="selectList" resultMap="BaseResultMap">
+		select distinct 
+			t.id,
+			u.nick sellerNick,
+			t.item_buy_num,
+			t.item_price,
+			t.seller_id,
+			t.speed_task_ingot,
+			t.create_time,
+			t.base_order_ingot,
+			t.extra_reward_ingot,
+			t.pc_order_num,
+			t.pc_taken_count,
+			t.mobile_order_num,
+			t.mobile_taken_count,
+			t.type,
+			t.sys_express,
+			t.express_type,
+			t.good_comment_img,
+			t.status,
+			t.sys_refund
+		from task t left join user u on u.id = t.seller_id
+		<where>
+			<if test="status !=null">
+				t.status=#{status}
+			</if>
+			<if test="platform !=null and platform.name() == 'TAOBAO'">
+				and t.platform in ('TAOBAO','TMALL')
+			</if>
+			<if test="platform !=null and platform.name() != 'TAOBAO'">
+				and t.platform = #{platform}
+			</if>
+			<if test="device!=null and device.name() =='PC'">
+				and (t.pc_taken_count &lt; t.pc_order_num or DATE_FORMAT(t.examine_time, '%Y-%m-%d') >#{modifyTimeEnd})
+				and t.pc_order_num > 0
+			</if>
+			<if test="device!=null and device.name() =='MOBILE'">
+				and (t.mobile_taken_count &lt; t.mobile_order_num or DATE_FORMAT(t.examine_time, '%Y-%m-%d') >#{modifyTimeEnd})
+				and t.mobile_order_num > 0
+			</if>
+			<if test="taskType !=null">
+				and t.type=#{taskType}
+			</if>
+			<if test="taskListType!=null and taskListType.name() =='NEW_SHOP' ">
+				and u.regist_time> #{registTime}
+			</if>
+			<if test="taskListType!=null and taskListType.name() =='EXTRA_REWARD' ">
+				and t.extra_reward_ingot>0
+			</if>
+			<if test="taskListType!=null and taskListType.name() =='SYS_RECOMMEND' ">
+				and t.speed_task_ingot >0
+			</if>
+			<if test="taskListType!=null and taskListType.name() =='COMMON' ">
+				<![CDATA[ 
+				and u.regist_time<= #{registTime} 
+				and (t.extra_reward_ingot<=0 or t.extra_reward_ingot is null)
+				and (t.speed_task_ingot<=0 or t.speed_task_ingot is null)
+				]]>
+			</if>
+		</where>
+		<choose>
+            <when test="taskListType != null and taskListType.name() =='EXTRA_REWARD'">
+               order by 
+               <if test="device!=null and device.name() =='PC'">
+				t.pc_taken_count >= t.pc_order_num,
+			</if>
+			<if test="device!=null and device.name() =='MOBILE'">
+				 t.mobile_taken_count >= t.mobile_order_num,
+			</if>
+                t.extra_reward_ingot desc 
+            </when>
+            <when test="taskListType!=null and taskListType.name() =='SYS_RECOMMEND' ">
+               order by
+                 <if test="device!=null and device.name() =='PC'">
+				t.pc_taken_count >= t.pc_order_num,
+			</if>
+			<if test="device!=null and device.name() =='MOBILE'">
+				 t.mobile_taken_count >= t.mobile_order_num,
+			</if>
+                t.speed_task_ingot desc 
+            </when>
+            <otherwise>
+                order by 
+                  <if test="device!=null and device.name() =='PC'">
+				t.pc_taken_count >= t.pc_order_num,
+			</if>
+			<if test="device!=null and device.name() =='MOBILE'">
+				 t.mobile_taken_count >= t.mobile_order_num,
+			</if>
+                t.extra_reward_ingot desc,t.publish_time asc,t.item_price  desc 
+            </otherwise>
+        </choose>
+        limit #{startIndex}, #{pageSize}
+	</select>
+	
+	<!-- 任务列表页面 -->
+	<select id="selectListCount" resultType="java.lang.Integer">
+		select count(1)
+		from task t left join user u on u.id = t.seller_id
+		<where>
+			<if test="status !=null">
+				t.status=#{status}
+			</if>
+			<if test="platform !=null and platform.name() == 'TAOBAO'">
+				and t.platform in ('TAOBAO','TMALL')
+			</if>
+			<if test="platform !=null and platform.name() != 'TAOBAO'">
+				and t.platform = #{platform}
+			</if>
+			<if test="device!=null and device.name() =='PC'">
+				and (t.pc_taken_count &lt; t.pc_order_num or DATE_FORMAT(t.examine_time, '%Y-%m-%d') >#{modifyTimeEnd})
+				and t.pc_order_num > 0
+			</if>
+			<if test="device!=null and device.name() =='MOBILE'">
+				and (t.mobile_taken_count &lt; t.mobile_order_num or DATE_FORMAT(t.examine_time, '%Y-%m-%d') >#{modifyTimeEnd})
+				and t.mobile_order_num > 0
+			</if>
+			<if test="taskType !=null">
+				and t.type=#{taskType}
+			</if>
+			<if test="taskListType!=null and taskListType.name() =='NEW_SHOP' ">
+				and u.regist_time> #{registTime}
+			</if>
+			<if test="taskListType!=null and taskListType.name() =='EXTRA_REWARD' ">
+				and t.extra_reward_ingot>0
+			</if>
+			<if test="taskListType!=null and taskListType.name() =='SYS_RECOMMEND' ">
+				and t.speed_task_ingot >0
+			</if>
+			<if test="taskListType!=null and taskListType.name() =='COMMON' ">
+				<![CDATA[ 
+				and u.regist_time<= #{registTime} 
+				and (t.extra_reward_ingot<=0 or t.extra_reward_ingot is null)
+				and (t.speed_task_ingot<=0 or t.speed_task_ingot is null)
+				]]>
+			</if>
+		</where>
+		<choose>
+            <when test="taskListType != null and taskListType.name() =='EXTRA_REWARD'">
+               order by t.extra_reward_ingot desc 
+            </when>
+            <when test="taskListType!=null and taskListType.name() =='SYS_RECOMMEND' ">
+               order by t.speed_task_ingot desc 
+            </when>
+            <otherwise>
+                order by t.extra_reward_ingot desc,t.publish_time asc,t.item_price desc 
+            </otherwise>
+        </choose>
+         
+	</select>
+
+	<select id="count" resultType="java.lang.Integer">
+		select count(1) from task t
+		<if test="status!= null and status.name() == 'NOT_PASS'">
+			left join task_examine_log log on t.id = log.task_id
+		</if>
+		<include refid="whereForSeller"/>
+	</select>
+	
+	<!-- 卖家任务列表 -->
+	<select id="countForSeller" resultType="java.lang.Integer">
+		select COUNT(DISTINCT(t.id))  from task t
+		<if test="status!= null and status.name() == 'NOT_PASS'">
+			left join task_examine_log log on t.id = log.task_id
+		</if>
+			LEFT JOIN buyer_task bt ON t.id = bt.task_id
+		<if test="buyerNick!= null and buyerNick != ''">
+			LEFT JOIN user u ON bt.buyer_id=u.id
+		</if>
+		<include refid="whereForSeller"/>
+	</select>
+	
+	<!-- 卖家任务列表 -->
+	<resultMap id="ResultMapVo" type="vos.SellerTaskVo">
+		<id property="id" column="taskId" />
+		<result property="taskId" column="taskId" />
+		<result property="shopName" column="shop_name" />
+		<result property="platform" column="platform" />
+		<result property="status" column="status" />
+		<result property="itemTitle" column="item_title" />
+		<result property="itemUrl" column="item_url" />
+		<result property="itemPic" column="item_pic" />
+		<result property="pcTakenCount" column="pc_taken_count" />
+		<result property="mobileTakenCount" column="mobile_taken_count" />
+		<result property="totalOrderNum" column="total_order_num" />
+		<result property="finishedCount" column="finished_count" />
+		<result property="sysRefund" column="sys_refund" />
+		<result property="additionalItemTitle" column="additional_item_title" />
+		<result property="additionalItemPicUrl" column="additional_item_pic_url" />
+		<result property="speedTaskIngot" column="speed_task_ingot" />
+		<result property="createTime" column="create_time" />
+		<result property="examineTime" column="examine_time" />
+		<result property="publishTime" column="publish_time" />
+		<result property="sellerNick" column="seller_nick"/>
+		<result property="sysExpress" column="sys_express"/>
+		<result property="expressType" column="express_type"/>
+		<collection property="examineLogs" ofType="models.TaskExamineLog">
+			<id property="id" column="log_id" />
+			<result property="memo" column="log_memo" />
+			<result property="finishTime" column="log_finish_time" />
+		</collection>
+	</resultMap>
+	
+
+	<select id="selectVoListForSeller" resultMap="ResultMapVo">
+		select
+			DISTINCT(t.id) taskId,
+			t.shop_name, 
+			t.status,
+			t.platform,
+			t.item_title,
+			t.item_url,
+			t.item_pic,
+			t.pc_taken_count,
+			t.mobile_taken_count,
+			t.finished_count,
+			t.total_order_num,
+			t.sys_refund,
+			t.additional_item_title,
+			t.additional_item_pic_url,
+			t.speed_task_ingot,
+			t.create_time,
+			t.examine_time,
+			t.publish_time,
+			t.sys_express,
+			t.express_type,
+			<if test="status!= null and status.name() == 'NOT_PASS'">
+			log.memo log_memo,
+			log.id log_id,
+			log.finish_time log_finish_time,
+			</if>
+			t.seller_nick
+		from task t
+			<if test="status!= null and status.name() == 'NOT_PASS'">
+				left join task_examine_log log on t.id = log.task_id
+			</if>
+			LEFT JOIN buyer_task bt ON t.id = bt.task_id
+			<if test="buyerNick!= null and buyerNick != ''">
+				 LEFT JOIN user u ON bt.buyer_id=u.id
+			</if>
+		<include refid="whereForSeller"/>
+		order by t.create_time desc
+		limit #{startIndex}, #{pageSize}
+	</select>
+	
+	<select id="selectProcessTaskSeller" resultMap="ResultMapVo">
+		select
+			DISTINCT(t.id) taskId,
+			t.shop_name, 
+			t.status,
+			t.platform,
+			t.item_title,
+			t.item_url,
+			t.item_pic,
+			t.pc_taken_count,
+			t.mobile_taken_count,
+			t.finished_count,
+			t.total_order_num,
+			t.sys_refund,
+			t.additional_item_title,
+			t.additional_item_pic_url,
+			t.speed_task_ingot,
+			t.create_time,
+			t.examine_time,
+			t.publish_time,
+			t.sys_express,
+			t.express_type,
+			<if test="status!= null and status.name() == 'NOT_PASS'">
+			log.memo log_memo,
+			log.id log_id,
+			log.finish_time log_finish_time,
+			</if>
+			t.seller_nick
+		from task t
+			<if test="status!= null and status.name() == 'NOT_PASS'">
+				left join task_examine_log log on t.id = log.task_id
+			</if>
+			LEFT JOIN buyer_task bt ON t.id = bt.task_id
+			<if test="buyerNick!= null and buyerNick != ''">
+				 LEFT JOIN user u ON bt.buyer_id=u.id
+			</if>
+		<where>
+			<if test="sellerId != null">
+				t.seller_id = #{sellerId}
+			</if>
+			<if test="platform !=null">
+				and t.platform=#{platform}
+			</if>
+			<if test="device != null and device.name() =='PC'">
+				and t.pc_order_num > 0
+			</if>
+			<if test="device != null and device.name() =='MOBILE'">
+				and t.mobile_order_num > 0
+			</if>				
+				and t.status not in('FINISHED','CANCLED')
+			<if test="shopName != null">
+				and t.shop_name = #{shopName}
+			</if>
+			<if test="sellerNick != null">
+				and  t.seller_nick = #{sellerNick}
+			</if>
+			<if test="itemTitle != null and itemTitle != ''">
+				and  t.item_title like '%${itemTitle}%'  
+			</if>
+			<if test="publishTimeStart != null">
+				<![CDATA[ and t.publish_time>= #{publishTimeStart} ]]>
+			</if>
+			<if test="publishTimeEnd != null">
+				<![CDATA[ and t.publish_time<= #{publishTimeEnd} ]]>
+			</if>
+			<if test="buyerTaskId != null and buyerTaskId != ''">
+				and  bt.id = #{buyerTaskId}
+			</if>
+			<if test="orderId != null and orderId != ''">
+				and  bt.order_id = #{orderId}
+			</if>
+			<if test="buyerAccountNick != null and buyerAccountNick != ''">
+				and  bt.buyer_account_nick like '%${buyerAccountNick}%'
+			</if>
+			<if test="buyerNick!= null and buyerNick != ''">
+				and  u.nick like '%${buyerNick}%'  
+			</if>
+		</where>
+		order by t.create_time desc
+		limit #{startIndex}, #{pageSize}
+	</select>
+	
+	<select id="countProcessTaskSeller" resultType="java.lang.Integer">
+		select COUNT(DISTINCT(t.id))  from task t
+		<if test="status!= null and status.name() == 'NOT_PASS'">
+			left join task_examine_log log on t.id = log.task_id
+		</if>
+			LEFT JOIN buyer_task bt ON t.id = bt.task_id
+		<if test="buyerNick!= null and buyerNick != ''">
+			LEFT JOIN user u ON bt.buyer_id=u.id
+		</if>
+		<where>
+			<if test="sellerId != null">
+				t.seller_id = #{sellerId}
+			</if>
+			<if test="platform !=null">
+				and t.platform=#{platform}
+			</if>
+			<if test="device != null and device.name() =='PC'">
+				and t.pc_order_num > 0
+			</if>
+			<if test="device != null and device.name() =='MOBILE'">
+				and t.mobile_order_num > 0
+			</if>		
+				and t.status not in('FINISHED','CANCLED')
+			<if test="shopName != null">
+				and t.shop_name = #{shopName}
+			</if>
+			<if test="sellerNick != null">
+				and  t.seller_nick = #{sellerNick}
+			</if>
+			<if test="itemTitle != null and itemTitle != ''">
+				and  t.item_title like '%${itemTitle}%'  
+			</if>
+			<if test="publishTimeStart != null">
+				<![CDATA[ and t.publish_time>= #{publishTimeStart} ]]>
+			</if>
+			<if test="publishTimeEnd != null">
+				<![CDATA[ and t.publish_time<= #{publishTimeEnd} ]]>
+			</if>
+			<if test="buyerTaskId != null and buyerTaskId != ''">
+				and  bt.id = #{buyerTaskId}
+			</if>
+			<if test="orderId != null and orderId != ''">
+				and  bt.order_id = #{orderId}
+			</if>
+			<if test="buyerAccountNick != null and buyerAccountNick != ''">
+				and  bt.buyer_account_nick like '%${buyerAccountNick}%'
+			</if>
+			<if test="buyerNick!= null and buyerNick != ''">
+				and  u.nick like '%${buyerNick}%'  
+			</if>
+		</where>
+		order by t.create_time desc
+	</select>
+
+	<sql id="whereForSeller">
+		<where>
+			<if test="sellerId != null">
+				t.seller_id = #{sellerId}
+			</if>
+			<if test="platform !=null">
+				and t.platform=#{platform}
+			</if>
+			<if test="device != null and device.name() =='PC'">
+				and t.pc_order_num > 0
+			</if>
+			<if test="device != null and device.name() =='MOBILE'">
+				and t.mobile_order_num > 0
+			</if>		
+			<if test="status != null">				
+				and t.status = #{status}
+			</if>
+			<if test="shopName != null">
+				and t.shop_name = #{shopName}
+			</if>
+			<if test="sellerNick != null">
+				and  t.seller_nick = #{sellerNick}
+			</if>
+			<if test="itemTitle != null and itemTitle != ''">
+				and  t.item_title like '%${itemTitle}%'  
+			</if>
+			<if test="publishTimeStart != null">
+				<![CDATA[ and t.publish_time>= #{publishTimeStart} ]]>
+			</if>
+			<if test="publishTimeEnd != null">
+				<![CDATA[ and t.publish_time<= #{publishTimeEnd} ]]>
+			</if>
+			<if test="buyerTaskId != null and buyerTaskId != ''">
+				and  bt.id = #{buyerTaskId}
+			</if>
+			<if test="orderId != null and orderId != ''">
+				and  bt.order_id = #{orderId}
+			</if>
+			<if test="buyerAccountNick != null and buyerAccountNick != ''">
+				and  bt.buyer_account_nick like '%${buyerAccountNick}%'
+			</if>
+			<if test="buyerNick!= null and buyerNick != ''">
+				and  u.nick like '%${buyerNick}%'  
+			</if>
+		</where>
+	</sql>
+	
+	<select id="countForStatus" resultType="java.lang.Integer">
+		select count(1)	from task t
+		
+		<where>
+			<if test="platform !=null">
+				and t.platform=#{platform}
+			</if>
+			<if test="status != null">
+				and t.status = #{status}
+			</if>
+			<if test="shopName != null">
+				and t.shop_name = #{shopName}
+			</if>
+			<if test = "sellerNick != null">
+				and t.seller_nick = #{sellerNick}
+			</if>
+		</where>
+	</select>
+	<select id="pcPublishAndNotTokenOver" resultType="java.lang.Integer">
+		select sum(pc_order_num) - sum(pc_taken_count) from task
+			where status = 'PUBLISHED'
+			and pc_order_num > 0
+			and <![CDATA[pc_taken_count < pc_order_num]]>
+	</select>
+	
+	<select id="mobilePublishAndNotTokenOver" resultType="java.lang.Integer">
+		select sum(mobile_order_num) - sum(mobile_taken_count) from task
+			where status = 'PUBLISHED'
+			and mobile_order_num > 0
+			and <![CDATA[mobile_taken_count < mobile_order_num]]>
+	</select>
+	
+	<select id="pcPublishAndNotTokenOverWithPlatform" resultType="java.lang.Integer">
+		select sum(pc_order_num) - sum(pc_taken_count) from task
+			where status = 'PUBLISHED'
+			and pc_order_num > 0
+			and <![CDATA[pc_taken_count < pc_order_num]]>
+			and platform = #{platform}
+	</select>
+
+	<select id="mobilePublishAndNotTokenOverWithPlatform" resultType="java.lang.Integer">
+		select sum(mobile_order_num) - sum(mobile_taken_count) from task
+			where status = 'PUBLISHED'
+			and mobile_order_num > 0
+			and <![CDATA[mobile_taken_count < mobile_order_num]]>
+			and platform = #{platform}
+	</select>
+	
+	<select id="pcPublishAndNotTokenOverWithDevice" resultType="java.lang.Integer">
+		select sum(pc_order_num) - sum(pc_taken_count) from task
+			where status = 'PUBLISHED'
+			and pc_order_num > 0
+			and <![CDATA[pc_taken_count < pc_order_num]]>
+			and platform = #{platform}
+			and type = #{device}
+	</select>
+		
+	<select id="mobilePublishAndNotTokenOverWithDevice" resultType="java.lang.Integer">
+		select sum(mobile_order_num) - sum(mobile_taken_count) from task
+			where status = 'PUBLISHED'
+			and mobile_order_num > 0
+			and <![CDATA[mobile_taken_count < mobile_order_num]]>
+			and platform = #{platform}
+			and type = #{device}
+	</select>
+	
+	<select id="selectVoForStatus" resultMap="VoResultMap">
+		select
+			t.id taskId,
+			t.shop_name,
+			t.status,
+			a.name,
+			t.platform,
+			t.item_title,
+			t.item_url,
+			t.item_pic,
+			t.additional_item_title,
+			t.additional_item_pic_url,
+			t.seller_nick,
+			t.sys_express,
+			t.express_type,
+			t.express_ingot,
+			t.create_time ,
+			t.speed_examine,
+			t.total_order_num
+		from task t left join user u on t.seller_id=u.id 
+		left join admin a on u.admin_id=a.id
+		<where>
+			<if test="platform !=null">
+				and t.platform=#{platform}
+			</if>
+			<if test="status != null">
+				and t.status = #{status}
+			</if>
+			<if test="shopName != null">
+				and t.shop_name = #{shopName}
+			</if>
+			<if test = "sellerNick != null">
+				and t.seller_nick = #{sellerNick}
+			</if>
+		</where>
+		order by speed_examine desc,create_time
+		limit #{startIndex}, #{pageSize}
+	</select>
+
+	<!-- 批量获取需要定时发布的任务 -->
+	<select id="selectListFromTaskPool" resultMap="BaseResultMap">
+		select t.id,t.last_batch_publish_time,t.publish_timer_interval,t.publish_timer_value,t.delay_span,t.publish_time
+		from task t
+		<where>
+			<if test="status !=null">
+				t.status=#{status}
+			</if>
+		</where>
+	</select>
+	
+	<!-- 卖家任务信息 -->
+	<resultMap id="ResultMap" type="models.Task">
+		<id property="id" column="id" />
+		<result property="sellerId" column="seller_id" />
+		<result property="platform" column="platform" />
+		<result property="shopId" column="shop_id" />
+		<result property="shopName" column="shop_name" />
+		<result property="type" column="type" />
+		<result property="status" column="status" />
+		<result property="sysRefund" column="sys_refund" />
+		<result property="sysExpress" column="sys_express" />
+		<result property="expressIngot" column="express_ingot" />
+		<result property="itemUrl" column="item_url" />
+		<result property="itemId" column="item_id" />
+		<result property="itemTitle" column="item_title" />
+		<result property="itemPicUrl" column="item_pic_url" />
+		<result property="itemPic" column="item_pic" />
+		<result property="itemSubwayPicUrl" column="item_subway_pic_url" />
+		<result property="itemSubwayPic" column="item_subway_pic" />
+		<result property="itemProps" column="item_props" />
+		<result property="itemPrice" column="item_price" />
+		<result property="itemBuyNum" column="item_buy_num" />
+		<result property="itemDisplayPrice" column="item_display_price" />
+		<result property="expressWeight" column="express_weight" />
+		<result property="itemSearchMinPrice" column="item_search_min_price" />
+		<result property="itemSearchMaxPrice" column="item_search_max_price" />
+		<result property="itemSearchLocation" column="item_search_location" />
+		<result property="taskRequest" column="task_request" />
+		<result property="isFreeShipping" column="is_free_shipping" />
+		<result property="orderMessages" column="order_messages" />
+		<result property="goodCommentImg" column="good_comment_img" />
+		<result property="totalOrderNum" column="total_order_num" />
+		<result property="pcOrderNum" column="pc_order_num"/>
+		<result property="mobileOrderNum" column="mobile_order_num" />
+		<result property="pcTakenCount" column="pc_taken_count" />
+		<result property="mobileTakenCount" column="mobile_taken_count" />
+		<result property="expressType" column="express_type" />
+		<result property="pledge" column="pledge" />
+		<result property="totalPledge" column="total_pledge" />
+		<result property="baseOrderIngot" column="base_order_ingot" />
+		<result property="vasIngot" column="vas_ingot" />
+		<result property="totalIngot" column="total_ingot" />
+		<result property="isPaid" column="is_paid" />
+		<result property="qq" column="qq" />
+		
+		<result property="publishTime" column="publish_time" />
+		<result property="speedTaskIngot" column="speed_task_ingot" />
+		<result property="extraRewardIngot" column="extra_reward_ingot" />
+		<result property="speedExamine" column="speed_examine" />
+		<result property="publishTimerInterval" column="publish_timer_interval" />
+		<result property="publishTimerValue" column="publish_timer_value" />
+		<result property="buyTimeInterval" column="buy_time_interval" />
+		<result property="goodCommentWords" column="good_comment_words" />
+		<result property="createTime" column="create_time" />
+		<result property="modifyTime" column="modify_time" />
+		<result property="delaySpan" column="delay_span"/>
+		<result property="lastBatchPublishTime" column="last_batch_publish_time"/>
+		<collection property="searchPlans" ofType="models.TaskItemSearchPlan">
+			<id property="id" column="plan_id" />
+			<result property="word" column="plan_word" />
+			<result property="skus" column="plan_skus" />
+			<result property="inTmall" column="plan_in_tmall" />
+			<result property="totalNum" column="total_num" />
+			<result property="takenNum" column="taken_num" />
+			<result property="flowNum" column="flow_num" />
+		</collection>
+		<collection property="messages" ofType="models.TaskOrderMessage">
+			<id property="id" column="order_id" />
+			<result property="message" column="order_message" />
+		</collection>
+	</resultMap>
+	<select id="selectById" resultMap="ResultMap">
+		select 
+		  t.*,
+		  p.id plan_id,
+		  p.word plan_word,
+		  p.skus plan_skus,
+		  p.in_tmall plan_in_tmall,
+		  p.total_num,
+		  p.taken_num,
+		  p.flow_num,
+		  o.id order_id,
+		  o.message order_message
+		from
+		  task t 
+		  left join
+		  task_item_search_plan p 
+		  on p.task_id = t.id
+		  left join
+		  task_order_message o
+		  on t.id = o.task_id 
+		where t.id = #{id}
+	</select>
+	
+	<!-- 统计任务费用明细，财务对账用 -->
+	<select id="selectForFinance" resultMap="BaseResultMap">
+	select 
+	  t.publish_time,
+	  t.id,
+	  t.status,
+	  t.item_id,
+	  t.item_price,
+	  t.item_buy_num,
+	  t.pc_order_num,
+	  p.pc_task_count,
+	  t.mobile_order_num,
+	  m.mobile_task_count,
+	  t.is_free_shipping,
+	  t.express_ingot,
+	  t.sys_refund,
+	  t.speed_task_ingot,
+	  t.speed_examine,
+	  t.extra_reward_ingot,
+	  t.publish_timer_interval,
+	  t.buy_time_interval,
+	  t.base_order_ingot,
+	  t.pledge,
+	  t.vas_ingot,
+	  t.total_ingot,
+	  t.total_pledge 
+	from
+	  task t 
+	  left join
+	  (select 
+	    bt.task_id,
+	    count(bt.id) pc_task_count 
+	  from
+	    buyer_task bt 
+	  where bt.status != 'CANCLED' 
+	    and bt.device = 'PC' 
+	  group by bt.task_id) p 
+	  on p.task_id = t.id 
+	  left join
+	  (select 
+	    bt.task_id,
+	    count(bt.id) mobile_task_count 
+	  from
+	    buyer_task bt 
+	  where bt.status != 'CANCLED' 
+	    and bt.device = 'MOBILE' 
+	  group by bt.task_id) m 
+	  on m.task_id = t.id 
+	  left join
+	  user u 
+	  on u.id = t.seller_id 
+	where t.status not in (
+	    'WAIT_EDIT',
+	    'WAITING_PAY',
+	    'NOT_PASS'
+	  )
+	  and u.nick = #{nick} 
+	  and t.modify_time
+	  between #{timeStart} and #{timeEnd}
+	  
+	group by t.id ;
+	</select>
+
+	<!-- 统计商家放单统计数量，统计数据用-->
+	<select id="findBySellerPutTimeVoCount" resultType="java.lang.Integer">
+	SELECT
+  		count(*)
+		FROM USER u
+  		LEFT JOIN admin a
+    		ON u.admin_id = a.id
+  		LEFT JOIN (SELECT
+               		t.seller_id,
+               		COUNT(t.seller_id) AS cc
+             		FROM buyer_task t
+       	<where>
+			<if test="taskTakeTimeStart !=null">
+				<![CDATA[ and t.take_time>=#{taskTakeTimeStart} ]]>
+			</if>
+			<if test="taskTakeTimeEnd !=null">
+				<![CDATA[ and t.take_time<=#{taskTakeTimeEnd} ]]>
+			</if>
+		</where> 
+            		 GROUP BY t.seller_id) tt
+   		 ON u.id = tt.seller_id
+  		LEFT JOIN (SELECT
+            		   t.seller_id,
+              		 MAX(t.publish_time) AS maxtime
+            		 FROM task t
+             		GROUP BY t.seller_id) ttt
+    		ON u.id = ttt.seller_id
+		<where>
+			u.type = 'SELLER'
+			<if test="sellerRegTimeStart !=null">
+				<![CDATA[ and u.regist_time>=#{sellerRegTimeStart} ]]>
+			</if>
+			<if test="sellerRegTimeEnd !=null">
+				<![CDATA[ and u.regist_time<=#{sellerRegTimeEnd} ]]>
+			</if>
+			<if test = "sellerNick != null and sellerNick!=''">
+				and u.nick = #{sellerNick}
+			</if>
+			<if test = "adminName != null and adminName !=''">
+				and a.name = #{adminName}
+			</if>
+		</where>
+	</select>
+
+	<!-- 统计商家放单统计明细，统计数据用-->
+	<select id="findBySellerPutTimeVo" resultMap="VoSellerPutTimeMap">
+	SELECT
+  		u.id,
+  		u.nick,
+  		u.regist_time,
+  		a.name,
+  		tt.cc,
+  		ttt.maxtime
+		FROM USER u
+  		LEFT JOIN admin a
+    		ON u.admin_id = a.id
+  		LEFT JOIN (SELECT
+               		t.seller_id,
+               		COUNT(t.seller_id) AS cc
+             		FROM buyer_task t
+       	<where>
+			<if test="taskTakeTimeStart !=null">
+				<![CDATA[ and t.take_time>=#{taskTakeTimeStart} ]]>
+			</if>
+			<if test="taskTakeTimeEnd !=null">
+				<![CDATA[ and t.take_time<=#{taskTakeTimeEnd} ]]>
+			</if>
+		</where> 
+            		 GROUP BY t.seller_id) tt
+   		 ON u.id = tt.seller_id
+  		LEFT JOIN (SELECT
+            		   t.seller_id,
+              		 MAX(t.publish_time) AS maxtime
+            		 FROM task t
+             		GROUP BY t.seller_id) ttt
+    		ON u.id = ttt.seller_id
+		<where>
+			u.type = 'SELLER'
+			<if test="sellerRegTimeStart !=null">
+				<![CDATA[ and u.regist_time>=#{sellerRegTimeStart} ]]>
+			</if>
+			<if test="sellerRegTimeEnd !=null">
+				<![CDATA[ and u.regist_time<=#{sellerRegTimeEnd} ]]>
+			</if>
+			<if test = "sellerNick != null and sellerNick!=''">
+				and u.nick = #{sellerNick}
+			</if>
+			<if test = "adminName != null and adminName !=''">
+				and a.name = #{adminName}
+			</if>
+		</where>
+		ORDER BY
+			<if test = "type == 'maxTime'">
+				maxTime DESC
+			</if>
+			<if test = "type == 'cc'">
+				cc DESC
+			</if>
+			<if test = "isExportOperator != true">
+				limit #{startIndex}, #{pageSize}
+			</if>
+	</select>
+	<!-- 统计买手接单数量，统计数据用-->
+	<select id="findByBuyerTakeTaskVoCount" resultType="java.lang.Integer">
+	SELECT
+  		count(*)
+		FROM USER u
+  		LEFT JOIN admin a
+    		ON u.admin_id = a.id
+  		LEFT JOIN (SELECT
+            	t.buyer_id,
+				COUNT(t.buyer_id) AS cc
+             	FROM buyer_task t
+       	<where>
+       		t.`status` != "CANCLED"
+			<if test="takeTaskTimeStart !=null">
+				<![CDATA[ and t.take_time>=#{takeTaskTimeStart} ]]>
+			</if>
+			<if test="takeTaskTimeEnd !=null">
+				<![CDATA[ and t.take_time<=#{takeTaskTimeEnd} ]]>
+			</if>
+		</where> 
+            GROUP BY t.buyer_id)tt 
+            	ON u.id = tt.buyer_id
+  			LEFT JOIN (SELECT
+					t.buyer_id,
+					MAX(t.take_time) AS maxtime
+				FROM
+			buyer_task t
+				WHERE
+				t.`status` != "CANCLED"
+			GROUP BY
+				t.buyer_id) ttt 
+					ON u.id = ttt.buyer_id
+		<where>
+			u.type = 'BUYER'
+			<if test="buyerCreateTimeStart !=null">
+				<![CDATA[ and u.create_time>=#{buyerCreateTimeStart} ]]>
+			</if>
+			<if test="buyerCreateTimeEnd !=null">
+				<![CDATA[ and u.create_time<=#{buyerCreateTimeEnd} ]]>
+			</if>
+			<if test = "buyerNick != null and buyerNick!=''">
+				and u.nick = #{buyerNick}
+			</if>
+			<if test = "adminName != null and adminName !=''">
+				and a.name = #{adminName}
+			</if>
+		</where>
+	</select>
+
+	<!-- 统计商家放单统计明细，统计数据用-->
+	<select id="findByBuyerTakeTaskVo" resultMap="VoBuyerTakeTaskMap">
+		SELECT
+  			u.id,
+			u.nick,
+			u.create_time,
+			tt.cc,
+			a.`name`,
+			ttt.maxtime
+		FROM USER u
+  		LEFT JOIN admin a
+    		ON u.admin_id = a.id
+  		LEFT JOIN (SELECT
+            	t.buyer_id,
+				COUNT(t.buyer_id) AS cc
+             	FROM buyer_task t
+       	<where>
+       		t.`status` != "CANCLED"
+			<if test="takeTaskTimeStart !=null">
+				<![CDATA[ and t.take_time>=#{takeTaskTimeStart} ]]>
+			</if>
+			<if test="takeTaskTimeEnd !=null">
+				<![CDATA[ and t.take_time<=#{takeTaskTimeEnd} ]]>
+			</if>
+		</where> 
+            GROUP BY t.buyer_id)tt 
+            	ON u.id = tt.buyer_id
+  			LEFT JOIN (SELECT
+					t.buyer_id,
+					MAX(t.take_time) AS maxtime
+				FROM
+			buyer_task t
+				WHERE
+				t.`status` != "CANCLED"
+			GROUP BY
+				t.buyer_id) ttt 
+					ON u.id = ttt.buyer_id
+		<where>
+			u.type = 'BUYER'
+			<if test="buyerCreateTimeStart !=null">
+				<![CDATA[ and u.create_time>=#{buyerCreateTimeStart} ]]>
+			</if>
+			<if test="buyerCreateTimeEnd !=null">
+				<![CDATA[ and u.create_time<=#{buyerCreateTimeEnd} ]]>
+			</if>
+			<if test = "buyerNick != null and buyerNick!=''">
+				and u.nick = #{buyerNick}
+			</if>
+			<if test = "adminName != null and adminName !=''">
+				and a.name = #{adminName}
+			</if>
+		</where>
+		ORDER BY
+			<if test = "type == 'maxTime'">
+				maxTime DESC
+			</if>
+			<if test = "type == 'cc'">
+				cc DESC
+			</if>
+			<if test = "isExportOperator != true">
+				limit #{startIndex}, #{pageSize}
+			</if>
+	</select>
+
+
+	<insert id="insert" parameterType="models.Task">
+		insert into task
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			id,platform,shop_id,shop_name,seller_id,seller_nick,type,status,
+			item_title,item_url,item_price,item_buy_num,
+			is_free_shipping,order_messages,
+			total_order_num,pc_order_num,mobile_order_num,pc_taken_count,mobile_taken_count,
+			base_order_ingot,vas_ingot,total_ingot,pledge,total_pledge,
+			is_paid,finished_count,
+			create_time,modify_time,sys_refund,express_ingot,sys_express,good_comment_img,express_type,qq,
+			<if test="itemId != null">
+				item_id,
+			</if> 
+			<if test="itemPic != null">
+				item_pic,
+			</if>
+			<if test="itemPicUrl != null">
+				item_pic_url,
+			</if>
+			<if test="itemSubwayPic != null">
+				item_subway_pic,
+			</if>
+			<if test="itemSubwayPicUrl != null">
+				item_subway_pic_url,
+			</if>
+			<if test="itemProps != null">
+				item_props,
+			</if>
+			<if test="itemDisplayPrice != null">
+				item_display_price,
+			</if>
+			<if test="itemSearchMinPrice != null">
+				item_search_min_price,
+			</if>
+			<if test="itemSearchMaxPrice != null">
+				item_search_max_price,
+			</if>
+			<if test="itemSearchLocation != null">
+				item_search_location,
+			</if>
+			<if test="additionalItemTitle !=null">
+				additional_item_title,
+			</if>
+			<if test="additionalItemUrl !=null">
+				additional_item_url,
+			</if>
+			<if test="additionalItemProps !=null">
+				additional_item_props,
+			</if>
+			<if test="additionalItemPrice !=null">
+				additional_item_price,
+			</if>
+			<if test="additionalItemBuyNum !=null">
+				additional_item_buy_num,
+			</if>
+			<if test="additionalItemSearchKeyword !=null">
+				additional_item_search_keyword,
+			</if>
+			<if test="additionalItemPicUrl !=null">
+				additional_item_pic_url,
+			</if>
+			<if test="additionalItemPic !=null">
+				additional_item_pic,
+			</if>
+			<if test="speedTaskIngot != null">
+				speed_task_ingot,
+			</if>
+			<if test="extraRewardIngot !=null and extraRewardIngot>0">
+				extra_reward_ingot,
+			</if>
+			<if test="speedExamine != null">
+				speed_examine,
+			</if>
+			<if test="publishTimerInterval != null">
+				publish_timer_interval,
+			</if>
+			<if test="goodCommentWords != null">
+				good_comment_words,
+			</if>
+			<if test="publishTimerValue != null">
+				publish_timer_value,
+			</if>
+			<if test="buyTimeInterval != null">
+				buy_time_interval,
+			</if>
+			<if test="lastBatchPublishTime != null">
+				last_batch_publish_time,
+			</if>
+			<if test="expressWeight != null">
+				express_weight,
+			</if>
+			<if test="taskRequest != null">
+				task_request,
+			</if>
+			<if test="delaySpan != null">
+				delay_span,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			#{id,jdbcType=BIGINT},#{platform},#{shopId},#{shopName},#{sellerId},#{sellerNick},#{type},#{status},
+			#{itemTitle},#{itemUrl},#{itemPrice},#{itemBuyNum},
+			#{isFreeShipping},#{orderMessages},
+			#{totalOrderNum},#{pcOrderNum},#{mobileOrderNum},#{pcTakenCount},#{mobileTakenCount},
+			#{baseOrderIngot},#{vasIngot},#{totalIngot},#{pledge},#{totalPledge},
+			#{isPaid},#{finishedCount},
+			#{createTime},#{modifyTime},#{sysRefund},#{expressIngot},#{sysExpress},#{goodCommentImg},#{expressType},#{qq},
+			<if test="itemId != null">
+				#{itemId},
+			</if> 
+			<if test="itemPic != null">
+				#{itemPic},
+			</if>
+			<if test="itemPicUrl != null">
+				#{itemPicUrl},
+			</if>
+			<if test="itemSubwayPic != null">
+				#{itemSubwayPic},
+			</if>
+			<if test="itemSubwayPicUrl != null">
+				#{itemSubwayPicUrl},
+			</if>
+			<if test="itemProps != null">
+				#{itemProps},
+			</if>
+			<if test="itemDisplayPrice != null">
+				#{itemDisplayPrice},
+			</if>
+			<if test="itemSearchMinPrice != null">
+				#{itemSearchMinPrice},
+			</if>
+			<if test="itemSearchMaxPrice != null">
+				#{itemSearchMaxPrice},
+			</if>
+			<if test="itemSearchLocation != null">
+				#{itemSearchLocation},
+			</if>
+			<if test="additionalItemTitle !=null"> #{additionalItemTitle},</if>
+			<if test="additionalItemUrl !=null"> #{additionalItemUrl},</if>
+			<if test="additionalItemProps !=null"> #{additionalItemProps},</if>
+			<if test="additionalItemPrice !=null"> #{additionalItemPrice},</if>
+			<if test="additionalItemBuyNum !=null"> #{additionalItemBuyNum},</if>
+			<if test="additionalItemSearchKeyword !=null"> #{additionalItemSearchKeyword},</if>
+			<if test="additionalItemPicUrl !=null"> #{additionalItemPicUrl},</if>
+			<if test="additionalItemPic !=null"> #{additionalItemPic},</if>
+			<if test="speedTaskIngot != null">
+				#{speedTaskIngot},
+			</if>
+			<if test="extraRewardIngot !=null and extraRewardIngot>0">
+				#{extraRewardIngot},
+			</if>
+			<if test="speedExamine != null">
+				#{speedExamine},
+			</if>
+			<if test="publishTimerInterval != null">
+				#{publishTimerInterval},
+			</if>
+			<if test="goodCommentWords !=null">#{goodCommentWords},</if>
+			<if test="publishTimerValue != null">
+				#{publishTimerValue},
+			</if>
+			
+			<if test="buyTimeInterval != null">
+				#{buyTimeInterval},
+			</if>
+			
+			<if test="lastBatchPublishTime != null">
+				#{lastBatchPublishTime},
+			</if>
+			<if test="expressWeight != null">
+				#{expressWeight},
+			</if>
+			<if test="taskRequest != null">
+				#{taskRequest},
+			</if>
+			<if test="delaySpan != null">
+				#{delaySpan}
+			</if> 
+		</trim>
+	</insert>
+
+	<update id="updateById" parameterType="models.Task">
+		update task
+		<set>
+			
+			<if test="platform !=null">platform = #{platform},</if>
+			<if test="type !=null">type = #{type},</if>
+			<if test="shopId !=null">shop_id = #{shopId},</if>
+			<if test="shopName !=null">shop_name = #{shopName},</if>
+			
+			<if test="itemId !=null">item_id = #{itemId},</if>
+			<if test="itemTitle !=null">item_title = #{itemTitle},</if>
+			<if test="itemUrl !=null">item_url = #{itemUrl},</if>
+			<if test="itemProps !=null">item_props = #{itemProps},</if>
+			<if test="itemPrice !=null and itemPrice>0">item_price = #{itemPrice},</if>
+			<if test="itemDisplayPrice !=null">item_display_price = #{itemDisplayPrice},</if>
+			<if test="itemBuyNum !=null and itemBuyNum>0">item_buy_num = #{itemBuyNum},</if>
+			<if test="itemPicUrl !=null">item_pic_url = #{itemPicUrl},</if>
+			<if test="itemPic !=null">item_pic = #{itemPic},</if>
+			<if test="itemSubwayPicUrl !=null">item_subway_pic_url = #{itemSubwayPicUrl},</if>
+			<if test="itemSubwayPic !=null">item_subway_pic = #{itemSubwayPic},</if>
+			<if test="itemSearchMinPrice !=null">item_search_min_price = #{itemSearchMinPrice},</if>
+			<if test="itemSearchMaxPrice !=null">item_search_max_price = #{itemSearchMaxPrice},</if>
+			<if test="itemSearchLocation !=null">item_search_location = #{itemSearchLocation},</if>
+			
+			<if test="additionalItemTitle !=null">additional_item_title = #{additionalItemTitle},</if>
+			<if test="additionalItemUrl !=null">additional_item_url = #{additionalItemUrl},</if>
+			<if test="additionalItemProps !=null">additional_item_props = #{additionalItemProps},</if>
+			<if test="additionalItemPrice !=null">additional_item_price = #{additionalItemPrice},</if>
+			<if test="additionalItemBuyNum !=null">additional_item_buy_num = #{additionalItemBuyNum},
+			</if>
+			<if test="additionalItemSearchKeyword !=null">additional_item_search_keyword =
+				#{additionalItemSearchKeyword},</if>
+			<if test="additionalItemPicUrl !=null">additional_item_pic_url = #{additionalItemPicUrl},
+			</if>
+			<if test="additionalItemPic !=null">additional_item_pic = #{additionalItemPic},</if>
+			<if test="isFreeShipping !=null">is_free_shipping = #{isFreeShipping},</if>
+			<if test="orderMessages !=null">order_messages = #{orderMessages},</if>
+			<if test="totalOrderNum !=null and totalOrderNum>0">total_order_num = #{totalOrderNum},</if>
+			<if test="pcOrderNum !=null">pc_order_num = #{pcOrderNum},</if>
+			<if test="mobileOrderNum !=null">mobile_order_num = #{mobileOrderNum},</if>
+			<if test="pcTakenCount !=null">pc_taken_count = #{pcTakenCount},</if>
+			<if test="mobileTakenCount !=null">mobile_taken_count = #{mobileTakenCount},</if>
+			
+			<if test="speedTaskIngot !=null">speed_task_ingot = #{speedTaskIngot},</if>
+			<if test="extraRewardIngot !=null">extra_reward_ingot = #{extraRewardIngot},</if>
+			<if test="speedExamine !=null">speed_examine = #{speedExamine},</if>
+			<if test="publishTimerInterval !=null">publish_timer_interval = #{publishTimerInterval},</if>
+			<if test="publishTimerValue !=null">publish_timer_value = #{publishTimerValue},</if>
+			<if test="buyTimeInterval !=null">buy_time_interval = #{buyTimeInterval},</if>
+			<if test="goodCommentWords !=null">good_comment_words = #{goodCommentWords},</if>
+			<if test="lastBatchPublishTime !=null">last_batch_publish_time = #{lastBatchPublishTime},
+			</if>
+			
+			<if test="rewardIngot !=null and rewardIngot>0">reward_ingot = #{rewardIngot},</if>
+			<if test="baseOrderIngot !=null">base_order_ingot = #{baseOrderIngot},</if>
+			<if test="vasIngot !=null">vas_ingot = #{vasIngot},</if>
+			<if test="totalIngot !=null">total_ingot = #{totalIngot},</if>
+			<if test="pledge !=null">pledge = #{pledge},</if>
+			<if test="totalPledge !=null">total_pledge = #{totalPledge},</if>
+			<if test="expressIngot !=null">express_ingot = #{expressIngot},</if>
+			<if test="sysExpress !=null">sys_express = #{sysExpress},</if>
+			<if test="sysRefund !=null">sys_refund = #{sysRefund},</if>
+			<if test="isPaid !=null">is_paid = #{isPaid},</if>
+			<if test="status !=null">status = #{status},</if>
+			<if test="sellerNick !=null">seller_nick = #{sellerNick},</if>
+			<if test="finishedCount !=null and finishedCount>0">finished_count = #{finishedCount},</if>
+			<if test="publishTime !=null">publish_time = #{publishTime},</if>
+			<if test="examineTime !=null">examine_time = #{examineTime},</if>
+			<if test="expressWeight >0">express_weight=#{expressWeight},</if>
+			<if test="taskRequest !=null">task_request=#{taskRequest},</if>
+			<if test="delaySpan !=null">delay_span = #{delaySpan},</if>
+			<if test="goodCommentImg !=null">good_comment_img=#{goodCommentImg},</if>
+			<if test="expressType !=null">express_type=#{expressType},</if>
+			<if test="qq !=null">qq=#{qq},</if>
+			modify_time = #{modifyTime}
+			
+		</set>
+		where id = #{id}
+	</update>
+	
+	<update id="updateExpressType">
+		update task
+		set express_type ='SELLERKD'
+		where id in
+		<foreach collection="ids" item="id" open="(" close=")"
+			separator=",">
+			#{id}
+		</foreach>
+	</update>
+</mapper>
+	

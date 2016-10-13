@@ -1,0 +1,1 @@
+[2016-08-11 17:05:01,636] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null

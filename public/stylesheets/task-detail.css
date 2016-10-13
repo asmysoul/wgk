@@ -1,0 +1,262 @@
+/*===========================================*/
+.stepWrapper{
+	position: relative;
+	background: url(/public/images/st_bar_bg.png) repeat-x left center;
+	height: 30px;
+}
+.stepFinish{
+	background: url(/public/images/st_finish.png) no-repeat center center;
+	width: 30px;
+	height: 30px;
+}
+.stepOn{
+	background: url(/public/images/st_on_num.png) no-repeat;
+	width: 30px;
+	height: 30px;
+	color: #FFF;
+	text-align: center;
+	line-height:30px;
+}
+.stepWaiting{
+	background: url(/public/images/st_waiting.png) no-repeat center top;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	text-align: center;
+	line-height:30px;	
+	float: left;
+}
+.stepWaiting .caption{
+	position: absolute;
+	font-size: 12px;
+	line-height: 20px;
+	left: 50%;
+	z-index: 3;
+}
+.stepWaiting .tcap{
+	bottom:30px;
+}
+.stepWaiting .bcap{
+	top:30px;
+}
+.stepWaiting .bcap .date,.stepWaiting .bcap .time{
+	display: block;
+}
+/*===========================================*/
+.panelBox{
+	padding-left: 10px;
+}
+.panelLine .secondTile{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+.panelLine .checkTextBtn{
+	line-height: 24px;
+}
+.buttonSection{
+	margin-top: 15px;
+}
+.buttonSection .prev{
+	background-color: #777;
+	margin-right: 20px;
+}
+.buttonSection .prev:hover{
+	background-color: #888;	
+}
+.panelLine .rad{
+	margin-top: 12px;
+}
+.contentBody .secondTile{
+	margin-bottom: 5px;
+}
+.contentBody .sec{
+	margin-bottom: 10px;
+}
+.panelLine .stdColorButton{
+	line-height: 20px;
+}
+.stdColorButton .iconfont{
+	padding-left: 10px;
+}
+.long{
+	width: 500px;
+}
+.middle{
+	width: 150px;
+}
+.short{
+	width:80px;
+}
+.withdrawImg{
+	background: url(/public/images/icon.png) no-repeat 100% 15%;
+}
+
+/*--------------------------------------------*/
+.itemPicBox img{
+	height: 180px;
+	width: 180px;
+	border:solid 1px #999;
+	margin-top: 10px;
+}
+#taskInfoCols{
+	position: relative;
+	padding-left: 340px;
+	min-height: 480px;
+}
+.leftPart{
+	width: 310px;
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 2;
+}
+#taskInfoCols .lbl{
+	padding-right: 10px;
+	color: #4E8C7A;
+}
+.leftPart .panelLine{
+	height: 32px;
+	line-height: 28px;
+}
+.panelLineNoHeight{
+	line-height: 28px;
+}
+.delt-info .state{
+	padding-top: 40px;
+	padding-left: 30px;
+}
+.delt-info .state h4{
+	height: 34px;
+	line-height: 34px;
+	position: relative;
+	padding: 0;
+	font-family: "Microsoft Yahei";
+	margin-bottom: 35px;
+	font-size: 26px;
+}
+.delt-info .state .stdColorButton{
+	margin-right: 20px;
+	border-radius: 3px;
+}
+.delt-info .state .mb{
+	margin-bottom: 15px;
+	line-height: 22px;
+}
+.delt-info .state .question:hover{
+	text-decoration: underline;
+}
+/*-----------------------------------------*/
+.stepDetailCell{
+	padding:15px;
+	border-width: 1px 1px 1px 3px;
+	border-style: solid;
+	border-color: #BBB;
+	position: relative;
+	margin-bottom: 10px;
+}
+.stepDetailCell .iconfont{
+	display: none;
+	position: absolute;
+	right: 10px;
+	top:10px;
+	font-size: 30px;
+}
+.stepTitle{
+	color:#5C5C5C;
+	margin-bottom: 8px;
+}
+.stepTitle .date{
+	padding-left: 14px;
+	color:#AAA;
+}
+.stepEsContent{
+	padding-left: 20px;
+	color:#666;
+}
+#stepDetailList .finished{
+	background-color: #E5F5F5;
+	border-color: #16a3ac;
+	border-width: 1px 1px 1px 3px;
+}
+#stepDetailList .finished .iconfont{
+	display: block;
+	color:#16a3ac;
+}
+#stepDetailList .finished .bold{
+	color:#16a3ac;
+}
+#stepDetailList .doing{
+	background-color: #FCFAE3;
+	border-color: #b38219;
+	border-width: 1px 1px 1px 3px;
+}
+#stepDetailList .doing .bold{
+	color:#b38219;
+}
+/*-----------------娑旀澘顔嶇粩锟�-------------------*/
+#itemInfo{
+}
+#itemInfo .picBox{
+	border:solid 1px #999;
+}
+#itemInfo .picBox,#itemInfo .picBox img{
+	width: 80px;
+	height: 80px;
+}
+#itemInfo .contInfo{
+	margin-left: 20px;
+	width:620px;
+}
+#itemInfo .title{
+	color:#1EA1D0;
+}
+#itemInfo .price-box .lb{
+	color:#AAA;
+}
+#itemInfo .price-box .val{
+	margin-right: 20px;
+}
+#itemInfo .summary{
+	width: 130px;
+	text-align: center;
+	float: right;
+}
+#itemInfo .summary .sum{
+	font-size: 22px;
+}
+/*-----------------閸楁牕顔嶇粩锟�-------------------*/
+#subOrderPagination{
+	height: 40px;
+}
+.view-detail:hover{
+	text-decoration: underline;
+}
+#subOrderPanel .normTable tr{
+	border-bottom: 1px solid #d1d1d1;
+}
+#subOrderPanel .normTable td{
+	vertical-align: middle;
+}
+#subOrderPanel .normTable thead td,#feePanel .normTable thead td{
+	background: #DEDEDE;
+	border-bottom: solid 1px #BBB;
+	color: #777;
+}
+#feePanel .normTable{
+
+}
+#feePanel .normTable .item{
+	text-align: left;
+}
+.chartImg{
+	width: 250px;
+	height:250px;
+}
+#urlMsg{
+	word-wrap:break-word;
+    word-break:break-all;
+}
+
+
+
+

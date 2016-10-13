@@ -1,0 +1,137 @@
+/*---------------------------*/
+.taskWrapperHf{
+	padding-left: 10px;
+	margin-top: 10px;
+	background-color: #EEE;
+}
+.buttonSection{
+	margin-top: 15px;
+}
+/*---------------------------*/
+.taskFilterLine{
+	height: 34px;
+	padding-left: 10px;	
+}
+.taskFilterLine .stdColorButton{
+	line-height: 14px;
+}
+.taskWrapper{
+
+}
+.chosen{
+	border-color: #91CCE8;
+	background-color: #E2F1F8;
+}
+.taskCell{
+	border-top:solid 1px #DEDEDE;
+	border-bottom:solid 1px #DEDEDE;
+	margin-bottom: 20px;
+}
+.taskCell:hover{
+	background-color: #fefce8;
+}
+.normTable{
+	width: 100%;
+}
+.taskCell .title{
+	height: 40px;
+	line-height: 40px;
+	padding:0 10px;
+}
+.taskCell .title .inputCheckBox{
+	margin-top: 6px;
+}
+.taskCell .shop{
+	float: left;
+	color: #111;
+}
+.taskCell .viewDetail{
+	color:#4083A9;
+	float:right;
+	margin-left: 10px;
+}
+.taskCell .viewDetail:hover{
+	text-decoration: underline;
+		color:#AD6BAE;
+}
+.taskCell .taskNo{
+	float: right;
+}
+.taskCell .body{
+}
+.taskCell .body td{
+	color: #B0B0B0;
+
+}
+.taskCell .body tbody td{
+}
+.taskCell .cap{
+	color: #888;
+	font-size: 12px;
+}
+.taskCell .body .item-list{
+	width: 300px;
+}
+.taskCell .body .item-list .item-box{
+	position: relative;
+	padding-left: 90px;
+	height: 90px;
+}
+.item-box .pic{
+	width:80px;
+	height: 80px;
+	position: absolute;
+	left:5px;
+	top:5px;
+}
+.item-box .pic img{
+	width:80px;
+	height: 80px;
+	border:solid 1px #DEDEDE;
+}
+.item-box .title{
+	text-align: left;
+	color:#5d5d5d;
+	font-weight: 700;
+	line-height: 24px;	
+	color:#3E88BE;
+}
+.taskCell .body tbody .name{
+	line-height: 24px;
+	color:#3388BB;
+}
+.taskCell .body .amount{
+	width: 100px;
+	color: red;
+	vertical-align: middle;
+}
+.taskCell .body .orderid{
+	width: 120px;
+	color:#B77E5E;
+	vertical-align: middle;
+}
+.taskCell .body .refundNo{
+	width: 140px;
+	color:#B77E5E;
+	vertical-align: middle;
+}
+
+.taskCell .body .opera{
+	width: 140px;
+	vertical-align: middle;
+	padding:0;
+}
+.btnConfirmRefund{
+	float:right;
+	padding: 0 6px;
+	border-radius: 2px;
+}
+#btnConfirmAll{
+	background-color: #6BB8DB;
+}
+#btnConfirmAll:hover{
+	background-color: #6BB8DB;
+}
+.contentCard{
+	min-width: 900px;
+}

@@ -1,0 +1,79 @@
+#{extends 'frame.html' /}
+#{set title:'处理提现申请' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/admin/handle-withdrawal.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.pagination.css'}" />
+#{/set}
+#{authenticityToken /}
+<div class="contentCard">
+	<div class="contentTitle">
+		<span class="iconfont">&#xf00bf;</span>
+		待审核的提现申请
+	</div>
+	<div class="contentBody">
+		<table class="normTable">
+			<thead>
+				<tr>
+					<td>所属账号</td>
+					<td>旺旺ID</td>
+					<td>收货信息</td>
+					<td>联系电话</td>
+					<td>创建时间</td>
+					<td>修改时间</td>
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody id="applicationContainer"></tbody>
+		</table>
+		<div class="pagin-btm clearFix">
+			<div class="pagination"></div>
+		</div>
+		<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+			<div class="maskLayer"></div>
+			<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />		
+		</div>
+	</div>
+</div>
+
+<!--拒绝理由窗口-->
+<div class="popWrapper" id="refuseReasonWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:;" class="wnd_Close_Icon" title="关闭窗口"></a>
+		<h3 class="topTile">拒绝提现申请</h3>
+		<div class="modalWndInner">
+			<div id="reasonShower">
+				<textarea class="inputText" id="txtReason"></textarea>
+			</div>
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="btnRefuse" href="javascript:;" class="botButton" bid="">确认</a>
+		</div>
+
+	</div>
+
+</div>
+#{authenticityToken /}
+<!--keyword muban-->
+<textarea class="muban" id="trowTemp">
+	{{#results}}
+	<tr bid="{{id}}">
+		<td>{{userNick}}</td>
+		<td>{{nick}}</td>
+		<td>{{consignee}}&nbsp;{{state}}&nbsp;{{city}}&nbsp;{{region}}&nbsp;{{address}}</td>
+		<td>{{mobile}}</td>
+		<td>{{createtime}}</td>
+		<td>{{modifytime}}</td>
+		<td>
+			<a class="stdColorButton access" href="javascript:;">通过</a>
+			<a class="stdColorButton refuse" href="javascript:;">拒绝</a>
+		</td>
+	</tr>
+	{{/results}}
+</textarea>
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script type="text/javascript">App.module = 'buyer';</script>
+#{/set}

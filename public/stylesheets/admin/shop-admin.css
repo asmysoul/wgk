@@ -1,0 +1,85 @@
+#taskFilterPanel{
+	padding-left: 20px;
+	padding-top: 10px;
+}
+#taskFilterPanel .stdColorButton{
+	line-height: 14px;
+}
+/*-----------------------------------*/
+.normTable{
+	margin-top:10px; 
+}
+.normTable tbody td{
+	border-bottom: solid 1px #DEDEDE;
+	vertical-align: middle;
+}
+.normTable thead td{
+	background: #DEDEDE;
+	border-bottom: solid 1px #BBB;
+	color: #999;
+}
+.access,.refuse{
+	padding:0 10px;
+	border-radius: 2px;
+}
+.access{
+	background-color:#069E2A;
+}
+.access:hover{
+	background-color:#07B630;
+}
+.refuse{
+	background-color:#D93B41;
+}
+.refuse:hover{
+	background-color:#DE4F54;
+}
+/*-----------------------------------*/
+#refuseReasonWnd .modalWnd{
+	width:400px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+#txtReason{
+	height: 70px;
+	width: 346px;
+}
+#btnRefuse{
+	background-color: #FD7037;
+}
+#btnRefuse:hover{
+	background-color: #FD804E;
+}
+.normTable tbody tr td{
+    word-wrap:break-word;
+    word-break:break-all;
+}
+.updateShopBtn{
+	text-align: center;
+	margin-left: 10px;
+	padding:0px 10px;
+	padding-top: -40px;
+}
+#btnSave{
+background-color: #26AA9F;
+}
+
+#editShop .modalWnd{
+	width:500px;
+	left:50%;
+	top:30%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+
+#editShop .modalWnd input{
+	width:300px;
+}
+.panelLine {
+  height: 35px;
+  line-height: 30px;
+}

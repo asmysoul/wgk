@@ -1,0 +1,148 @@
+#{extends 'frame.html' /}
+#{set title:'活动管理' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/admin/activity.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.pagination.css'}" />
+#{/set}
+
+<div class="contentCard">
+	<div class="contentTitle">
+		活动列表
+		<span class="floatRight mr20">
+			<a href="javascript:;" class="red" id="addActivity"> <em class="iconfont">&#xf0199;</em>
+				创建新的运营活动
+			</a>
+		</span>
+	</div>
+	#{if false}
+	<div id="taskFilterPanel">
+		<div class="clearfix mb10">
+			<span class="floatLeft mr10">邀请人</span>
+			<input type="text" id="nick" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">注册用户</span>
+			<input type="text" id="nick" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">注册用户身份</span>
+			<select class="floatLeft mr10" id="type">
+				#{list items:userTypeList, as:'s'}
+				<option value="${s}" >${s.title}</option>
+				#{/list}
+			</select>
+		</div>
+		<div class="clearfix mb10">
+			<span class="floatLeft mr10">开通会员时间</span>
+			<input type="text" id="regTimeStart" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">-</span>
+			<input type="text" id="regTimeEnd" class="floatLeft mr10 inputText" />
+			<a class="stdColorButton floatLeft queryBtn" href="javascript:;" id="queryBtn">查询</a>
+		</div>
+	</div>
+	#{/if}
+	<div class="mt20">
+		<table class="normTable">
+			<thead>
+				<tr>
+					<td style="width:5%">ID</td>
+					<td style="width:5%">标题</td>
+					<td style="width:8%">状态</td>
+					<td style="width:8%">开始时间</td>
+					<td style="width:8%">截止时间</td>
+					<td style="width:5%">操作</td>
+				</tr>
+			</thead>
+			<tbody id="accountContainer"></tbody>
+		</table>
+		<div id="noMsg">
+			<div class="warnBox">
+				<span class="iconfont">&#xf00b6;</span>
+				没有运营活动记录!
+			</div>
+		</div>
+		<div class="pagin-btm clearFix" style="display: none;">
+			<div class="pagination"></div>
+		</div>
+		<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+			<div class="maskLayer"></div>
+			<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />
+		</div>
+	</div>
+</div>
+
+<div class="contentCard">
+	<div class="contentTitle">
+		邀请好友注册活动规则
+	</div>
+	<div class="contentBody">
+		<div class="mb10"> 
+			被邀请的【买手】用户充值成为会员，奖励首次开通会员费用的：
+			<input type="text" class="inputText" value="${inviteRegistRule?.buyerRewardRate}" />%
+			<br/>
+			被邀请的【商家】用户充值成为会员，奖励首次开通会员费用的：
+			<input type="text" class="inputText" value="${inviteRegistRule?.sellerRewardRate}" />%
+			<br/>
+			<div class="clearFix"></div>
+		</div>
+		<div class="mb10">
+			<input type="button" id="saveRule" value="  保存  ">
+			<div class="clearFix"></div>
+		</div>
+	</div>
+</div>
+
+<!-- 添加、修改活动窗口 -->
+<div class="popWrapper" id="editActivityWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:;" class="wnd_Close_Icon" id="btnCloseAddWnd" title="关闭窗口"></a>
+		<h3 class="topTile">添加新活动</h3>
+		<div class="modalWndInner">
+			<form id="modifyForm">
+				<div id="infoShower">
+					<div class="panelLine ">
+						<label class="floatLeft wangwangID">标题</label>
+						<input type="text" class="inputText floatLeft mr20 required" id="title" name="title"  />
+					</div>
+					<div class="panelLine">
+						<label class="floatLeft">开始时间</label>
+						<input type="text" class="inputText floatLeft mr20 required" id="startTime" name="startTime"/>
+					</div>
+					<div class="panelLine">
+						<label class="floatLeft">截止时间</label>
+						<input type="text" class="inputText floatLeft mr20 required" id="endTime" name="endTime"/>
+					</div>
+					<div class="panelLine" id="status">
+						<label class="floatLeft mr-20">状态</label>
+						<input class="VALID" type="radio" name="status" value="VALID" />进行中
+						<input class="INVALID" type="radio" name="status" value="INVALID" checked="true" />已停止
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="wndBotButtonSection">
+			<input id="saveActivity" type="button" value="   保存   " />
+		</div>
+	</div>
+</div>
+
+<textarea class="muban" id="rowTemp">
+	{{#results}}
+	<tr data-id="{{id}}" data-status="{{status}}">
+		<td>{{id}}</td>
+		<td  class="J_title">{{title}}</td>
+		<td  class="J_status">{{statusTitle}}</td>
+		<td  class="J_startTime">{{startTimeStr}}</td>
+		<td  class="J_endTime">{{endTimeStr}}</td>
+		<td>
+			<input type="button" class="J_edit queryBtn red bold" href="javascript:;"  value=" 修改 " />
+		</td>
+	</tr>
+	{{/results}}
+</textarea>
+
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.number.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/admin/activity.js'}" type="text/javascript"></script>
+<script type="text/javascript">App.module = 'activity';</script>
+#{/set}

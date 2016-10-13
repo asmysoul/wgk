@@ -1,0 +1,57 @@
+#{extends 'frame.html' /}
+#{set title:'操作结果' /}
+
+#{set 'moreStyles'}
+#{/set}
+
+<div class="contentCard">
+	<div class="contentTitle">
+		<span class="iconfont">&#xf00b7;</span>
+		提示
+	</div>
+	<div class="contentBody">
+		<div class="errBox">
+		#{if errMsg}
+			<div class="panelLine">
+				<span>${errTitle}：</span>
+			</div>
+			<div class="panelLine">
+				<span class="bold">${errMsg}</span>
+			</div>
+		#{/if}
+		#{else}
+			<div class="panelLine">
+				<span>您目前暂时无法使用该功能，原因如下：</span>
+			</div>
+			<div class="panelLine">
+				#{if user?.status.toString()=='ACTIVE'}
+				<span class="bold">需要先开通VIP会员~~</span>
+				<span>
+					<a href="/user/member">[立即开通]</a>
+				</span>
+				#{/if}
+				#{elseif user?.status.toString()=='INVALID'}
+				<span class="bold">您的VIP会员身份已过期~~</span>
+				<span>
+					<a href="/user/member">[立即续费]</a>
+				</span>
+				#{/elseif}
+				#{else}
+				<span class="bold">${msg}~~</span>
+				#{if url}
+				<span>
+					<a href="${url}">[立即处理]</a>
+				</span>
+				#{/if}
+				#{/else}
+			</div>
+		#{/else}	
+		</div>
+	</div>
+</div>
+
+#{set 'moreScripts'}
+<script type="text/javascript">
+	App.module = '${module}';
+</script>
+#{/set}

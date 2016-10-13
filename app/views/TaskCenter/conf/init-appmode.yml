@@ -1,0 +1,31 @@
+#
+# 系统默认的AppMode配置.【注意】对象字段必须与实际的类代码符合.
+#
+
+# 线上正式运行的产品模式
+- !!com.aton.config.AppMode
+  mode: ONLINE
+  mockFrontend: false
+  disableJob: false
+  mockTenpay: false
+  disableMemberCheck: false
+  testPay: false
+
+# 上线前的开发模式
+- !!com.aton.config.AppMode
+  mode: DEV
+  mockFrontend: true
+  disableJob: false
+  mockTenpay: true
+  disableMemberCheck: true
+  testPay: true
+
+# 测试模式
+- !!com.aton.config.AppMode
+  mode: TEST
+  mockFrontend: true
+  disableJob: false
+  mockTenpay: true
+  disableMemberCheck: true
+  testPay: true
+  

@@ -1,0 +1,403 @@
+#{extends 'frame.html' /}
+#{set title:'我的推广' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/task/sellerTasks.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.pagination.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/datePicker.css'}" />
+#{/set}
+<div class="contentCard">
+	<div class="contentTitle">
+	<span class="floatRight mr20">
+		<a href="/task/publish2" class="red">
+		<em class="iconfont">&#xf0199;</em>我要发推广</a>
+	</span>
+	<span class="floatLeft">待处理任务</span>
+	
+	</div>
+	<div class="contentBody">
+		<div class="overview-wrapper clearfix">
+			<div class="overview-box floatLeft">
+				<div class="caption secondTile">平台审核中</div>
+				#{if waitingTaskInfoMap.get('EXAMINE_STATUS_LIST')}
+				<div class="num-list">
+					#{list items:waitingTaskInfoMap.get('EXAMINE_STATUS_LIST'), as:'vo'}
+					<a href="/seller/tasks/examine2/${vo.status}" class="item">
+						<span>${vo.status.title}</span> <strong>${vo.count}</strong>
+					</a>
+					#{/list}
+				</div>
+				#{/if}
+				#{else}
+				<div class="no-data">暂无待处理的任务</div>
+				#{/else}
+				<div class="info">
+					<span class="iconfont">&#xf0142;</span>
+					审核时间早上9点到晚上9点，审核不通过请根据提示修改
+				</div>
+			</div>
+			<div class="overview-box floatLeft">
+				<div class="caption secondTile">买手已完成，待返佣</div>
+				#{if waitingTaskInfoMap.get('WAIT_SEND_GOODS')}
+				<div class="num-list">
+					#{list items:waitingTaskInfoMap.get('WAIT_SEND_GOODS'), as:'vo'}
+					<a href="/seller/tasks/sendSHENHE/${vo.platform}" class="item">
+						<span class="item">
+							<span>${vo.platform.title}</span> <strong>${vo.count}</strong>
+						</span>
+					</a>
+					#{/list}
+				</div>
+				#{/if}
+				#{if waitingTaskInfoMap.get('EXPRESS_PRINT')}
+				<div class="num-list">
+					#{list items:waitingTaskInfoMap.get('EXPRESS_PRINT'), as:'vo'}
+					<a href="/seller/tasks/sendSHENHE/${vo.platform}" class="item">
+						<span class="item">
+							<span>${vo.platform.title}</span> <strong>${vo.count}</strong>
+						</span>
+					</a>
+					#{/list}
+				</div>
+				#{/if}
+				#{else}
+				<div class="no-data">暂无待处理的任务</div>
+				#{/else}
+				<div class="info">
+					<span class="iconfont">&#xf0142;</span>
+					请及时核实买手任务情况，并及时发放佣金
+				</div>
+			</div>
+			<!-- <div class="overview-box floatLeft">
+				<div class="caption secondTile">买手已确认，待返款</div>
+				#{if waitingTaskInfoMap.get('WAIT_REFUND')}
+				<div class="num-list">
+					#{list items:waitingTaskInfoMap.get('WAIT_REFUND'), as:'vo'}
+					<a href="/seller/tasks2/refund/${vo.platform}" class="item">
+						<span class="item">
+							<span>${vo.platform.title}</span>
+							<strong>${vo.count}</strong>
+						</span>
+					</a>
+					#{/list}
+				</div>
+				#{/if}
+				#{if waitSysRefund>0}
+				<div class="num-list">
+					<a href="/seller/tasks/sysRefund2" class="item">
+						<span class="item">
+							<span>平台返款</span>
+							<strong>${waitSysRefund}</strong>
+						</span>
+					</a>
+				</div>
+				#{/if}
+				#{ifnot waitingTaskInfoMap.get('WAIT_REFUND') || waitSysRefund>0}
+				<div class="no-data">暂无待处理的推广</div>
+				#{/ifnot}
+				<div class="info">
+					<span class="iconfont">&#xf0142;</span>
+					请在48小时内给买手返款，否则平台将扣除任务押金中的返款保证金
+				</div>
+			</div> -->
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+ <div class="contentCard">
+	<div class="contentTitle">推广进展</div>
+	<div class="tabSwitchWrapper">
+		<a class="tab-cell chargeTypeTab focus" href="javascript:;" data-status="PROCESS" for="processingTask">进行中的推广</a>
+		<a class="tab-cell chargeTypeTab" href="javascript:;" data-status="FINISHED" for="finishedTask">已完成的推广</a>
+		<a class="tab-cell chargeTypeTab" href="javascript:;" data-status="CANCEL" for="cancelTask">已经取消的推广</a>
+		<a class="tab-cell chargeTypeTab" href="javascript:;" data-status="ALL" for="allTask">全部推广</a>
+	</div>
+	<div class="taskFilterPanel mt10">
+		<span class="floatLeft mr-8">平台种类</span>
+		<select class="floatLeft mr-8" id="platform">
+			<option value="">全部</option>
+			<option value="WEIXIN">WEIXIN</option>
+			<option value="QQ">QQ</option>
+			<option value="WEIBO">微博</option>
+			<option value="OTHER">其他</option>
+		</select>
+		<span class="floatLeft mr-8">任务状态</span>
+		<select class="floatLeft mr-8" id="status">
+			<option value="">全部</option>
+			#{list items:sellerStatusList,as:'sellerStatus'}
+			<option value="${sellerStatus}">${sellerStatus.title}</option>
+			#{/list}
+		</select>
+		<span class="floatLeft mr10">商品名称</span>
+		<input type="text" id="itemTitle" class="floatLeft mr10 inputText" />
+		
+	</div>
+	<div class="taskFilterPanel">
+		<span class="floatLeft mr10" title="买手推广号">买手推广号</span>
+		<input type="text" id="buyerAccountNick" class="floatLeft mr10 inputText" />
+		<span class="floatLeft mr10">订单号&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<input type="text" id="orderId" class="floatLeft mr10 inputText" />
+		<span class="floatLeft mr10" title="子任务号">子任务号</span>
+		<input type="text" id="buyerTaskId" class="floatLeft mr10 inputText" />		
+	</div>
+	<div class="cal-content taskFilterPanel mb10">
+	    <span class="floatLeft mr10" title="下面列表中的ID字段">买手账号</span>
+		<input type="text" id="buyerNick" class="floatLeft mr10 inputText" />
+		<span class="floatLeft mr10">发布时间</span>
+		<span class="floatLeft mr10 cal-date-input">
+			<input class="inputDate start-date" id="publishTimeStart" readonly="readonly" value=""  />
+		</span>
+		<span class="floatLeft mr10 med-cal-split">-</span>
+		<span class="floatLeft mr10 cal-date-input">
+			<input class="inputDate end-date" id="publishTimeEnd" readonly="readonly" value="" />
+		</span>
+		<a class="stdColorButton floatLeft" id="queryBtn" href="javascript:;" style="height:20px;">查询</a>
+	</div>
+	
+	
+	
+	
+	
+	<div>
+		<div class="taskWrapper" style="overflow: hidden;" id="taskContainer"></div>
+		<div class="pagin-btm clearFix ml20">
+			<div class="pagination"></div>
+		</div>
+		<!--这里是分页区域-->
+		<div class="taskPagination"></div>
+
+		<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+			<div class="maskLayer"></div>
+			<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />
+		</div>
+	</div>
+</div> 
+
+
+
+<!--Pop Window-->
+<div class="popWrapper" id="boostWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:;" class="wnd_Close_Icon" title="关闭窗口"></a>
+		<h3 class="topTile">快速完成任务</h3>
+		<div class="modalWndInner">
+			<div id="stepShower-1">
+				<div class="panelLine">
+					<span class="num-list-flag floatLeft mr-4">1</span>
+					<span class="floatLeft mr-8">升级为推荐任务并提升排名</span>
+					<span class="floatLeft grey">增加金币越多，推荐任务排名越靠前</span>
+				</div>
+				<div class="panelLine">
+					<input class="rad ls floatLeft speed" type="radio" name="r_plus_period" value="5">
+					<span class="floatLeft ls">+5&nbsp;金币</span>
+					<input class="rad ls floatLeft speed" type="radio" name="r_plus_period" value="10">
+					<span class="floatLeft ls">+10&nbsp;金币</span>
+					<input class="rad ls floatLeft speed" type="radio" name="r_plus_period" value="15">
+					<span class="floatLeft ls">+15&nbsp;金币</span>
+					<input class="rad ls floatLeft speed" type="radio" name="r_plus_period" value="20">
+					<span class="floatLeft ls">+20&nbsp;金币</span>
+				</div>
+				<hr/>
+				<div class="panelLine">
+					<span class="num-list-flag floatLeft mr-4">2</span>
+					<span class="floatLeft mr-8">加赏任务佣金</span>
+					<span class="floatLeft grey">增加符点越多，买手完成人物的积极性越大，买手会优先完成</span>
+				</div>
+				<div class="panelLine">
+					<span class="floatLeft mr-8">每单加赏佣金</span>
+					<input class="inputText floatLeft short mr-8" type="text" value="0" id="txtPlusComm" />
+					<span class="floatLeft mr-8">金币，共计</span>
+					<span class="floatLeft">
+						<span class="count">0</span>
+						单x
+						<span class="add red">2</span>
+						金币/单=
+						<span class="add red">0</span>
+						个金币
+					</span>
+				</div>
+			</div>
+			<div id="stepShower-2" style="display:none;">
+				<div class="secondTile">选择支付方式</div>
+				<div id="payType">
+					<div class="panelLine">
+						<input class="rad floatLeft ingot" type="checkbox" name="r_pay_type" checked="checked"/>
+						<span class="floatLeft mr-8">使用金币支付</span>
+						<span class="floatLeft mr-4">可用金币</span>
+						<span class="mr-20 orange floatLeft ingot">${user?.ingot}</span>
+						<span class="floatLeft grey">1点=1元</span>
+					</div>
+					<div class="panelLine">
+						<input class="rad floatLeft pledge" type="checkbox" name="r_pay_type" checked="checked"/>
+						<span class="floatLeft mr-8">使用押金支付</span>
+						<span class="floatLeft mr-4">可用押金</span>
+						<span class="mr-4 orange floatLeft pledge">${user?.pledge}</span>
+						<span class="floatLeft">元</span>
+					</div>
+					<div class="panelLine sec"style="display:none">
+						<span class="floatLeft ls red ">余额不足，请选择银行卡支付</span>
+					</div>
+					<div class="bankListWrapper" id="platformSelect">
+						#{list payPlatforms, as: 'p'}
+						<div class="floatLeft panelLine sec pay checkTextBtn">
+							<input  class="floatLeft rad ls" type="radio" name="pay_type" value="${p}" />
+							<div class="wid floatLeft ls rad0">
+								<img src="/public/images/bank/${p}.gif" />
+							</div>
+						</div>
+						#{/list}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wndBotButtonSection">
+			<a href="javascript:;" class="botButton btnPay">去支付</a>
+			<a href="javascript:;" class="botButton btnNext">
+				下一步
+				<span class="iconfont">&#xf016d;</span>
+			</a>
+			<a href="javascript:;" class="botButton btnPrev" style="display:none;">
+				<span class="iconfont">&#xf016e;</span>
+				上一步
+			</a>
+		</div>
+
+	</div>
+
+</div>
+
+<!--Cancel window-->
+<div class="popWrapper" id="cancelWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:;" class="wnd_Close_Icon" title="关闭窗口"></a>
+		<h3 class="topTile">撤销未接单任务</h3>
+		<div class="modalWndInner">
+			<div class="content-info">
+				<p>
+					<span class="mr-4">当前任务还有</span>
+					<span class="red mr-4 cancledNum">1</span>
+					<span>单未接手</span>
+					<br/>
+					<span class="mr-4">撤销将解冻押金</span>
+					<span class="red mr-4 cancledPledge">112</span>
+					<span class="mr-4">元，退回金币</span>
+					<span class="red mr-4 cancledIngot">112</span>
+					<span>个</span>
+				</p>
+
+			</div>
+
+		</div>
+		<div class="wndBotButtonSection">
+			<a href="javascript:;" class="botButton btnPay">确认</a>
+		</div>
+	</div>
+</div>
+<!--Task Template-->
+
+
+
+<textarea id="taskCellTemp" class="muban">
+	{{#results}}
+	<div class="taskCell">
+		<div class="title clearfix">
+			<span class="operation">
+		</span>
+		<span class="shop floatLeft mr-20 ml10"> <i class="plat_small {{platIcon}}"></i>
+			{{shopName}}
+		</span>
+		<span class="taskNo floatLeft mr-4">
+			推广编号：
+			<span>{{taskId}}</span>
+		</span>
+		<a target="_blank" href="/seller/task2/{{taskId}}" class="floatLeft view-detail  mr-20">【详情】</a>
+		<span class="floatLeft mr-4">
+			任务状态：
+			<span class="{{status}}">{{statusTitle}}</span>
+		</span class="floatLeft mr-4">
+		<span>发布时间：
+		<span class="{{status}}">{{pubTime}}</span></span>
+	</div>
+	
+	<div class="body">
+		<table class="normTable">
+			<thead>
+				<tr>
+					<td class="item-list"></td>
+					<td class="doing"></td>
+					<td class="express"></td>
+					<td class="opera">
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="item-list">
+						<div class="item-box">
+							<div class="pic">
+								<img src="{{itemPic}}" />
+							</div>
+							<p class="title tl">
+								{{itemTitle}}
+							</p>
+						</div>
+						{{#additionalItemPicUrl}}
+						<div class="item-box">
+							<div class="pic">
+								<img src="{{additionalItemPicUrl}}" />
+							</div>
+							<p class="title">{{additionalItemTitle}}</p>
+						</div>
+						{{/additionalItemPicUrl}}
+					</td>
+					<td> 
+						<em class="cap">未接单：<span class="waiting">{{notTakenCount}}</span></em>
+						<em class="cap">进行中：<span class="doing">{{performingCount}}</span></em>
+						<em class="cap">已完成：<span class="finished">{{finishedCount}}</span></em>
+					</td>
+					<td class="express">
+							<em class="cap">返款类型：
+							{{#sysRefund}}<span class="green">商家返款</span>{{/sysRefund}}
+							{{^sysRefund}}<span class="red">平台返款</span>{{/sysRefund}}
+							</em>
+					</td>
+					<td class="opera">
+					{{^isRealTask}}
+						<a class="btnRepublish stdColorButton" href="/task/republish2/{{taskId}}" target="_blank">一键发布</a>
+					{{/isRealTask}}
+					{{#isWaitingPay}}
+						<a class="btnRepublish stdColorButton" href="/task/publish/edit2/{{taskId}}" target="_blank">继续支付</a>
+					{{/isWaitingPay}}
+		            {{#isWaitEdit}}
+		            	<a class="btnRepublish stdColorButton" href="/task/publish/edit2/{{taskId}}" target="_blank">继续编辑</a>
+		            {{/isWaitEdit}}
+					{{#cancelFlag}}
+						<a class="btnRepublish stdColorButton cancel btn" href="javascript:;" taskId="{{taskId}}" target="_blank">撤销任务</a>
+					{{/cancelFlag}}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</div>
+{{/results}}
+</textarea>
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/date.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.datePicker.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.number.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/task/sellerTasks2.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script type="text/javascript">
+	App.module = 'myTask2';
+	// App.drivel = 'bb';
+</script>
+#{/set}

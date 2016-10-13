@@ -1,0 +1,903 @@
+[2016-08-04 09:01:38,303] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-04 10:11:21,526] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemPic] Must be checked
+[2016-08-04 10:12:18,985] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemPic] Must be checked
+[2016-08-04 10:13:46,243] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemPic] Must be checked
+[2016-08-04 11:04:45,416] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffie7
+Internal Server Error (500) for request GET /task/publish
+
+Template compilation error (In /app/views/frame.html around line 104)
+The template /app/views/frame.html does not compile : #{else} is not closed.
+
+play.exceptions.TemplateCompilationException: #{else} is not closed.
+	at play.templates.GroovyTemplateCompiler.endTag(GroovyTemplateCompiler.java:334)
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:93)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:42)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:28)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:89)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at play.templates.FastTags._extends(FastTags.java:353)
+	at play.templates.FastTags$_extends.call(Unknown Source)
+	at /app/views/TaskCenter/tasks.html.(line:1)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskPublish.publish(TaskPublish.java:98)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-08-04 11:16:30,140] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-04 11:22:39,000] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-04 11:22:56,296] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffie8
+admin.tasks2 action not found
+
+Action not found
+Action admin.tasks2 could not be found. Error raised is No method public static void tasks2() was found in class controllers.admin
+
+play.exceptions.ActionNotFoundException: Action admin.tasks2 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void tasks2() was found in class controllers.admin
+	... 3 more
+[2016-08-04 11:24:13,457] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffie9
+admin.tasks2 action not found
+
+Action not found
+Action admin.tasks2 could not be found. Error raised is No method public static void tasks2() was found in class controllers.admin
+
+play.exceptions.ActionNotFoundException: Action admin.tasks2 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void tasks2() was found in class controllers.admin
+	... 3 more
+[2016-08-04 13:36:12,118] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-04 13:39:53,259] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiea
+Error during job execution (jobs.AddKwdForFlow)
+
+Compilation error (In /app/controllers/Admin.java around line 862)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method listSellerTask(TaskSearchVo) in type Admin
+
+play.exceptions.CompilationException: Duplicate method listSellerTask(TaskSearchVo) in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 13:39:55,546] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiec
+Error during job execution (jobs.BuyerTaskCancel)
+
+Compilation error (In /app/controllers/Admin.java around line 862)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method listSellerTask(TaskSearchVo) in type Admin
+
+play.exceptions.CompilationException: Duplicate method listSellerTask(TaskSearchVo) in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 13:40:06,141] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiee
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/Admin.java around line 862)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method listSellerTask(TaskSearchVo) in type Admin
+
+play.exceptions.CompilationException: Duplicate method listSellerTask(TaskSearchVo) in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 13:42:22,808] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffieg
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 820)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : Duplicate method fetchCancelTaskInfo(long) in type TaskPublish
+
+play.exceptions.CompilationException: Duplicate method fetchCancelTaskInfo(long) in type TaskPublish
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 13:51:24,635] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiei
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/Admin.java around line 1151)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method exportTasks(TaskSearchVo, int) in type Admin
+
+play.exceptions.CompilationException: Duplicate method exportTasks(TaskSearchVo, int) in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 13:53:23,436] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [expressWeight] Required
+[2016-08-04 13:53:49,935] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiek
+Internal Server Error (500) for request GET /admin/exportTask2?count=50&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task2.java around line 1129)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper2.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy72.selectSimple(Unknown Source)
+	at models.Task2.findByPage(Task2.java:1129)
+	at controllers.Admin.exportTasks2(Admin.java:1208)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 13:53:59,099] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiel
+Internal Server Error (500) for request GET /admin/exportTask2?count=50&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task2.java around line 1129)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper2.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy72.selectSimple(Unknown Source)
+	at models.Task2.findByPage(Task2.java:1129)
+	at controllers.Admin.exportTasks2(Admin.java:1208)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 13:55:39,948] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiem
+Internal Server Error (500) for request GET /admin/exportTask2?count=50&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task2.java around line 1129)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper2.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy72.selectSimple(Unknown Source)
+	at models.Task2.findByPage(Task2.java:1129)
+	at controllers.Admin.exportTasks2(Admin.java:1208)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 13:58:12,750] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffien
+Internal Server Error (500) for request GET /admin/exportTask2?count=10&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task2.java around line 1129)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper2.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy72.selectSimple(Unknown Source)
+	at models.Task2.findByPage(Task2.java:1129)
+	at controllers.Admin.exportTasks2(Admin.java:1208)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 13:58:17,145] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffieo
+Internal Server Error (500) for request GET /admin/exportTask2?count=10&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task2.java around line 1129)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper2.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy72.selectSimple(Unknown Source)
+	at models.Task2.findByPage(Task2.java:1129)
+	at controllers.Admin.exportTasks2(Admin.java:1208)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 14:03:31,162] ERROR [jobs-thread-5] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffiep
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1165)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate method taskDetail2(Long) in type TaskCenter
+
+play.exceptions.CompilationException: Duplicate method taskDetail2(Long) in type TaskCenter
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 14:05:03,066] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [expressWeight] Required
+[2016-08-04 14:06:32,537] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffif1
+Internal Server Error (500) for request GET /admin/tasks2
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-08-04 14:06:32,538] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2398)
+	at java.lang.Class.getConstructor0(Class.java:2708)
+	at java.lang.Class.newInstance0(Class.java:328)
+	at java.lang.Class.newInstance(Class.java:310)
+	at sun.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:381)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.reflect.MethodAccessorGenerator.generate(MethodAccessorGenerator.java:377)
+	at sun.reflect.MethodAccessorGenerator.generateSerializationConstructor(MethodAccessorGenerator.java:95)
+	at sun.reflect.ReflectionFactory.newConstructorForSerialization(ReflectionFactory.java:313)
+	at java.io.ObjectStreamClass.getSerializableConstructor(ObjectStreamClass.java:1322)
+	at java.io.ObjectStreamClass.access$1500(ObjectStreamClass.java:50)
+	at java.io.ObjectStreamClass$2.run(ObjectStreamClass.java:435)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.io.ObjectStreamClass.<init>(ObjectStreamClass.java:411)
+	at java.io.ObjectStreamClass.lookup(ObjectStreamClass.java:308)
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:545)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1729)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at java.util.HashMap.readObject(HashMap.java:1029)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:969)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1852)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1756)
+[2016-08-04 14:06:36,666] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711cffif2
+Internal Server Error (500) for request GET /admin/tasks2
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:82)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at play.plugins.PluginCollection.reloadApplicationPlugins(PluginCollection.java:204)
+	at play.Play.start(Play.java:482)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-08-04 14:06:37,135] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+	at sun.misc.Unsafe.defineClass(Native Method)
+	at sun.reflect.ClassDefiner.defineClass(ClassDefiner.java:45)
+	at sun.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:381)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.reflect.MethodAccessorGenerator.generate(MethodAccessorGenerator.java:377)
+	at sun.reflect.MethodAccessorGenerator.generateSerializationConstructor(MethodAccessorGenerator.java:95)
+	at sun.reflect.ReflectionFactory.newConstructorForSerialization(ReflectionFactory.java:313)
+	at java.io.ObjectStreamClass.getSerializableConstructor(ObjectStreamClass.java:1322)
+	at java.io.ObjectStreamClass.access$1500(ObjectStreamClass.java:50)
+	at java.io.ObjectStreamClass$2.run(ObjectStreamClass.java:435)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.io.ObjectStreamClass.<init>(ObjectStreamClass.java:411)
+	at java.io.ObjectStreamClass.lookup(ObjectStreamClass.java:308)
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:545)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1729)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at java.util.HashMap.readObject(HashMap.java:1029)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:969)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1852)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1756)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at play.utils.Java.deserialize(Java.java:361)
+[2016-08-04 14:10:29,554] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpb
+Internal Server Error (500) for request GET /admin/exportTask2?count=50&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task2.java around line 1129)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper2.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper2.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task2 t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy36.selectSimple(Unknown Source)
+	at models.Task2.findByPage(Task2.java:1129)
+	at controllers.Admin.exportTasks2(Admin.java:1208)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 14:10:54,585] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpc
+Internal Server Error (500) for request GET /admin/exportTask?count=50&vo.publishTimeStart=2016-08-01%2000:00:00&vo.publishTimeEnd=2016-08-04%2000:00:00
+
+Execution exception (In /app/models/Task.java around line 1067)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous ### The error may exist in models/mappers/TaskMapper.xml ### The error may involve defaultParameterMap ### The error occurred while setting parameters ### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ? ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+### The error may exist in models/mappers/TaskMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select t.id,item_title,item_pic,total_order_num,platform,shop_name,seller_nick,publish_time,t.create_time,status from task t left join user u on t.seller_id=u.id    left join admin a on u.admin_id=a.id        WHERE  t.publish_time >= ?             and t.publish_time <= ?       order by t.create_time desc   limit ?, ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy31.selectSimple(Unknown Source)
+	at models.Task.findByPage(Task.java:1067)
+	at controllers.Admin.exportTasks(Admin.java:1166)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'status' in field list is ambiguous
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-08-04 14:16:08,376] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpd
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/Admin.java around line 813)
+The file /app/controllers/Admin.java could not be compiled. Error raised is : Duplicate method buyerTasks() in type Admin
+
+play.exceptions.CompilationException: Duplicate method buyerTasks() in type Admin
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 14:24:55,790] ERROR [jobs-thread-4] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpf
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/admins/TaskManage.java around line 152)
+The file /app/controllers/admins/TaskManage.java could not be compiled. Error raised is : The method findByPageForAdmin(TaskSearchVo) in the type BuyerTask is not applicable for the arguments (TaskSearchVo2)
+
+play.exceptions.CompilationException: The method findByPageForAdmin(TaskSearchVo) in the type BuyerTask is not applicable for the arguments (TaskSearchVo2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 14:40:47,401] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjph
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/admins/TaskManage.java around line 268)
+The file /app/controllers/admins/TaskManage.java could not be compiled. Error raised is : The method findByPageForAdmin(TaskSearchVo) in the type BuyerTask is not applicable for the arguments (TaskSearchVo2)
+
+play.exceptions.CompilationException: The method findByPageForAdmin(TaskSearchVo) in the type BuyerTask is not applicable for the arguments (TaskSearchVo2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-08-04 14:44:00,141] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpj
+Internal Server Error (500) for request GET /admin/timeout2
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-08-04 14:44:00,141] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2300)
+	at java.lang.Class.getDeclaredField(Class.java:1882)
+	at java.io.ObjectStreamClass.getDeclaredSUID(ObjectStreamClass.java:1605)
+	at java.io.ObjectStreamClass.access$700(ObjectStreamClass.java:50)
+	at java.io.ObjectStreamClass$2.run(ObjectStreamClass.java:423)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.io.ObjectStreamClass.<init>(ObjectStreamClass.java:411)
+	at java.io.ObjectStreamClass.lookup(ObjectStreamClass.java:308)
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:545)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1729)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at java.util.HashMap.readObject(HashMap.java:1029)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:969)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1852)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1756)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at play.utils.Java.deserialize(Java.java:361)
+	at play.templates.GroovyTemplate.directLoad(GroovyTemplate.java:87)
+	at play.templates.BaseTemplate.loadFromCache(BaseTemplate.java:56)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:81)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at play.server.PlayHandler.serve500(PlayHandler.java:792)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:247)
+[2016-08-04 14:44:57,891] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpk
+Internal Server Error (500) for request GET /admin/buyerTask/listAllTimeoutCount?__ts=1470293094487&vo.platform=&vo.device=&vo.type=sllerGood&vo.buyerNick=&vo.sellerNick=&vo.buyerAccountNick=&vo.orderId=&vo.shopName=&vo.taskId=&vo.buyerTaskId=
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-08-04 14:44:58,343] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2398)
+	at java.lang.Class.getConstructor0(Class.java:2708)
+	at java.lang.Class.newInstance0(Class.java:328)
+	at java.lang.Class.newInstance(Class.java:310)
+	at sun.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:381)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.reflect.MethodAccessorGenerator.generate(MethodAccessorGenerator.java:377)
+	at sun.reflect.MethodAccessorGenerator.generateSerializationConstructor(MethodAccessorGenerator.java:95)
+	at sun.reflect.ReflectionFactory.newConstructorForSerialization(ReflectionFactory.java:313)
+	at java.io.ObjectStreamClass.getSerializableConstructor(ObjectStreamClass.java:1322)
+	at java.io.ObjectStreamClass.access$1500(ObjectStreamClass.java:50)
+	at java.io.ObjectStreamClass$2.run(ObjectStreamClass.java:435)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.io.ObjectStreamClass.<init>(ObjectStreamClass.java:411)
+	at java.io.ObjectStreamClass.lookup(ObjectStreamClass.java:308)
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:545)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1729)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at java.util.HashMap.readObject(HashMap.java:1029)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:969)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1852)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1756)
+[2016-08-04 14:45:01,323] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@711ddpjpl
+Internal Server Error (500) for request GET /admin/buyerTask/listAllTimeout?__ts=1470293094503&vo.platform=&vo.device=&vo.type=sllerGood&vo.buyerNick=&vo.sellerNick=&vo.buyerAccountNick=&vo.orderId=&vo.shopName=&vo.taskId=&vo.buyerTaskId=&vo.pageNo=1&vo.pageSize=20
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+[2016-08-04 14:45:01,763] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+[2016-08-04 15:09:29,667] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null

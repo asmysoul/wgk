@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.UserMapper">
+
+	<resultMap id="BaseResultMap" type="models.User"></resultMap>
+	
+	<select id="findUserTakenCount" resultMap="BaseResultMap">
+	SELECT u.nick,u.id FROM buyer_task bt RIGHT JOIN
+	`user` u ON u.id=bt.buyer_id WHERE buyer_id IN(
+	SELECT
+	DISTINCT buyer_id
+	FROM
+	`user` u
+	RIGHT JOIN buyer_task b ON u.id = b.buyer_id
+	WHERE
+	u.type = 'BUYER'
+	AND DATE_FORMAT(b.take_time, '%Y-%m-%d') = #{createTime}
+	AND b. STATUS != 'CANCLED'
+	AND buyer_id NOT IN (
+	SELECT
+	buyer_id
+	FROM
+	buyer_task
+	WHERE
+	DATE_FORMAT(take_time, '%Y-%m-%d') &lt; #{createTime})
+
+	) AND DATE_FORMAT(take_time, '%Y-%m-%d')= #{createTime}
+
+</select>
+
+	<update id="updateById" parameterType="models.User">
+		update user
+		<set>
+			<if test="password !=null">
+				password = #{password},
+			</if>
+			<if test="payPassword!= null">
+				pay_password = #{payPassword},
+			</if>
+			<if test="email!= null">
+				email = #{email},
+			</if>
+			<if test="adminId!= null">
+				admin_id = #{adminId},
+			</if>
+			<if test="name!= null">
+				name = #{name},
+			</if>
+			<if test="qq!= null">
+				qq = #{qq},
+			</if>
+			<if test="mobile!= null">
+				mobile = #{mobile},
+			</if>
+			<if test="registTime != null">
+				regist_time = #{registTime},
+			</if>
+			<if test="status != null">
+				status = #{status},
+			</if>
+			<if test="vipStatus != null">
+				vip_status = #{vipStatus},
+			</if>
+			<if test="activeCode != null">
+				active_code = #{activeCode},
+			</if>
+			<if test="activeCodeCreateTime != null">
+				active_code_create_time = #{activeCodeCreateTime},
+			</if>
+			<if test="dueTime != null">
+				due_time = #{dueTime},
+			</if>
+			<if test="modifyTime != null">
+				modify_time = #{modifyTime}
+			</if>
+		</set>
+		where id = #{id}
+	</update>
+
+	<!-- 后台管理：用户列表 -->
+	<sql id="where">
+		<where>
+			<if test="id !=null">
+				and u.id=#{id}
+			</if>
+			<if test="nick !=null">
+				and u.nick=#{nick}
+			</if>
+			<if test="email !=null">
+				and u.email=#{email}
+			</if>
+			<if test="qq !=null">
+				and u.qq=#{qq}
+			</if>
+			<if test="mobile !=null">
+				and u.mobile=#{mobile}
+			</if>
+			<if test="adminName !=null">
+				and a.name=#{adminName}
+			</if>
+			<if test="type !=null and type.toString() !='ALL'">
+				and u.type=#{type}
+			</if>
+			<if test="status !=null and status.toString() !='ALL'">
+				and u.status=#{status}
+			</if>
+			<if test="vipStatus !=null and vipStatus.toString() !='ALL'">
+				and u.vip_status=#{vipStatus}
+			</if>
+			<if test="registTimeStart !=null">
+				<![CDATA[ and u.regist_time>=#{registTimeStart} ]]>
+			</if>
+			<if test="registTimeEnd !=null">
+				<![CDATA[ and u.regist_time<=#{registTimeEnd} ]]>
+			</if>
+		</where>
+	</sql>
+	<select id="count" resultType="java.lang.Integer">
+		select count(1) from user u left join admin a on u.admin_id = a.id 
+		<include refid="where"/>
+	</select>
+	<select id="selectListForAdmin" resultMap="BaseResultMap">
+		select u.id,u.nick,u.admin_id,a.name,u.vip_status,u.email,u.qq,u.mobile,u.type,u.status,u.regist_time,u.create_time from user u left join admin a on u.admin_id = a.id 
+		<include refid="where"/>
+		order by u.regist_time desc
+		limit #{startIndex}, #{pageSize}
+	</select>
+	
+</mapper>
+	

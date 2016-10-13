@@ -1,0 +1,591 @@
+[2016-07-26 13:57:48,775] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p00i8ij
+Internal Server Error (500) for request GET /seller/tasks/examine2/WAIT_EXAMINE
+
+Template not found (In /app/controllers/TaskCenter.java around line 945)
+The template TaskCenter/examine2.html does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : TaskCenter/examine2.html
+	at play.mvc.Controller.renderTemplate(Controller.java:685)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.examine2(TaskCenter.java:945)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-07-26 13:58:50,891] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: Incorrect value
+[2016-07-26 14:09:09,695] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p00i8ik
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 633)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : The method findVoByPage(TaskSearchVo) in the type Task is not applicable for the arguments (TaskSearchVo2)
+
+play.exceptions.CompilationException: The method findVoByPage(TaskSearchVo) in the type Task is not applicable for the arguments (TaskSearchVo2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-26 14:10:27,305] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-07-26 14:10:27,305] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy77.countForSeller(Unknown Source)
+	at models.Task2.findVoByPage(Task2.java:969)
+	at controllers.TaskCenter.listSellerTasks2(TaskCenter.java:644)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:380)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:170)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:152)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:48)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:97)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:116)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:1657)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:92)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:49)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:333)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:413)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:395)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:48)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:33)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:54)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:40)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:278)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 33 more
+[2016-07-26 14:10:36,401] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-07-26 14:10:36,401] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy77.countForSeller(Unknown Source)
+	at models.Task2.findVoByPage(Task2.java:969)
+	at controllers.TaskCenter.listSellerTasks2(TaskCenter.java:644)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:380)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:170)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:152)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:48)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:97)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:116)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:1657)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:92)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:49)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:333)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:413)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:395)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:48)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:33)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:54)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:40)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:278)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 33 more
+[2016-07-26 14:10:51,402] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-07-26 14:10:51,402] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy77.countForSeller(Unknown Source)
+	at models.Task2.findVoByPage(Task2.java:969)
+	at controllers.TaskCenter.listSellerTasks2(TaskCenter.java:644)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:380)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:170)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:152)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:48)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:97)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:116)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:1657)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:92)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:49)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:333)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:413)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:395)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:48)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:33)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:54)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:40)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:278)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 33 more
+[2016-07-26 14:11:13,875] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-07-26 14:11:13,875] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy77.countForSeller(Unknown Source)
+	at models.Task2.findVoByPage(Task2.java:969)
+	at controllers.TaskCenter.listSellerTasks2(TaskCenter.java:644)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:380)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:170)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:152)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:48)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:97)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:116)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:1657)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:92)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:49)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:333)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:413)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:395)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:48)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:33)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:54)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:40)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:278)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 33 more
+[2016-07-26 14:13:29,816] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:232) - =======>Server Fatal Error<======
+[2016-07-26 14:13:29,816] ERROR [play-thread-1] com.aton.base.BaseController.handleServerError(BaseController.java:233) - 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy41.countForSeller(Unknown Source)
+	at models.Task2.findVoByPage(Task2.java:969)
+	at controllers.TaskCenter.listSellerTasks2(TaskCenter.java:644)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:267)
+	at play.Invoker$Invocation$1.apply(Invoker.java:290)
+	at play.Invoker$Invocation$1.apply(Invoker.java:287)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.Invoker$Invocation.withinFilter(Invoker.java:271)
+	at play.Invoker$Invocation.run(Invoker.java:287)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:245)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'platform' in 'class vos.TaskSearchVo2'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:380)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:170)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:152)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:48)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:97)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:116)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:1657)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:92)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:49)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:170)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:210)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:333)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:413)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:395)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:48)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:33)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:54)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:40)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:278)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 33 more
+[2016-07-26 14:28:59,527] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p04kk5l
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 757)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate method taskDetail(Long) in type TaskCenter
+
+play.exceptions.CompilationException: Duplicate method taskDetail(Long) in type TaskCenter
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-26 14:31:45,463] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p04kk5n
+Internal Server Error (500) for request GET /seller/task2/757823259042381824
+
+Template execution error (In /app/views/TaskCenter/taskDetail2.html around line 161)
+Execution error occured in template /app/views/TaskCenter/taskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.taskDetail2(TaskCenter.java:900)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/taskDetail2.html.(line:161)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-07-26 14:34:19,936] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p04kk5o
+Internal Server Error (500) for request GET /seller/task2/756413098700570624
+
+Template execution error (In /app/views/TaskCenter/taskDetail2.html around line 161)
+Execution error occured in template /app/views/TaskCenter/taskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.taskDetail2(TaskCenter.java:900)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/taskDetail2.html.(line:161)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-07-26 14:34:25,808] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p04kk5p
+Internal Server Error (500) for request GET /seller/task2/756415293533716480
+
+Template execution error (In /app/views/TaskCenter/taskDetail2.html around line 161)
+Execution error occured in template /app/views/TaskCenter/taskDetail2.html. Exception raised was NullPointerException : Cannot get property 'title' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'title' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskCenter.taskDetail2(TaskCenter.java:900)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
+	at /app/views/TaskCenter/taskDetail2.html.(line:161)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-07-26 16:39:18,631] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p04kk60
+Error during job execution (jobs.Bootstrap)
+
+Compilation error (In /app/controllers/TaskPublish.java around line 289)
+The file /app/controllers/TaskPublish.java could not be compiled. Error raised is : The method findByUrl(String, Platform, TaskType) in the type Item is not applicable for the arguments (String, Platform2, TaskType2)
+
+play.exceptions.CompilationException: The method findByUrl(String, Platform, TaskType) in the type Item is not applicable for the arguments (String, Platform2, TaskType2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-26 16:39:18,631] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p04kk61
+Error during job execution (jobs.TaskKeeper)
+
+Oops: CompilationException
+An unexpected error occured caused by exception CompilationException: The method findByUrl(String, Platform, TaskType) in the type Item is not applicable for the arguments (String, Platform2, TaskType2)
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.jobs.Job.onException(Job.java:157)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: play.exceptions.CompilationException: The method findByUrl(String, Platform, TaskType) in the type Item is not applicable for the arguments (String, Platform2, TaskType2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	... 1 more
+[2016-07-26 16:49:48,168] ERROR [jobs-thread-5] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p0n7c5d
+Error during job execution (jobs.TaskKeeper)
+
+Oops: ClassNotFoundException
+An unexpected error occured caused by exception ClassNotFoundException: models.Item2
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.classloading.ApplicationClasses.getAnnotatedClasses(ApplicationClasses.java:100)
+	at play.classloading.ApplicationClassloader.getAnnotatedClasses(ApplicationClassloader.java:491)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:127)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:515)
+	at play.Play.start(Play.java:537)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+Caused by: java.lang.ClassNotFoundException: models.Item2
+	at java.lang.ClassLoader.findClass(ClassLoader.java:358)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:91)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at play.classloading.ApplicationClasses.getAnnotatedClasses(ApplicationClasses.java:98)
+	... 8 more
+[2016-07-26 16:52:31,560] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70p0n7c5f
+Internal Server Error (500) for request GET /seller/tasks2
+
+Oops: ClassNotFoundException
+An unexpected error occured caused by exception ClassNotFoundException: models.Item2
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.classloading.ApplicationClasses.getAnnotatedClasses(ApplicationClasses.java:100)
+	at play.classloading.ApplicationClassloader.getAnnotatedClasses(ApplicationClassloader.java:491)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:127)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:515)
+	at play.Play.start(Play.java:537)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.ClassNotFoundException: models.Item2
+	at java.lang.ClassLoader.findClass(ClassLoader.java:358)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:91)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at play.classloading.ApplicationClasses.getAnnotatedClasses(ApplicationClasses.java:98)
+	... 7 more
+[2016-07-26 17:17:21,210] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemUrl] Required
+[2016-07-26 17:17:26,893] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemUrl] Required
+[2016-07-26 17:23:49,224] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.itemUrl] Required

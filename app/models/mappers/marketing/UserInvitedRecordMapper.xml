@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.marketing.UserInvitedRecordMapper">
+
+	<resultMap id="BaseResultMap" type="models.marketing.UserInvitedRecord"></resultMap>
+
+	<update id="updateById" parameterType="models.User">
+		update user
+		<set>
+			<if test="password !=null">
+				password = #{password},
+			</if>
+			<if test="payPassword!= null">
+				pay_password = #{payPassword},
+			</if>
+			<if test="email!= null">
+				email = #{email},
+			</if>
+			<if test="qq!= null">
+				qq = #{qq},
+			</if>
+			<if test="mobile!= null">
+				mobile = #{mobile},
+			</if>
+			<if test="registTime != null">
+				regist_time = #{registTime},
+			</if>
+			<if test="status != null">
+				status = #{status},
+			</if>
+			<if test="activeCode != null">
+				active_code = #{activeCode},
+			</if>
+			<if test="activeCodeCreateTime != null">
+				active_code_create_time = #{activeCodeCreateTime},
+			</if>
+			<if test="dueTime != null">
+				due_time = #{dueTime},
+			</if>
+			modify_time = #{modifyTime}
+		</set>
+		where id = #{id}
+	</update>
+
+	<!-- 后台管理：用户列表 -->
+	<sql id="where">
+		<where>
+			<if test="id !=null">
+				and u.id=#{id}
+			</if>
+			<if test="nick !=null">
+				and u.nick=#{nick}
+			</if>
+			<if test="inviteNick !=null">
+				and i.nick=#{inviteNick}
+			</if>
+			<if test="email !=null">
+				and u.email=#{email}
+			</if>
+			<if test="qq !=null">
+				and u.qq=#{qq}
+			</if>
+			<if test="mobile !=null">
+				and u.mobile=#{mobile}
+			</if>
+			<if test="type !=null and type.toString() !='ALL'">
+				and u.type=#{type}
+			</if>
+			<if test="status !=null and status.toString() !='ALL'">
+				and u.status=#{status}
+			</if>
+			<if test="registTimeStart !=null">
+				<![CDATA[ and u.regist_time>=#{registTimeStart} ]]>
+			</if>
+			<if test="registTimeEnd !=null">
+				<![CDATA[ and u.regist_time<=#{registTimeEnd} ]]>
+			</if>
+
+		</where>
+	</sql>
+	<select id="count" resultType="java.lang.Integer">
+		select count(1)
+		from
+		user_invited_record a
+		left join
+		user u on a.user_id =
+		u.id
+		left join
+		user i on a.invite_user_id = i.id
+		<include refid="where" />
+	</select>
+	<select id="selectList" resultMap="BaseResultMap">
+		SELECT
+		a.id,
+		a.invite_user_id,
+		a.user_id,
+		i.nick inviteNick,
+		u.nick,
+		u.type,
+		u.qq,
+		u.status,
+		u.regist_time,
+		a.member_open_time,
+		a.reward_ingot,
+		a.create_time,
+		a.modify_time
+		from
+		user_invited_record a
+		left join
+		user u on
+		a.user_id = u.id
+		left join
+		user i on a.invite_user_id = i.id
+		<where>
+			<if test="id !=null">
+				and u.id=#{id}
+			</if>
+			<if test="nick !=null">
+				and u.nick=#{nick}
+			</if>
+			<if test="inviteNick !=null">
+				and i.nick=#{inviteNick}
+			</if>
+			<if test="email !=null">
+				and u.email=#{email}
+			</if>
+			<if test="qq !=null">
+				and u.qq=#{qq}
+			</if>
+			<if test="mobile !=null">
+				and u.mobile=#{mobile}
+			</if>
+			<if test="type !=null and type.toString() !='ALL'">
+				and u.type=#{type}
+			</if>
+			<if test="status !=null and status.toString() !='ALL'">
+				and u.status=#{status}
+			</if>
+			<if test="registTimeStart !=null">
+				<![CDATA[ and u.regist_time>=#{registTimeStart} ]]>
+			</if>
+			<if test="registTimeEnd !=null">
+				<![CDATA[ and u.regist_time<=#{registTimeEnd} ]]>
+			</if>
+
+			<if test="memberOpenTimeStart !=null">
+				<![CDATA[ and a.member_open_time>=#{memberOpenTimeStart} ]]>
+			</if>
+			<if test="memberOpenTimeEnd !=null">
+				<![CDATA[ and a.member_open_time<=#{memberOpenTimeEnd} ]]>
+			</if>
+		</where>
+		order by
+		a.create_time desc
+		limit #{startIndex}, #{pageSize}
+
+
+	</select>
+	<insert id="insert" parameterType="models.marketing.UserInvitedRecord">
+		insert into user_invited_record
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			id,
+			invite_user_id,user_id,create_time, modify_time
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			#{id,jdbcType=BIGINT},#{inviteUserId},#{userId},#{createTime},#{modifyTime}
+		</trim>
+	</insert>
+
+	<update id="update" parameterType="models.marketing.UserInvitedRecord">
+		update user_invited_record
+		<set>
+			<if test="memberOpenTime !=null and memberOpenTime!=''">
+				member_open_time = #{memberOpenTime},
+			</if>
+			<if test="rewardIngot!= null and rewardIngot!=''">
+				reward_ingot = #{rewardIngot},
+			</if>
+			modify_time = #{modifyTime}
+		</set>
+		where id = #{id}
+	</update>
+</mapper>
+	

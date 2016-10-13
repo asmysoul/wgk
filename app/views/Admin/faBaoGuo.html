@@ -1,0 +1,109 @@
+#{extends 'frame.html' /}
+#{set title:'发包裹' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/admin/express.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.pagination.css'}" />
+#{/set}
+
+<div class="contentCard">
+  	
+	<div class="contentTitle">
+		<span class="iconfont">&#xf00bf;</span>
+		<span class="dingdan"><a href="javascript:;" id="waitExport" class="focus">待生成订单</a>&nbsp;&nbsp;<a href="javascript:;" id="waitUpload">待导出订单</a>&nbsp;&nbsp;<a href="javascript:;" id="finishedUpload">已导出订单</a>&nbsp;&nbsp;</span>
+		<span class="floatRight">
+			<form action="/admin/fabaoguo/uploadOrders" method="post" id="uploadForm" enctype="multipart/form-data" target="id_iframe">
+				快递单
+				#{authenticityToken /}
+				<input type="file" name="file" class="fileInput" multiple="multiple"/>	
+				<a href="javascript:;" id="upload">导入</a>
+			</form>
+		</span>
+		
+		<span class="floatRight">
+		
+			<form id="exportForm" action="/admin/fabaoguo/exportOrders" method="post">
+				批次号：
+				<input type="text"  name="vo.batchNum" id="batchNum" />
+				<input type="hidden"  name="vo.status" id="orderStatus" />		
+				设置导出数量：
+				<input type="text" class="required" name="vo.exportNo" id="exportNum" style="width:60px;color:red;"/>	
+				#{authenticityToken /}
+				<a href="javascript:;" id="btnExportOrder" target="iframe">导出</a>
+				&nbsp;&nbsp;&nbsp;
+				<span id="shuaxin" class="" style="display:none">导出订单后请刷新页面&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			</form>
+		</span>
+		<span class="floatRight mr20 mt10" style="line-height:1;">
+		<a class="stdColorButton floatLeft printBtn" href="javascript:;" id="printBtn">生成运单号</a>
+		</span>
+		<span class="floatRight">
+			<iframe id="iframe" name="id_iframe" style="display:none; width: 800px; height: 40px;"></iframe>
+		</span>
+	</div>
+	<div class="contentBody">
+		<table class="normTable">
+			<thead>
+				<tr>
+					<td>淘宝订单号</td>
+					<td>批次号</td>
+					<td>下单时间</td>
+					<td>运单号</td>
+					<td>发件人姓名</td>
+					<td>发件人电话</td>
+					<td>发件人地址</td>
+					<td>收货人姓名</td>
+					<td>收货人电话</td>
+					<td>收件人地址</td>
+					<td>物品重量</td>
+					<td>产品类别</td>
+					<td>揽件网点</td>
+					<td>备注</td>
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody id="orderContainer"></tbody>
+		</table>
+		<div id="noMsg"><div class="warnBox"><span class="iconfont">&#xf00b6;</span>没有订单号!</div></div>
+		<div class="pagin-btm clearFix"style="display: none;">
+			<div class="pagination"></div>
+		</div>
+		<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+			<div class="maskLayer"></div>
+			<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />		
+		</div>
+	</div>
+</div>
+<textarea id="orderTemp" class="muban">
+{{#results}}
+	<tr>
+		<td>{{order_sn}}</td>
+		<td>{{batch_num}}</td>
+		<td>{{sendTimeStr}}</td>
+		<td>{{expressNo}}</td>
+		<td>{{send_name}}</td>
+		<td>{{send_tel}}</td>
+		<td>{{send_addr}}</td>
+		<td>{{receive_name}}</td>
+		<td>{{receive_tel}}</td>
+		<td>{{receive_addr}}</td>
+		<td>{{weight}}</td>
+		<td></td>
+		<td>{{net_no}}</td>
+		<td>{{comment}}</td>
+		<td>
+		
+		{{#isWaitImport}}
+		<a class="stdColorButton btnResetStatus" href="javascript:;" data-id="{{id}}">重置状态</a>
+		{{/isWaitImport}}
+		</td>
+	</tr>
+{{/results}}
+</textarea>
+
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/admin/fabaoguo.js'}" type="text/javascript"></script>
+<script type="text/javascript">App.module = 'fabaoguo';</script>
+#{/set}

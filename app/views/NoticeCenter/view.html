@@ -1,0 +1,11 @@
+#{extends 'frame.html' /}
+#{set title:'公告详情' /}
+
+<div class="contentCard">
+	<div class="contentTitle">
+		<span class="iconfont">&#xf00b6;</span>
+		${notice?.title}
+		<span class="floatRight">${notice?.createTime.format("yyyy-MM-dd HH:mm")}</span>
+	</div>
+	<div class="contentBody">${notice?.content.raw()}</div>
+</div>

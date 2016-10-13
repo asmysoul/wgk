@@ -1,0 +1,86 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/index.css'}" />
+<link rel="stylesheet" type="text/css" href="@{'/public/javascripts/jcarousel/lib/jquery.jcarousel.css'}" />
+<link rel="stylesheet" type="text/css" href="@{'/public/javascripts/jcarousel/skins/tango/skin.css'}" />
+#{/set}
+<div class="body">
+	<div id="wrap">
+		<ul id="mycarousel" class="jcarousel-skin-tango">
+			<li><img src="@{'/public/images/guide/Carousel.jpg'}"  alt="" /></li>
+			<li><img src="@{'/public/images/guide/Carousel.jpg'}"  alt="" /></li>
+			<li><img src="@{'/public/images/guide/Carousel.jpg'}"  alt="" /></li>
+			<li><img src="@{'/public/images/guide/Carousel.jpg'}"  alt="" /></li>
+			<li><img src="@{'/public/images/guide/Carousel.jpg'}"  alt="" /></li>
+			<li><img src="@{'/public/images/guide/Carousel.jpg'}"  alt="" /></li>
+			<li><img src="@{'/public/images/guide/Carousel.jpg'}"  alt="" /></li>
+			<li><img src="@{'/public/images/guide/Carousel.jpg'}"  alt="" /></li>
+			<li><img src="@{'/public/images/guide/Carousel.jpg'}"  alt="" /></li>
+			<li><img src="@{'/public/images/guide/Carousel.jpg'}"  alt="" /></li>
+		</ul>
+	</div>
+	<div class="contentBody">
+		<div class="InformationPanel" >
+			<div class="box floatLeft">
+				<p>已安全增长的订单数</p>
+				<em>￥0.00</em>
+			</div>
+			<div class="box floatLeft">
+				<p>已加入的买手</p>
+				<em>￥7.00</em>
+			</div>
+			<div class="box floatLeft">
+				<p>平台共计发放佣金</p>
+				<em>￥0.00</em>
+			</div>
+			<div class="box floatLeft">
+				<p>今日买手接单总数</p>
+				<em>￥0.00</em>
+			</div>
+			<div class="box floatLeft">
+				<p>昨日买手接单总数</p>
+				<em>￥0.00</em>
+			</div>
+		</div>
+	</div>
+	<div class="contentBody">
+		<div class="procedure">
+			<h2 class="title">
+				<span class="floatLeft">业务流程</span>
+			</h2>
+			<img src="@{'/public/images/guide/step.jpg'}">			
+		</div>
+	</div>
+	<div class="contentBody">		
+		<h2 class="title">
+		<span class="floatLeft">正在发生</span>
+		</h2>
+		<div class="nowingBody">
+			<div class="nowing-con floatLeft">
+				<h3>发布任务</h3>
+			</div>
+			<div class="nowing-con floatLeft">
+				<h3>完成任务</h3>
+			</div>
+			<div class="nowing-con floatLeft">
+				<h3>提现</h3>
+			</div>
+		</div>
+	</div>
+	<div class="contentBody">
+		<h2 class="title">
+			<span class="floatLeft">安全保障</span>
+		</h2>
+		<img src="@{'/public/images/guide/anquan_detail2.gif'}"/>
+	</div>
+</div>
+
+
+#{set 'moreScripts'}
+<script type="text/javascript" src="@{'/public/javascripts/jcarousel/lib/jquery-1.2.3.pack.js'}"></script>
+<script type="text/javascript" src="@{'/public/javascripts/jcarousel/lib/jquery.jcarousel.pack.js'}"></script>
+<script src="@{'/public/javascripts/carousel.set.js'}" type="text/javascript"></script>
+
+#{/set}

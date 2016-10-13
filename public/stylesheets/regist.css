@@ -1,0 +1,73 @@
+body{
+	background:url("/public/images/bg.png");
+}
+#topBar{
+	position: static;
+}
+#centerBox{
+	width: 900px;
+	margin: 60px auto;
+}
+.panelLine{
+	height: auto;
+}
+.panelLine .long,.harflong{
+	width: 250px;
+	padding: 5px 8px;
+}
+.harflong{
+	width: 124px;
+}
+.panelLine .rad{
+	margin-top: 12px;
+}
+.lbl{
+	width: 90px;
+	font-family: "Microsoft Yahei";
+}
+.formBlock{
+	width: 630px;
+	margin-top: 20px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 0 7px rgba(200,200,200,.75);
+	box-shadow: 0 0 7px rgba(200,200,200,.75);
+	overflow: hidden;
+	position: relative;
+	border: 1px solid #c9ccd0;
+	background-color: #fafafa;
+}
+#formTitle{
+	height: 60px;
+	font-family: "Microsoft Yahei";
+	text-align: center;
+	line-height: 60px;
+	border-bottom: solid 1px #e6e6e6;
+	color: #465567;
+}
+#formSection{
+	/* 右侧留位置避免校验提示信息换行 */
+	padding: 20px 30px 20px 50px;
+}
+/*----------------------------------------*/
+#agreement{
+	width: 240px;
+	margin-top: 20px;
+	margin-left: 20px;
+	overflow: hidden;
+	-webkit-box-shadow: 0 0 7px rgba(200,200,200,.75);
+	box-shadow: 0 0 7px rgba(200,200,200,.75);
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #c9ccd0;
+	background-color: #FFF;
+}
+.quoteBox{
+	padding:30px;
+}
+.captcha{
+	padding:3px 15px;
+	cursor: pointer;
+	font-size: 12px;
+	width: 118px;
+}

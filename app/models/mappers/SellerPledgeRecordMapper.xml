@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.SellerPledgeRecordMapper">
+	<resultMap id="BaseResultMap" type="models.SellerPledgeRecord">
+	</resultMap>
+	
+	<sql id="where">
+		<where>
+			<if test="userId != null">
+				and seller_id = #{userId}
+			</if>
+			<if test="userNick !=null">
+				and u.nick like '%${userNick}%'
+			</if>
+			<if test="taskId !=null">
+				and s.task_id = #{taskId}
+			</if>
+			<if test="createTimeStart !=null">
+				<![CDATA[ and s.create_time>=#{createTimeStart} ]]>
+			</if>
+			<if test="createTimeEnd !=null">
+				<![CDATA[ and s.create_time<=#{createTimeEnd} ]]>
+			</if>
+			<if test="amountStart !=null">
+				<![CDATA[ and s.amount>=#{amountStart} ]]>
+			</if>
+			<if test="amountEnd !=null">
+				<![CDATA[ and s.amount<=#{amountEnd} ]]>
+			</if>
+			<if test="sign != null">
+				and s.sign = #{sign}
+			</if>
+		</where>
+	</sql>
+	
+	<select id="selectList" resultMap="BaseResultMap">
+		select s.task_id taskIdStr,s.create_time,s.amount,s.sign,s.memo,s.balance,u.nick userNick from seller_pledge_record s
+		left join user u on u.id = s.seller_id
+		<include refid="where"/>
+		order by s.id desc
+		limit #{startIndex}, #{pageSize}
+	</select>
+	<select id="count" resultType="java.lang.Integer">
+		select count(1) from seller_pledge_record s left join user u on u.id = s.seller_id
+		<include refid="where"/>
+	</select>
+</mapper>
+	

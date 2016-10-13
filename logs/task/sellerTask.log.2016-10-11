@@ -1,0 +1,299 @@
+2016-10-11 10:47:50 User=1677 publish new task2
+2016-10-11 10:50:24 Create new task for user=1677
+2016-10-11 10:50:28 Create new task for user=1677
+2016-10-11 10:50:38 Create new task for user=1677
+2016-10-11 10:51:24 Check status of task=785673935919251456, user=1677
+2016-10-11 10:51:24 Save task=785673935919251456 for user=1677
+2016-10-11 10:51:24 Create new task for user=1677
+2016-10-11 10:53:13 Check status of task=785673935919251456, user=1677
+2016-10-11 10:53:13 Save task=785673935919251456 for user=1677
+2016-10-11 10:53:13 Create new task for user=1677
+2016-10-11 10:53:56 Check status of task=785673935919251456, user=1677
+2016-10-11 10:53:56 Save task=785673935919251456 for user=1677
+2016-10-11 10:53:56 Create new task for user=1677
+2016-10-11 10:54:02 User=1677 pay for task=785673935919251456
+2016-10-11 10:54:02 User=1677 pay task=785673935919251456 with amount=500, useIngot=true,usePledge=false
+2016-10-11 10:54:37 User=1677 publish new task2
+2016-10-11 10:55:11 Create new task for user=1677
+2016-10-11 10:55:33 Check status of task=785675083556323328, user=1677
+2016-10-11 10:55:33 Save task=785675083556323328 for user=1677
+2016-10-11 10:55:33 Create new task for user=1677
+2016-10-11 10:55:36 User=1677 pay for task=785675083556323328
+2016-10-11 10:55:36 User=1677 pay task=785675083556323328 with amount=500, useIngot=true,usePledge=true
+2016-10-11 10:55:59 User=1677 publish new task2
+2016-10-11 10:56:53 User=1677 edit task=785675083556323328
+2016-10-11 10:58:02 User=1677 edit task=785673935919251456
+2016-10-11 10:58:31 Check status of task=785673935919251456, user=1677
+2016-10-11 10:58:31 Save task=785673935919251456 for user=1677
+2016-10-11 10:58:31 Create new task for user=1677
+2016-10-11 10:58:34 User=1677 pay for task=785673935919251456
+2016-10-11 10:58:34 User=1677 pay task=785673935919251456 with amount=500, useIngot=true,usePledge=true
+2016-10-11 10:59:21 User=1677 publish new task2
+2016-10-11 11:01:09 User=1677 edit task=785675083556323328
+2016-10-11 11:01:35 Check status of task=785675083556323328, user=1677
+2016-10-11 11:01:35 Save task=785675083556323328 for user=1677
+2016-10-11 11:01:35 Create new task for user=1677
+2016-10-11 11:01:38 User=1677 pay for task=785675083556323328
+2016-10-11 11:01:38 User=1677 pay task=785675083556323328 with amount=400, useIngot=true,usePledge=false
+2016-10-11 11:02:41 User=1677 publish new task2
+2016-10-11 11:04:18 Create new task for user=1677
+2016-10-11 11:04:22 User=1677 pay for task=785677376116752384
+2016-10-11 11:04:22 User=1677 pay task=785677376116752384 with amount=400, useIngot=true,usePledge=false
+2016-10-11 11:05:09 User=1677 publish new task
+2016-10-11 11:05:14 User=1677 publish new task2
+2016-10-11 11:05:55 Create new task for user=1677
+2016-10-11 11:05:58 User=1677 pay for task=785677783262035968
+2016-10-11 11:05:58 User=1677 pay task=785677783262035968 with amount=400, useIngot=true,usePledge=false
+2016-10-11 11:06:21 User=1677 publish new task2
+2016-10-11 11:06:51 Create new task for user=1677
+2016-10-11 11:06:54 User=1677 pay for task=785678018507964416
+2016-10-11 11:06:54 User=1677 pay task=785678018507964416 with amount=400, useIngot=true,usePledge=false
+2016-10-11 11:11:22 User=1677 repubish task2=785678018507964416
+2016-10-11 11:11:43 Create new task for user=1677
+2016-10-11 11:11:46 User=1677 pay for task=785679244146507776
+2016-10-11 11:11:46 User=1677 pay task=785679244146507776 with amount=250, useIngot=true,usePledge=true
+2016-10-11 11:17:54 User=1677 edit task=785673935919251456
+2016-10-11 11:18:18 Check status of task=785673935919251456, user=1677
+2016-10-11 11:18:18 Save task=785673935919251456 for user=1677
+2016-10-11 11:18:18 Create new task for user=1677
+2016-10-11 11:18:21 User=1677 pay for task=785673935919251456
+2016-10-11 11:18:21 User=1677 pay task=785673935919251456 with amount=400, useIngot=true,usePledge=true
+2016-10-11 11:21:33 User=1677 repubish task2=785679244146507776
+2016-10-11 11:22:00 Create new task for user=1677
+2016-10-11 11:22:02 User=1677 pay for task=785681829901369344
+2016-10-11 11:22:02 User=1677 pay task=785681829901369344 with amount=400, useIngot=true,usePledge=true
+2016-10-11 11:48:30 User=1677 edit task=773081043149258752
+2016-10-11 11:48:46 User=1677 publish new task2
+2016-10-11 11:48:50 User=1677 publish new task
+2016-10-11 13:21:38 User=1677 publish new task2
+2016-10-11 13:21:47 User=1677 publish new task2
+2016-10-11 13:21:53 User=1677 publish new task2
+2016-10-11 13:23:24 User=1677 publish new task2
+2016-10-11 13:24:46 User=1677 publish new task2
+2016-10-11 13:26:26 User=1677 publish new task2
+2016-10-11 13:26:36 User=1677 publish new task2
+2016-10-11 13:27:31 User=1677 publish new task2
+2016-10-11 13:29:28 User=1677 publish new task2
+2016-10-11 13:29:51 User=1677 publish new task2
+2016-10-11 13:31:25 User=1707 publish new task2
+2016-10-11 13:31:43 User=1707 publish new task2
+2016-10-11 13:34:30 User=1707 publish new task2
+2016-10-11 13:34:46 User=1707 publish new task2
+2016-10-11 13:35:11 User=1707 publish new task2
+2016-10-11 13:36:07 User=1707 publish new task2
+2016-10-11 13:39:24 User=1707 publish new task2
+2016-10-11 13:39:38 User=1707 publish new task2
+2016-10-11 13:43:37 User=1707 publish new task2
+2016-10-11 13:43:45 User=1707 publish new task2
+2016-10-11 13:44:16 User=1707 publish new task
+2016-10-11 13:44:31 User=1677 publish new task2
+2016-10-11 13:47:58 User=1677 publish new task2
+2016-10-11 13:50:49 User=1677 publish new task2
+2016-10-11 13:51:41 Create new task for user=1677
+2016-10-11 13:51:42 User=1677 pay for task=785719499650236416
+2016-10-11 13:51:42 User=1677 pay task=785719499650236416 with amount=700, useIngot=true,usePledge=true
+2016-10-11 13:51:54 User=1677 publish new task
+2016-10-11 13:51:57 User=1677 publish new task2
+2016-10-11 13:55:40 User=1677 publish new task2
+2016-10-11 14:00:52 User=1677 publish new task2
+2016-10-11 14:01:45 User=1677 publish new task2
+2016-10-11 14:02:04 Create new task for user=1677
+2016-10-11 14:02:05 User=1677 pay for task=785722114412904448
+2016-10-11 14:02:05 User=1677 pay task=785722114412904448 with amount=500, useIngot=true,usePledge=true
+2016-10-11 14:02:43 User=1677 publish new task
+2016-10-11 14:02:46 User=1677 publish new task2
+2016-10-11 14:03:03 User=1677 publish new task2
+2016-10-11 14:03:48 Create new task for user=1677
+2016-10-11 14:03:50 User=1677 pay for task=785722551253860352
+2016-10-11 14:03:50 User=1677 pay task=785722551253860352 with amount=500, useIngot=true,usePledge=true
+2016-10-11 14:03:59 User=1677 publish new task
+2016-10-11 14:04:20 User=1677 publish new task
+2016-10-11 14:04:24 User=1677 publish new task2
+2016-10-11 14:04:54 Create new task for user=1677
+2016-10-11 14:04:56 User=1677 pay for task=785722825443901440
+2016-10-11 14:04:56 User=1677 pay task=785722825443901440 with amount=500, useIngot=true,usePledge=true
+2016-10-11 14:05:34 User=1677 publish new task2
+2016-10-11 14:06:46 User=1707 publish new task2
+2016-10-11 14:08:10 User=1707 publish new task2
+2016-10-11 14:09:55 User=1677 publish new task2
+2016-10-11 14:11:47 Create new task for user=1677
+2016-10-11 14:11:51 User=1677 pay for task=785724559763439616
+2016-10-11 14:11:59 User=1677 pay for task=785724559763439616
+2016-10-11 14:11:59 User=1677 pay task=785724559763439616 with amount=700, useIngot=false,usePledge=true
+2016-10-11 14:12:56 User=1677 edit task=785724559763439616
+2016-10-11 14:13:37 User=1677 edit task=785724559763439616
+2016-10-11 14:13:52 Check status of task=785724559763439616, user=1677
+2016-10-11 14:13:52 Save task=785724559763439616 for user=1677
+2016-10-11 14:13:52 Create new task for user=1677
+2016-10-11 14:13:57 User=1677 pay for task=785724559763439616
+2016-10-11 14:13:57 User=1677 pay task=785724559763439616 with amount=700, useIngot=true,usePledge=true
+2016-10-11 14:17:58 User=1677 repubish task2=784935546374848512
+2016-10-11 14:19:20 User=1677 publish new task
+2016-10-11 14:20:11 User=1677 edit task=785724559763439616
+2016-10-11 14:24:23 Check status of task=785724559763439616, user=1677
+2016-10-11 14:24:23 Save task=785724559763439616 for user=1677
+2016-10-11 14:24:23 Create new task for user=1677
+2016-10-11 14:24:26 User=1677 pay for task=785724559763439616
+2016-10-11 14:24:26 User=1677 pay task=785724559763439616 with amount=700, useIngot=true,usePledge=true
+2016-10-11 14:24:40 User=1677 publish new task2
+2016-10-11 14:25:42 Create new task for user=1677
+2016-10-11 14:26:29 Create new task for user=1677
+2016-10-11 14:26:37 Check status of task=785728259550609408, user=1677
+2016-10-11 14:26:37 Save task=785728259550609408 for user=1677
+2016-10-11 14:26:37 Create new task for user=1677
+2016-10-11 14:26:39 User=1677 pay for task=785728259550609408
+2016-10-11 14:26:39 User=1677 pay task=785728259550609408 with amount=700, useIngot=true,usePledge=true
+2016-10-11 14:27:40 User=1677 edit task=785728259550609408
+2016-10-11 14:28:27 Check status of task=785728259550609408, user=1677
+2016-10-11 14:28:27 Save task=785728259550609408 for user=1677
+2016-10-11 14:28:27 Create new task for user=1677
+2016-10-11 14:29:01 Check status of task=785728259550609408, user=1677
+2016-10-11 14:29:01 Save task=785728259550609408 for user=1677
+2016-10-11 14:29:01 Create new task for user=1677
+2016-10-11 14:29:04 User=1677 pay for task=785728259550609408
+2016-10-11 14:29:04 User=1677 pay task=785728259550609408 with amount=700, useIngot=true,usePledge=true
+2016-10-11 14:29:34 User=1677 edit task=785728259550609408
+2016-10-11 14:29:48 Check status of task=785728259550609408, user=1677
+2016-10-11 14:29:48 Save task=785728259550609408 for user=1677
+2016-10-11 14:29:48 Create new task for user=1677
+2016-10-11 14:29:53 User=1677 pay for task=785728259550609408
+2016-10-11 14:29:53 User=1677 pay task=785728259550609408 with amount=700, useIngot=true,usePledge=true
+2016-10-11 14:32:25 User=1677 publish new task
+2016-10-11 14:34:34 Create new task for user=1677
+2016-10-11 14:34:38 User=1677 pay for task=785730292919828480
+2016-10-11 14:35:37 User=1677 pay for task=785730292919828480
+2016-10-11 14:35:37 User=1677 pay task=785730292919828480 with amount=122, useIngot=true,usePledge=false
+2016-10-11 14:41:00 User=1707 publish new task2
+2016-10-11 14:42:20 User=1707 publish new task2
+2016-10-11 14:42:35 User=1707 publish new task2
+2016-10-11 14:43:09 User=1707 publish new task2
+2016-10-11 14:43:33 Create new task for user=1707
+2016-10-11 14:43:37 Create new task for user=1707
+2016-10-11 14:43:56 Create new task for user=1707
+2016-10-11 14:44:57 User=1707 publish new task2
+2016-10-11 14:45:30 User=1707 publish new task2
+2016-10-11 14:45:50 User=1677 publish new task2
+2016-10-11 14:46:22 User=1677 publish new task2
+2016-10-11 14:46:36 User=1707 publish new task
+2016-10-11 14:47:30 User=1707 publish new task
+2016-10-11 14:47:50 User=1707 publish new task
+2016-10-11 14:48:36 User=1707 publish new task
+2016-10-11 14:48:44 User=1707 publish new task2
+2016-10-11 14:49:31 User=1707 publish new task2
+2016-10-11 14:50:47 User=1707 publish new task2
+2016-10-11 14:50:50 User=1707 publish new task2
+2016-10-11 14:52:28 User=1707 publish new task2
+2016-10-11 14:55:10 User=1707 publish new task2
+2016-10-11 14:56:29 User=1707 publish new task2
+2016-10-11 14:56:53 Create new task for user=1707
+2016-10-11 14:57:18 Create new task for user=1707
+2016-10-11 14:59:37 User=1707 publish new task2
+2016-10-11 15:00:00 Create new task for user=1707
+2016-10-11 15:00:02 User=1707 pay for task=785736692668563456
+2016-10-11 15:00:02 User=1707 pay task=785736692668563456 with amount=300, useIngot=true,usePledge=true
+2016-10-11 15:02:16 User=1707 publish new task2
+2016-10-11 15:02:46 Create new task for user=1707
+2016-10-11 15:02:49 User=1707 pay for task=785737390105821184
+2016-10-11 15:02:49 User=1707 pay task=785737390105821184 with amount=300, useIngot=true,usePledge=false
+2016-10-11 15:03:43 User=1707 publish new task2
+2016-10-11 15:04:03 Create new task for user=1707
+2016-10-11 15:04:05 User=1707 pay for task=785737712190619648
+2016-10-11 15:04:09 User=1707 pay for task=785737712190619648
+2016-10-11 15:04:09 User=1707 pay task=785737712190619648 with amount=300, useIngot=true,usePledge=true
+2016-10-11 15:04:30 User=1707 publish new task2
+2016-10-11 15:04:49 User=1707 publish new task2
+2016-10-11 15:05:01 Create new task for user=1707
+2016-10-11 15:05:02 User=1707 pay for task=785737953442791424
+2016-10-11 15:05:02 User=1707 pay task=785737953442791424 with amount=300, useIngot=true,usePledge=true
+2016-10-11 15:17:11 User=1677 publish new task2
+2016-10-11 15:18:29 User=1677 publish new task2
+2016-10-11 15:19:33 User=1677 publish new task2
+2016-10-11 15:28:02 User=1677 publish new task2
+2016-10-11 15:29:06 User=1677 publish new task2
+2016-10-11 15:29:30 User=1677 publish new task2
+2016-10-11 15:29:54 User=1677 publish new task2
+2016-10-11 15:30:50 User=1677 publish new task2
+2016-10-11 15:31:46 User=1677 publish new task2
+2016-10-11 15:33:06 User=1677 publish new task2
+2016-10-11 15:33:23 User=1677 publish new task2
+2016-10-11 15:33:46 User=1677 publish new task2
+2016-10-11 15:34:48 User=1677 publish new task2
+2016-10-11 15:35:41 User=1677 publish new task2
+2016-10-11 15:36:10 User=1677 publish new task2
+2016-10-11 15:36:43 User=1677 publish new task2
+2016-10-11 15:45:02 User=1677 publish new task2
+2016-10-11 15:45:27 User=1677 publish new task2
+2016-10-11 15:46:06 User=1677 publish new task2
+2016-10-11 15:47:07 User=1677 publish new task
+2016-10-11 15:47:09 User=1677 publish new task2
+2016-10-11 15:47:44 User=1677 publish new task
+2016-10-11 15:48:29 User=1677 publish new task2
+2016-10-11 16:02:47 User=1677 publish new task
+2016-10-11 16:07:41 Create new task for user=1677
+2016-10-11 16:07:50 User=1677 pay for task=785753726949261312
+2016-10-11 16:07:50 User=1677 pay task=785753726949261312 with amount=11454, useIngot=true,usePledge=true
+2016-10-11 16:35:09 User=1677 repubish task2=785728259550609408
+2016-10-11 16:40:24 User=1677 repubish task=785753726949261312
+2016-10-11 16:40:35 User=1677 repubish task2=785728259550609408
+2016-10-11 16:47:41 User=1677 repubish task=785753726949261312
+2016-10-11 16:47:47 User=1677 repubish task2=785728259550609408
+2016-10-11 16:49:34 User=1677 repubish task2=785728259550609408
+2016-10-11 16:52:38 User=1677 repubish task2=785728259550609408
+2016-10-11 16:53:30 User=1677 repubish task2=785728259550609408
+2016-10-11 16:53:40 Create new task for user=1677
+2016-10-11 16:53:46 User=1677 repubish task2=785728259550609408
+2016-10-11 16:54:24 User=1677 repubish task2=785728259550609408
+2016-10-11 16:54:39 Create new task for user=1677
+2016-10-11 16:54:46 User=1677 repubish task2=785728259550609408
+2016-10-11 16:54:57 Create new task for user=1677
+2016-10-11 16:55:31 User=1677 repubish task2=785728259550609408
+2016-10-11 16:57:20 User=1677 repubish task2=785728259550609408
+2016-10-11 17:02:09 User=1677 repubish task2=785728259550609408
+2016-10-11 17:03:17 User=1677 repubish task2=785728259550609408
+2016-10-11 17:05:12 User=1677 repubish task2=785728259550609408
+2016-10-11 17:06:00 User=1677 repubish task2=785728259550609408
+2016-10-11 17:07:28 User=1677 repubish task2=785728259550609408
+2016-10-11 17:08:00 User=1677 repubish task2=785728259550609408
+2016-10-11 17:11:06 User=1677 repubish task2=785728259550609408
+2016-10-11 17:11:08 User=1677 repubish task2=785728259550609408
+2016-10-11 17:13:08 User=1677 repubish task2=785728259550609408
+2016-10-11 17:13:57 User=1677 repubish task2=785728259550609408
+2016-10-11 17:14:35 User=1677 repubish task2=785728259550609408
+2016-10-11 17:19:17 User=1677 repubish task2=785728259550609408
+2016-10-11 17:19:44 Create new task for user=1677
+2016-10-11 17:19:46 User=1677 pay for task=785771858459885568
+2016-10-11 17:19:46 User=1677 pay task=785771858459885568 with amount=700, useIngot=true,usePledge=true
+2016-10-11 17:23:14 User=1677 repubish task2=785771858459885568
+2016-10-11 17:31:22 User=1677 publish new task2
+2016-10-11 17:34:07 Create new task for user=1677
+2016-10-11 17:34:12 User=1677 pay for task=785775477519286272
+2016-10-11 17:34:12 User=1677 pay task=785775477519286272 with amount=2500, useIngot=true,usePledge=true
+2016-10-11 17:35:35 User=1677 edit task=785775477519286272
+2016-10-11 17:36:42 Check status of task=785775477519286272, user=1677
+2016-10-11 17:36:42 Save task=785775477519286272 for user=1677
+2016-10-11 17:36:42 Create new task for user=1677
+2016-10-11 17:36:58 User=1677 pay for task=785775477519286272
+2016-10-11 17:36:58 User=1677 pay task=785775477519286272 with amount=3500, useIngot=true,usePledge=true
+2016-10-11 17:40:57 User=1677 publish new task
+2016-10-11 17:43:45 Create new task for user=1677
+2016-10-11 17:44:21 Check status of task=785777899775983616, user=1677
+2016-10-11 17:44:21 Save task=785777899775983616 for user=1677
+2016-10-11 17:44:21 Create new task for user=1677
+2016-10-11 17:44:23 User=1677 pay for task=785777899775983616
+2016-10-11 17:44:23 User=1677 pay task=785777899775983616 with amount=122, useIngot=true,usePledge=false
+2016-10-11 18:08:26 User=1677 publish new task
+2016-10-11 18:10:26 Create new task for user=1677
+2016-10-11 18:10:29 User=1677 pay for task=785784618182770688
+2016-10-11 18:10:29 User=1677 pay task=785784618182770688 with amount=202, useIngot=true,usePledge=false
+2016-10-11 18:15:36 User=1677 edit task=785405654457122816
+2016-10-11 18:15:50 User=1677 repubish task2=785775477519286272
+2016-10-11 18:16:42 User=1677 publish new task2
+2016-10-11 18:17:15 Create new task for user=1677
+2016-10-11 18:17:19 User=1677 pay for task=785786332826828800
+2016-10-11 18:17:19 User=1677 pay task=785786332826828800 with amount=2500, useIngot=true,usePledge=true
+2016-10-11 18:18:13 User=1677 publish new task
+2016-10-11 18:19:25 Create new task for user=1677
+2016-10-11 18:19:35 User=1677 pay for task=785786879231393792
+2016-10-11 18:19:35 User=1677 pay task=785786879231393792 with amount=6628, useIngot=true,usePledge=false
+2016-10-11 20:18:57 User=1677 repubish task=785786879231393792
+2016-10-11 20:19:16 Create new task for user=1677

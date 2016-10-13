@@ -1,0 +1,313 @@
+.stepWrapper{
+	position: relative;
+	background: url(/public/images/st_bar_bg.png) repeat-x left center;
+	height: 30px;
+}
+.stepFinish{
+	background: url(/public/images/st_finish.png) no-repeat center center;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+.stepOn{
+	background: url(/public/images/st_on_num.png) no-repeat;
+	width: 30px;
+	height: 30px;
+	color: #FFF;
+	text-align: center;
+	line-height:30px;
+}
+.stepWaiting{
+	background: url(/public/images/st_waiting.png) no-repeat center top;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	text-align: center;
+	line-height:30px;	
+	float: left;
+}
+.stepWaiting .caption{
+	position: absolute;
+	font-size: 12px;
+	line-height: 20px;
+	bottom:30px;
+	left: 50%;
+	z-index: 3;
+}
+/*===========================================*/
+#taskStep-2{
+	margin-bottom: 100px;
+}
+.panelBox{
+	padding-left: 10px;
+}
+.panelLine .secondTile{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+.panelLine .checkTextBtn{
+	line-height: 24px;
+}
+.panelLine .stdColorButton{
+	padding:0 10px;
+	line-height: 28px;
+	margin-top: 2px;
+}
+.buttonSection{
+	margin-top: 15px;
+}
+.pic-box{
+	padding-left: 83px;
+}
+.pic-box img{
+	width: 100px;
+	height: 100px;
+	border: solid 1px #888;
+}
+.buttonSection .prev{
+	background-color: #777;
+	margin-right: 20px;
+}
+.buttonSection .prev:hover{
+	background-color: #888;	
+}
+.panelLine .rad{
+	margin-top: 12px;
+}
+.contentBody .secondTile{
+	margin-bottom: 5px;
+}
+.contentBody .sec{
+	margin-bottom: 10px;
+}
+.stdColorButton .iconfont{
+	padding-left: 10px;
+}
+.long{
+	width: 500px;
+}
+.middle{
+	width: 150px;
+}
+.short{
+	width:80px;
+}
+#btnBindNewShop{
+	border: 2px dashed #cbcbcb;
+	float: left;
+	padding: 3px 10px;
+	line-height: 24px;
+	color:#666;
+	height: 24px;
+}
+#btnBindNewShop:hover{
+	background-color: #f90;
+	color: #fff;
+	border:solid 2px #f90;
+}
+
+.legendPanel{
+	border:solid 1px #DEDEDE;
+	position: relative;
+	padding: 15px 10px;
+	margin-top: 10px;
+}
+.subwayPancel{
+	border:solid 1px #DEDEDE;
+	position: relative;
+	padding: 15px 10px;
+	margin-top: 10px;
+}
+.subwayPancel .l_title{
+	position: absolute;
+	background: #FAFAFA;
+	top:-14px;
+	left: 6px;
+	color:#A65E2B;
+}
+.subwayPancel .close{
+	font-size: 25px;
+	float: right;
+	cursor: pointer;
+	color: #888;
+}
+.subwayPancel .close:hover{
+	color: #773CBE;
+}
+
+.commentPicPancel{
+	border:solid 1px #DEDEDE;
+	position: relative;
+	padding: 15px 10px;
+	margin-top: 10px;
+}
+.commentPicPancel .l_title{
+	position: absolute;
+	background: #FAFAFA;
+	top:-14px;
+	left: 6px;
+	color:#A65E2B;
+}
+.commentPicPancel .close{
+	font-size: 25px;
+	float: right;
+	cursor: pointer;
+	color: #888;
+}
+.commentPicPancel .close:hover{
+	color: #773CBE;
+}
+.legendPanel .l_title{
+	position: absolute;
+	background: #FAFAFA;
+	top:-14px;
+	left: 6px;
+	color:#A65E2B;
+}
+.legendPanel .close{
+	font-size: 25px;
+	float: right;
+	cursor: pointer;
+	color: #888;
+}
+.legendPanel .close:hover{
+	color: #773CBE;
+}
+.plusBlockBtn{
+	padding-top:8px;
+	color: #1f9cd8;
+	cursor: pointer;
+	width: 430px;
+}
+.plusBlockBtn:hover span{
+	text-decoration:underline;
+}
+#btnRegionPicker{
+	border: solid 1px #888;	
+	padding:0 8px;
+	line-height: 24px;
+	margin-top: 6px;
+	color: #888;
+}
+#btnRegionPicker:hover{
+	background-color:#888;
+	color:#FFF;
+}
+#regionFloatDiv{
+	border-radius: 3px;
+	position: absolute;
+	top:300px;
+	left: 500px;
+	width: 392px;
+	padding: 20px;
+	background: #FFF;
+	border: solid 1px #999;
+	-webkit-box-shadow: 1px 1px 2px #BFBFBF;
+	-moz-box-shadow: 1px 1px 2px #BFBFBF;
+	box-shadow: 1px 1px 2px #BFBFBF;
+	font-size: 12px;
+	visibility:hidden;
+}
+#regionFloatDiv .list-innerwrap{
+	border-top: dashed 1px #DEDEDE;
+}
+#regionFloatDiv .list-innerwrap li{
+	float: left;
+	width: 56px;
+}
+#regionFloatDiv .list-innerwrap .address{
+	display: inline-block;
+	padding: 3px;
+	line-height: 14px;
+	color:#6d6d6d;
+}
+#regionFloatDiv .list-innerwrap .address:hover{
+	background-color:#f60;
+	color: #FFF;
+}
+.most-location{
+	margin-bottom: 15px;
+}
+#regionFloatDiv .list-innerwrap .country{
+	color:#47364A;
+}
+#spLocation{
+	margin-left: 20px;
+}
+/*----------增值服务---------------------------*/
+.trade-num-list .rad{
+	margin-right: 5px;
+}
+.clickable{
+	cursor: pointer;
+}
+.clickable:hover{
+	background-color: #EAEAEA;
+}
+/*-----------费用总计--------------------------*/
+.feeDetail{
+	text-align: left !important;
+	width: 220px;
+}
+.taskNum{
+	width: 55px;
+}
+.genre{
+	width: 65px;
+}
+.r_price{
+	width: 100px;
+}
+#feeWrapper tr{
+	border-bottom: 1px solid #d1d1d1;
+}
+#goodCommentBox .goodCommentWord{
+	border: 2px solid #f90;
+	margin-right: 8px;
+	float:left;
+	padding-left: 8px;
+}
+#goodCommentBox .close{
+	padding-left: 8px;
+	padding-right: 4px;
+	cursor: pointer;
+}
+#goodCommentBox .close:hover{
+	color: orange;
+}
+.panelLine .rad0{
+	margin-top: 7px;
+}
+#platformSelect .checkTextBtn{
+	border-color:#cbcbcb;
+}
+#platformSelect .selectedCtb,#platformSelect .checkTextBtn:hover{
+	border-color:#f90;
+}
+.wid{
+	width:121px;
+}
+.totalcostBox{
+	height:24px;
+	margin-right: 8px;
+}
+/*网银弹窗*/
+.bankPayment .modalWnd{
+	width:650px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -325px;
+	position: fixed;
+	z-index: 100;
+}
+.btnConfirmSave{
+	background-color: #26AA9F;
+	width: 20%;
+	text-align: center;
+}
+.btnConfirmSave:hover{
+	background-color: #2BBFB3;
+}
+.return{
+	line-height:32px
+}

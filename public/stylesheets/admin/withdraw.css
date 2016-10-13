@@ -1,0 +1,158 @@
+#taskFilterPanel{
+	padding-left: 20px;
+	padding-top: 10px;
+}
+#taskFilterPanel .stdColorButton{
+	line-height: 14px;
+}
+/*-----------------------------------*/
+.normTable{
+	margin-top: 10px;
+}
+.normTable tbody td{
+	border-bottom: solid 1px #DEDEDE;
+	vertical-align: middle;
+}
+.normTable thead td{
+	background: #DEDEDE;
+	border-bottom: solid 1px #BBB;
+	color: #999;
+}
+.access,.refuse{
+	padding:0 10px;
+	border-radius: 2px;
+}
+.access{
+	background-color:#069E2A;
+}
+.access:hover{
+	background-color:#07B630;
+}
+.refuse{
+	background-color:#D93B41;
+}
+.refuse:hover{
+	background-color:#DE4F54;
+}
+/*-----------------------------------*/
+.taskCell{
+	border-bottom:solid 1px #DEDEDE;
+	padding:10px;
+}
+.taskCell:hover{
+	background-color: #fefce8;
+}
+.normTable tbody tr td {
+	line-height: 24px;
+}
+.taskCell .title{
+	height: 40px;
+	line-height: 40px;
+	padding:0 10px;
+}
+.taskCell .shop{
+	color: #111;
+}
+.taskCell .taskNo{
+
+}
+.taskCell .operation{
+	float:right;
+}
+.taskCell .operation .btn{
+	color:#4083A9;
+}
+.taskCell .operation .btn:hover{
+	color:#AD6BAE;
+}
+.taskCell .view-detail{
+	color:#4083A9;
+}
+.taskCell .view-detail:hover{
+	color:#D94E75;
+}
+
+.taskCell .body{
+	padding:0 10px;
+
+}
+.taskCell .body td{
+	color: #666;
+}
+.taskCell .cap{
+	color: #888;
+	font-size: 12px;
+}
+.taskCell .body .item-list{
+	width: 350px;
+}
+.taskCell .body .item-list .item-box{
+	position: relative;
+	padding-left: 90px;
+	height: 90px;
+}
+.item-box .pic{
+	width:80px;
+	height: 80px;
+	position: absolute;
+	left:5px;
+	top:5px;
+}
+.item-box .pic img{
+	width:80px;
+	height: 80px;
+	border:solid 1px #DEDEDE;
+}
+.item-box .title{
+	text-align: left;
+	color:#5d5d5d;
+	font-weight: 700;
+	line-height: 24px;	
+	color:#3E88BE;
+}
+/*-----------------------------------*/
+#refuseReasonWnd .modalWnd{
+	width:400px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+#txtReason{
+	height: 70px;
+	width: 346px;
+}
+#btnRefuse{
+	background-color: #FD7037;
+}
+#btnRefuse:hover{
+	background-color: #FD804E;
+}
+th{
+	text-align: left;
+	padding: 3px 8px;
+	line-height: 34px;
+}
+#searchDiv{
+	height:65px;
+	border-bottom:dashed 1px #BBB ;
+}
+/*弹出框样式*/
+.modalWnd{
+	left:60%;
+	top:40%;
+	margin:-150px 0 0 -325px;
+	position: fixed;
+	z-index: 100;
+
+}
+#RechargeWnd .modalWndInner{
+	width:300px;
+}
+.area{
+	height:100px;
+}
+.radio{
+	width:80px;
+}

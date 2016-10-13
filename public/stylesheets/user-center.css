@@ -1,0 +1,113 @@
+.btnInfoEdit{
+	cursor: pointer;
+	font-size: 14px;
+}
+.btnInfoEdit:hover{
+	color:#AD6BAE;
+}
+
+#personalInfoPanel .num{
+	line-height: 24px;
+	color:#596678;
+}
+.announceList{
+
+}
+.panelLine {
+	height: 35px;
+	line-height: 35px;
+}
+.announceList li{
+	line-height: 35px;
+}
+.announceCell .title{
+	color:#555;
+}
+.announceCell .title:hover{
+	color:#0F9EE2;
+	text-decoration: underline;
+}
+.announceCell .date{
+	float:right;
+}
+/*---------------------------*/
+#taskFilterPanel{
+	height: 34px;
+	padding-left: 10px;
+}
+#taskFilterPanel .sp{
+	margin-right: 8px;
+}
+#taskFilterPanel .stdColorButton{
+	line-height: 14px;
+}
+.taskWrapper{
+
+}
+.taskCell{
+	border-top:solid 1px #DEDEDE;
+	border-bottom:solid 1px #DEDEDE;
+}
+.taskCell:hover{
+	background-color: #fefce8;
+}
+.taskCell .title{
+	height: 40px;
+	line-height: 40px;
+	padding:0 10px;
+}
+.taskCell .shop{
+	float: left;
+	color: #111;
+}
+.taskCell .taskNo{
+	float: right;
+}
+.taskCell .body{
+	padding:10px;
+
+}
+.taskCell .body td{
+	color: #B0B0B0;
+
+}
+.taskCell .body tbody td{
+}
+.taskCell .body .pic{
+	width:80px;
+}
+.taskCell .body .pic img{
+	width:80px;
+	height: 80px;
+	border:solid 1px #DEDEDE;
+}
+.taskCell .body .name{
+	text-align: left;
+	color:#5d5d5d;
+	font-weight: 700;
+}
+.taskCell .body tbody .name{
+	line-height: 24px;
+	color:#3388BB;
+}
+.taskCell .body .nick{
+	width: 150px;
+	vertical-align: middle;
+}
+.taskCell .body .price{
+	width: 100px;
+	color:#B77E5E;
+	vertical-align: middle;
+}
+.taskCell .body .commission{
+	width: 100px;
+	color:#B77E5E;
+	vertical-align: middle;
+}
+.taskCell .body .status{
+	width: 200px;
+	vertical-align: middle;
+}
+#modifyForm label{
+	width: 84px;
+}

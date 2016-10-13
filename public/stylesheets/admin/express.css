@@ -1,0 +1,29 @@
+.normTable tbody td{
+	border-bottom: solid 1px #DEDEDE;
+	vertical-align: middle;
+}
+.normTable thead td{
+	background: #DEDEDE;
+	border-bottom: solid 1px #BBB;
+	color: #999;
+}
+#shuaxin{
+	color: #555;
+}
+.fileInput{
+	width: 150px;
+}
+.dingdan{
+	height:100px;
+}
+.dingdan a{
+	color:#555;
+	height:100px;
+}
+.focus{
+	background:#DEDEDE;
+}
+.queryByShopName{
+	height:100px;
+	text-decoration: underline;
+}

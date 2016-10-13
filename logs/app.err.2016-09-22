@@ -1,0 +1,33 @@
+[2016-09-22 09:12:11,082] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-22 09:46:36,271] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71f4dilph
+frameImg.tuiguang.png action not found
+
+Action not found
+Action frameImg.tuiguang.png could not be found. Error raised is Controller controllers.frameImg.tuiguang not found
+
+play.exceptions.ActionNotFoundException: Action frameImg.tuiguang.png not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.frameImg.tuiguang not found
+	... 3 more
+[2016-09-22 13:35:25,474] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-22 13:56:29,822] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-22 13:56:35,367] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [pass] Required
+[2016-09-22 13:58:48,398] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-22 14:00:12,551] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71f4dilpi
+seller.login action not found
+
+Action not found
+Action seller.login could not be found. Error raised is Controller controllers.seller not found
+
+play.exceptions.ActionNotFoundException: Action seller.login not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.seller not found
+	... 3 more

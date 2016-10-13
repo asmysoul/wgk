@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.TaskItemSearchPlanMapper">
+
+	<resultMap id="BaseResultMap" type="models.Task">
+	</resultMap>
+
+	<insert id="insert" parameterType="models.TaskItemSearchPlan">
+		insert into task_item_search_plan
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			task_id,word,in_tmall,total_num,taken_num,create_time,modify_time,flow_num,
+			<if test="skus != null">
+				skus
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			#{taskId},#{word},#{inTmall},#{totalNum},#{takenNum},#{createTime},#{modifyTime},#{flowNum},
+			<if test="skus != null">
+				#{skus},
+			</if>
+		</trim>
+	</insert>
+	
+	<update id="updateById" parameterType="models.TaskItemSearchPlan">
+		update task_item_search_plan
+		<set>
+			<if test="taskId != null">
+				task_id = #{taskId},
+			</if>
+			<if test="takenNum !=null">
+				taken_num = #{takenNum},
+			</if>
+			<if test="word !=null">
+				word = #{word},
+			</if>
+			<if test="skus != null">
+				skus = #{skus},
+			</if>
+			<if test="inTmall != null">
+				in_tmall = #{inTmall},
+			</if>
+			<if test="inTmall != null">
+				in_tmall = #{inTmall},
+			</if>
+			<if test="flowNum != null">
+				flow_num = #{flowNum},
+			</if>
+			modify_time = #{modifyTime}
+		</set>
+		where id = #{id}
+	</update>
+	
+</mapper>
+	

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.UserWithdrawRecordMapper">
+
+	<resultMap id="BaseResultMap" type="models.UserWithdrawRecord"></resultMap>
+	
+	<!-- 后台管理：获取提现申请记录列表 -->
+	<select id="countForAdmin" resultType="java.lang.Integer">
+		select count(distinct r.id) from 
+		  user_withdraw_record r 
+		  left join user u on u.id = r.user_id  
+		  left JOIN buyer_task bt ON bt.user_withdraw_record_sn = r.sn
+		<include refid="where"/>
+	</select>
+	<select id="selectForAdmin" resultMap="BaseResultMap">
+		select 
+		  distinct r.id,
+		  r.apply_time,
+		  r.apply_amount,
+		  r.amount,
+		  r.status,
+		  r.trade_no,
+		  r.is_buyer_deposit,
+		  r.user_id,
+		  u.nick userNick,
+		  u.type userType
+		from
+		  user_withdraw_record r 
+		  left join user u on u.id = r.user_id  
+		  left JOIN buyer_task bt ON bt.user_withdraw_record_sn = r.sn
+		<include refid="where"/>
+		order by r.apply_time asc
+		limit #{startIndex}, #{pageSize}
+	</select>
+	<sql id="where">
+		<where>
+			<if test="id !=null">
+				 r.id=#{id}
+			</if>
+			<if test="userId !=null">
+				and u.id=#{userId}
+			</if>
+			<if test="userNick !=null">
+				and u.nick=#{userNick}
+			</if>
+			<if test="userType != null">
+				and u.type = #{userType}
+			</if>
+			<if test="status != null">
+				and r.status = #{status}
+			</if>
+			<if test="isBuyerDeposit ==null or !isBuyerDeposit">
+				and (r.is_buyer_deposit is null or r.is_buyer_deposit=0)
+			</if>
+			<if test="isBuyerDeposit !=null and isBuyerDeposit">
+				and r.is_buyer_deposit = #{isBuyerDeposit}
+			</if>
+			<if test="buyerAccountNick !=null">
+				and bt.buyer_account_nick = #{buyerAccountNick}
+			</if>
+			<if test="taskId != null">
+				and bt.task_id = #{taskId}
+			</if>
+			<if test="buyerTaskId != null">
+				and bt.id = #{buyerTaskId}
+			</if>
+			<if test="applyTimeStart != null and applyTimeEnd != null">
+				<![CDATA[ and r.apply_time >= #{applyTimeStart} and r.apply_time<=#{applyTimeEnd} ]]>
+			</if>
+			<if test="applyTimeStart != null and applyTimeEnd == null">
+				<![CDATA[ and r.apply_time >= #{applyTimeStart}  ]]>
+			</if>
+			<if test="applyTimeStart == null and applyTimeEnd != null">
+				<![CDATA[ and r.apply_time<=#{applyTimeEnd} ]]>
+			</if>
+		</where>
+	</sql>
+	
+	
+	<select id="selectList" resultMap="BaseResultMap">
+		select s.*,u.nick userNick from user_withdraw_record s
+		left join user u on u.id = s.user_id
+		<include refid="whereRecord"/>
+		order by s.apply_time desc
+		limit #{startIndex}, #{pageSize}
+	</select>
+	<select id="count" resultType="java.lang.Integer">
+		select count(1) from user_withdraw_record s left join user u on u.id = s.user_id
+		<include refid="whereRecord"/>
+	</select>
+	<sql id="whereRecord">
+		<where>
+			<if test="userId != null">
+				and user_id = #{userId}
+			</if>
+			<if test="userNick !=null">
+				and u.nick like '%${userNick}%'
+			</if>
+			<if test="createTimeStart !=null">
+				<![CDATA[ and s.apply_time>=#{createTimeStart} ]]>
+			</if>
+			<if test="createTimeEnd !=null">
+				<![CDATA[ and s.apply_time<=#{createTimeEnd} ]]>
+			</if>
+			<if test="amountStart !=null">
+				<![CDATA[ and s.amount>=#{amountStart} ]]>
+			</if>
+			<if test="amountEnd !=null">
+				<![CDATA[ and s.amount<=#{amountEnd} ]]>
+			</if>
+		</where>
+	</sql>
+	<select id="buyerIngotWithdrawCount" resultType="java.lang.Integer">
+		select count(1) from user_withdraw_record r 
+			left join user u on u.id = r.user_id
+		where
+			u.id=#{userId}
+			<![CDATA[ 
+			and r.apply_time >= #{applyTimeStart}
+			 ]]>
+			and apply_amount > amount;
+	</select>
+</mapper>
+	

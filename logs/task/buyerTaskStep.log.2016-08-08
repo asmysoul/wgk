@@ -1,0 +1,17 @@
+16-08-08 15:23:30 Buyer=1678-maimai take Task=745917079860805632
+16-08-08 15:23:30 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=745917079860805632-6465 with status=RECIEVED
+16-08-08 15:24:38 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=745917079860805632-6465 with status=RECIEVED
+16-08-08 15:24:45 Buyer=1678-maimai perform buyerTask=6465 save step=CHOOSE_ITEM
+16-08-08 15:24:45 Fetch and Check Buyer=1678 last perform step of buyerTask=6465
+16-08-08 15:24:45 Sessoin current taskStep=CHOOSE_ITEM ,buyer=1678,buyerTask=6465
+16-08-08 15:24:45 Buyer=1678-maimai perform save step=CHOOSE_ITEM of buyerTask=745917079860805632-6465 with status=RECIEVED
+16-08-08 15:25:21 Buyer=1678-maimai perform buyerTask=6465 save step=VIEW_AND_INQUIRY
+16-08-08 15:25:21 Fetch and Check Buyer=1678 last perform step of buyerTask=6465
+16-08-08 15:25:21 Sessoin current taskStep=VIEW_AND_INQUIRY ,buyer=1678,buyerTask=6465
+16-08-08 15:25:21 Buyer=1678 last perform step=37725[CHOOSE_ITEM] of buyerTask=6465
+16-08-08 15:25:21 Buyer=1678-maimai perform save step=VIEW_AND_INQUIRY of buyerTask=745917079860805632-6465 with status=WAIT_PAY
+16-08-08 15:25:57 Buyer=1678-maimai perform buyerTask=6465 save step=ORDER_AND_PAY
+16-08-08 15:25:57 Fetch and Check Buyer=1678 last perform step of buyerTask=6465
+16-08-08 15:25:57 Sessoin current taskStep=ORDER_AND_PAY ,buyer=1678,buyerTask=6465
+16-08-08 15:25:57 Buyer=1678 last perform step=37726[VIEW_AND_INQUIRY] of buyerTask=6465
+16-08-08 15:25:57 Buyer=1678-maimai perform save step=ORDER_AND_PAY of buyerTask=745917079860805632-6465 with status=WAIT_PAY

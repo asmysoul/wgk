@@ -1,0 +1,84 @@
+.panelLine .num-list-flag{
+	background-color: #445C71;
+	color:#fff;
+	padding:0 6px;
+	margin-right: 8px;
+	line-height: 20px;
+	margin-top: 7px;
+	border-radius: 2px;
+}
+.swi-btn{
+	color:#555;
+	margin-right: 20px;
+	line-height: 27px;
+	border:solid 1px transparent;
+	padding: 0 5px;
+	margin-top: 3px;
+	display: inline-block;
+}
+.btnList .on,.swi-btn:hover{
+	color:#f55732;
+	border-color: #fdb08e;
+	background-color: #fff0e8;
+}
+
+
+
+/*----=======================================----*/
+.item-info{
+	border-bottom:dashed 1px #dedede;
+	border-top:solid 1px #dedede;
+	padding-left: 100px;
+	position: relative;
+	margin:15px 0;
+}
+.item-info .pic-box{
+	position: absolute;
+	top:10px;
+	left: 0;
+}
+.item-info .pic-box,.item-info .pic-box img{
+	width: 80px;
+	height: 80px;
+}
+.item-info .title{
+	margin-top: 10px;
+	line-height: 1em;
+	margin-bottom: 20px;
+}
+.item-info .view{
+	color: #7c7c7c;
+}
+.item-info .view:hover{
+	color:#3388BB;
+}
+.txtRateContent{
+	width: 500px;
+	height: 100px;
+}
+.backToCenter{
+	color: #555;
+	float: right;
+}
+.backToCenter:hover{
+	color: orange;
+}
+
+.itemPicBox img{
+	max-width:800px;
+	max-height:500px;
+	min-height:50px;
+	min-width:200px;
+	border:solid 1px #999;
+	margin-top: 10px;
+}
+
+.imgComm{
+	max-width:800px;
+	max-height:500px;
+	min-height:50px;
+	min-width:200px;
+	position: absolute;
+	z-index: 2;
+	display: none;
+}

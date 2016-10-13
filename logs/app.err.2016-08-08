@@ -1,0 +1,162 @@
+[2016-08-08 08:53:55,904] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-08 08:56:30,336] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@712f111o6
+Internal Server Error (500) for request GET /admin/timeout2
+
+Template compilation error (In /app/views/Admin/timeout2.html around line 209)
+The template /app/views/Admin/timeout2.html does not compile : expecting ''', found '\n' 
+
+play.exceptions.TemplateCompilationException: expecting ''', found '\n' 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:186)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:224)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.timeout2(Admin.java:1765)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-08-08 08:56:52,159] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@712f111o7
+Internal Server Error (500) for request GET /admin/timeout2
+
+Template compilation error (In /app/views/Admin/timeout2.html around line 209)
+The template /app/views/Admin/timeout2.html does not compile : expecting ''', found '\n' 
+
+play.exceptions.TemplateCompilationException: expecting ''', found '\n' 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:186)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:224)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.timeout2(Admin.java:1765)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-08-08 08:58:32,763] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@712f111o8
+Internal Server Error (500) for request GET /admin/expressCount
+
+Template execution error (In /app/views/Admin/expressCount.html around line 22)
+Execution error occured in template /app/views/Admin/expressCount.html. Exception raised was NullPointerException : Cannot get property 'user_score' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'user_score' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.expressCount(Admin.java:2064)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'user_score' on null object
+	at /app/views/Admin/expressCount.html.(line:22)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-08-08 08:58:35,019] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@712f111o9
+Internal Server Error (500) for request GET /admin/expressCount
+
+Template execution error (In /app/views/Admin/expressCount.html around line 22)
+Execution error occured in template /app/views/Admin/expressCount.html. Exception raised was NullPointerException : Cannot get property 'user_score' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'user_score' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.expressCount(Admin.java:2064)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'user_score' on null object
+	at /app/views/Admin/expressCount.html.(line:22)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-08-08 08:58:39,584] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@712f111oa
+Internal Server Error (500) for request GET /admin/expressCount
+
+Template execution error (In /app/views/Admin/expressCount.html around line 22)
+Execution error occured in template /app/views/Admin/expressCount.html. Exception raised was NullPointerException : Cannot get property 'user_score' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'user_score' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.expressCount(Admin.java:2064)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'user_score' on null object
+	at /app/views/Admin/expressCount.html.(line:22)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-08-08 09:04:40,566] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@712f111ob
+Internal Server Error (500) for request GET /admin/expressCount
+
+Template execution error (In /app/views/Admin/expressCount.html around line 22)
+Execution error occured in template /app/views/Admin/expressCount.html. Exception raised was NullPointerException : Cannot get property 'user_score' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'user_score' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Admin.expressCount(Admin.java:2064)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'user_score' on null object
+	at /app/views/Admin/expressCount.html.(line:22)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	... 13 more
+[2016-08-08 15:23:49,573] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null

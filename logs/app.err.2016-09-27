@@ -1,0 +1,1197 @@
+[2016-09-27 13:33:55,542] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-27 13:56:56,130] ERROR [jobs-thread-9] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg3o9p5
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1678)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+
+play.exceptions.CompilationException: Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 13:56:56,412] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg3o9p7
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1678)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+
+play.exceptions.CompilationException: Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 14:04:57,332] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg3o9p9
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1682)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Invalid character constant
+
+play.exceptions.CompilationException: Invalid character constant
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 14:04:57,645] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg3o9pb
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1682)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Invalid character constant
+
+play.exceptions.CompilationException: Invalid character constant
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 14:13:55,767] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg3o9pd
+Error during job execution (jobs.AddKwdForFlow)
+
+Compilation error (In /app/models/Task2.java around line 2355)
+The file /app/models/Task2.java could not be compiled. Error raised is : The method selectAllList(TaskSearchVo2) is undefined for the type TaskMapper2
+
+play.exceptions.CompilationException: The method selectAllList(TaskSearchVo2) is undefined for the type TaskMapper2
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 14:13:59,587] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg3o9pf
+Error during job execution (jobs.BuyerTaskCancel)
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.jobs.Job.onException(Job.java:154)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	... 1 more
+[2016-09-27 14:14:01,290] ERROR [jobs-thread-9] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg3o9ph
+Error during job execution (jobs.GetExpressNo)
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.jobs.Job.onException(Job.java:154)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	... 1 more
+[2016-09-27 14:29:26,478] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg8590i
+Internal Server Error (500) for request GET /buyer/account/list2?__ts=1474957765969&platform=WEIXIN
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1540)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate method buyerTasks2() in type TaskCenter
+
+play.exceptions.CompilationException: Duplicate method buyerTasks2() in type TaskCenter
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-27 14:29:26,709] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg8590j
+Internal Server Error (500) for request GET /buyer/task/list2?__ts=1474957765980&vo.platform=&vo.buyerAccountId=&vo.status=&vo.pageNo=1&vo.pageSize=20&vo.takeTimeStart=&vo.takeTimeEnd=&vo.buyerTaskId=&vo.orderId=&vo.taskId=&type=PROCESS
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1540)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate method buyerTasks2() in type TaskCenter
+
+play.exceptions.CompilationException: Duplicate method buyerTasks2() in type TaskCenter
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-27 14:33:04,409] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg8hjce
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1561)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate local variable map
+
+play.exceptions.CompilationException: Duplicate local variable map
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 14:34:04,574] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg8hjcg
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1563)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error on token ",", Expression expected after this token
+
+play.exceptions.CompilationException: Syntax error on token ",", Expression expected after this token
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 14:40:51,866] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg8hjci
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1561)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error on token "+", ++ expected
+
+play.exceptions.CompilationException: Syntax error on token "+", ++ expected
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 14:40:52,046] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg8hjck
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1561)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error on token "+", ++ expected
+
+play.exceptions.CompilationException: Syntax error on token "+", ++ expected
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 14:49:33,941] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg8hjcm
+Internal Server Error (500) for request GET /buyer/tasks2
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1544)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+
+play.exceptions.CompilationException: Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-27 14:49:37,720] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg8hjcn
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1544)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+
+play.exceptions.CompilationException: Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 14:49:37,877] ERROR [jobs-thread-9] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gg8hjcp
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1544)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+
+play.exceptions.CompilationException: Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 14:49:53,651] ERROR [play-thread-1]  - 
+
+@71gg8hjd1
+Internal Server Error (500) for request GET /buyer/tasks2
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1205)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:522)
+	at javax.xml.parsers.SAXParser.parse(SAXParser.java:395)
+	at javax.xml.parsers.SAXParser.parse(SAXParser.java:198)
+	at net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:157)
+	at net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:103)
+	at net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:140)
+	at net.sf.ehcache.CacheManager.newInstance(CacheManager.java:818)
+	at net.sf.ehcache.CacheManager.create(CacheManager.java:799)
+	at play.cache.EhCacheImpl.<init>(EhCacheImpl.java:32)
+	at play.cache.EhCacheImpl.newInstance(EhCacheImpl.java:42)
+	at play.cache.Cache.init(Cache.java:241)
+	at play.Play.start(Play.java:533)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-27 14:53:24,390] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggb944n
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1550)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : maps cannot be resolved
+
+play.exceptions.CompilationException: maps cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 14:55:27,335] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggb944p
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/vos/TaskSearchVo.java around line 120)
+The file /app/vos/TaskSearchVo.java could not be compiled. Error raised is : The constructor TaskSearchVo() is undefined
+
+play.exceptions.CompilationException: The constructor TaskSearchVo() is undefined
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 14:55:27,367] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggb9451
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/vos/TaskSearchVo.java around line 120)
+The file /app/vos/TaskSearchVo.java could not be compiled. Error raised is : The constructor TaskSearchVo() is undefined
+
+play.exceptions.CompilationException: The constructor TaskSearchVo() is undefined
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 15:05:11,432] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggb9453
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1799)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : vo cannot be resolved to a variable
+
+play.exceptions.CompilationException: vo cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 15:05:11,542] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggb9455
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1799)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : vo cannot be resolved to a variable
+
+play.exceptions.CompilationException: vo cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 15:09:16,290] ERROR [play-thread-1]  - 
+
+@71ggb9457
+Internal Server Error (500) for request GET /buyer/tasks2
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-27 15:10:33,476] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggdfhpl
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1822)
+NullPointerException occured : Try to read status on null object vos.TaskSearchVo2 (controllers.TaskCenter.listBuyer, line 1822)
+
+play.exceptions.JavaExecutionException: Try to read status on null object vos.TaskSearchVo2 (controllers.TaskCenter.listBuyer, line 1822)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read status on null object vos.TaskSearchVo2 (controllers.TaskCenter.listBuyer, line 1822)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1822)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:11:06,735] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggdfhpm
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1823)
+NullPointerException occured : Try to read status on null object vos.TaskSearchVo2 (controllers.TaskCenter.listBuyer, line 1823)
+
+play.exceptions.JavaExecutionException: Try to read status on null object vos.TaskSearchVo2 (controllers.TaskCenter.listBuyer, line 1823)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read status on null object vos.TaskSearchVo2 (controllers.TaskCenter.listBuyer, line 1823)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1823)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:11:24,973] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggdfhpn
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1823)
+NullPointerException occured : Try to read status on null object vos.TaskSearchVo2 (controllers.TaskCenter.listBuyer, line 1823)
+
+play.exceptions.JavaExecutionException: Try to read status on null object vos.TaskSearchVo2 (controllers.TaskCenter.listBuyer, line 1823)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read status on null object vos.TaskSearchVo2 (controllers.TaskCenter.listBuyer, line 1823)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1823)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:13:52,271] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggdfhpo
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1824)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1824)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:15:13,743] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggdfhpp
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1824)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1824)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:15:19,605] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggdfi00
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1824)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1824)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:16:32,631] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggdfi01
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1824)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1824)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:20:46,539] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggeof5g
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1831)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1831)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:21:12,254] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggeof5h
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1831)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1831)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:21:31,895] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggeof5i
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1831)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1831)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:22:34,786] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggf4jb9
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1831)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1831)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:23:54,628] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggf4jba
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1809)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1809)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:25:03,042] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggf4jbb
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1796)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1796)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:26:25,613] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggf4jbc
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1796)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1796)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:26:38,165] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggf4jbd
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1811)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1811)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:27:39,039] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggf4jbe
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1781)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : The method listBuyer(TaskSearchVo2, String) is undefined for the type TaskCenter
+
+play.exceptions.CompilationException: The method listBuyer(TaskSearchVo2, String) is undefined for the type TaskCenter
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 15:27:39,180] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggf4jbg
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1781)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : The method listBuyer(TaskSearchVo2, String) is undefined for the type TaskCenter
+
+play.exceptions.CompilationException: The method listBuyer(TaskSearchVo2, String) is undefined for the type TaskCenter
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 15:33:20,169] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggf4jbi
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=PROCESS
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1780)
+NullPointerException occured : Try to read status on null object vos.TaskSearchVo2 (controllers.TaskCenter.listBuyer, line 1780)
+
+play.exceptions.JavaExecutionException: Try to read status on null object vos.TaskSearchVo2 (controllers.TaskCenter.listBuyer, line 1780)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read status on null object vos.TaskSearchVo2 (controllers.TaskCenter.listBuyer, line 1780)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1780)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:34:13,218] ERROR [play-thread-1]  - 
+
+@71ggf4jbj
+Internal Server Error (500) for request POST /q?h=ED19A4B9DD094D527DEBD262C14F9F4E&r=0000&v=6.3.8.22277
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-27 15:34:16,118] ERROR [play-thread-1]  - Oops. Error in Logger !
+java.lang.OutOfMemoryError: PermGen space
+[2016-09-27 15:34:18,759] ERROR [play-thread-1]  - 
+
+@71ggf4jbk
+Internal Server Error (500) for request GET /taskcenter/get
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+[2016-09-27 15:34:19,713] ERROR [play-thread-1]  - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+[2016-09-27 15:34:55,546] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gggklpj
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=FINISHED
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1774)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1774)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:35:48,590] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gggklpk
+Internal Server Error (500) for request GET /taskcenter/listbuyer?type=FINISHED
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1772)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1772)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 15:36:48,279] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gggklpl
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1757)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : The method listBuyer() in the type TaskCenter is not applicable for the arguments (TaskSearchVo2, String)
+
+play.exceptions.CompilationException: The method listBuyer() in the type TaskCenter is not applicable for the arguments (TaskSearchVo2, String)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 15:36:48,463] ERROR [jobs-thread-4] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gggklpn
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1757)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : The method listBuyer() in the type TaskCenter is not applicable for the arguments (TaskSearchVo2, String)
+
+play.exceptions.CompilationException: The method listBuyer() in the type TaskCenter is not applicable for the arguments (TaskSearchVo2, String)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 15:42:06,225] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71gggklpp
+Internal Server Error (500) for request GET /buyer/tasks2
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-27 15:42:06,225] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.templates.GroovyTemplate$TClassLoader.defineTemplate(GroovyTemplate.java:79)
+	at play.templates.GroovyTemplate.directLoad(GroovyTemplate.java:92)
+	at play.templates.BaseTemplate.loadFromCache(BaseTemplate.java:56)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:81)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at play.server.PlayHandler.serve500(PlayHandler.java:792)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:247)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-09-27 15:55:38,995] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggjdgje
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1804)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : taskVo cannot be resolved to a variable
+
+play.exceptions.CompilationException: taskVo cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 15:55:39,215] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggjdgjg
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1804)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : taskVo cannot be resolved to a variable
+
+play.exceptions.CompilationException: taskVo cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 15:57:01,717] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggjdgji
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1805)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : taskVo cannot be resolved to a variable
+
+play.exceptions.CompilationException: taskVo cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 15:57:01,827] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggjdgjk
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1805)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : taskVo cannot be resolved to a variable
+
+play.exceptions.CompilationException: taskVo cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 16:10:42,748] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggjdgjm
+Internal Server Error (500) for request GET /taskcenter/listBuyer
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-27 16:10:42,748] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggjdgjn
+Error during the 500 response generation
+
+Template execution error (In /app/views/errors/500.html around line 11)
+Execution error occured in template /app/views/errors/500.html. Exception raised was OutOfMemoryError : PermGen space.
+
+play.exceptions.TemplateExecutionException: PermGen space
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.server.PlayHandler.serve500(PlayHandler.java:792)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.templates.GroovyTemplate$TClassLoader.defineTemplate(GroovyTemplate.java:79)
+	at play.templates.GroovyTemplate.directLoad(GroovyTemplate.java:92)
+	at play.templates.BaseTemplate.loadFromCache(BaseTemplate.java:56)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:81)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:383)
+[2016-09-27 16:25:16,917] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggnakl4
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1769)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate local variable type
+
+play.exceptions.CompilationException: Duplicate local variable type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 16:25:17,044] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggnakl6
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1769)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Duplicate local variable type
+
+play.exceptions.CompilationException: Duplicate local variable type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 16:27:31,836] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggnakl8
+Internal Server Error (500) for request GET /taskcenter/listBuyer
+
+Execution exception (In /app/controllers/TaskCenter.java around line 1811)
+NullPointerException occured : Try to read items on null object vos.Page (controllers.TaskCenter.listBuyer, line 1811)
+
+play.exceptions.JavaExecutionException: Try to read items on null object vos.Page (controllers.TaskCenter.listBuyer, line 1811)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read items on null object vos.Page (controllers.TaskCenter.listBuyer, line 1811)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:214)
+	at controllers.TaskCenter.listBuyer(TaskCenter.java:1811)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-27 16:28:31,622] ERROR [jobs-thread-4] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggnakl9
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1808)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : s.items cannot be resolved to a type
+
+play.exceptions.CompilationException: s.items cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 16:28:31,764] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggnaklb
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 1808)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : s.items cannot be resolved to a type
+
+play.exceptions.CompilationException: s.items cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-27 16:37:31,216] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71ggnakld
+Error during job execution (jobs.AddKwdForFlow)
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.jobs.Job.onException(Job.java:154)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	... 1 more

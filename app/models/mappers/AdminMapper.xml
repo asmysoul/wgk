@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.AdminMapper">
+
+	<resultMap id="BaseResultMap" type="models.AdminUser"></resultMap>
+
+	<update id="updateByAdmin" parameterType="models.AdminUser">
+		update admin
+		<set>
+			<if test="name!= null">
+				name = #{name},
+			</if>
+			<if test="type !=null and type.toString() !='ALL'">
+				type=#{type},
+			</if>
+			<if test="password !=null">
+				password=#{password},
+			</if>
+			<if test="qq !=null">
+				qq=#{qq},
+			</if>
+			<if test="email !=null">
+				email=#{email},
+			</if>
+			<if test="mobile !=null">
+				mobile=#{mobile},
+			</if>
+			<if test="status !=null and status.toString() !='ALL'">
+				status=#{status},
+			</if>
+			<if test="message !=null">
+				message=#{message}
+			</if>
+		</set>
+		where id = #{id}
+	</update>
+
+	<!-- 后台管理：管理员用户列表 -->
+	<sql id="where">
+		<where>
+			<if test="id !=null and id !=0">
+				and a.id=#{id}
+			</if>
+			<if test="name !=null">
+				and a.name=#{name}
+			</if>
+			<if test="type !=null and type.toString() !='ALL'">
+				and a.type=#{type}
+			</if>
+			<if test="qq !=null">
+				and a.qq=#{qq}
+			</if>
+			<if test="email !=null">
+				and a.email=#{email}
+			</if>
+			<if test="mobile !=null">
+				and a.mobile=#{mobile}
+			</if>
+			<if test="status !=null and status.toString() !='ALL'">
+				and a.status=#{status}
+			</if>
+		</where>
+	</sql>
+	<select id="count" resultType="java.lang.Integer">
+		select count(1) from admin a
+		<include refid="where"/>
+	</select>
+	<select id="selectListForAdmin" resultMap="BaseResultMap">
+		select id,name,type,qq,email,mobile,status,message from admin a
+		<include refid="where"/>
+		limit #{startIndex}, #{pageSize}
+	</select>
+	
+</mapper>
+	

@@ -1,0 +1,268 @@
+#{extends 'frame.html' /}
+#{set title:'绑定推广' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/shop.css'}" />
+#{/set}
+<div class="contentCard">
+	<div class="contentTitle">选择平台</div>
+	<div class="contentBody clearfix">
+		<div class="filterBlock">
+			<div class="clearfix" id="platform2">
+				#{list items:platforms2, as:'p'}
+				<span class="checkTextBtn ${p.toString()=='WEIXIN'?'selectedCtb':''}" href="javascript:;" value="${p}">${p.title}</span>
+				#{/list}
+				
+				</p>
+				<span class="btnSection">
+				<a id="btnBindShop" href="javascript:;" class="btnCharge stdColorButton">
+					绑定推广主体
+				</a>
+				<span class="grey f11">(仅任务对应的买手可见，不会被泄漏)</span>
+			</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="contentCard">
+	<div class="contentTitle">
+		已绑定的主体
+	</div>
+	<div class="contentBody">
+		<div class="taskSection">
+			<div id="taskTableTitle">
+				<table class="normTable">
+					<tbody>
+						<tr>
+							<td class="r_seller">账号ID</td>
+							<td class="r_sellerName">账号名</td>
+							<td class="r_mobile">联系电话</td>
+							<td class="r_commision">主体地区</td>
+							<td class="r_street">详细地址</td>
+							<td class="r_amount">操作</td> 
+							
+							
+							<!-- <td class="r_seller">店铺账号</td>
+							<td class="r_sellerName">发货人姓名</td>
+							<td class="r_mobile">发货人电话</td>
+							<td class="r_commision">发货地区</td>
+							<td class="r_street">发货详细地址</td>
+							<td class="r_branch">快递揽件网点编码</td>
+							<td class="r_amount">店铺网址</td>
+							<td class="r_amount">操作</td> -->
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="dianpuContainer"></div>
+
+		</div>
+
+	</div>
+</div>
+
+
+
+
+<!--绑定新推广窗口-->
+<div class="popWrapper" id="bindShopWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:;" class="wnd_Close_Icon" title="关闭窗口"></a>
+		<h3 class="topTile">绑定新推广主体</h3>
+		<div class="modalWndInner">
+			<div id="shopInfoShower">
+				#{authenticityToken/}
+				
+				<form id="addShop">
+					
+					<div class="panelLine">
+						<span>账号ID</span>
+						<span class="grey">(绑定后无法修改)</span>
+					</div>
+					<div class="panelLine">
+						<input type="text" class="inputText floatLeft ls long required" id="txtWangwang" name="nick" />
+					</div>
+					
+					<div class="panelLine">
+						<span>账户昵称：</span>
+						<input type="text" class="inputText ls long required " id="sellerName" style="width:110px;" name="sellerName" />&nbsp;&nbsp;&nbsp;
+						<span>发件人电话：</span>
+						<input type="text" class="inputText ls long required " id="moblie" style="width:110px;" name="mobile" />
+					</div>
+					
+					<div class="panelLine">
+						<div class="floatLeft ls">主体地区：</div>
+						<div id="selectAdd" class="ls">
+							<select class="selectAddress required" id="first"name="first">
+								<option value="" selected="selected">请选择</option>
+								#{list items: regions, as:'re'}
+								<option rid="${re.id}">${re.name}</option>
+								#{/list}
+							</select>
+							<select class="selectAddress required" id="second"name="second">
+								<option value="" selected="selected">请选择</option>
+
+							</select>
+							<select class="selectAddress required" id="thrid"name="third">
+								<option value="" selected="selected">请选择</option>
+
+							</select>
+						</div>
+					</div>
+					
+					<div class="panelLine">
+						<span>详细地址：</span>
+						<input type="text" class="inputText ls long required" style="width:345px;" id="street" name="street" />
+					</div>
+					
+					
+				</form>
+			</div>
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="btnConfirmSave" href="javascript:;" class="botButton">确认</a>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+<!--修改店铺窗口-->
+<div class="popWrapper" id="modifyShopWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:;" class="wnd_Close_Icon" title="关闭窗口"></a>
+		<h3 class="topTile">修改店铺信息</h3>
+		<div class="modalWndInner">
+			<div id="shopInfoShower">
+				#{authenticityToken/}
+				<form id="modifyShop">
+					<!-- <div class="panelLine">
+						<span>店铺首页网址:</span>
+						<span id = "newTxtWangzhi"></span>
+					</div> -->
+					<div class="panelLine">
+						<span>微信账号:</span>
+						<span id = "newTxtWangwang"></span>
+					</div>
+					
+					<div class="panelLine">
+						<span>账户昵称：</span>
+						<input type="text" class="inputText ls long required " id="newSellerName" style="width:110px;" name="sellerName" />&nbsp;&nbsp;&nbsp;
+						<span>联系人电话：</span>
+						<input type="text" class="inputText ls long required " id="newMoblie" style="width:110px;" name="mobile" />
+					</div>
+					
+					<div class="panelLine">
+						<div class="floatLeft ls">联系地址:</div>
+						<div id="selectAdd" class="ls">
+							<select class="selectAddress required" id="newFirst"name="first">
+								<option value="" selected="selected">请选择</option>
+								#{list items: regions, as:'re'}
+								<option rid="${re.id}">${re.name}</option>
+								#{/list}
+							</select>
+							<select class="selectAddress required" id="newSecond"name="second">
+								<option value="" selected="selected">请选择</option>
+
+							</select>
+							<select class="selectAddress required" id="newThrid"name="third">
+								<option value="" selected="selected">请选择</option>
+							</select>
+							
+						</div>
+					</div>
+					
+					<div class="panelLine">
+						<span>联系详细地址：</span>
+						<input type="text" class="inputText ls long required" style="width:345px;" id="newStreet" name="street" />
+					</div>
+					
+					
+				</form>
+			</div>
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="btnConfirmModify" href="javascript:;" class="botButton">确认</a>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+<!-- templates -->
+<textarea id="taskRowTempl" class="muban">
+	<div class="taskRow">
+		<table class="normTable">
+			<tbody>
+				<tr>
+					<td class="r_seller">灰太狼的巴巴</td>
+					<td class="r_percount">123件</td>
+					<td class="r_price">
+						<span class="iconfont">&#xf0150;</span>
+						516元
+					</td>
+					<td class="r_commision">
+						<span class="green">8.4</span>
+						符点
+						<span class="red">1.5</span>
+						经验
+					</td>
+					<td class="r_amount">15单</td>
+					<td class="r_percent"> <strong class="ui-progressbar-mid ui-progressbar-mid-56"><em>56%</em></strong> 
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="taskCover">
+			<div class="bg"></div>
+			<a href="javascript:;" class="btnTakeIt stdColorButton">确认接手</a>
+		</div>
+	</div>
+</textarea>
+
+<textarea id="dianpuTemp" class="muban">
+	{{#results}}
+	<div class="taskRow">
+		<table class="normTable">
+			<tbody>
+				<tr>
+					<td class="r_seller">{{nick}}</td>
+					<td class="r_sellerName">{{sellerName}}</td>
+					<td class="r_mobile">{{mobile}}</td>
+					<td class="r_commision">{{address}}</td>
+					<td class="r_street">{{street}}</td>
+					 <td class="r_branch">
+						<input type="button" class="modifyShop red bold" href="javascript:;"  data-uid="{{id}}" value="修改主体信息" />
+					</td>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	{{/results}}
+</textarea>
+
+<textarea id="quyuTemp" class="muban">
+	{{#results}}
+	<option rid="{{id}}">{{name}}</option>
+	{{/results}}
+</textarea>
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/shop/shop2.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script type="text/javascript">
+	App.module = 'shop2';
+	// App.drivel = 'bb';
+</script>
+#{/set}

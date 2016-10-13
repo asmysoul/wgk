@@ -1,0 +1,74 @@
+.normTable{
+	margin-top: 10px;
+}
+.normTable tbody td{
+	border-bottom: solid 1px #DEDEDE;
+	vertical-align: middle;
+}
+.normTable thead td{
+	background: #DEDEDE;
+	border-bottom: solid 1px #BBB;
+	color: #999;
+}
+/*-----------------------------------*/
+th{
+	text-align: left;
+	padding: 3px 8px;
+	line-height: 34px;
+}
+#taskFilterPanel{
+	height: auto;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+#taskFilterPanel .stdColorButton{
+	line-height: 14px;
+}
+/*-----------------------------------*/
+#editBtnSave{
+background-color: #26AA9F;
+}
+#addTraffic .modalWnd{
+	width:600px;
+	left:50%;
+	top:30%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+#addTraffic .modalWnd{
+	width:600px;
+	left:50%;
+	top:30%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+#editConfig .modalWnd{
+	width:600px;
+	left:50%;
+	top:30%;
+	position: fixed;
+	z-index: 100;
+}
+#txtFundAccountNo{
+	width:260px;
+	color:red
+}
+#btnSave{
+	background-color:  #26AA9F;
+}
+#btnSave:hover{
+	background-color: #2BBFB3;
+}
+.selectType{
+	width: 196px;
+	height: 28px;
+}
+
+.panelLine{
+	text-align: right;
+}
+.panelLine input,select{
+	margin-right: 130px;
+}

@@ -1,0 +1,285 @@
+.task-simp-info{
+	margin-bottom: 20px;
+}
+#info-table thead td{
+	background: #DEDEDE;
+	border-bottom: solid 1px #BBB;
+	color: #999;
+}
+.panelLine .num-list-flag{
+	background-color: #445C71;
+	color:#fff;
+	padding:0 6px;
+	margin-right: 8px;
+	line-height: 20px;
+	margin-top: 7px;
+	border-radius: 2px;
+}
+/*===========================================*/
+.stepWrapper{
+	position: relative;
+	background: url(/public/images/st_bar_bg.png) repeat-x left center;
+	height: 30px;
+}
+.stepFinish{
+	background: url(/public/images/st_finish.png) no-repeat center center;
+	width: 30px;
+	height: 30px;
+}
+.stepOn{
+	background: url(/public/images/st_on_num.png) no-repeat;
+	width: 30px;
+	height: 30px;
+	color: #FFF;
+	text-align: center;
+	line-height:30px;
+}
+.stepWaiting{
+	background: url(/public/images/st_waiting.png) no-repeat center top;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	text-align: center;
+	line-height:30px;	
+	float: left;
+}
+.stepWaiting .caption{
+	position: absolute;
+	font-size: 12px;
+	line-height: 20px;
+	top:30px;
+	left: 50%;
+	z-index: 3;
+}
+/*===========================================*/
+.panelBox{
+	padding-left: 10px;
+}
+.panelLine .secondTile{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+.imgBox{
+	width: 80px;
+	height: 80px;
+}
+.taskMsg{
+	height: 80px;
+	line-height: 40px;
+}
+.exampleImg{
+	height: 320px;
+}
+.panelLine .checkTextBtn{
+	line-height: 24px;
+}
+.buttonSection{
+	margin-top: 15px;
+}
+.buttonSection .prev{
+	background-color: #777;
+	margin-right: 20px;
+}
+.buttonSection .prev:hover{
+	background-color: #888;	
+}
+.panelLine .rad{
+	margin-top: 12px;
+}
+.contentBody .secondTile{
+	margin-bottom: 5px;
+}
+.contentBody .sec{
+	margin-bottom: 10px;
+}
+.panelLine .stdColorButton{
+	line-height: 20px;
+}
+.stdColorButton .iconfont{
+	padding-left: 10px;
+}
+.long{
+	width: 500px;
+}
+.middle{
+	width: 150px;
+}
+.short{
+	width:80px;
+}
+/*----------增值服务---------------------------*/
+.required{
+	background-color: #FCFFD6;
+}
+.clickable{
+	cursor: pointer;
+}
+.clickable:hover{
+	background-color: #EAEAEA;
+}
+/*--------------------------------------------*/
+.itemPicBox img{
+	max-width:800px;
+	max-height:500px;
+	min-height: 100px;
+	min-width: 100px;
+	border:solid 1px #999;
+	margin-top: 10px;
+}
+.itemSubwaySamplePicBox img{
+	height: 180px;
+	width: 480px;
+	border:solid 1px #999;
+	margin-top: 10px;
+}
+.afterPlusText{
+	border-top: dashed 1px #7B805D;
+	padding-top:20px;
+}
+.afterPlusText .panelLine{
+	line-height: 28px;
+	min-height: 28px;
+	height: auto;
+}
+/*------------------------------------------*/
+.confirm-info-box{
+
+}
+.item-info{
+	margin-bottom: 40px;
+}
+.item-info label{
+	width: 80px;
+	margin-right: 10px;
+	color: #999;
+}
+.up-snapshot-info{
+}
+#lnkViewSnapExample{
+	margin-left: 10px;
+}
+#lnkViewSnapExample:hover{
+	text-decoration: underline;
+}
+.disabled{
+	background-color:#726E68;
+}
+.next{
+	background-color: #F49E00;
+}
+.stdColorButton:hover{
+	background-color: #726E68;
+}
+.next:hover{
+	background-color: #FFAB0F;
+}
+/*----------弹窗---------------------------*/
+#confirmToOrderWnd .modalWnd{
+	width:540px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+.wndBotButtonSection .btnConfirm{
+	background-color: #26AA9F;
+	display: inline-block; 
+	padding:5px 15px; 
+	color:#FFF; 
+
+}
+.wndBotButtonSection .btnConfirm:hover{
+	background-color: #2BBFB3;
+}
+.btnClearItemUrl{
+	cursor: pointer;
+}
+#message{
+    display:-moz-inline-box;
+    display:inline-block;
+    width:200px;
+}
+.harvest{
+	display:-moz-inline-box;
+    display:inline-block;
+    width:370px;
+}
+.spareHide,.harvest .consigneeInfo{
+	display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+/* 查看上一步信息样式 */
+#btnLookupSearchMsg:hover{
+	color: #FA7456;
+}
+/*----------弹窗---------------------------*/
+#submitToOrderWnd .modalWnd{
+	width:540px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+.wndBotButtonSection .btnConfirm{
+	background-color: #26AA9F;
+	display: inline-block; 
+	padding:5px 15px; 
+	color:#FFF; 
+
+}
+.wndBotButtonSection .btnConfirm:hover{
+	background-color: #2BBFB3;
+}
+.btnClearItemUrl{
+	cursor: pointer;
+}
+#message{
+    display:-moz-inline-box;
+    display:inline-block;
+    width:200px;
+}
+.harvest{
+	display:-moz-inline-box;
+    display:inline-block;
+    width:370px;
+}
+.spareHide,.harvest .consigneeInfo{
+	display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+#JHS_Platform .item-info .panelLine{
+	display:block;
+	word-wrap: break-word; 
+	word-break: normal; 
+	height: auto;
+}
+
+.imgOrder-model,.imgChat-model{
+	min-width:400px;
+	max-width:1000px;
+	position: absolute;
+	bottom:100px;
+	margin-bottom:100px;
+	min-height: 100px;
+	z-index: 2;
+	display: none;
+}
+
+
+
+
+.hei{
+	height:400px;
+}
+.ta tr td img{height:130px;width:130px;margin:0 15px 15px 0}
+.buttonSection{margin-top:90px;margin-left:62px;}
+
+.donpic{margin-left:580px;margin-top:-50px;position:absolute;width:80px;}

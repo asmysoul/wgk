@@ -1,0 +1,35 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+# For use in JavaExtensions.since tag
+since.seconds = %s second%s ago
+since.minutes = %s minute%s ago
+since.hours   = %s hour%s ago
+since.days    = %s day%s ago
+since.months  = %s month%s ago
+since.years   = %s year%s ago
+since.format  = MMM d, yyyy
+
+# Validation messages
+validation.required=[%s] Required
+validation.minSize=[%s] Minimum size is %2$d
+validation.maxSize=[%s] Maximum size is %2$d
+validation.email=[%s] Invalid email address
+validation.range=[%s] Not in the range %2$d through %3$d
+validation.min=[%s] Cannot be lower than %2$d
+validation.max=[%s] Cannot be greater than %2$d
+validation.match=[%s] Must match %2$s
+validation.isTrue=[%s] Must be checked
+validation.equals=[%s] Must be equal to &{%2$s}
+validation.invalid=Incorrect value
+validation.future=[%s] Must be in the future
+validation.after=[%s] Must be after %2$s
+validation.past=[%s] Must be in the past
+validation.before=[%s] Must be before %2$s
+validation.object=[%s] Validation failed
+validation.notFound=[%s] Object not found for id %2$s
+validation.url=[%s] Not a valid URL
+validation.phone=[%s] Not a valid phone
+validation.ipv4=[%s] Not a valid IP address
+validation.ipv6=[%s] Not a valid IP v6 address
+validation.unique=[%s] Must be unique

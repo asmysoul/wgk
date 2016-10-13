@@ -1,0 +1,28 @@
+body{
+	background-color: #F4F4F4;
+}
+#topBar{
+	position: static;
+}
+.contentCard{
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 0 7px rgba(200,200,200,.75);
+	box-shadow: 0 0 7px rgba(200,200,200,.75);
+	overflow: hidden;
+	border: 1px solid #c9ccd0;
+	background-color: #fafafa;
+}
+#centerBox{
+	width: 500px;
+	margin: 60px auto;
+}
+.panelLine .iconfont{
+	font-size: 20px;
+}
+.long{
+	width: 240px;
+}
+.lbl{
+	width: 70px;
+}

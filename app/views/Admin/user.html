@@ -1,0 +1,437 @@
+#{extends 'frame.html' /}
+#{set title:'用户管理' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/admin/user-manage.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.pagination.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/datePicker.css'}" />
+
+#{/set}
+<div class="contentCard">
+	<input type="hidden" value=${jumpStatus} id="jumpStatus"/>
+	<div class="contentTitle">用户列表</div>
+	<div id="taskFilterPanel">
+		<div class="clearfix mb10">
+			<span class="floatLeft mr10">身份</span>
+			<select class="floatLeft mr10" id="type">
+				<option value="BUYER" selected="true" id="BUYER">买手</option>
+				<option value="SELLER" id="SELLER">商家</option>
+				<option value="ALL">全部</option>
+			</select>
+			<span class="floatLeft mr10">用户ID</span>
+			<input type="text" id="uid" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">昵称</span>
+			<input type="text" id="nick" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">VIP等级</span>
+			<select class="floatLeft mr10" id="vipStatus">
+					#{list items:userVipStatusList, as:'s'}
+					<option value="${s}" >${s.title}</option>
+					#{/list}
+			</select>
+		</div>
+		<div class="clearfix mb10">
+			<span class="floatLeft mr10">Email</span>
+			<input type="text" id="email" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">手机</span>
+			<input type="text" id="mobile" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">QQ</span>
+			<input type="text" id="qq" class="floatLeft mr10 inputText" />
+			<span class="floatLeft mr10">对接客服</span>
+			<input type="text" id="adminName" class="floatLeft mr10 inputText" />
+		</div>
+		<div class="clearfix mb10">
+			<div class="cal-content">
+				<span class="floatLeft mr10">注册时间</span>
+				<span class="floatLeft mr10 cal-date-input">
+					<input class="inputDate start-date" id="regTimeStart" readonly="readonly" value=""  />
+				</span>
+				<span class="floatLeft mr10 med-cal-split">-</span>
+				<span class="floatLeft mr10 cal-date-input">
+					<input class="inputDate end-date" id="regTimeEnd" readonly="readonly" value="" />
+				</span>
+				<span class="floatLeft mr10">用户状态</span>
+				<select class="floatLeft mr10 mt4" id="status">
+					<option value="">全部</option>
+					#{list items:userStatusList, as:'s'}
+					<option value="${s}" >${s.title}</option>
+					#{/list}
+				</select>
+				<a class="stdColorButton floatLeft queryBtn" href="javascript:;" id="queryBtn">查询</a>
+			</div>
+		</div>
+	</div>
+	<div class="mt20">
+		<table class="normTable">
+			<thead>
+				<tr>
+					<td style="width:150px">昵称</td>
+					<td style="width:185px">用户状态</td>
+					<td style="width:210px">用户信息</td>
+					<td style="width:100px">用户资金</td>
+					<td style="width:90px">注册时间</td>
+					<td style="width:70px">对接客服</td>
+					<td style="width:90px">操作</td>
+				</tr>
+			</thead>
+			<tbody id="accountContainer"></tbody>
+		</table>
+		<div id="noMsg">
+			<div class="warnBox">
+				<span class="iconfont">&#xf00b6;</span>
+				没有用户!
+			</div>
+		</div>
+		<div class="pagin-btm clearFix" style="display: none;">
+			<div class="pagination"></div>
+		</div>
+		<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+			<div class="maskLayer"></div>
+			<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />
+		</div>
+	</div>
+</div>
+
+<!--keyword muban-->
+<textarea class="muban" id="rowTemp">
+	{{#results}}
+	<tr data-nick="{{nick}}" data-uid="{{id}}">
+		<td><span class="nick">{{nick}}</span><br>
+			<span>[{{id}}]</span>
+		</td>
+		<td class="usertype">
+			<div class="tdLeft">类型：{{usertype}}</div><br>
+			<div class="tdLeft">等级：{{vipstatus}}</div><br>
+			<div class="tdLeft">
+				状态：{{userstatus}}
+				{{#isInactive}}
+				<input type="button" class="J_resendMail bold" data-email="{{email}}" data-nick="{{nick}}" value="发送邮件" />
+				{{/isInactive}}
+			</div>
+		</td>
+		<td>
+			<div class="tdLeft">邮箱：{{email}}</div><br>
+			<div class="tdLeft">QQ：{{qq}}</div><br>
+			<div class="tdLeft">手机：{{mobile}}</div>
+		</td>
+		<td>
+			<span class="tdLeft">金币：{{ingotStr}}</span><br>
+			#{if jumpStatus == "BUYER"}
+			<span class="tdLeft">本金：{{depositStr}}</span><br>
+			#{/if}
+			#{if jumpStatus == "SELLER"}
+			<span class="tdLeft">押金：{{pledgeStr}}</span><br>
+			<span class="tdLeft">流量：{{flow}}</span>
+			#{/if}
+		</td>
+		<td>{{regtime}}</td>
+		<td>
+		{{name}}
+		{{#isName}}
+			<input type="button" class="dockingMessage blue bold" href="javascript:;" data-uid="{{id}}" value="对接详情" />
+			<input type="button" class="cancelDocking red bold" href="javascript:;" data-uid="{{id}}" value="取消对接" />
+		{{/isName}}
+		</td>
+		<td >
+		#{if admin.type.toString()=='SERVICE'}
+		#{/if}
+		#{else}
+			<input type="button" class="Recharge queryBtn red bold" href="javascript:;" data-nick="{{nick}}" data-uid="{{id}}" value=" 资金操作 " />
+			<input type="button" class="MemberDelay queryBtn red bold" href="javascript:;" data-nick="{{nick}}" data-uid="{{id}}" value=" 会员延期 " />
+		#{/else}
+			#{if jumpStatus == "BUYER"}
+			<input type="button" class="RechargeDeposit queryBtn red bold" href="javascript:;" data-nick="{{nick}}" data-uid="{{id}}" value="本金操作" /><br>
+			#{/if}
+			
+			<input type="button" class="modifyMessage blue bold" href="javascript:;"  data-uid="{{id}}" value="修改用户信息" />
+			<input type="button" class="J_resetPayPass orange bold" href="javascript:;" data-uid="{{id}}" value="重置支付密码" />
+			#{if jumpStatus == "SELLER"}
+			<input type="button" class="limit green bold" href="javascript:;" data-uid="{{id}}" value="规则限制" />
+			<input type="button" class="flowBtn green bold" href="javascript:;" data-uid="{{id}}" value="流量管理" />
+			#{/if}
+		</td>
+	</tr>
+	{{/results}}
+</textarea>
+
+<div class="popWrapper depositWnd" id="depositWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:void(0);" class="wnd_Close_Icon" id="close" title="关闭窗口"></a>
+		<h3 class="topTile">流量操作</h3>
+		<div class="modalWndInner" style="width:500px">
+			<form id="rechargeForm">
+			    <div class="panelLine">
+					<span class="floatLeft mr10">流量操作：</span>
+					<span >
+					<input type="hidden"  id="userId" value=""/>
+						<input type="radio" checked="checked" name="fundPracticef" class="depositRecharge" />					
+						<span class=" bold red">&nbsp;充值</span>
+					</span>
+					<span>
+						<input type="radio" name="fundPracticef" class="depositDeduct"/>					
+						<span class=" bold red">&nbsp;扣款</span>
+					</span>
+				</div>
+				<div class="panelLine">
+					<span class="floatLeft mr10">充值数额：</span>
+					<input type="text" class="txtDepositRecharge bold required inputText" style="width:260px;color:red" name="deposit"></div>
+				<div class="area">
+					<span class="floatLeft mr10">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：</span>
+					<textarea rows="5" cols="41" id="txtDepositMemo" class="required txtMemo inputMultiText" name="memo"></textarea>
+					<span id="errorf"></span>
+				</div>
+			</form>
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="depositBtnCharge" href="javascript:;" class="botButton stdColorButton">确认</a>
+		</div>
+	</div>
+</div>
+
+<div class="popWrapper flowWnd" id="flowWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:void(0);" class="wnd_Close_Icon" id="close" title="关闭窗口"></a>
+		<h3 class="topTile">流量操作</h3>
+		<div class="modalWndInner" style="width:500px">
+			<form id="rechargeForm">
+			    <div class="panelLine">
+					<span class="floatLeft mr10">流量操作：</span>
+					<span >
+					<input type="hidden"  id="userId" value=""/>
+						<input type="radio" checked="checked" name="fundPracticef" class="flowRecharge" />					
+						<span class=" bold red">&nbsp;充值</span>
+					</span>
+					<span>
+						<input type="radio" name="fundPracticef" class="flowDeduct"/>					
+						<span class=" bold red">&nbsp;扣款</span>
+					</span>
+				</div>
+				<div class="panelLine">
+					<span class="floatLeft mr10">充值个数：</span>
+					<input type="text" class="txtFlowRecharge bold required inputText" style="width:260px;color:red" name="flow"></div>
+				<div class="area">
+					<span class="floatLeft mr10">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：</span>
+					<textarea rows="5" cols="41" id="txtFlowMemo" class="required txtMemo inputMultiText" name="memo"></textarea>
+					<span id="errorf"></span>
+				</div>
+			</form>
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="flowBtnCharge" href="javascript:;" class="botButton stdColorButton">确认</a>
+		</div>
+	</div>
+</div>
+
+<!--新充值窗口-->
+<div class="popWrapper RechargeWnd" id="RechargeWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:void(0);" class="wnd_Close_Icon" id="close" title="关闭窗口"></a>
+		<h3 class="topTile">资金操作</h3>
+		<div class="modalWndInner" style="width:500px">
+			<form id="rechargeForm">
+			    <div class="panelLine">
+					<span class="floatLeft mr10">资金操作：</span>
+					<span >
+						<input type="radio" checked="checked" name="fundPractice" class="recharge" />					
+						<span class=" bold red">&nbsp;充值</span>
+					</span>
+					<span>
+						<input type="radio" name="fundPractice" class=" deduct"/>					
+						<span class=" bold red">&nbsp;扣款</span>
+					</span>
+				</div>
+				<div class="panelLine">
+					<span class="floatLeft mr10">账户余额：</span>
+					<span class="mr-20">
+						<span id="currInogt" class="bold green">0.00</span>&nbsp;金币
+					</span>
+					<span>
+						<span id="currPledge" class="bold green">0.00</span>&nbsp;<span class="titleDeposit">#{if jumpStatus == "BUYER"}本金#{/if}#{else}押金#{/else}</span>
+					</span>
+				</div>
+				<div class="panelLine">
+					<span class="floatLeft mr10">资金类型：</span>
+					<span id="INGOT">
+						<input type="radio" data-type="INGOT" name="Recharge" checked="checked" />					
+						<span class=" bold red">&nbsp;金币</span>
+					</span>
+					<span id="PLEDGE" class="bold red">
+						<input type="radio" data-type="PLEDGE" name="Recharge" />					
+						&nbsp;<span class="titleDeposit">#{if jumpStatus == "BUYER"}本金#{/if}#{else}押金#{/else}</span>
+						<span class="bold grey">(注意：一般仅开发测试时才需要此选项)</span>
+					</span>
+				</div>
+				<div class="panelLine">
+					<span class="floatLeft mr10">充值金额：</span>
+					<input type="text" class="txtRecharge bold required inputText" style="width:260px;color:red" name="amount"></div>
+				<div class="area">
+					<span class="floatLeft mr10">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：</span>
+					<textarea rows="5" cols="41" id="txtMemo" class="required txtMemo inputMultiText" name="memo"></textarea>
+					<span id="error"></span>
+				</div>
+				<div>
+					<span class="bold grey">(注意：客服充值时，备注里请填写支付宝交易号，便于对账)</span>
+				</div>
+			</form>
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="btnCharge" href="javascript:;" class="botButton stdColorButton">确认</a>
+			#{if jumpStatus == "SELLER"}
+			<a id="btnIngotToPledge" href="javascript:;" class="botButton stdColorButton">金币转押金</a>
+			#{/if}
+			<a id="btnCleanCache" href="javascript:;" class="botButton stdColorButton">清理缓存</a>
+		</div>
+	</div>
+</div>
+<!--信息修改窗口-->
+<div class="popWrapper modifyMessageWnd" id="modifyMessageWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:void(0);" class="wnd_Close_Icon close" title="关闭窗口"></a>
+		<h3 class="topTile">平台帮用户修改资料</h3>
+		<div class="modalWndInner" style="width:500px">
+			<form id="modifyMessageForm">
+				
+				<div class="panelLine">
+
+					<span class="floatLeft mr10" style='color'>密码：</span>
+
+					<input id="newPassword" class = "inputText bold"/>
+
+			    </div>
+			
+				<div class="panelLine">
+					<span class="floatLeft mr10">QQ：</span>
+					<input id="newQQ" class = "inputText bold"/>
+			    </div>
+				<div class="panelLine">
+					<span class="floatLeft mr10">电话：</span>
+					<input id="newMobile" class = "inputText bold"/>
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">邮箱修改：</span>
+			    	<input id="newEmail" type="text" class="inputText bold"/>
+			    </div>
+				<div class="panelLine">
+					<span class="floatLeft mr10">用户等级：</span>
+					<select class="floatLeft mr10" id="newVipStatus">
+						<option value="NORMAL">普通用户</option>
+						<option value="VIP1">VIP一级</option>
+						<option value="VIP2">VIP二级</option>
+						<option value="VIP3">VIP三级</option>
+						<option value="SPECIAL">合作用户</option>
+						<option value="LOW">降权用户</option>
+					</select>
+			    </div>
+				<div class="panelLine">
+					<span class="floatLeft mr10">注册状态：</span>
+					<select class="floatLeft" id="newStatus">
+						<option value="INACTIVE">注册后未激活</option>
+						<option value="ACTIVE">已激活，尚未开通会员</option>
+						<option value="VALID">注册后开通会员</option>
+						<option value="INVALID">会员过期</option>
+						<option value="LOCKED">账号被冻结</option>
+					</select>
+			    </div>
+			</form>
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="btnModifyMessage" href="javascript:;" class="botButton stdColorButton">确认</a>
+		</div>
+	</div>
+</div>
+<!--对接用户备注窗口-->
+<div class="popWrapper dockingNameWnd" id="dockingNameWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:void(0);" class="wnd_Close_Icon close" title="关闭窗口"></a>
+		<h3 class="topTile">对接用户备注修改</h3>
+		<div class="modalWndInner" style="width:500px">
+			<form id="dockingNameForm">
+				<div class="panelLine">
+					<span class="floatLeft mr10">当前对接客服姓名：</span>
+					<input id="newDockingName" class = "inputText bold" disabled = "disabled"/>
+			    </div>
+			    <div class="area">
+					<span class="floatLeft mr10">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：</span>
+					<textarea rows="5" cols="41" id="newDockingMessage" class="required txtMemo inputMultiText" name="newDockingMessage"></textarea>
+				</div>
+			</form>
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="btnDockingMessage" href="javascript:;" class="botButton stdColorButton">确认</a>
+		</div>
+	</div>
+</div>
+
+<!--会员延期窗口-->
+<div class="popWrapper memberDelayWnd" id="memberDelayWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:void(0);" class="wnd_Close_Icon close" title="关闭窗口"></a>
+		<h3 class="topTile">会员延期</h3>
+		<div class="modalWndInner" style="width:500px">
+			<form id="memberDelayForm">
+				<div class="panelLine">
+					<span class="floatLeft mr10">当前用户到期时间：</span>
+					<input id="memberDueTime" class = "inputText bold" disabled = "disabled"/>
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">延期时长：</span>
+			    	<select class="floatLeft ls mt8" id="memberDelayDuration">
+						<option value="1" selected="selected">一天</option>
+						<option value="7">一周</option>
+						<option value="30">一个月</option>
+						<option value="365">一年</option>
+					</select>
+			    </div>
+			</form>
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="btnMemberDelay" href="javascript:;" class="botButton stdColorButton">确认</a>
+		</div>
+	</div>
+</div>
+<!--规则限制窗口-->
+<div class="popWrapper limitWnd" id="limitWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:void(0);" class="wnd_Close_Icon close" title="关闭窗口"></a>
+		<h3 class="topTile">规则限制</h3>
+		<div class="modalWndInner" style="width:500px">
+			<form id="limitForm">
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">同一个账号接同一个商家：</span>
+			    	<input id="buyerAndSellerTime" class = "inputText bold"/>天
+			    </div>
+				<div class="panelLine">
+			    	<span class="floatLeft mr10">同一个账号接同一个店铺：</span>
+			    	<input id="buyerAndShopTime" class = "inputText bold"/>天
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">同一个买号接同一个店铺：</span>
+			    	<input id="buyerAcountAndShopTime" class = "inputText bold"/>天
+			    </div>
+			    <div class="panelLine">
+			    	<span class="floatLeft mr10">同一个买号接同一个商品：</span>
+			    	<input id="buyerAcountAndItemTime" class = "inputText bold"/>天
+			    </div>
+			</form>
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="btnLimit" href="javascript:;" class="botButton stdColorButton">确认</a>
+		</div>
+	</div>
+</div>
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/date.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.datePicker.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.number.min.js'}" type="text/javascript"></script>
+<script type="text/javascript">App.module = '${jumpStatus}';App.adminName = '${admin.name}';</script>
+<script src="@{'/public/javascripts/admin/user.js'}" type="text/javascript"></script>
+
+#{/set}

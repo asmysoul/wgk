@@ -1,0 +1,523 @@
+[2016-07-25 09:19:39,113] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p8c
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/TaskCenter.java around line 563)
+The file /app/controllers/TaskCenter.java could not be compiled. Error raised is : Type mismatch: cannot convert from Multimap&lt;String,TaskCountVo2> to Multimap&lt;String,TaskCountVo>
+
+play.exceptions.CompilationException: Type mismatch: cannot convert from Multimap<String,TaskCountVo2> to Multimap<String,TaskCountVo>
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-25 09:31:37,091] ERROR [jobs-thread-3] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p8e
+Error during job execution (jobs.AddKwdForFlow)
+
+Compilation error (In /app/models/BuyerTask2.java around line 196)
+The file /app/models/BuyerTask2.java could not be compiled. Error raised is : The method insert(BuyerTask) in the type BuyerTaskMapper is not applicable for the arguments (BuyerTask2)
+
+play.exceptions.CompilationException: The method insert(BuyerTask) in the type BuyerTaskMapper is not applicable for the arguments (BuyerTask2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-25 09:31:38,001] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p8g
+Error during job execution (jobs.BuyerTaskCancel)
+
+Compilation error (In /app/models/BuyerTask2.java around line 196)
+The file /app/models/BuyerTask2.java could not be compiled. Error raised is : The method insert(BuyerTask) in the type BuyerTaskMapper is not applicable for the arguments (BuyerTask2)
+
+play.exceptions.CompilationException: The method insert(BuyerTask) in the type BuyerTaskMapper is not applicable for the arguments (BuyerTask2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-25 09:31:40,058] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p8i
+Error during job execution (jobs.GetExpressNo)
+
+Compilation error (In /app/models/BuyerTask2.java around line 196)
+The file /app/models/BuyerTask2.java could not be compiled. Error raised is : The method insert(BuyerTask) in the type BuyerTaskMapper is not applicable for the arguments (BuyerTask2)
+
+play.exceptions.CompilationException: The method insert(BuyerTask) in the type BuyerTaskMapper is not applicable for the arguments (BuyerTask2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-25 09:41:37,810] ERROR [jobs-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p8k
+Error during job execution (jobs.FlowClickTimes)
+
+Compilation error (In /app/models/BuyerTask2.java around line 196)
+The file /app/models/BuyerTask2.java could not be compiled. Error raised is : The method insert(BuyerTask) in the type BuyerTaskMapper is not applicable for the arguments (BuyerTask2)
+
+play.exceptions.CompilationException: The method insert(BuyerTask) in the type BuyerTaskMapper is not applicable for the arguments (BuyerTask2)
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-07-25 10:50:46,570] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p8m
+Error during job execution (jobs.Bootstrap)
+
+Execution exception (In /app/models/SysConfig.java around line 142)
+IncompleteElementException occured : Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo2
+
+play.exceptions.JavaExecutionException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo2
+	at play.jobs.Job.call(Job.java:216)
+	at Invocation.Job(Play!)
+Caused by: org.apache.ibatis.builder.IncompleteElementException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo2
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:346)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:284)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:107)
+	at org.apache.ibatis.session.Configuration.buildAllStatements(Configuration.java:698)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:668)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:663)
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:180)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy47.findAll(Unknown Source)
+	at models.SysConfig.initCache(SysConfig.java:142)
+	at jobs.Bootstrap.doJob(Bootstrap.java:26)
+	at play.jobs.Job.doJobWithResult(Job.java:54)
+	at play.jobs.Job$2.apply(Job.java:199)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.jobs.Job.withinFilter(Job.java:176)
+	at play.jobs.Job.call(Job.java:196)
+	... 1 more
+Caused by: java.lang.IllegalArgumentException: Result Maps collection does not contain value for models.mappers.BuyerTaskMapper2.buyerTaskVo2
+	at org.apache.ibatis.session.Configuration$StrictMap.get(Configuration.java:797)
+	at org.apache.ibatis.session.Configuration.getResultMap(Configuration.java:550)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:344)
+	... 20 more
+[2016-07-25 10:50:46,590] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p8n
+Internal Server Error (500) for request GET /task/publish2
+
+Oops: IncompleteElementException
+An unexpected error occured caused by exception IncompleteElementException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo2
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.jobs.Job.onException(Job.java:157)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: org.apache.ibatis.builder.IncompleteElementException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo2
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:346)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:284)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:107)
+	at org.apache.ibatis.session.Configuration.buildAllStatements(Configuration.java:698)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:668)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:663)
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:180)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy47.findAll(Unknown Source)
+	at models.SysConfig.initCache(SysConfig.java:142)
+	at jobs.Bootstrap.doJob(Bootstrap.java:26)
+	at play.jobs.Job.doJobWithResult(Job.java:54)
+	at play.jobs.Job$2.apply(Job.java:199)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.jobs.Job.withinFilter(Job.java:176)
+	at play.jobs.Job.call(Job.java:196)
+	... 1 more
+Caused by: java.lang.IllegalArgumentException: Result Maps collection does not contain value for models.mappers.BuyerTaskMapper2.buyerTaskVo2
+	at org.apache.ibatis.session.Configuration$StrictMap.get(Configuration.java:797)
+	at org.apache.ibatis.session.Configuration.getResultMap(Configuration.java:550)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:344)
+	... 20 more
+[2016-07-25 10:53:41,202] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p8o
+Error during job execution (jobs.Bootstrap)
+
+Execution exception (In /app/models/SysConfig.java around line 142)
+IncompleteElementException occured : Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+
+play.exceptions.JavaExecutionException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at play.jobs.Job.call(Job.java:216)
+	at Invocation.Job(Play!)
+Caused by: org.apache.ibatis.builder.IncompleteElementException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:346)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:284)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:107)
+	at org.apache.ibatis.session.Configuration.buildAllStatements(Configuration.java:698)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:668)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:663)
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:180)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy48.findAll(Unknown Source)
+	at models.SysConfig.initCache(SysConfig.java:142)
+	at jobs.Bootstrap.doJob(Bootstrap.java:26)
+	at play.jobs.Job.doJobWithResult(Job.java:54)
+	at play.jobs.Job$2.apply(Job.java:199)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.jobs.Job.withinFilter(Job.java:176)
+	at play.jobs.Job.call(Job.java:196)
+	... 1 more
+Caused by: java.lang.IllegalArgumentException: Result Maps collection does not contain value for models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at org.apache.ibatis.session.Configuration$StrictMap.get(Configuration.java:797)
+	at org.apache.ibatis.session.Configuration.getResultMap(Configuration.java:550)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:344)
+	... 20 more
+[2016-07-25 10:53:41,243] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p8p
+Internal Server Error (500) for request GET /seller/task/list?__ts=1469415218718&vo.platform=&vo.device=&vo.status=&vo.itemTitle=&vo.publishTimeStart=&vo.publishTimeEnd=&vo.buyerAccountNick=&vo.orderId=&vo.buyerTaskId=&vo.buyerNick=&vo.pageNo=1&vo.pageSize=20&type=PROCESS
+
+Oops: IncompleteElementException
+An unexpected error occured caused by exception IncompleteElementException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.jobs.Job.onException(Job.java:157)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: org.apache.ibatis.builder.IncompleteElementException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:346)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:284)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:107)
+	at org.apache.ibatis.session.Configuration.buildAllStatements(Configuration.java:698)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:668)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:663)
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:180)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy48.findAll(Unknown Source)
+	at models.SysConfig.initCache(SysConfig.java:142)
+	at jobs.Bootstrap.doJob(Bootstrap.java:26)
+	at play.jobs.Job.doJobWithResult(Job.java:54)
+	at play.jobs.Job$2.apply(Job.java:199)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.jobs.Job.withinFilter(Job.java:176)
+	at play.jobs.Job.call(Job.java:196)
+	... 1 more
+Caused by: java.lang.IllegalArgumentException: Result Maps collection does not contain value for models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at org.apache.ibatis.session.Configuration$StrictMap.get(Configuration.java:797)
+	at org.apache.ibatis.session.Configuration.getResultMap(Configuration.java:550)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:344)
+	... 20 more
+[2016-07-25 10:53:42,824] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p90
+Error during job execution (jobs.Bootstrap)
+
+Execution exception (In /app/models/SysConfig.java around line 142)
+IncompleteElementException occured : Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+
+play.exceptions.JavaExecutionException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at play.jobs.Job.call(Job.java:216)
+	at Invocation.Job(Play!)
+Caused by: org.apache.ibatis.builder.IncompleteElementException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:346)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:284)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:107)
+	at org.apache.ibatis.session.Configuration.buildAllStatements(Configuration.java:698)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:668)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:663)
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:180)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy49.findAll(Unknown Source)
+	at models.SysConfig.initCache(SysConfig.java:142)
+	at jobs.Bootstrap.doJob(Bootstrap.java:26)
+	at play.jobs.Job.doJobWithResult(Job.java:54)
+	at play.jobs.Job$2.apply(Job.java:199)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.jobs.Job.withinFilter(Job.java:176)
+	at play.jobs.Job.call(Job.java:196)
+	... 1 more
+Caused by: java.lang.IllegalArgumentException: Result Maps collection does not contain value for models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at org.apache.ibatis.session.Configuration$StrictMap.get(Configuration.java:797)
+	at org.apache.ibatis.session.Configuration.getResultMap(Configuration.java:550)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:344)
+	... 20 more
+[2016-07-25 10:53:42,854] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p91
+Internal Server Error (500) for request GET /seller/tasks
+
+Oops: IncompleteElementException
+An unexpected error occured caused by exception IncompleteElementException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.jobs.Job.onException(Job.java:157)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: org.apache.ibatis.builder.IncompleteElementException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:346)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:284)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:107)
+	at org.apache.ibatis.session.Configuration.buildAllStatements(Configuration.java:698)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:668)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:663)
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:180)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy49.findAll(Unknown Source)
+	at models.SysConfig.initCache(SysConfig.java:142)
+	at jobs.Bootstrap.doJob(Bootstrap.java:26)
+	at play.jobs.Job.doJobWithResult(Job.java:54)
+	at play.jobs.Job$2.apply(Job.java:199)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.jobs.Job.withinFilter(Job.java:176)
+	at play.jobs.Job.call(Job.java:196)
+	... 1 more
+Caused by: java.lang.IllegalArgumentException: Result Maps collection does not contain value for models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at org.apache.ibatis.session.Configuration$StrictMap.get(Configuration.java:797)
+	at org.apache.ibatis.session.Configuration.getResultMap(Configuration.java:550)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:344)
+	... 20 more
+[2016-07-25 10:54:13,591] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p92
+Error during job execution (jobs.Bootstrap)
+
+Execution exception (In /app/models/SysConfig.java around line 142)
+IncompleteElementException occured : Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+
+play.exceptions.JavaExecutionException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at play.jobs.Job.call(Job.java:216)
+	at Invocation.Job(Play!)
+Caused by: org.apache.ibatis.builder.IncompleteElementException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:346)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:284)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:107)
+	at org.apache.ibatis.session.Configuration.buildAllStatements(Configuration.java:698)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:668)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:663)
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:180)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy50.findAll(Unknown Source)
+	at models.SysConfig.initCache(SysConfig.java:142)
+	at jobs.Bootstrap.doJob(Bootstrap.java:26)
+	at play.jobs.Job.doJobWithResult(Job.java:54)
+	at play.jobs.Job$2.apply(Job.java:199)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.jobs.Job.withinFilter(Job.java:176)
+	at play.jobs.Job.call(Job.java:196)
+	... 1 more
+Caused by: java.lang.IllegalArgumentException: Result Maps collection does not contain value for models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at org.apache.ibatis.session.Configuration$StrictMap.get(Configuration.java:797)
+	at org.apache.ibatis.session.Configuration.getResultMap(Configuration.java:550)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:344)
+	... 20 more
+[2016-07-25 10:54:13,611] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p93
+Internal Server Error (500) for request GET /seller/tasks
+
+Oops: IncompleteElementException
+An unexpected error occured caused by exception IncompleteElementException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.jobs.Job.onException(Job.java:157)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: org.apache.ibatis.builder.IncompleteElementException: Could not find result map models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:346)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:284)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:107)
+	at org.apache.ibatis.session.Configuration.buildAllStatements(Configuration.java:698)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:668)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:663)
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:180)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:43)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:51)
+	at com.sun.proxy.$Proxy50.findAll(Unknown Source)
+	at models.SysConfig.initCache(SysConfig.java:142)
+	at jobs.Bootstrap.doJob(Bootstrap.java:26)
+	at play.jobs.Job.doJobWithResult(Job.java:54)
+	at play.jobs.Job$2.apply(Job.java:199)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.jobs.Job.withinFilter(Job.java:176)
+	at play.jobs.Job.call(Job.java:196)
+	... 1 more
+Caused by: java.lang.IllegalArgumentException: Result Maps collection does not contain value for models.mappers.BuyerTaskMapper2.buyerTaskVo
+	at org.apache.ibatis.session.Configuration$StrictMap.get(Configuration.java:797)
+	at org.apache.ibatis.session.Configuration.getResultMap(Configuration.java:550)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setStatementResultMap(MapperBuilderAssistant.java:344)
+	... 20 more
+[2016-07-25 10:54:33,731] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p94
+Internal Server Error (500) for request GET /login
+
+Template execution error (In /app/views/Application/login.html around line 1)
+Execution error occured in template /app/views/Application/login.html. Exception raised was OutOfMemoryError : PermGen space.
+
+play.exceptions.TemplateExecutionException: PermGen space
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Application.login(Application.java:63)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.templates.GroovyTemplate$TClassLoader.defineTemplate(GroovyTemplate.java:79)
+	at play.templates.GroovyTemplate.directLoad(GroovyTemplate.java:92)
+	at play.templates.BaseTemplate.loadFromCache(BaseTemplate.java:56)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:81)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at play.templates.FastTags._extends(FastTags.java:353)
+	at play.templates.FastTags$_extends.call(Unknown Source)
+	at /app/views/Application/login.html.(line:1)
+[2016-07-25 10:54:33,731] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.templates.GroovyTemplate$TClassLoader.defineTemplate(GroovyTemplate.java:79)
+	at play.templates.GroovyTemplate.directLoad(GroovyTemplate.java:92)
+	at play.templates.BaseTemplate.loadFromCache(BaseTemplate.java:56)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:81)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at play.server.PlayHandler.serve500(PlayHandler.java:792)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:247)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-07-25 10:55:54,990] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p95
+Internal Server Error (500) for request GET /login
+
+Execution exception (In /app/controllers/Application.java around line 63)
+OutOfMemoryError occured : PermGen space
+
+play.exceptions.JavaExecutionException: PermGen space
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.Throwable.getStackTraceElement(Native Method)
+	at java.lang.Throwable.getOurStackTrace(Throwable.java:591)
+	at java.lang.Throwable.getStackTrace(Throwable.java:582)
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:71)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:676)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.Application.login(Application.java:63)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-07-25 10:55:55,430] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - Error during the 500 response generation
+java.lang.RuntimeException: java.lang.OutOfMemoryError: PermGen space
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:93)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:285)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.server.PlayHandler.serve500(PlayHandler.java:792)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+[2016-07-25 10:56:41,451] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@70oh92p96
+Internal Server Error (500) for request GET /
+
+Execution exception
+InvocationTargetException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:230)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.reflect.InvocationTargetException
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: java.lang.OutOfMemoryError: PermGen space
+[2016-07-25 10:56:41,461] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space

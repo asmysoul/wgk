@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.TaskExamineLogMapper">
+
+	<resultMap id="BaseResultMap" type="models.TaskExamineLog">
+	</resultMap>
+	
+	<update id="updateById" parameterType="models.TaskItemSearchPlan">
+		update task_examine_log
+		<set>
+			<if test="isPass != null">
+				is_pass = #{isPass},
+			</if>
+			<if test="memo !=null">
+				memo = #{memo},
+			</if>
+			<if test="finishTime!= null">
+				finish_time = #{finishTime},
+			</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+</mapper>
+	

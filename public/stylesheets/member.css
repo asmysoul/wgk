@@ -1,0 +1,44 @@
+.rad{
+	margin-top: 12px;
+	margin-right: 5px;
+}
+.center-sp{
+	margin:0 8px;
+}
+/*--------------------------*/
+.buttonSection{
+	margin-top: 30px;
+}
+#btnConfirmCharge{
+	padding: 8px 20px;
+}
+.sec{
+	margin-bottom: 10px;
+}
+.rad0{
+	margin-top: 7px;
+}
+.wid{
+	width:121px;
+	height:28px;
+}
+/*网银弹窗*/
+.bankPayment .modalWnd{
+	width:650px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -325px;
+	position: fixed;
+	z-index: 100;
+}
+.btnConfirmSave{
+	background-color: #26AA9F;
+	width: 20%;
+	text-align: center;
+}
+.btnConfirmSave:hover{
+	background-color: #2BBFB3;
+}
+.return{
+	line-height:32px
+}

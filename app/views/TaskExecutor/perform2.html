@@ -1,0 +1,511 @@
+#{extends 'frame.html' /}
+#{set title:'做推广' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/task/perform.css'}" />
+#{/set}
+<div class="contentCard">
+	<div class="contentTitle">
+		<span class="iconfont">&#xf00e8;</span>
+		任务进度
+		<span class="red">
+			<span class="ml20">剩余时间：</span>
+			<span id="hr"></span>
+			:
+			<span id="min"></span>
+			:
+			<span id="sec"></span>
+		</span>
+	</div>
+	<div class="contentBody" style="padding:20px 40px;">
+		<div class="task-simp-info">
+			<table class="normTable" id="info-table">
+				<thead>
+					<tr>
+						<td width="18%">商家</td>
+						<td width="9%">购买件数</td>
+						<td width="10%">垫付资金</td>
+						<td width="13%">佣金</td>
+						<td width="20%">接手时间</td>
+						<td>当前状态</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>${taskInfo?.shopName}******</td>
+						<td>${taskInfo?.itemBuyNum}</td>
+						<td>${(taskInfo?.itemPrice/100).format('##0.00')}元</td>
+						<td>${(taskInfo?.rewardIngot/100).format('##0.00')}金币</td>
+						<td id="takeTime">${taskInfo?.takeTime?.format("yyyy-MM-dd HH:mm:ss")}</td>
+						<td>${taskInfo?.status?.title}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="JHS_Platform_Process">
+		<div class="stepWrapper">
+			<div class="stepWaiting" style="position:absolute;top:0;left:-5px;">
+				<div class="stepOn">1</div>
+				<div class="caption" style="width:48px;margin-left:-24px;">任务要求111</div>
+			</div>
+			<div class="stepWaiting" style="margin-left:22%;">
+				2
+				<div class="caption" style="width:48px;margin-left:-24px;">增值服务</div>
+			</div>
+			<div class="stepWaiting" style="margin-left:22%;">
+				3
+				<div class="caption" style="width:84px;margin-left:-42px;">完成情况</div>
+			</div>
+			<div class="stepWaiting" style="margin-left:22%;">
+				4
+				<div class="caption" style="width:60px;margin-left:-30px;">XX</div>
+			</div>
+			<div class="stepWaiting" style="position:absolute;top:0;right:-5px;">
+				5
+				<div class="caption" style="width:48px;margin-left:-24px;">任务完成</div>
+			</div>
+		</div>
+		<div style="height:30px;"></div>
+		</div>
+		<div class="panelLine sec black bold" style="margin-top: 30px;">
+				<span class="floatLeft ls">商家客服qq或微信:</span>
+				<span class="floatLeft red mr10">${taskInfo?.qq}</span><span>（在做任务过程中，有问题可联系商家客服沟通）</span>
+		<br />
+				<span class="floatLeft ls">商家特殊要求:</span>
+				<span class="floatLeft red mr10">${taskInfo?.taskRequest}</span>
+		</div>
+	</div>
+</div>
+
+<form id="stepForm">
+<div id="TaoBao_Platform">
+	<!-- Step 1 -->
+	<div class="contentCard stepCard" id="taskStep-1" style="display:none">
+		<div class="contentTitle">
+			<span class="iconfont">&#xe69a;</span>
+			[文字+链接] 分享内容
+		</div>
+		<div class="contentBody">
+			<div class="panelLine">
+				<span class="floatLeft">
+					打开
+					<span class="bold">${taskInfo.platform?.title}App</span>
+					，登录账号：
+					<span class="green bold">${taskInfo.buyerAccountNick}</span>
+					，并刷新页面
+					<span class="black bold">确认账号已成功登录</span>
+				</span>
+			</div>
+			<div class="panelLine">
+				<span class="floatLeft ls num-list-flag">1</span>
+				<span class="floatLeft">
+				点击【复制文字内容】	
+				&nbsp;
+				</span>
+				<span class="floatLeft red bold">${searchPlan?.word}</span>
+			</div>
+			<div class="panelLine">
+				<span class="floatLeft ls num-list-flag">2</span>
+				<span class="floatLeft">【打开链接】，使用浏览器打开</span>
+			</div>
+			<div class="panelLine">
+				<span class="floatLeft ls num-list-flag">3</span>
+				<span class="floatLeft">点击【分享】,粘贴文字内容分享至微信朋友圈</span>
+			</div>
+			<div class="panelLine sec grey">
+				<span class="red bold">【预览效果】</span>
+				<input type="button" name="LookImg" value="查看">
+			</div>
+			<div class="panelLine sec">
+				<span class="ls floatLeft itemUrl">文字内容</span>
+				<input type="text" class="inputText floatLeft ls long required fellow-item-url" name="itemTitle" id="urlMsg" value="${taskInfo.itemTitle}" />
+				<input type="button" class="inputBtn copyUrl" href="javascript:;" value="复制" />
+			</div>
+			
+			<div class="panelLine sec">
+				<span class="ls floatLeft itemUrl">链接地址</span>
+				<input type="text" class="inputText floatLeft ls long  fellow-item-url" name="itemUrl" id="url" value="${taskInfo.itemUrl}" />
+				<input type="button" class="inputBtn openURL" value="打开" />
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			<div class="contentTitle">
+			<span class="iconfont">&#xe69a;</span>
+			[文字+图片] 分享内容
+		</div>
+		<div class="contentBody">
+			<div class="panelLine">
+				<span class="floatLeft ls num-list-flag">1</span>
+				<span class="floatLeft">
+				点击【下载图片】	
+				&nbsp;图片下载至手机
+				</span>
+				<span class="floatLeft red bold">${searchPlan?.word}</span>
+			</div>
+			<div class="panelLine">
+				<span class="floatLeft ls num-list-flag">2</span>
+				<span class="floatLeft">【复制文字】，内容以便分享使用</span>
+			</div>
+			<div class="panelLine">
+				<span class="floatLeft ls num-list-flag">3</span>
+				<span class="floatLeft">打开【微信】发布朋友圈，【从手机相册选择】图片，粘贴文字【发送】</span>
+			</div>
+			<div class="panelLine sec grey">
+				<span class="red bold">【预览效果】</span>
+				<input type="button" name="LookImg" value="查看">
+			</div>
+			<div class="panelLine sec">
+				<span class="ls floatLeft itemUrl">文字内容</span>
+				<input type="text" class="inputText floatLeft ls long required fellow-item-url" name="itemTitle" id="urlMsg" value="${taskInfo.itemTitle}" />
+				<input type="button" class="inputBtn copyUrl" value="复制" />
+			</div>
+			<a class="imgNum" style="display: none;">${img}</a><hr>
+			<a class="size" style="display: none;">${imgsize}</a><hr>
+			<div class="panelLine sec hei">
+				<span class="ls floatLeft itemUrl">图片内容</span>
+				<table class="ta">
+					<tr>
+						<td><img alt="ss"  src="${taskInfo.itemPic}"></td>
+					</tr>
+				</table>
+				<div id="imgList"></div>
+				<button class="donpic" id="downloadImg">下载图片</button>
+			</div>
+			
+			<div class="buttonSection">
+				<a href="javascript:;" class="stdColorButton disabled nextBtn">
+					下一步
+					<span class="iconfont">&#xf016d;</span>
+				</a>
+				<span class="tip ml10">
+					请认真完成任务步骤，
+					<span class="second red">100</span>
+					秒后方可进行下一步
+				</span>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+	
+	
+	<!-- Step 2 -->
+	<div class="contentCard stepCard" id="taskStep-2" style="display:none">
+		<div class="contentTitle">
+			<span class="iconfont">&#xe69a;</span>
+			增值服务
+		</div>
+		
+			<div class="panelLine">
+				<span class="floatLeft " style="margin-left:20px;color:red;font-size:23px;">!&nbsp;</span>
+				<span class="floatLeft" style="font-size:22px;color:#ff0000;">以下任务为增值服务内容，如无要求可跳过，执行下一步骤</span>
+			</div>
+		
+			<div class="contentBody">
+			<div class="panelLine">
+				<span class="floatLeft">
+					<span class="bold">添加卖家微信号为好友</span>
+				</span>
+			</div>
+			<div class="panelLine sec">
+				<span class="ls floatLeft itemUrl">卖家微信号</span>
+				<input type="text" class="inputText floatLeft ls long required fellow-item-url" name="sellerAcccount" id="sellerAcccount" value="${taskInfo.qq}"  disabled/>
+				<input type="button" class="inputBtn copysellerAcccount" href="javascript:;" value="复制" />
+			</div>
+			<hr/>		
+				
+			<div class="panelLine">
+				<span class="floatLeft">
+					<span class="bold">追加朋友圈评论</span>
+				</span>
+			</div>
+			<div class="panelLine sec">
+				<span class="ls floatLeft itemUrl">评论内容</span>
+				<input type="text" class="inputText floatLeft ls long required fellow-item-url" name="PingLunContent" id="PingLunContent" value="${taskInfo.goodCommentWords}" disabled />
+				<input type="button" class="inputBtn copyPingLunContent" href="javascript:;" value="复制" />
+			</div>
+			<hr/>	
+			
+			<div class="panelLine sec grey">
+				<span class="red bold">【预览效果】</span>
+				<input type="button" name="LookImg" value="查看">
+			</div>
+			<div class="buttonSection">
+				<a href="javascript:;" class="stdColorButton disabled nextBtn" id="btnVerify">
+					下一步
+					<span class="iconfont">&#xf016d;</span>
+				</a>
+				<span class="tip ml10">请认真完成任务步骤，确定地址正确后方可进行下一步</span>
+			</div>
+		</div>
+	</div> 
+	
+	
+	
+	<!-- Step 3 -->
+	 <div class="contentCard stepCard" id="taskStep-3" style="display:none">
+		<div class="contentTitle">
+			<span class="iconfont">&#xe69a;</span>
+			完成情况
+		</div>
+		<div class="contentBody">
+			
+			<div class="panelLine">
+				<span class="floatLeft">请上传朋友圈截图</span>
+			</div>
+			
+			<div class="panelLine sec">
+				<span class="ls floatLeft itemUrl">朋友圈<label>截图<span style="color:red;">*</span></label></span>
+				<input type="button" class="floatLeft" id="btnItemUrl7" value="点击上传" />
+				<input type="text" class="inputText floatLeft ls long required item-url-inshop" name="itemUrl7"  style="width:0px;padding:0px;border:none"/>
+			</div>
+			<div id="itemUrl7Img" class="itemPicBox sec"></div>
+			<hr>
+				<p style="color:red;">以下为增值服务，凭证截图，若无增值服务要求，则可不填</p>
+			<hr>
+			<div class="panelLine">
+				<span class="floatLeft">请上传添加好友后截图</span>
+			</div>
+			
+			<div class="panelLine sec">
+				<span class="ls floatLeft itemUrl">添加成功<label>截图</label></span>
+				<input type="button" class="floatLeft" id="btnItemUrl5" value="点击上传" />
+				<input type="text" class="inputText floatLeft ls long  item-url-inshop" name="itemUrl5" style="width:0px;padding:0px;border:none"/>
+			</div>
+			<div id="itemUrl5Img"></div>
+			
+			<div class="panelLine">
+				<span class="floatLeft mr4">请上传追加评论截图</span>
+			</div>
+			
+			<div class="panelLine sec">
+				<span class="ls floatLeft itemUrl">追加评论<label>截图</label></span>
+				<input type="button" class="floatLeft" id="btnItemUrl6" value="点击上传" />
+				<input type="text" class="inputText floatLeft ls long  item-url-inshop" name="itemUrl6"  style="width:0px;padding:0px;border:none"/>
+			</div>
+			<div id="itemUrl6Img"></div>
+			
+			
+			
+			
+			
+			
+			<div class="buttonSection">
+				<a href="javascript:;" class="stdColorButton disabled nextBtn">
+					下一步
+					<span class="iconfont">&#xf016d;</span>
+				</a>
+				<span class="tip ml10">
+					请认真完成任务步骤，
+					<span class="second red">180</span>
+					秒后方可进行下一步
+				</span>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<!-- Step 4 -->
+	 <div class="contentCard stepCard" id="taskStep-4" style="display:none">
+		<div class="contentBody">
+		
+			<!-- <div class="panelLine">
+				<span class="floatLeft">请上传朋友圈截图</span>
+			</div>
+			
+			<div class="panelLine sec">
+				<span class="ls floatLeft itemUrl">宝贝页<label>截图3</label></span>
+				<input type="button" class="floatLeft" id="btnItemUrl7" value="点击上传店内宝贝截图" />
+				<input type="text" class="inputText floatLeft ls long required item-url-inshop" name="itemUrl7"  style="width:0px;padding:0px;border:none"/>
+			</div>
+			<div id="itemUrl7Img" class="itemPicBox sec"></div> -->
+		
+			<div class="buttonSection">
+				<a href="javascript:;" class="stdColorButton disabled nextBtn">
+					下一步
+					<span class="iconfont">&#xf016d;</span>
+				</a>
+			</div>
+		</div>
+	</div> 
+	
+	
+	<!-- Step 5 -->
+	 <div class="contentCard stepCard" id="taskStep-5" data-account-id="${taskInfo?.buyerAccountId}" style="display:none">
+		<div class="contentTitle">
+			<span class="iconfont">&#xe69a;</span>
+			第五步：任务完成
+		</div>
+		<div class="contentBody">
+			<div class="buttonSection">
+				<a href="javascript:;" class="stdColorButton disabled nextBtn" messageId="${orderMessage?.id}">
+					完成
+					<span class="iconfont">&#xf016d;</span>
+				</a>
+			</div>
+		</div>
+	</div> 
+	
+	
+</div>
+ <div id="JHS_Platform" style="display: none;">
+		<div class="contentCard stepCard" id="taskStep-5"
+			data-account-id="${taskInfo?.buyerAccountId}" style="display: none">
+			<div class="contentTitle">
+				<span class="iconfont">&#xe69a;</span> 第一步：付款并上传截图
+			</div>
+			<div class="contentBody">
+				
+				<div class="item-info">
+				
+				<div class="panelLine">点击图片可以查看大图：</div>
+					<div >
+						<a href="${taskInfo?.itemPic}" target="_blank">
+							<img style="width: 150px;height: 150px;" src="${taskInfo?.itemPic}" />
+						</a>
+					</div>
+					<div class="panelLine">
+						<label >商品链接</label> <span class="ml10" id="copyItemUrl">${taskInfo?.itemUrl}</span><span class="ml20"><a href="javascript:;" class="btn_blue bar_btn"
+								id="btnCopy">复制链接</a>(如复制不成功，请手动复制)</span>
+					</div>
+					<div class="panelLine">
+						<label class="">店铺</label> <span class="ml40">${taskInfo?.shopName}</span>
+					</div>
+					<div class="panelLine">
+						<label class="">商品</label> <span class="ml40">${taskInfo?.itemTitle}</span>
+					</div>
+					<div class="panelLine">
+						<label class="">单价</label> <span class="ml40">${taskInfo?.itemPrice>0?taskInfo.itemPrice/100:0.00}元</span>
+					</div>
+					<div class="panelLine">
+						<label class="">购买数量</label> <span class="ml20">${taskInfo?.itemBuyNum}</span>
+					</div>
+					<div class="panelLine">
+						<label class="">总价</label> <span class="ml40 red">${taskInfo?.itemPrice>0?taskInfo.itemPrice*taskInfo.itemBuyNum/100:0.00}元</span>
+					</div>
+				</div>
+				
+				<div class="panelLine">
+					<span class="floatLeft ls num-list-flag">2</span>
+					<span class="floatLeft mr4">浏览商品，下单付款</span>
+				</div>
+				<div class="warnBox confirm-info-box">
+					<span class="iconfont">&#xf00b7;</span> 注意 <br />
+					只能使用银行借记卡或支付宝付款，不得使用 <span class="red">信用卡、返利网站</span> 下单
+				</div>
+				<div class="panelLine">
+					<span class="mr4">请使用账号</span> <span class="red mr4">${taskInfo?.buyerAccountNick}</span>
+					<span class="mr4">下单</span> <span class="grey">(请刷新页面确认当前账号是否正确)</span>
+				</div>
+				<div class="panelLine">
+					<span class="mr4">收货地址为</span> <span class="red mr4 consigneeInfo"></span>
+				</div>
+				<div class="panelLine">
+					<span class="mr4">订单留言为</span> <span class="red mr4"
+						id="spOrderMessage">${orderMessage?.message}</span> <a
+						class="grey" id="copyit" href="javascript:;" for="spOrderMessage"
+						style="display: none">[点击复制]</a>
+				</div>
+				
+				</br>
+				<div class="panelLine">
+					<span class="floatLeft ls num-list-flag">3</span>
+					<span class="floatLeft mr4">付款完成，填写订单编号，上传订单截图</span>
+				</div>
+				<div class="secondTile">我已经付完款了?</div>
+				<div class="up-snapshot-info">
+					<div class="panelLine">
+						请，将本订单的【 <span
+							class="red">订单详情</span> 】截图，并上传 <a href="javascript:;"
+							id="lnkViewSnapExample" class="blue" style="display: none">查看截图示例</a>
+					</div>
+					<div class="panelLine">
+						<span class="floatLeft grey mr-20">图片格式gif,jpg,jpeg,png，且图片不能大于1M</span>
+						<div id="orderUploadButtonBox">
+							<input type="button" class="middle ls floatLeft"
+								id="btnPickfiles2" value="上传订单截图" />
+							<a href="javascript:;" class="floatLeft btn-imgOrder-model" id="btn-imgOrder-model">查看截图示例</a>
+							<img class="floatLeft imgOrder-model"></img>
+						</div>
+						<a href="javascript:;" class="J_fixUploadFailed blue"
+							style="display: none">上传失败？点这里</a>
+					</div>
+					<div class="itemPicBox sec">
+						<a href="javascript:;" class="img" target="_blank"> <img
+							src=""></a>
+					</div>
+				</div>
+				<div class="panelLine">
+					<span class="floatLeft mr4">订单号</span> <input
+						class="inputText floatLeft mr10 required" type="text" value=""
+						id="txtOrderId" style="width: 250px;" name="orderId" /> <span
+						class="floatLeft mr4">实际付款金额</span> <input
+						class="inputText floatLeft middle mr4 required" type="text"
+						value="" id="txtPayAmount" name="payNum" /> <span
+						class="floatLeft">元</span>
+				</div>
+				<div class="buttonSection">
+					<a href="javascript:;" class="stdColorButton disabled nextBtn"
+						messageId="${orderMessage?.id}"> 下一步，确认已付款提交 <span
+						class="iconfont">&#xf016d;</span>
+					</a> <span class="tip ml10"> 请认真完成任务步骤， <span class="second red">15</span>
+						秒后方可进行下一步
+					</span>
+				</div>
+			</div>
+		</div>
+</div>
+</form>
+
+
+<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+	<div class="maskLayer"></div>
+	<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />
+</div>
+
+<!-- 确认提交弹窗 -->
+<div class="popWrapper" id="submitToOrderWnd">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:;" class="wnd_Close_Icon" title="关闭窗口"></a>
+		<div class="modalWndInner">
+			<div class="contentBody">
+				确认完成任务？
+			</div>
+			<div class="wndBotButtonSection">
+				<a href="javascript:;" class="btnConfirm" id="btnConfirmSubmit">确认</a>
+				<a href="javascript:;" class="btnConfirm" id="btncancel">取消</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+#{set 'moreScripts'}
+#{if !request.domain.endsWith('jzniu.cn')}
+	<script type="text/javascript">App.dev=true;</script>
+#{/if}
+#{else}
+	<script type="text/javascript">App.dev=false;</script>
+#{/else}
+<script src="@{'/public/javascripts/plupload/plupload.full.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/qiniu.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.zclip.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/datetimepicker/jquery.datetimepicker.js'}" type="text/javascript"></script>
+<script type="text/javascript">
+	App.module = 'takeTask2';
+	App.currId = '${taskInfo?.id}';
+	App.initStep = ${initTaskStepNo?initTaskStepNo:1};
+	App.QnTaskFileBucket = '${upload_task_address}';
+	App.platform="${taskPlatform}";
+	App.taskType='${taskInfo?.taskType}';
+	App.userVipStaus='${user?.vipStatus}';
+</script>
+   <script src="@{'/public/javascripts/task/perform2.js'}" type="text/javascript"></script>
+#{/set}

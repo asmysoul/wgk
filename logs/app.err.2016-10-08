@@ -1,0 +1,1885 @@
+[2016-09-29 10:54:12,151] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-29 10:55:06,427] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h3k568d
+Internal Server Error (500) for request GET /UserCenterApp/getAll?nick=maimai&userid=1678
+
+Action not found
+Action UserCenterApp.getAll could not be found. Error raised is MODULE$
+
+play.exceptions.ActionNotFoundException: Action UserCenterApp.getAll not found
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:467)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NoSuchFieldException: MODULE$
+	at java.lang.Class.getDeclaredField(Class.java:1884)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:459)
+	... 3 more
+[2016-09-29 11:16:53,930] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h3n1f73
+Internal Server Error (500) for request POST /UserAuthentication/doLoginApp?nick=maimai&pass=123123
+
+Compilation error (In /app/controllers/UserAuthentication.java around line 90)
+The file /app/controllers/UserAuthentication.java could not be compiled. Error raised is : Map cannot be resolved to a type
+
+play.exceptions.CompilationException: Map cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-29 11:17:39,862] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h3n1f74
+TaskCenterApp.get action not found
+
+Action not found
+Action TaskCenterApp.get could not be found. Error raised is No method public static void get() was found in class controllers.TaskCenterApp
+
+play.exceptions.ActionNotFoundException: Action TaskCenterApp.get not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void get() was found in class controllers.TaskCenterApp
+	... 3 more
+[2016-09-29 11:19:36,838] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h3n1f75
+TaskCenterApp.get action not found
+
+Action not found
+Action TaskCenterApp.get could not be found. Error raised is No method public static void get() was found in class controllers.TaskCenterApp
+
+play.exceptions.ActionNotFoundException: Action TaskCenterApp.get not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void get() was found in class controllers.TaskCenterApp
+	... 3 more
+[2016-09-29 11:20:03,268] ERROR [jobs-thread-5] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h3n1f76
+Error during job execution (jobs.Bootstrap)
+
+Oops: ClassCastException
+An unexpected error occured caused by exception ClassCastException: com.aton.config.AppMode cannot be cast to com.aton.config.AppMode
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.jobs.Job.onException(Job.java:154)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: java.lang.ClassCastException: com.aton.config.AppMode cannot be cast to com.aton.config.AppMode
+	at com.aton.config.AppMode.get(AppMode.java:89)
+	at com.aton.job.BaseJob.before(BaseJob.java:26)
+	at play.jobs.Job.call(Job.java:186)
+	... 1 more
+[2016-09-29 11:20:03,268] ERROR [jobs-thread-5] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h3n1f77
+Error during job execution (jobs.TaskKeeper2)
+
+Oops: ClassCastException
+An unexpected error occured caused by exception ClassCastException: com.aton.config.AppMode cannot be cast to com.aton.config.AppMode
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.jobs.Job.onException(Job.java:157)
+	at com.aton.job.BaseJob.onException(BaseJob.java:49)
+	at play.jobs.Job.call(Job.java:224)
+	at Invocation.Job(Play!)
+Caused by: java.lang.ClassCastException: com.aton.config.AppMode cannot be cast to com.aton.config.AppMode
+	at com.aton.config.AppMode.get(AppMode.java:89)
+	at com.aton.job.BaseJob.before(BaseJob.java:26)
+	at play.jobs.Job.call(Job.java:186)
+	... 1 more
+[2016-09-29 11:23:44,868] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 11:23:51,833] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 11:23:54,001] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 11:55:02,604] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h3n1f79
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/UserCenterApp.java around line 1071)
+The file /app/controllers/UserCenterApp.java could not be compiled. Error raised is : '&lt;>' operator is not allowed for source level below 1.7
+
+play.exceptions.CompilationException: '<>' operator is not allowed for source level below 1.7
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-29 11:55:02,819] ERROR [jobs-thread-6] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h3n1f7b
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/UserCenterApp.java around line 1071)
+The file /app/controllers/UserCenterApp.java could not be compiled. Error raised is : '&lt;>' operator is not allowed for source level below 1.7
+
+play.exceptions.CompilationException: '<>' operator is not allowed for source level below 1.7
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-29 11:55:06,432] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h3n1f7d
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/UserCenterApp.java around line 1071)
+The file /app/controllers/UserCenterApp.java could not be compiled. Error raised is : '&lt;>' operator is not allowed for source level below 1.7
+
+play.exceptions.CompilationException: '<>' operator is not allowed for source level below 1.7
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-29 11:55:06,664] ERROR [jobs-thread-8] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h3n1f7f
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/UserCenterApp.java around line 1071)
+The file /app/controllers/UserCenterApp.java could not be compiled. Error raised is : '&lt;>' operator is not allowed for source level below 1.7
+
+play.exceptions.CompilationException: '<>' operator is not allowed for source level below 1.7
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-29 11:55:11,974] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h3n1f7h
+Internal Server Error (500) for request POST /UserAuthentication/listBuyerAccountsApp?platform=TAOBAO&nick=maimai&receive=true
+
+Compilation error (In /app/controllers/UserCenterApp.java around line 1071)
+The file /app/controllers/UserCenterApp.java could not be compiled. Error raised is : '&lt;>' operator is not allowed for source level below 1.7
+
+play.exceptions.CompilationException: '<>' operator is not allowed for source level below 1.7
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-29 11:55:29,734] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h3n1f7i
+Internal Server Error (500) for request POST /UserAuthentication/listBuyerAccountsApp?platform=TAOBAO&nick=maimai&receive=true
+
+Compilation error (In /app/controllers/UserCenterApp.java around line 1071)
+The file /app/controllers/UserCenterApp.java could not be compiled. Error raised is : '&lt;>' operator is not allowed for source level below 1.7
+
+play.exceptions.CompilationException: '<>' operator is not allowed for source level below 1.7
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:480)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+[2016-09-29 11:55:54,576] ERROR [play-thread-1]  - 
+
+@71h3n1f7j
+Internal Server Error (500) for request POST /UserCenterApp/getAll?nick=maimai&userid=1678
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-29 11:56:42,956] ERROR [play-thread-1]  - 
+
+@71h3n1f7k
+Internal Server Error (500) for request POST /TaskCenterApp/get?nick=maimai
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+[2016-09-29 11:56:50,086] ERROR [play-thread-1]  - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+[2016-09-29 13:56:34,449] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 13:57:20,473] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 13:57:21,440] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 13:57:23,477] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 13:57:25,466] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 14:23:21,179] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h4le22m
+Internal Server Error (500) for request POST /UserAuthentication/ma?platform=WM&status=PUBLISHED&device=MOBILE
+
+Execution exception (In /app/enums/Platform.java around line 1)
+IllegalArgumentException occured : No enum const class enums.Platform.WM
+
+play.exceptions.JavaExecutionException: No enum const class enums.Platform.WM
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IllegalArgumentException: No enum const class enums.Platform.WM
+	at java.lang.Enum.valueOf(Enum.java:196)
+	at enums.Platform.valueOf(Platform.java:1)
+	at controllers.UserAuthentication.ma(UserAuthentication.java:144)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-29 14:23:21,231] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h4le22n
+Internal Server Error (500) for request POST /UserAuthentication/ma?platform=OTHER&status=PUBLISHED&device=MOBILE
+
+Execution exception (In /app/enums/Platform.java around line 1)
+IllegalArgumentException occured : No enum const class enums.Platform.OTHER
+
+play.exceptions.JavaExecutionException: No enum const class enums.Platform.OTHER
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IllegalArgumentException: No enum const class enums.Platform.OTHER
+	at java.lang.Enum.valueOf(Enum.java:196)
+	at enums.Platform.valueOf(Platform.java:1)
+	at controllers.UserAuthentication.ma(UserAuthentication.java:144)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-29 14:24:27,997] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h4le22o
+Internal Server Error (500) for request POST /UserAuthentication/ma?platform=WM&status=PUBLISHED&device=MOBILE
+
+Execution exception (In /app/enums/Platform.java around line 1)
+IllegalArgumentException occured : No enum const class enums.Platform.WM
+
+play.exceptions.JavaExecutionException: No enum const class enums.Platform.WM
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IllegalArgumentException: No enum const class enums.Platform.WM
+	at java.lang.Enum.valueOf(Enum.java:196)
+	at enums.Platform.valueOf(Platform.java:1)
+	at controllers.UserAuthentication.ma(UserAuthentication.java:144)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-29 14:25:21,009] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 14:25:28,688] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 14:25:30,316] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 14:25:32,523] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 14:37:31,462] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h4le22p
+Internal Server Error (500) for request POST /UserAuthentication/ma?platform=OTHER&status=PUBLISHED&device=MOBILE
+
+Execution exception (In /app/enums/Platform.java around line 1)
+IllegalArgumentException occured : No enum const class enums.Platform.OTHER
+
+play.exceptions.JavaExecutionException: No enum const class enums.Platform.OTHER
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IllegalArgumentException: No enum const class enums.Platform.OTHER
+	at java.lang.Enum.valueOf(Enum.java:196)
+	at enums.Platform.valueOf(Platform.java:1)
+	at controllers.UserAuthentication.ma(UserAuthentication.java:144)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-29 14:38:50,056] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 14:40:12,471] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h4le230
+Internal Server Error (500) for request POST /UserCenterApp/addBuyerAccount
+
+Execution exception (In /app/models/BuyerAccount.java around line 225)
+PersistenceException occured :  ### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1 ### The error may involve models.mappers.BuyerAccountMapper.insert-Inline ### The error occurred while setting parameters ### SQL: insert into buyer_account(nick,platform,consignee,state,city,region,address,mobile,user_id,status,create_time,modify_time) values(?,?,?,?,?,?,?,?,?,?,?,?) ### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1
+
+play.exceptions.JavaExecutionException: 
+### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1
+### The error may involve models.mappers.BuyerAccountMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into buyer_account(nick,platform,consignee,state,city,region,address,mobile,user_id,status,create_time,modify_time) values(?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1
+### The error may involve models.mappers.BuyerAccountMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into buyer_account(nick,platform,consignee,state,city,region,address,mobile,user_id,status,create_time,modify_time) values(?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:141)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:51)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy31.insert(Unknown Source)
+	at models.BuyerAccount.save(BuyerAccount.java:225)
+	at controllers.UserCenterApp.saveBuyerAccount(UserCenterApp.java:620)
+	at controllers.UserCenterApp.addBuyerAccount(UserCenterApp.java:555)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3833)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.ReuseExecutor.doUpdate(ReuseExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	... 13 more
+[2016-09-29 14:40:15,685] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h4le231
+Internal Server Error (500) for request POST /UserCenterApp/addBuyerAccount
+
+Execution exception (In /app/models/BuyerAccount.java around line 225)
+PersistenceException occured :  ### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1 ### The error may involve models.mappers.BuyerAccountMapper.insert-Inline ### The error occurred while setting parameters ### SQL: insert into buyer_account(nick,platform,consignee,state,city,region,address,mobile,user_id,status,create_time,modify_time) values(?,?,?,?,?,?,?,?,?,?,?,?) ### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1
+
+play.exceptions.JavaExecutionException: 
+### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1
+### The error may involve models.mappers.BuyerAccountMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into buyer_account(nick,platform,consignee,state,city,region,address,mobile,user_id,status,create_time,modify_time) values(?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1
+### The error may involve models.mappers.BuyerAccountMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into buyer_account(nick,platform,consignee,state,city,region,address,mobile,user_id,status,create_time,modify_time) values(?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:141)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:51)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy31.insert(Unknown Source)
+	at models.BuyerAccount.save(BuyerAccount.java:225)
+	at controllers.UserCenterApp.saveBuyerAccount(UserCenterApp.java:620)
+	at controllers.UserCenterApp.addBuyerAccount(UserCenterApp.java:555)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'state' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3833)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.ReuseExecutor.doUpdate(ReuseExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	... 13 more
+[2016-09-29 14:40:22,460] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 15:22:45,682] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h538o1j
+Internal Server Error (500) for request POST /UserAuthentication/listBuyerAccountsApp?platform=null&nick=null&receive=true
+
+Execution exception (In /app/controllers/UserAuthentication.java around line 220)
+NullPointerException occured : Try to read id on null object models.User (controllers.UserAuthentication.listBuyerAccountsApp, line 220)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.UserAuthentication.listBuyerAccountsApp, line 220)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.UserAuthentication.listBuyerAccountsApp, line 220)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.UserAuthentication.listBuyerAccountsApp(UserAuthentication.java:220)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 15:23:09,309] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h538o1k
+Internal Server Error (500) for request POST /UserAuthentication/listBuyerAccountsApp?platform=null&nick=null&receive=true
+
+Execution exception (In /app/controllers/UserAuthentication.java around line 220)
+NullPointerException occured : Try to read id on null object models.User (controllers.UserAuthentication.listBuyerAccountsApp, line 220)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.UserAuthentication.listBuyerAccountsApp, line 220)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.UserAuthentication.listBuyerAccountsApp, line 220)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.UserAuthentication.listBuyerAccountsApp(UserAuthentication.java:220)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 15:23:16,603] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h538o1l
+Internal Server Error (500) for request POST /UserAuthentication/listBuyerAccountsApp?platform=null&nick=null&receive=true
+
+Execution exception (In /app/controllers/UserAuthentication.java around line 220)
+NullPointerException occured : Try to read id on null object models.User (controllers.UserAuthentication.listBuyerAccountsApp, line 220)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.UserAuthentication.listBuyerAccountsApp, line 220)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.UserAuthentication.listBuyerAccountsApp, line 220)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.UserAuthentication.listBuyerAccountsApp(UserAuthentication.java:220)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 15:56:15,105] ERROR [play-thread-1] com.aton.base.BaseController.getCurrentUser(BaseController.java:176) - user INVALID_SESSION 
+[2016-09-29 16:01:28,685] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-09-29 16:15:24,963] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h538o1m
+Internal Server Error (500) for request GET /buyer/task/perform2/6603
+
+Execution exception (In /app/models/BuyerTask2.java around line 1073)
+NullPointerException occured : Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+
+play.exceptions.JavaExecutionException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at models.BuyerTask2.findForPerforming(BuyerTask2.java:1073)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:280)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 16:16:17,967] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h538o1n
+Internal Server Error (500) for request GET /buyer/task/perform2/6603
+
+Execution exception (In /app/models/BuyerTask2.java around line 1073)
+NullPointerException occured : Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+
+play.exceptions.JavaExecutionException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at models.BuyerTask2.findForPerforming(BuyerTask2.java:1073)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:280)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 16:17:11,229] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h538o1o
+Internal Server Error (500) for request GET /buyer/task/perform2/6603
+
+Execution exception (In /app/models/BuyerTask2.java around line 1073)
+NullPointerException occured : Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+
+play.exceptions.JavaExecutionException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at models.BuyerTask2.findForPerforming(BuyerTask2.java:1073)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:280)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 16:23:33,496] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h538o1p
+Internal Server Error (500) for request GET /buyer/task/perform2/6603
+
+Execution exception (In /app/models/BuyerTask2.java around line 1073)
+NullPointerException occured : Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+
+play.exceptions.JavaExecutionException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at models.BuyerTask2.findForPerforming(BuyerTask2.java:1073)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:280)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 16:24:30,122] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h538o20
+Internal Server Error (500) for request GET /buyer/task/perform2/6603
+
+Execution exception (In /app/models/BuyerTask2.java around line 1073)
+NullPointerException occured : Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+
+play.exceptions.JavaExecutionException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at models.BuyerTask2.findForPerforming(BuyerTask2.java:1073)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:280)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 16:33:19,475] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h538o21
+Internal Server Error (500) for request GET /buyer/task/perform2/6603
+
+Execution exception (In /app/models/BuyerTask2.java around line 1073)
+NullPointerException occured : Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+
+play.exceptions.JavaExecutionException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at models.BuyerTask2.findForPerforming(BuyerTask2.java:1073)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:280)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 16:37:21,716] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h538o22
+Internal Server Error (500) for request GET /buyer/task/perform2/6603
+
+Execution exception (In /app/models/BuyerTask2.java around line 1073)
+NullPointerException occured : Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+
+play.exceptions.JavaExecutionException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read goodCommentWords on null object vos.BuyerTaskVo2 (models.BuyerTask2.findForPerforming, line 1073)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at models.BuyerTask2.findForPerforming(BuyerTask2.java:1073)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:280)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 16:48:58,394] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h538o23
+usercenterapp.firststep2 action not found
+
+Action not found
+Action usercenterapp.firststep2 could not be found. Error raised is No method public static void firststep2() was found in class controllers.usercenterapp
+
+play.exceptions.ActionNotFoundException: Action usercenterapp.firststep2 not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:598)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:85)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void firststep2() was found in class controllers.usercenterapp
+	... 3 more
+[2016-09-29 16:52:43,083] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h538o24
+Internal Server Error (500) for request POST /usercenterapp/firststep2?id=6537&urls=http%3A%2F%2Fwww.taobao.com%2F123,http%3A%2F%2Fwww.taobao.com,,&nick=mmmm&buyerAccountId=6537&messageId=5950
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 1150)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.UserCenterApp.firstStep2(UserCenterApp.java:1150)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 16:57:50,254] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h5flddp
+Internal Server Error (500) for request GET /buyer/task/perform2/6605
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 17:03:19,718] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h5flde0
+Internal Server Error (500) for request POST /usercenterapp/firststep2?id=6538&urls=http%3A%2F%2Fwww.taobao.com%2F123,http%3A%2F%2Fwww.taobao.com,,&nick=maimai&buyerAccountId=6538&messageId=4923
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 1150)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.UserCenterApp.firstStep2(UserCenterApp.java:1150)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 17:03:26,446] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h5flde1
+Internal Server Error (500) for request POST /usercenterapp/firststep2?id=6538&urls=http%3A%2F%2Fwww.taobao.com%2F123,http%3A%2F%2Fwww.taobao.com,,&nick=maimai&buyerAccountId=6538&messageId=4923
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 1150)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.UserCenterApp.firstStep2(UserCenterApp.java:1150)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 19:34:11,032] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96ec
+UserCenterApp.getAll action not found
+
+Action not found
+Action UserCenterApp.getAll could not be found. Error raised is Controller controllers.UserCenterApp not found
+
+play.exceptions.ActionNotFoundException: Action UserCenterApp.getAll not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:586)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:85)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.UserCenterApp not found
+	... 3 more
+[2016-09-29 19:34:11,868] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96ed
+TaskCenterApp.get action not found
+
+Action not found
+Action TaskCenterApp.get could not be found. Error raised is Controller controllers.TaskCenterApp not found
+
+play.exceptions.ActionNotFoundException: Action TaskCenterApp.get not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:586)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:85)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.TaskCenterApp not found
+	... 3 more
+[2016-09-29 20:02:08,847] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96ee
+Internal Server Error (500) for request POST /UserCenterApp/getAll?nick=null&userid=null
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 3028)
+NumberFormatException occured : For input string: "null"
+
+play.exceptions.JavaExecutionException: For input string: "null"
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NumberFormatException: For input string: "null"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at controllers.UserCenterApp.getAll(UserCenterApp.java:3028)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:02:11,720] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96ef
+Internal Server Error (500) for request POST /TaskCenterApp/get?nick=null
+
+Execution exception (In /app/controllers/TaskCenterApp.java around line 671)
+NullPointerException occured : Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.TaskCenterApp.listBuyer(TaskCenterApp.java:671)
+	at controllers.TaskCenterApp.get(TaskCenterApp.java:646)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:04:10,875] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96eg
+Internal Server Error (500) for request POST /UserCenterApp/getAll?nick=null&userid=null
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 3028)
+NumberFormatException occured : For input string: "null"
+
+play.exceptions.JavaExecutionException: For input string: "null"
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NumberFormatException: For input string: "null"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at controllers.UserCenterApp.getAll(UserCenterApp.java:3028)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:04:12,140] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96eh
+Internal Server Error (500) for request POST /TaskCenterApp/get?nick=null
+
+Execution exception (In /app/controllers/TaskCenterApp.java around line 671)
+NullPointerException occured : Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.TaskCenterApp.listBuyer(TaskCenterApp.java:671)
+	at controllers.TaskCenterApp.get(TaskCenterApp.java:646)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:05:38,356] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96ei
+Internal Server Error (500) for request POST /usercenterapp/firststep2?id=6539&urls=http%3A%2F%2Fwww.taobao.com%2F123,http%3A%2F%2Fwww.taobao.com,,&nick=mmmm&buyerAccountId=6539&messageId=5909
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 1178)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.UserCenterApp.firstStep2(UserCenterApp.java:1178)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:07:46,420] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96ej
+Internal Server Error (500) for request POST /UserCenterApp/getAll?nick=null&userid=null
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 3028)
+NumberFormatException occured : For input string: "null"
+
+play.exceptions.JavaExecutionException: For input string: "null"
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NumberFormatException: For input string: "null"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at controllers.UserCenterApp.getAll(UserCenterApp.java:3028)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:07:47,589] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96ek
+Internal Server Error (500) for request POST /TaskCenterApp/get?nick=null
+
+Execution exception (In /app/controllers/TaskCenterApp.java around line 671)
+NullPointerException occured : Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.TaskCenterApp.listBuyer(TaskCenterApp.java:671)
+	at controllers.TaskCenterApp.get(TaskCenterApp.java:646)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:07:54,557] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96el
+Internal Server Error (500) for request POST /UserCenterApp/getAll?nick=null&userid=null
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 3028)
+NumberFormatException occured : For input string: "null"
+
+play.exceptions.JavaExecutionException: For input string: "null"
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NumberFormatException: For input string: "null"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at controllers.UserCenterApp.getAll(UserCenterApp.java:3028)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:07:56,038] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96em
+Internal Server Error (500) for request POST /TaskCenterApp/get?nick=null
+
+Execution exception (In /app/controllers/TaskCenterApp.java around line 671)
+NullPointerException occured : Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.TaskCenterApp.listBuyer(TaskCenterApp.java:671)
+	at controllers.TaskCenterApp.get(TaskCenterApp.java:646)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:08:07,139] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96en
+Internal Server Error (500) for request POST /UserCenterApp/getAll?nick=null&userid=null
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 3028)
+NumberFormatException occured : For input string: "null"
+
+play.exceptions.JavaExecutionException: For input string: "null"
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NumberFormatException: For input string: "null"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at controllers.UserCenterApp.getAll(UserCenterApp.java:3028)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:08:07,168] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96eo
+Internal Server Error (500) for request POST /TaskCenterApp/get?nick=null
+
+Execution exception (In /app/controllers/TaskCenterApp.java around line 671)
+NullPointerException occured : Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.TaskCenterApp.listBuyer(TaskCenterApp.java:671)
+	at controllers.TaskCenterApp.get(TaskCenterApp.java:646)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:11:39,285] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96ep
+Internal Server Error (500) for request POST /UserCenterApp/getAll?nick=null&userid=null
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 3028)
+NumberFormatException occured : For input string: "null"
+
+play.exceptions.JavaExecutionException: For input string: "null"
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NumberFormatException: For input string: "null"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at controllers.UserCenterApp.getAll(UserCenterApp.java:3028)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:11:39,332] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96f0
+Internal Server Error (500) for request POST /TaskCenterApp/get?nick=null
+
+Execution exception (In /app/controllers/TaskCenterApp.java around line 671)
+NullPointerException occured : Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.TaskCenterApp.listBuyer(TaskCenterApp.java:671)
+	at controllers.TaskCenterApp.get(TaskCenterApp.java:646)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:15:44,761] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96f1
+Internal Server Error (500) for request POST /UserCenterApp/getAll?nick=null&userid=null
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 3028)
+NumberFormatException occured : For input string: "null"
+
+play.exceptions.JavaExecutionException: For input string: "null"
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NumberFormatException: For input string: "null"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at controllers.UserCenterApp.getAll(UserCenterApp.java:3028)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:15:44,790] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96f2
+Internal Server Error (500) for request POST /TaskCenterApp/get?nick=null
+
+Execution exception (In /app/controllers/TaskCenterApp.java around line 671)
+NullPointerException occured : Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.TaskCenterApp.listBuyer(TaskCenterApp.java:671)
+	at controllers.TaskCenterApp.get(TaskCenterApp.java:646)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:26:08,600] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96f3
+Internal Server Error (500) for request POST /UserCenterApp/withdrawApp?nick=null
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 3002)
+NullPointerException occured : Try to read id on null object models.User (controllers.UserCenterApp.withdrawApp, line 3002)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.UserCenterApp.withdrawApp, line 3002)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.UserCenterApp.withdrawApp, line 3002)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.UserCenterApp.withdrawApp(UserCenterApp.java:3002)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:27:28,536] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96f4
+Internal Server Error (500) for request POST /UserCenterApp/getAll?nick=null&userid=null
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 3028)
+NumberFormatException occured : For input string: "null"
+
+play.exceptions.JavaExecutionException: For input string: "null"
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NumberFormatException: For input string: "null"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at controllers.UserCenterApp.getAll(UserCenterApp.java:3028)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:27:28,565] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96f5
+Internal Server Error (500) for request POST /TaskCenterApp/get?nick=null
+
+Execution exception (In /app/controllers/TaskCenterApp.java around line 671)
+NullPointerException occured : Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.TaskCenterApp.listBuyer(TaskCenterApp.java:671)
+	at controllers.TaskCenterApp.get(TaskCenterApp.java:646)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:28:17,387] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96f6
+Internal Server Error (500) for request POST /UserCenterApp/getAll?nick=null&userid=null
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 3028)
+NumberFormatException occured : For input string: "null"
+
+play.exceptions.JavaExecutionException: For input string: "null"
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NumberFormatException: For input string: "null"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at controllers.UserCenterApp.getAll(UserCenterApp.java:3028)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:28:17,415] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96f7
+Internal Server Error (500) for request POST /TaskCenterApp/get?nick=null
+
+Execution exception (In /app/controllers/TaskCenterApp.java around line 671)
+NullPointerException occured : Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.TaskCenterApp.listBuyer(TaskCenterApp.java:671)
+	at controllers.TaskCenterApp.get(TaskCenterApp.java:646)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:28:51,954] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96f8
+Internal Server Error (500) for request POST /UserCenterApp/getAll?nick=null&userid=null
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 3028)
+NumberFormatException occured : For input string: "null"
+
+play.exceptions.JavaExecutionException: For input string: "null"
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NumberFormatException: For input string: "null"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at controllers.UserCenterApp.getAll(UserCenterApp.java:3028)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:28:51,986] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96f9
+Internal Server Error (500) for request POST /TaskCenterApp/get?nick=null
+
+Execution exception (In /app/controllers/TaskCenterApp.java around line 671)
+NullPointerException occured : Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.TaskCenterApp.listBuyer(TaskCenterApp.java:671)
+	at controllers.TaskCenterApp.get(TaskCenterApp.java:646)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:29:36,478] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96fa
+Internal Server Error (500) for request POST /UserCenterApp/getAll?nick=null&userid=null
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 3028)
+NumberFormatException occured : For input string: "null"
+
+play.exceptions.JavaExecutionException: For input string: "null"
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NumberFormatException: For input string: "null"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at controllers.UserCenterApp.getAll(UserCenterApp.java:3028)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:29:36,510] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96fb
+Internal Server Error (500) for request POST /TaskCenterApp/get?nick=null
+
+Execution exception (In /app/controllers/TaskCenterApp.java around line 671)
+NullPointerException occured : Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.TaskCenterApp.listBuyer, line 671)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.TaskCenterApp.listBuyer(TaskCenterApp.java:671)
+	at controllers.TaskCenterApp.get(TaskCenterApp.java:646)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:32:24,684] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96fc
+Internal Server Error (500) for request POST /UserCenterApp/withdraw
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 2338)
+NullPointerException occured : Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.UserCenterApp.withdraw(UserCenterApp.java:2338)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:32:25,568] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96fd
+Internal Server Error (500) for request POST /UserCenterApp/withdraw
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 2338)
+NullPointerException occured : Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.UserCenterApp.withdraw(UserCenterApp.java:2338)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:32:26,570] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96fe
+Internal Server Error (500) for request POST /UserCenterApp/withdraw
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 2338)
+NullPointerException occured : Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.UserCenterApp.withdraw(UserCenterApp.java:2338)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:32:47,530] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96ff
+Internal Server Error (500) for request POST /UserCenterApp/withdraw
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 2338)
+NullPointerException occured : Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.UserCenterApp.withdraw(UserCenterApp.java:2338)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:33:10,347] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96fg
+Internal Server Error (500) for request POST /UserCenterApp/withdraw
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 2338)
+NullPointerException occured : Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.UserCenterApp.withdraw(UserCenterApp.java:2338)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:33:20,311] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96fh
+Internal Server Error (500) for request POST /UserCenterApp/withdraw
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 2338)
+NullPointerException occured : Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.UserCenterApp.withdraw(UserCenterApp.java:2338)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:33:27,822] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96fi
+Internal Server Error (500) for request POST /UserCenterApp/withdraw
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 2338)
+NullPointerException occured : Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.UserCenterApp.withdraw(UserCenterApp.java:2338)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:33:35,769] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96fj
+Internal Server Error (500) for request POST /UserCenterApp/withdraw
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 2338)
+NullPointerException occured : Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.UserCenterApp.withdraw(UserCenterApp.java:2338)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-09-29 20:33:39,377] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71h6a96fk
+Internal Server Error (500) for request POST /UserCenterApp/withdraw
+
+Execution exception (In /app/controllers/UserCenterApp.java around line 2338)
+NullPointerException occured : Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+
+play.exceptions.JavaExecutionException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read id on null object models.User (controllers.UserCenterApp.withdraw, line 2338)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:216)
+	at controllers.UserCenterApp.withdraw(UserCenterApp.java:2338)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:544)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:494)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:489)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:458)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:162)
+	... 1 more
+[2016-10-08 15:24:00,451] ERROR [main] play.Logger.error(Logger.java:426) - Could not bind on port 80
+[2016-10-08 15:25:53,227] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - Database [default] Cannot connected to the database : Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2149)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2074)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:132)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:515)
+	at play.Play.start(Play.java:537)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2090)
+	... 14 more
+[2016-10-08 15:25:55,479] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71jif9k7a
+Internal Server Error (500) for request GET /
+
+Database error
+A database error occured : Cannot connected to the database[default], Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+
+play.exceptions.DatabaseException: Cannot connected to the database[default], Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:200)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:515)
+	at play.Play.start(Play.java:537)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2149)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2074)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:132)
+	... 5 more
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2090)
+	... 14 more
+[2016-10-08 15:26:09,344] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - Database [default] Cannot connected to the database : Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2149)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2074)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:132)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:515)
+	at play.Play.start(Play.java:537)
+	at play.Play.detectChanges(Play.java:641)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2090)
+	... 14 more
+[2016-10-08 15:26:09,457] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71jif9k7b
+Internal Server Error (500) for request GET /
+
+Database error
+A database error occured : Cannot connected to the database[default], Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+
+play.exceptions.DatabaseException: Cannot connected to the database[default], Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:200)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:515)
+	at play.Play.start(Play.java:537)
+	at play.Play.detectChanges(Play.java:641)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2149)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2074)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:132)
+	... 5 more
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2090)
+	... 14 more
+[2016-10-08 15:26:27,187] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - Database [default] Cannot connected to the database : Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2149)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2074)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:132)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:515)
+	at play.Play.start(Play.java:537)
+	at play.Play.detectChanges(Play.java:641)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2090)
+	... 14 more
+[2016-10-08 15:26:27,291] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71jif9k7c
+Internal Server Error (500) for request GET /
+
+Database error
+A database error occured : Cannot connected to the database[default], Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+
+play.exceptions.DatabaseException: Cannot connected to the database[default], Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:200)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:515)
+	at play.Play.start(Play.java:537)
+	at play.Play.detectChanges(Play.java:641)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2149)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2074)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:132)
+	... 5 more
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2090)
+	... 14 more
+[2016-10-08 15:51:10,715] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-10-08 17:05:14,458] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71jj2ao93
+Internal Server Error (500) for request GET /buyer/task/perform2/6620
+
+Template compilation error (In /app/views/TaskExecutor/perform2.html around line 511)
+The template /app/views/TaskExecutor/perform2.html does not compile : #{/set} is not opened.
+
+play.exceptions.TemplateCompilationException: #{/set} is not opened.
+	at play.templates.GroovyTemplateCompiler.endTag(GroovyTemplateCompiler.java:326)
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:93)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:42)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:28)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:89)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at play.mvc.Controller.renderTemplate(Controller.java:675)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:323)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-10-08 17:05:35,603] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71jj2ao94
+Internal Server Error (500) for request GET /buyer/task/perform2/6620
+
+Template compilation error (In /app/views/TaskExecutor/perform2.html around line 511)
+The template /app/views/TaskExecutor/perform2.html does not compile : #{/set} is not opened.
+
+play.exceptions.TemplateCompilationException: #{/set} is not opened.
+	at play.templates.GroovyTemplateCompiler.endTag(GroovyTemplateCompiler.java:326)
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:93)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:42)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:28)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:89)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at play.mvc.Controller.renderTemplate(Controller.java:675)
+	at play.mvc.Controller.renderTemplate(Controller.java:656)
+	at play.mvc.Controller.render(Controller.java:713)
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:323)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	at Invocation.HTTP Request(Play!)
+[2016-10-08 17:10:54,742] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71jj2ao95
+Internal Server Error (500) for request GET /buyer/task/perform2/6625
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-08 17:16:55,203] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71jj2ao96
+Internal Server Error (500) for request GET /buyer/task/perform2/6628
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-08 18:01:20,688] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71jj2ao97
+Internal Server Error (500) for request GET /buyer/task/perform2/6630
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-08 18:03:02,395] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71jj2ao98
+Internal Server Error (500) for request GET /buyer/task/perform2/6631
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-08 18:06:19,424] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71jj2ao99
+Internal Server Error (500) for request GET /buyer/task/perform2/6632
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-08 18:39:50,103] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71jj2ao9a
+Internal Server Error (500) for request GET /buyer/task/perform2/6633
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-08 18:40:50,474] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71jj2ao9b
+Internal Server Error (500) for request GET /buyer/task/perform2/6633
+
+Execution exception (In /app/controllers/TaskExecutor.java around line 281)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.TaskExecutor.perform2(TaskExecutor.java:281)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-10-08 20:46:05,367] ERROR [play-thread-1] com.aton.base.BaseController.handleWrongInput(BaseController.java:291) - Input wrong: [task.expressType] Required

@@ -1,0 +1,1127 @@
+[2016-09-23 09:48:35,919] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbl1bcp
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 201)
+PersistenceException occured :  ### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2] ### Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy61.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:201)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:165)
+	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:44)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.executor.BaseExecutor.createCacheKey(BaseExecutor.java:186)
+	at org.apache.ibatis.executor.CachingExecutor.createCacheKey(CachingExecutor.java:129)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 09:50:54,603] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbl9781
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 201)
+PersistenceException occured :  ### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2] ### Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy24.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:201)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:165)
+	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:44)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.executor.BaseExecutor.createCacheKey(BaseExecutor.java:186)
+	at org.apache.ibatis.executor.CachingExecutor.createCacheKey(CachingExecutor.java:129)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 09:53:24,216] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbl9782
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2] ### Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy24.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:165)
+	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:44)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.executor.BaseExecutor.createCacheKey(BaseExecutor.java:186)
+	at org.apache.ibatis.executor.CachingExecutor.createCacheKey(CachingExecutor.java:129)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 09:56:29,355] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbl9783
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2] ### Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy32.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: org.apache.ibatis.binding.BindingException: Parameter 'userId' not found. Available parameters are [1, 0, param1, param2]
+	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:165)
+	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:44)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.executor.BaseExecutor.createCacheKey(BaseExecutor.java:186)
+	at org.apache.ibatis.executor.CachingExecutor.createCacheKey(CachingExecutor.java:129)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 09:59:54,961] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbme0jf
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1). ### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess) ### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline ### The error occurred while setting parameters ### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like='?%' ### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like='?%'
+### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like='?%'
+### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy24.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.PreparedStatement.checkBounds(PreparedStatement.java:3399)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3384)
+	at com.mysql.jdbc.PreparedStatement.setString(PreparedStatement.java:4110)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:70)
+	at com.sun.proxy.$Proxy20.setString(Unknown Source)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:31)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:50)
+	at org.apache.ibatis.type.UnknownTypeHandler.setNonNullParameter(UnknownTypeHandler.java:45)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:50)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:81)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:80)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:61)
+	at org.apache.ibatis.executor.ReuseExecutor.prepareStatement(ReuseExecutor.java:79)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:56)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 09:59:57,791] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbme0jg
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1). ### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess) ### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline ### The error occurred while setting parameters ### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like='?%' ### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like='?%'
+### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like='?%'
+### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy24.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.PreparedStatement.checkBounds(PreparedStatement.java:3399)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3384)
+	at com.mysql.jdbc.PreparedStatement.setString(PreparedStatement.java:4110)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:70)
+	at com.sun.proxy.$Proxy20.setString(Unknown Source)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:31)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:50)
+	at org.apache.ibatis.type.UnknownTypeHandler.setNonNullParameter(UnknownTypeHandler.java:45)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:50)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:81)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:80)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:61)
+	at org.apache.ibatis.executor.ReuseExecutor.prepareStatement(ReuseExecutor.java:79)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:56)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 10:00:04,378] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbme0jh
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1). ### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess) ### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline ### The error occurred while setting parameters ### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like='?%' ### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like='?%'
+### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like='?%'
+### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy24.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.PreparedStatement.checkBounds(PreparedStatement.java:3399)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3384)
+	at com.mysql.jdbc.PreparedStatement.setString(PreparedStatement.java:4110)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:70)
+	at com.sun.proxy.$Proxy20.setString(Unknown Source)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:31)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:50)
+	at org.apache.ibatis.type.UnknownTypeHandler.setNonNullParameter(UnknownTypeHandler.java:45)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:50)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:81)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:80)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:61)
+	at org.apache.ibatis.executor.ReuseExecutor.prepareStatement(ReuseExecutor.java:79)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:56)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 10:01:46,144] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbmk984
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='2014-12-06%'' at line 1 ### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess) ### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline ### The error occurred while setting parameters ### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like='2014-12-06%' ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='2014-12-06%'' at line 1
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='2014-12-06%'' at line 1
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like='2014-12-06%'
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='2014-12-06%'' at line 1
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='2014-12-06%'' at line 1
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like='2014-12-06%'
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='2014-12-06%'' at line 1
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy24.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='2014-12-06%'' at line 1
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 10:03:02,398] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbmoi3e
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+BindingException occured : Mapper method 'models.mappers.UserIngotRecordMapper.selectListanount attempted to return null from a method with a primitive return type (int).
+
+play.exceptions.JavaExecutionException: Mapper method 'models.mappers.UserIngotRecordMapper.selectListanount attempted to return null from a method with a primitive return type (int).
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.binding.BindingException: Mapper method 'models.mappers.UserIngotRecordMapper.selectListanount attempted to return null from a method with a primitive return type (int).
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:74)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy24.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+[2016-09-23 10:10:33,935] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbno9mb
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1). ### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess) ### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline ### The error occurred while setting parameters ### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like '?%' ### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like '?%'
+### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like '?%'
+### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy36.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.PreparedStatement.checkBounds(PreparedStatement.java:3399)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3384)
+	at com.mysql.jdbc.PreparedStatement.setString(PreparedStatement.java:4110)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:70)
+	at com.sun.proxy.$Proxy20.setString(Unknown Source)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:31)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:50)
+	at org.apache.ibatis.type.UnknownTypeHandler.setNonNullParameter(UnknownTypeHandler.java:45)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:50)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:81)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:80)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:61)
+	at org.apache.ibatis.executor.ReuseExecutor.prepareStatement(ReuseExecutor.java:79)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:56)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 10:12:16,905] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbo46cj
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1 ### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess) ### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline ### The error occurred while setting parameters ### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like ?% ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like ?%
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like ?%
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy24.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 10:13:58,122] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fboa069
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1). ### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess) ### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline ### The error occurred while setting parameters ### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like ' ? %' ### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like ' ? %'
+### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like ' ? %'
+### Cause: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy24.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.PreparedStatement.checkBounds(PreparedStatement.java:3399)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3384)
+	at com.mysql.jdbc.PreparedStatement.setString(PreparedStatement.java:4110)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:70)
+	at com.sun.proxy.$Proxy20.setString(Unknown Source)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:31)
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:50)
+	at org.apache.ibatis.type.UnknownTypeHandler.setNonNullParameter(UnknownTypeHandler.java:45)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:50)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:81)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:80)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:61)
+	at org.apache.ibatis.executor.ReuseExecutor.prepareStatement(ReuseExecutor.java:79)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:56)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 10:15:29,421] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fboa06a
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1 ### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess) ### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline ### The error occurred while setting parameters ### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like ?% ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like ?%
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like ?%
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy30.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 10:17:00,075] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fboa06b
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.cancat does not exist ### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess) ### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline ### The error occurred while setting parameters ### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like concat(cancat(?),'%') ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.cancat does not exist
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.cancat does not exist
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like concat(cancat(?),'%')
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.cancat does not exist
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.cancat does not exist
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like concat(cancat(?),'%')
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.cancat does not exist
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy34.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.cancat does not exist
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 10:18:21,343] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fboa06c
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist ### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess) ### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline ### The error occurred while setting parameters ### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like concat(user_ingot_record(?),'%') ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like concat(user_ingot_record(?),'%')
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like concat(user_ingot_record(?),'%')
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy38.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 10:20:46,926] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fboa06d
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist ### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess) ### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline ### The error occurred while setting parameters ### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like concat(user_ingot_record(?),'%') ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like concat(user_ingot_record(?),'%')
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like concat(user_ingot_record(?),'%')
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy43.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION waguke.user_ingot_record does not exist
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 10:23:48,834] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fboa06e
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-23 10:23:48,834] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2436)
+	at java.lang.Class.getDeclaredMethod(Class.java:1937)
+	at java.io.ObjectStreamClass.getPrivateMethod(ObjectStreamClass.java:1377)
+	at java.io.ObjectStreamClass.access$1700(ObjectStreamClass.java:50)
+	at java.io.ObjectStreamClass$2.run(ObjectStreamClass.java:436)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.io.ObjectStreamClass.<init>(ObjectStreamClass.java:411)
+	at java.io.ObjectStreamClass.lookup(ObjectStreamClass.java:308)
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:545)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1580)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1493)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1729)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1326)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:348)
+	at play.utils.Java.deserialize(Java.java:361)
+	at play.templates.GroovyTemplate.directLoad(GroovyTemplate.java:87)
+	at play.templates.BaseTemplate.loadFromCache(BaseTemplate.java:56)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:81)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at play.server.PlayHandler.serve500(PlayHandler.java:792)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:247)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+[2016-09-23 10:24:06,577] ERROR [main] play.Logger.error(Logger.java:426) - Could not bind on port 80
+[2016-09-23 10:24:50,664] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbpl37o
+Internal Server Error (500) for request GET /MoneyManage/amount
+
+Execution exception (In /app/models/UserIngotRecord.java around line 203)
+PersistenceException occured :  ### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'2016-06-23'+'%'' at line 1 ### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess) ### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline ### The error occurred while setting parameters ### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like '%'+?+'%' ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'2016-06-23'+'%'' at line 1
+
+play.exceptions.JavaExecutionException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'2016-06-23'+'%'' at line 1
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like '%'+?+'%'
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'2016-06-23'+'%'' at line 1
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'2016-06-23'+'%'' at line 1
+### The error may exist in models/mappers/UserIngotRecordMapper.java (best guess)
+### The error may involve models.mappers.UserIngotRecordMapper.selectListanount-Inline
+### The error occurred while setting parameters
+### SQL: select sum(amount) from user_ingot_record where user_id=? and sign = 'PLUS' and create_time like '%'+?+'%'
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'2016-06-23'+'%'' at line 1
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:111)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:66)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy24.selectListanount(Unknown Source)
+	at models.UserIngotRecord.findByAnount(UserIngotRecord.java:203)
+	at controllers.MoneyManage.amount(MoneyManage.java:273)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'2016-06-23'+'%'' at line 1
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1203)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy20.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.ReuseExecutor.doQuery(ReuseExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	... 13 more
+[2016-09-23 10:29:02,715] ERROR [jobs-thread-9] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbpl37p
+Error during job execution (jobs.TaskKeeper)
+
+Compilation error (In /app/controllers/MoneyManage.java around line 267)
+The file /app/controllers/MoneyManage.java could not be compiled. Error raised is : This method must return a result of type Long
+
+play.exceptions.CompilationException: This method must return a result of type Long
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-23 10:29:02,834] ERROR [jobs-thread-7] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbpl381
+Error during job execution (jobs.TaskKeeper2)
+
+Compilation error (In /app/controllers/MoneyManage.java around line 267)
+The file /app/controllers/MoneyManage.java could not be compiled. Error raised is : This method must return a result of type Long
+
+play.exceptions.CompilationException: This method must return a result of type Long
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-23 10:38:02,533] ERROR [jobs-thread-9] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbpl383
+Error during job execution (jobs.AddKwdForFlow)
+
+Compilation error (In /app/controllers/UserCenterApp.java around line 345)
+The file /app/controllers/UserCenterApp.java could not be compiled. Error raised is : The constructor User(String, String, User.UserType, String, String, String) is undefined
+
+play.exceptions.CompilationException: The constructor User(String, String, User.UserType, String, String, String) is undefined
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-23 10:38:02,960] ERROR [jobs-thread-2] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbpl385
+Error during job execution (jobs.BuyerTaskCancel)
+
+Compilation error (In /app/controllers/UserCenterApp.java around line 345)
+The file /app/controllers/UserCenterApp.java could not be compiled. Error raised is : The constructor User(String, String, User.UserType, String, String, String) is undefined
+
+play.exceptions.CompilationException: The constructor User(String, String, User.UserType, String, String, String) is undefined
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-23 10:38:03,080] ERROR [jobs-thread-9] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbpl387
+Error during job execution (jobs.GetExpressNo)
+
+Compilation error (In /app/controllers/UserCenterApp.java around line 345)
+The file /app/controllers/UserCenterApp.java could not be compiled. Error raised is : The constructor User(String, String, User.UserType, String, String, String) is undefined
+
+play.exceptions.CompilationException: The constructor User(String, String, User.UserType, String, String, String) is undefined
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:289)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:326)
+	at play.Play.detectChanges(Play.java:636)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at play.jobs.Job.call(Job.java:185)
+	at Invocation.Job(Play!)
+[2016-09-23 10:41:16,382] ERROR [play-thread-1] play.Logger.niceThrowable(Logger.java:604) - 
+
+@71fbpl389
+Internal Server Error (500) for request GET /user/money
+
+Oops: OutOfMemoryError
+An unexpected error occured caused by exception OutOfMemoryError: PermGen space
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:245)
+	at play.Invoker$Invocation.run(Invoker.java:305)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:152)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:433)
+	at play.Play.start(Play.java:527)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	... 1 more
+[2016-09-23 10:41:16,382] ERROR [play-thread-1] play.Logger.error(Logger.java:457) - Error during the 500 response generation
+java.lang.OutOfMemoryError: PermGen space
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:631)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:615)
+	at play.templates.GroovyTemplate$TClassLoader.defineTemplate(GroovyTemplate.java:79)
+	at play.templates.GroovyTemplate.directLoad(GroovyTemplate.java:92)
+	at play.templates.BaseTemplate.loadFromCache(BaseTemplate.java:56)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:81)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:179)
+	at play.server.PlayHandler.serve500(PlayHandler.java:792)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:247)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:98)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:206)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)

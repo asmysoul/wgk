@@ -1,0 +1,100 @@
+2016-10-10 10:33:26 Buyer=1699-zhangsan take Task=785306532790140928
+2016-10-10 10:33:27 Buyer=1699-zhangsan begin to perform step=CHOOSE_ITEM of buyerTask=785306532790140928-27 with status=RECIEVED
+2016-10-10 10:33:37 Buyer=1699-zhangsan perform buyerTask=27 save step=CHOOSE_ITEM
+2016-10-10 10:33:37 Fetch and Check Buyer=1699 last perform step of buyerTask=27
+2016-10-10 10:33:37 Sessoin current taskStep=CHOOSE_ITEM ,buyer=1699,buyerTask=27
+2016-10-10 10:33:37 Buyer=1699-zhangsan perform save step=CHOOSE_ITEM of buyerTask=785306532790140928-27 with status=RECIEVED
+2016-10-10 10:33:41 Buyer=1699-zhangsan perform buyerTask=27 save step=CONFIRM_REFUND
+2016-10-10 10:33:41 Fetch and Check Buyer=1699 last perform step of buyerTask=27
+2016-10-10 10:33:41 Sessoin current taskStep=VIEW_AND_INQUIRY ,buyer=1699,buyerTask=27
+2016-10-10 10:33:41 Buyer=1699 last perform step=275669[CHOOSE_ITEM] of buyerTask=27
+2016-10-10 10:33:41 Buyer=1699-zhangsan perform save step=CONFIRM_REFUND of buyerTask=785306532790140928-27 with status=WAIT_PAY
+2016-10-10 10:34:57 Buyer=1699-zhangsan take Task=785307505067556864
+2016-10-10 10:34:58 Buyer=1699-zhangsan begin to perform step=CHOOSE_ITEM of buyerTask=785307505067556864-28 with status=RECIEVED
+2016-10-10 10:35:07 Buyer=1699-zhangsan perform buyerTask=28 save step=CHOOSE_ITEM
+2016-10-10 10:35:07 Fetch and Check Buyer=1699 last perform step of buyerTask=28
+2016-10-10 10:35:07 Sessoin current taskStep=CHOOSE_ITEM ,buyer=1699,buyerTask=28
+2016-10-10 10:35:07 Buyer=1699-zhangsan perform save step=CHOOSE_ITEM of buyerTask=785307505067556864-28 with status=RECIEVED
+2016-10-10 10:35:12 Buyer=1699-zhangsan begin to perform step=VIEW_AND_INQUIRY of buyerTask=785307505067556864-28 with status=WAIT_PAY
+2016-10-10 10:35:16 Buyer=1699-zhangsan perform buyerTask=28 save step=CONFIRM_REFUND
+2016-10-10 10:35:16 Fetch and Check Buyer=1699 last perform step of buyerTask=28
+2016-10-10 10:35:16 Sessoin current taskStep=VIEW_AND_INQUIRY ,buyer=1699,buyerTask=28
+2016-10-10 10:35:16 Buyer=1699 last perform step=275672[CHOOSE_ITEM] of buyerTask=28
+2016-10-10 10:35:16 Buyer=1699-zhangsan perform save step=CONFIRM_REFUND of buyerTask=785307505067556864-28 with status=WAIT_PAY
+2016-10-10 10:40:14 Buyer=1699-zhangsan take Task=785308545259143168
+2016-10-10 10:40:14 Buyer=1699-zhangsan begin to perform step=CHOOSE_ITEM of buyerTask=785308545259143168-29 with status=RECIEVED
+2016-10-10 10:40:35 Buyer=1699-zhangsan begin to perform step=CHOOSE_ITEM of buyerTask=785308545259143168-29 with status=RECIEVED
+2016-10-10 10:40:45 Buyer=1699-zhangsan perform buyerTask=29 save step=CHOOSE_ITEM
+2016-10-10 10:40:45 Fetch and Check Buyer=1699 last perform step of buyerTask=29
+2016-10-10 10:40:45 Sessoin current taskStep=CHOOSE_ITEM ,buyer=1699,buyerTask=29
+2016-10-10 10:40:45 Buyer=1699-zhangsan perform save step=CHOOSE_ITEM of buyerTask=785308545259143168-29 with status=RECIEVED
+2016-10-10 10:40:53 Buyer=1699-zhangsan perform buyerTask=29 save step=CONFIRM_REFUND
+2016-10-10 10:40:53 Fetch and Check Buyer=1699 last perform step of buyerTask=29
+2016-10-10 10:40:53 Sessoin current taskStep=VIEW_AND_INQUIRY ,buyer=1699,buyerTask=29
+2016-10-10 10:40:53 Buyer=1699 last perform step=275675[CHOOSE_ITEM] of buyerTask=29
+2016-10-10 10:40:53 Buyer=1699-zhangsan perform save step=CONFIRM_REFUND of buyerTask=785308545259143168-29 with status=WAIT_PAY
+2016-10-10 10:43:58 Buyer=1699-zhangsan take Task=785309375349653504
+2016-10-10 10:43:58 Buyer=1699-zhangsan begin to perform step=CHOOSE_ITEM of buyerTask=785309375349653504-30 with status=RECIEVED
+2016-10-10 10:44:34 Buyer=1699-zhangsan begin to perform step=CHOOSE_ITEM of buyerTask=785309375349653504-30 with status=RECIEVED
+2016-10-10 10:44:44 Buyer=1699-zhangsan perform buyerTask=30 save step=CHOOSE_ITEM
+2016-10-10 10:44:44 Fetch and Check Buyer=1699 last perform step of buyerTask=30
+2016-10-10 10:44:44 Sessoin current taskStep=CHOOSE_ITEM ,buyer=1699,buyerTask=30
+2016-10-10 10:44:44 Buyer=1699-zhangsan perform save step=CHOOSE_ITEM of buyerTask=785309375349653504-30 with status=RECIEVED
+2016-10-10 10:44:47 Buyer=1699-zhangsan perform buyerTask=30 save step=CONFIRM_REFUND
+2016-10-10 10:44:47 Fetch and Check Buyer=1699 last perform step of buyerTask=30
+2016-10-10 10:44:47 Sessoin current taskStep=VIEW_AND_INQUIRY ,buyer=1699,buyerTask=30
+2016-10-10 10:44:47 Buyer=1699 last perform step=275678[CHOOSE_ITEM] of buyerTask=30
+2016-10-10 10:44:47 Buyer=1699-zhangsan perform save step=CONFIRM_REFUND of buyerTask=785309375349653504-30 with status=WAIT_PAY
+2016-10-10 11:03:03 Buyer=1678-maimai take Task=785311050974101504
+2016-10-10 11:03:04 Buyer=1678-maimai begin to perform step=CHOOSE_ITEM of buyerTask=785311050974101504-31 with status=RECIEVED
+2016-10-10 11:03:28 Buyer=1678-maimai perform buyerTask=31 save step=CHOOSE_ITEM
+2016-10-10 11:03:28 Fetch and Check Buyer=1678 last perform step of buyerTask=31
+2016-10-10 11:03:28 Sessoin current taskStep=CHOOSE_ITEM ,buyer=1678,buyerTask=31
+2016-10-10 11:03:28 Buyer=1678-maimai perform save step=CHOOSE_ITEM of buyerTask=785311050974101504-31 with status=RECIEVED
+2016-10-10 11:03:36 Buyer=1678-maimai perform buyerTask=31 save step=CONFIRM_REFUND
+2016-10-10 11:03:36 Fetch and Check Buyer=1678 last perform step of buyerTask=31
+2016-10-10 11:03:36 Sessoin current taskStep=VIEW_AND_INQUIRY ,buyer=1678,buyerTask=31
+2016-10-10 11:03:36 Buyer=1678 last perform step=275681[CHOOSE_ITEM] of buyerTask=31
+2016-10-10 11:03:36 Buyer=1678-maimai perform save step=CONFIRM_REFUND of buyerTask=785311050974101504-31 with status=WAIT_PAY
+2016-10-10 12:55:05 Buyer=1699-zhangsan take Task=785341582038532096
+2016-10-10 12:55:05 Buyer=1699-zhangsan begin to perform step=CHOOSE_ITEM of buyerTask=785341582038532096-32 with status=RECIEVED
+2016-10-10 12:55:28 Buyer=1699-zhangsan perform buyerTask=32 save step=CHOOSE_ITEM
+2016-10-10 12:55:28 Fetch and Check Buyer=1699 last perform step of buyerTask=32
+2016-10-10 12:55:28 Sessoin current taskStep=CHOOSE_ITEM ,buyer=1699,buyerTask=32
+2016-10-10 12:55:28 Buyer=1699-zhangsan perform save step=CHOOSE_ITEM of buyerTask=785341582038532096-32 with status=RECIEVED
+2016-10-10 12:55:34 Buyer=1699-zhangsan perform buyerTask=32 save step=CONFIRM_REFUND
+2016-10-10 12:55:34 Fetch and Check Buyer=1699 last perform step of buyerTask=32
+2016-10-10 12:55:34 Sessoin current taskStep=VIEW_AND_INQUIRY ,buyer=1699,buyerTask=32
+2016-10-10 12:55:34 Buyer=1699 last perform step=275684[CHOOSE_ITEM] of buyerTask=32
+2016-10-10 12:55:34 Buyer=1699-zhangsan perform save step=CONFIRM_REFUND of buyerTask=785341582038532096-32 with status=WAIT_PAY
+2016-10-10 17:07:50 Buyer=1699-zhangsan take Task=767897338961199104
+2016-10-10 17:08:20 Buyer=1699-zhangsan cancle buyerTask=767897338961199104-6639
+2016-10-10 17:08:32 Buyer=1699-zhangsan take Task=784935546374848512
+2016-10-10 17:08:33 Buyer=1699-zhangsan begin to perform step=CHOOSE_ITEM of buyerTask=784935546374848512-6640 with status=RECIEVED
+2016-10-10 17:08:47 Buyer=1699-zhangsan begin to perform step=CHOOSE_ITEM of buyerTask=784935546374848512-6640 with status=RECIEVED
+2016-10-10 17:08:51 Buyer=1699-zhangsan perform buyerTask=6640 save step=CHOOSE_ITEM
+2016-10-10 17:08:51 Fetch and Check Buyer=1699 last perform step of buyerTask=6640
+2016-10-10 17:08:51 Sessoin current taskStep=CHOOSE_ITEM ,buyer=1699,buyerTask=6640
+2016-10-10 17:08:51 Buyer=1699-zhangsan perform save step=CHOOSE_ITEM of buyerTask=784935546374848512-6640 with status=RECIEVED
+2016-10-10 17:09:12 Buyer=1699-zhangsan perform buyerTask=6640 save step=VIEW_AND_INQUIRY
+2016-10-10 17:09:12 Fetch and Check Buyer=1699 last perform step of buyerTask=6640
+2016-10-10 17:09:12 Sessoin current taskStep=VIEW_AND_INQUIRY ,buyer=1699,buyerTask=6640
+2016-10-10 17:09:12 Buyer=1699 last perform step=107[CHOOSE_ITEM] of buyerTask=6640
+2016-10-10 17:09:12 Buyer=1699-zhangsan perform save step=VIEW_AND_INQUIRY of buyerTask=784935546374848512-6640 with status=WAIT_PAY
+2016-10-10 17:09:49 Buyer=1699-zhangsan perform buyerTask=6640 save step=ORDER_AND_PAY
+2016-10-10 17:09:49 Fetch and Check Buyer=1699 last perform step of buyerTask=6640
+2016-10-10 17:09:49 Sessoin current taskStep=ORDER_AND_PAY ,buyer=1699,buyerTask=6640
+2016-10-10 17:09:49 Buyer=1699 last perform step=108[VIEW_AND_INQUIRY] of buyerTask=6640
+2016-10-10 17:09:49 Buyer=1699-zhangsan perform save step=ORDER_AND_PAY of buyerTask=784935546374848512-6640 with status=WAIT_PAY
+2016-10-10 17:13:24 Buyer=1699-zhangsan take Task=785404723585875968
+2016-10-10 17:13:24 Buyer=1699-zhangsan begin to perform step=CHOOSE_ITEM of buyerTask=785404723585875968-33 with status=RECIEVED
+2016-10-10 17:15:03 Buyer=1699-zhangsan begin to perform step=CHOOSE_ITEM of buyerTask=785404723585875968-33 with status=RECIEVED
+2016-10-10 17:15:17 Buyer=1699-zhangsan perform buyerTask=33 save step=CHOOSE_ITEM
+2016-10-10 17:15:17 Fetch and Check Buyer=1699 last perform step of buyerTask=33
+2016-10-10 17:15:17 Sessoin current taskStep=CHOOSE_ITEM ,buyer=1699,buyerTask=33
+2016-10-10 17:15:17 Buyer=1699-zhangsan perform save step=CHOOSE_ITEM of buyerTask=785404723585875968-33 with status=RECIEVED
+2016-10-10 17:15:47 Buyer=1699-zhangsan perform buyerTask=33 save step=CONFIRM_REFUND
+2016-10-10 17:15:47 Fetch and Check Buyer=1699 last perform step of buyerTask=33
+2016-10-10 17:15:47 Sessoin current taskStep=VIEW_AND_INQUIRY ,buyer=1699,buyerTask=33
+2016-10-10 17:15:47 Buyer=1699 last perform step=275687[CHOOSE_ITEM] of buyerTask=33
+2016-10-10 17:15:47 Buyer=1699-zhangsan perform save step=CONFIRM_REFUND of buyerTask=785404723585875968-33 with status=WAIT_PAY

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<workbook>
+	<worksheet idx="0">
+		<section startRow="0" endRow="0" />
+		<loop startRow="1" endRow="1" items="results" var="orderExpress"
+			varType="vos.FaBaoGuoVo">
+			<section startRow="1" endRow="1">
+				<mapping row="1" col="0">orderExpress.order_sn</mapping>
+				<mapping row="1" col="1">orderExpress.sendTimeStr</mapping>
+				<mapping row="1" col="2">orderExpress.send_name</mapping>
+				<mapping row="1" col="3">orderExpress.send_tel</mapping>
+				<mapping row="1" col="4">orderExpress.send_addr</mapping>
+				<mapping row="1" col="5">orderExpress.receive_name</mapping>
+				<mapping row="1" col="6">orderExpress.receive_tel</mapping>
+				<mapping row="1" col="7">orderExpress.receive_addr</mapping>
+				<mapping row="1" col="8">orderExpress.weight</mapping>
+				<mapping row="1" col="9">orderExpress.goods_name</mapping>
+				<mapping row="1" col="10">orderExpress.net_no</mapping>
+				<mapping row="1" col="11">orderExpress.comment</mapping>
+			</section>
+			<loopbreakcondition>
+				<rowcheck offset="0">
+					<cellcheck offset="0" />
+				</rowcheck>
+			</loopbreakcondition>
+		</loop>
+	</worksheet>
+</workbook>

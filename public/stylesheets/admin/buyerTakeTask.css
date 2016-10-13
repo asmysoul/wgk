@@ -1,0 +1,61 @@
+#taskFilterPanel{
+	padding-left: 20px;
+	padding-top: 10px;
+}
+#taskFilterPanel .stdColorButton{
+	line-height: 14px;
+}
+.short{
+	width: 70px;
+}
+/*-----------------------------------*/
+/*列表显示样式*/
+.foundTypeSwitchWrapper{
+	padding-top: 15px;
+	background-color: #F3F1F1;
+	height: 40px;
+	position: relative;
+	z-index: 4;
+}
+.foundTab{
+	margin-left: 20px;
+	color:#BFBFBF;
+	line-height: 39px;
+	float: left;
+	padding:0 10px;
+}
+.foundTypeSwitchWrapper .focus,.foundTab:hover{
+	background-color:#FFF;
+	border-top:solid 1px #DADADA;
+	border-left:solid 1px #DADADA;
+	border-right:solid 1px #DADADA;
+	color:#FB8A73;
+	position: relative;
+	top: 1px;
+}
+/*====================================================*/
+.foundRecordWrapper{
+	border-top:solid 1px #DADADA;
+	position: relative;
+	z-index: 1;
+	padding-top: 15px;
+}
+.foundCell:first-child{
+	border-top:none;
+}
+.normTable td{
+	vertical-align: middle;
+}
+.normTable thead td{
+	color: #777;
+	font-weight: 700;
+}
+.sec{
+	margin-bottom: 10px;
+}
+.rad{
+	margin-top: 5px;
+}
+.wid{
+	width:121px;
+}

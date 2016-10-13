@@ -1,0 +1,516 @@
+#{extends 'frame.html' /}
+#{set title:'提现管理' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/withdraw.css'}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.pagination.css'}" />
+#{/set}
+
+
+<div class="tabbedCard">
+	<div class="contentTitle">
+		提现设置
+	</div>
+	<div class="tabSwitchWrapper">
+		<a class="tab-cell withdrawOpTab focus" href="javascript:;" for="boxBindAccount">提现/返款账号</a>
+		<a class="tab-cell withdrawOpTab" href="javascript:;" for="boxWithdraw">提现申请</a>
+		#{if user.isBuyer()}
+		<a class="tab-cell withdrawOpTab" href="javascript:;" for="boxCapitalWithdraw">垫付本金提现</a>
+		#{/if}
+	</div>
+	<!-- 绑定账号区域 -->
+	<div class="contentBody clearfix withdraw-setting-panel" id="boxBindAccount">
+		<div class="filterBlock">
+			<div class="clearfix" id="platformSelect" userId="${user.id}">
+				<div class="moneyAccountBox checkTextBtn selectedCtb" href="javascript:;" value="tenpay">
+					<div class="m_name">财付通</div>
+					<div class="m_acc grey" id="tenpayId">#{if tenpay}${tenpay.no}#{/if}#{else}未绑定#{/else}</div>
+				</div>
+				<div class="moneyAccountBox checkTextBtn " href="javascript:;" value="alipay" >
+					<div class="m_name">支付宝</div>
+					<div class="m_acc grey" id="alipayId">#{if alipay}${alipay.no}#{/if}#{else}未绑定#{/else}</div>
+				</div>
+				<div class="moneyAccountBox checkTextBtn" href="javascript:;" value="bank">
+					<div class="m_name">#{if bank}${bank.type.title}卡#{/if}#{else}银行卡#{/else}</div>
+					<div class="m_acc grey" id="bankId">#{if bank}${bank.no}#{/if}#{else}未绑定#{/else}</div>
+				</div>
+				<div class="moneyAccountBox checkTextBtn newAccount" href="javascript:;" style="display:none">
+					<div class="btnAddNewAccount">
+						<span class="iconfont mr-8">&#xf0154;</span>
+						<span style="line-height:30px;">添加新的银行卡</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<form id="bindForm">
+			<div class="mt20 bindMsg" id="alipayBind" style="display:none">
+				#{if alipay}
+				<div class="panelLine mb10">
+					<label>原支付宝账号</label>
+					<span class="ls floatLeft red bold" id="alipayMark" fid="${alipay.id}">${alipay.no}</span>
+				</div>
+				#{/if}
+				#{else}
+				<div class="panelLine mb10">
+					<label>姓名</label>
+					<input type="text" class="inputText floatLeft middle mr-8 required" id="txtAlipayName" value="" name="name">
+					<span class="grey">支付宝姓名一般为真实姓名，请务必准确填写，否则将无法给你返款</span>
+				</div>
+				<div class="panelLine mb10">
+					<label class="ls floatLeft">支付宝账号</label>
+					<input type="text" class="inputText floatLeft middle mr-8 required" id="txtAlipayNo" value="" name="alipayNO"></div>
+
+				<div class="buttonSection">
+					<a href="javascript:;" class="stdColorButton bindingBtn">
+						确认
+						<span class="iconfont">&#xf016d;</span>
+					</a>
+				</div>
+				#{/else}
+			</div>
+			<div class="mt20 bindMsg" id="tenpayBind">
+				#{if tenpay}
+				<div class="panelLine mb10">
+					<label>原财付通账号</label>
+					<span class="ls floatLeft red bold" id="tenpayMark" fid="${tenpay.id}">${tenpay.no}</span>
+				</div>
+				#{/if}
+				#{else}
+				<div class="panelLine mb10">
+					<label>姓名</label>
+					<input type="text" class="inputText floatLeft ls required" id="txtTenpayName" value="" name="name">
+					<span class="grey">财付通姓名一般为真实姓名，请务必准确填写，否则将无法给你返款</span>
+				</div>
+				<div class="panelLine mb10">
+					<label>财付通账号</label>
+					<input type="text" class="inputText floatLeft ls required" id="txtTenpayNo" value="" name="tenpayNO"></div>
+
+				<div class="buttonSection">
+					<a href="javascript:;" class="stdColorButton bindingBtn">
+						确认
+						<span class="iconfont">&#xf016d;</span>
+					</a>
+				</div>
+				#{/else}
+			</div>
+
+			<div class="mt20 bindMsg" id="bankBind" style="display:none">
+				#{if bank}
+				<div class="panelLine mb10">
+					<label>原银行卡账号</label>
+					<span class="ls floatLeft red bold" id="bankMark" fid="${bank.id}">${bank.no}</span>
+				</div>
+				#{/if}
+				#{else}
+				<div class="panelLine mb10">
+					<label>开户人姓名</label>
+					<input type="text" class="inputText floatLeft ls required" id="txtBankName" value="" name="name"/>
+				</div>
+				<div class="panelLine mb10">
+					<label>选择银行</label>
+					<select class="" id="txtBankType">
+						#{list items:payPlatforms, as:'p'}
+						<option value="${p}">${p.title}</option>
+						#{/list}
+					</select>
+				</div>
+				<div class="panelLine mb10">
+					<label>银行卡号</label>
+					<input type="text" class="inputText floatLeft ls required" id="txtBankNo" value="" name="bankNO"/>
+				</div>
+				<div class="panelLine mb10">
+					<label>确认卡号</label>
+					<input type="text" class="inputText floatLeft ls  required" id="txtCheckBankNo" value="" name="checkBankNO"/>
+				</div>
+				<div class="panelLine mb10" id="quyu">
+					<label>地区</label>
+					<select class="ls" id="first">
+						<option value="" selected="selected">请选择</option>
+						#{list items: regions, as:'re'}
+						<option rid="${re.id}">${re.name}</option>
+						#{/list}
+					</select>
+					<select class="ls" id="second">
+						<option value="" selected="selected">请选择</option>
+					</select>
+					<input type="hidden" class="required" id="address" name="address"/>
+				</div>
+				<div class="panelLine mb10">
+					<label>开户支行</label>
+					<input type="text" class="inputText floatLeft ls required" id="txtOpeningBank" value="" name="opengingBank"/>
+				</div>
+
+				<div class="buttonSection">
+					<a href="javascript:;" class="stdColorButton bindingBtn">
+						确认
+						<span class="iconfont">&#xf016d;</span>
+					</a>
+				</div>
+				#{/else}
+
+				<div class="panelBox" style="border-bottom:dashed 1px #DEDEDE;margin-top: 20px;"></div>
+				温馨提示:
+				<br/>
+				1、如果您填写的开户行支行不正确，可能将无法成功提现，由此产生的提现费用将不予返还
+				<br/>
+				2、如果您不确定开户行支行名称，可打电话到所在地银行的营业网点询问或上网查询
+				<br/>
+				3、如果有接手的任务还没有全部完成，暂不能修改返款账号，请先完成任务后再修改
+				<br/>
+				4、不支持提现至信用卡账号
+			</div>
+		</form>
+	</div>
+	<!-- 提现操作区域 -->
+	<div class="contentBody clearfix withdraw-setting-panel" id="boxWithdraw" style="display:none">
+		<form id="fm1">
+			<div class="inputArea clearfix">
+			<!-- 卖家押金提现 -->
+			#{if user?.isSeller()}
+				<div class="panelLine mb10">
+					<span class="ls floatLeft">可提现押金</span>
+					<span class="ls floatLeft red bold" id="spRefundCount">${(user.pledge/100).format("##0.00")}</span>
+					元
+				</div>
+				<div class="panelLine mb10">
+					<span class="ls floatLeft">银行卡</span>
+					<span class="ls floatLeft black bold">${bank?.type?.title}</span>
+					<span class="floatLeft">尾号</span>
+					<span class="ls floatLeft black bold">${bank?.no}</span>
+				</div>
+				#{ifnot bank}
+				<div class="panelLine mb10">
+					<span class="ls floatLeft red">尚未绑定提现【银行卡】账号！</span>
+					<div class="buttonSection">
+						<input type="button" id="btnBindWithdraw" value="立即绑定" />
+					</div>
+				</div>
+				#{/ifnot}
+				#{else}
+				<div class="panelLine mb10">
+					<span class="ls floatLeft">提现金额</span>
+					<input type="text" class="inputText floatLeft middle mr-8" id="txtWithdrawAmount" value="100" name="ChargeVal1" />
+					元
+					<span class="ls grey">单次最少提现100元</span>
+				</div>
+				<div class="panelLine mb10">
+					<span class="ls floatLeft">实际到账金额</span>
+					<span class="ls floatLeft red bold" id="spRealWithdrawAmount">99.70</span>
+					元
+				</div>
+				<div class="warnBox mb10">
+					提现操作平台将收取0.3%的手续费，预计2个工作日内（国家法定假日和双休日顺延）平台完成提现操作，到账时间以各大银行为准，预计3-5天左右
+				</div>
+				#{/else}
+			#{/if}			
+			<!-- 买手金币提现 -->
+			#{else}
+				<div class="panelLine mb10">
+					<span class="ls floatLeft">可提现金币</span>
+					<span class="ls floatLeft red bold" id="spRefundCount">${(user.ingot/100).format("##0.00")}</span>金币
+				</div>
+				#{if !bank}
+				<div class="panelLine mb10">
+					<span class="ls floatLeft red">尚未绑定【银行卡】账号！</span>
+					<div class="buttonSection">
+						<input type="button" id="btnBindWithdraw" value="立即绑定" />
+					</div>
+				</div>
+				#{/if}
+				#{else}
+				<div class="panelLine mb10">
+					<span class="ls floatLeft ">提现单价</span>
+					<span class="ls floatLeft orange bold">0.95</span>元/金币
+				</div>
+				<div class="panelLine mb10">
+					<span class="ls floatLeft ">提现金币</span>
+					<input type="text" class="inputText floatLeft middle mr-8" id="txtWithdrawAmount" value="100" name="ChargeVal1" />
+					<span class="ls grey">单次最少提现100金币</span>
+				</div>
+				<div class="panelLine mb10">
+					<span class="ls floatLeft ">实际到账金额</span>
+					<span class="ls floatLeft red bold" id="spRealWithdrawAmount">95.00</span>
+					元
+				</div>
+				<div class="warnBox mb10">
+					提现金额将转账到您绑定的【银行卡】账户中，请注意查收。
+				</div>
+				#{/else}
+			#{/else}
+				#{ifnot user?.payPassword}
+				<div class="panelLine mb10">
+					<span class="ls floatLeft red">尚未设置支付密码！</span>
+					<a class="buttonSection " href="/user">
+						<input type="button" id="" value="设置支付密码" />
+					</a>
+				</div>
+				#{/ifnot}
+				#{else}
+				<div class="panelLine mb10">
+					<span class="ls floatLeft jumpLink floatLeft ">支付密码</span>
+					<input type="password" class="inputText floatLeft middle mr-8" id="pword" value="" name="password" />
+					#{if user?.isBuyer()}
+					<span class="ls grey">本月还可提现<i class="red bold">${countThisMonthApply}</i>&nbsp;次</span>
+					#{/if}
+				</div>
+				#{if countThisMonthApply>0 || user?.isSeller()}
+				<div class="buttonSection">
+					<a href="#" class="stdColorButton bindBtn" id="applyWithdraw" >
+						申请提现
+						<span class="iconfont">&#xf016d;</span>
+					</a>
+				</div>
+				#{/if}
+				#{/else}
+
+				<div class="panelBox" style="border-bottom:dashed 1px #DEDEDE;margin-top: 20px;"></div>
+				温馨提示:
+				<br/>1.请确保您输入的提现金额，以及财付通、支付宝或银行卡账号信息准确无误。
+				<br/>2.如果您填写的提现信息不正确也可能会导致提现失败，由此产生的提现费用将不予返还。
+				<br/>3.在国家法定假日和双休日期间，用户可以申请提现，平台会在7个工作日内进行处理。由此造成的不便，请多多谅解!
+				<br/>4.平台禁止洗钱、信用卡套现、虚假交易等行为，一经发现并确认，将终止该账号的使用。
+				<br/>5.平台操作提现后，到账金额可能会分为几笔打入您的账户，查询时请注意计算到账总金额。
+			</div>
+		</form>
+	</div>
+	
+	#{if user.isBuyer()}
+	<!-- 本金提现操作区域 -->	
+	<div class="contentBody clearfix withdraw-setting-panel" id="boxCapitalWithdraw" style="display:none">
+		<div class="inputArea clearfix">
+			<div class="warnBox mb10">
+				非平台返款超时，由平台自动将垫付的本金退还到买手本金账户，买手需要先核实卖家返款，任务完成后才能提现。
+			</div>
+			<div class="panelLine mb10">
+				<span class="ls floatLeft">可提现本金</span>
+				<span class="ls floatLeft red bold">${(withDepositAmt/100).format("##0.00")}</span>
+				金币
+			</div>
+			<div>
+				<div class="taskWrapperHf clearfix">
+					<a href="javascript:;" class="lnkChoseAll inputCheckBox floatLeft">&nbsp;</a>
+					<span class="floatLeft" style="line-height:30px;">全选</span>
+				</div>
+				<div class="taskWrapper" style="overflow: hidden;" id="taskContainer">
+				</div>
+				<!--这里是分页区域-->	
+				<div class="pagin-btm clearFix">
+					<div class="pagination"></div>
+				</div>
+				<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+					<div class="maskLayer"></div>
+					<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />	
+				</div>
+				<div class="taskWrapperHf clearfix">
+					<a href="javascript:;" class="lnkChoseAll inputCheckBox floatLeft">&nbsp;</a>
+					<span class="floatLeft" style="line-height:30px;">全选</span>
+				</div>
+			</div>
+			#{ifnot bank}
+			<div class="panelLine mb10">
+				<span class="ls floatLeft red">尚未绑定提现【银行卡】！</span>
+				<div class="buttonSection">
+					<input type="button" id="btnBindWithdraw" value="立即绑定" />	
+				</div>
+			</div>
+			#{/ifnot}
+			#{else}
+			<div class="warnBox mb10">
+				提现金额将转账到您绑定的【银行卡】账户中，请注意查收。
+			</div>
+			#{/else}
+			#{ifnot user?.payPassword}
+				<div class="panelLine mb10">
+					<span class="ls floatLeft red">尚未设置支付密码！</span>
+					<a class="buttonSection " href="/user">
+						<input type="button" id="" value="设置支付密码" />	
+					</a>
+				</div>
+			#{/ifnot}
+			#{else}
+				<div class="panelLine mb10">
+				<span class="ls floatLeft jumpLink floatLeft ">支付密码</span>
+				<input type="password" class="inputText floatLeft middle mr-8" id="payPass" value="" name="password" />	
+			</div>
+			<div class="buttonSection">
+				<a href="#" class="stdColorButton" id="applyDepositWithdraw">
+					申请提现
+					<span class="iconfont">&#xf016d;</span>
+				</a>
+			</div>
+			#{/else}
+
+			<div class="panelBox" style="border-bottom:dashed 1px #DEDEDE;margin-top: 20px;"></div>
+			温馨提示:
+			<br/>	
+			1.请确保您输入的银行卡账号信息准确无误。
+			<br/>	
+			2.如果您填写的提现信息不正确也可能会导致提现失败，由此产生的提现费用将不予返还。
+			<br/>	
+			3.在国家法定假日和双休日期间，用户可以申请提现，平台会在7个工作日内进行处理。由此造成的不便，请多多谅解!
+		</div>
+	</div>
+	#{/if}
+</div>
+
+<!-- 确认信息弹窗 -->
+<div class="popWrapper" id="confirmPlatformWnd" data-id="0">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:;" class="wnd_Close_Icon" title="关闭窗口"></a>
+		<h3 class="topTile">确认绑定信息</h3>
+		<div class="modalWndInner">
+			<div id="alipayBindTemp" style="display:none">
+				<div class="panelLine mb10">
+					<label>姓名</label>
+					<span id="alipayName" class="bold green"></span>
+				</div>
+				<div class="panelLine mb10">
+					<label class="ls floatLeft">支付宝账号</label>
+					<span id="alipayNo" class="bold red"></span>
+				</div>
+			</div>
+			<div id="tenpayBindTemp" style="display:none">
+				<div class="panelLine mb10">
+					<label>姓名</label>
+					<span id="tenpayName" class="bold green"></span>
+				</div>
+				<div class="panelLine mb10">
+				<label class="ls floatLeft">财付通账号</label>
+					<span id="tenpayNo" class="bold red"></span>
+				</div>		
+			</div>
+			<div id="bankBindTemp" style="display:none">
+				<div class="panelLine mb10">
+					<label>银行:</label>
+					<span id="bankType" class="red">
+						<img src="">
+					</span>
+				</div>
+				<div class="panelLine mb10">
+					<label>开户人姓名:</label>
+					<span id="bankName" class="bold red"></span>
+				</div>
+				
+				<div class="panelLine mb10">
+					<label>银行卡号:</label>
+					<span id="bankNO" class="bold red"></span>
+				</div>
+				<div class="panelLine mb10">
+					<label>地区:</label>
+					<span id="quyuFirst" class="bold green"></span>
+					<span id="quyuSecond" class="bold green"></span>
+				</div>
+				<div class="panelLine mb10">
+					<label>开户支行:</label>
+					<span id="spOpeningBank" class="bold green"></span>
+				</div>
+			</div>		
+		</div>
+		<div class="wndBotButtonSection">
+			<a id="btnCancel" href="javascript:;" class="botButton">取消</a>
+			<a id="btnConfirm" href="javascript:;" class="botButton">确认</a>
+		</div>
+	</div>
+</div>
+
+<!-- 可提现任务模板 -->
+<textarea id="taskRowTemp" class="muban">
+	{{#results}}
+	<div class="taskCell">
+		<div class="title">
+			<span class="taskNo floatRight">
+				任务编号：{{taskIdStr}}-{{id}}
+				<a target="_blank" href="/buyer/task/{{id}}" class="view-detail">[查看详情]</a>
+			</span>
+			<a href="javascript:;" class="inputCheckBox floatLeft" data-tid="{{id}}">&nbsp;</a> 
+			<span class="shop">
+				<i class="plat_small {{platIcon}}"></i>
+				{{shopName}}**********
+			</span>
+		</div>
+		<div class="body">
+			<table class="normTable">
+				<thead>
+					<tr>
+						<td class="item-list"></td>
+						<td class="nick"></td>
+						<td class="price"></td>
+						<td class="commission"></td>
+						<td class="status"></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="item-list">
+						<a href="{{itemPic}}" target="_blank">
+							<div class="item-box">
+								<div class="pic">
+									<img src="{{itemPic}}" />
+								</div>
+							</div>
+						</a>
+						</td>
+						<td class="nick"> <em class="cap">买号</em>
+							{{buyerAccountNick}}
+						</td>
+						<td class="price"> <em class="cap">返款金额</em>
+							{{paidFeeStr}}元
+						</td>
+						<td class="status">
+							<span>
+								<em class="cap">返款时间</em>
+							</span>
+							<em>{{modifyTimeStr}}</em>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	{{/results}}
+</textarea>
+
+
+<!-- 区域选择模板-->
+<textarea id="quyuTemp" class="muban">
+	{{#results}}
+	<option rid="{{id}}">{{name}}</option>
+	{{/results}}
+</textarea>
+<textarea id="oldAlipayTemp" class="muban">
+	{{#results}}
+	<div class="panelLine mb10 bindFirstAli">
+		<span class="ls floatLeft">原支付宝账号：</span>
+		<span class="ls floatLeft red bold" id="alipayMark" fid="{{id}}">{{no}}</span>
+	</div>
+	{{/results}}
+</textarea>
+<textarea id="oldTenpayTemp" class="muban">
+	{{#results}}
+	<div class="panelLine mb10 bindFirstTen">
+		<span class="ls floatLeft">原财付通账号：</span>
+		<span class="ls floatLeft red bold" id="tenpayMark" fid="{{id}}">{{no}}</span>
+	</div>
+	{{/results}}
+</textarea>
+<textarea id="oldBankTemp" class="muban">
+	{{#results}}
+	<div class="panelLine mb10 bindFirstBank">
+		<span class="ls floatLeft">原银行卡账号：</span>
+		<span class="ls floatLeft red bold" id="bankMark" fid="{{id}}">{{no}}</span>
+	</div>
+	{{/results}}
+</textarea>
+
+
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.number.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/withdraw.js'}" type="text/javascript"></script>
+<script type="text/javascript">
+	App.module = 'withdraw';
+	App.userType = '${user?.type}';
+</script>
+#{/set}

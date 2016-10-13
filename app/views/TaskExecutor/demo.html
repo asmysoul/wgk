@@ -1,0 +1,33 @@
+#{extends 'frame.html' /}
+#{set title:'任务互斥测试' /}
+
+#{set 'moreStyles'}
+
+#{/set}
+<div id="flashContent">
+	<div id="sto_core"></div>
+</div>
+<div class="contentCard">
+	<div class="contentTitle">
+		<span class="iconfont">&#xf00b7;</span>
+		测试
+	</div>
+	<div class="contentBody">
+		<div class="panelLine">
+			当前接过<span class="red mr10 ml10">1</span>个人的单子
+		</div>
+		<div class="panelLine">
+			<input type="text" class="inputText" id="txtToTake" />
+			<input type="button" value="接某人的单子" id="btnTake" />
+		</div>
+		<div class="panelLine">
+			<input type="text" class="inputText" id="txtIfTake" />
+			<input type="button" value="判断是否接过某人的单子" id="btnIfTake" />	
+		</div>
+	</div>
+</div>
+
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/swfobject.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mutex.js'}" type="text/javascript"></script>
+#{/set}

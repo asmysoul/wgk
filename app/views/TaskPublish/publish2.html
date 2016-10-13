@@ -1,0 +1,822 @@
+#{extends 'frame.html' /} #{set title:'发布推广' /} #{set 'moreStyles'}
+<link rel="stylesheet" media="screen"
+	href="@{'/public/stylesheets/task-publish2.css'}" />
+<link rel="stylesheet" media="screen"
+	href="@{'/public/stylesheets/tipsy2.css'}" />
+#{/set} #{if msg}
+<div class="contentCard">
+	<div class="contentTitle">
+		<span class="iconfont">&#xf00b7;</span> 提示
+	</div>
+	<div class="contentBody">
+		<div class="errBox">
+			<div class="panelLine">
+				<span>您目前暂时无法发布新任务，原因如下：</span>
+			</div>
+			<div class="panelLine">
+				#{if user.status.toString()=='ACTIVE'} <span class="bold">需要先开通VIP会员~~</span>
+				<span> <a href="/user/member">[立即开通]</a>
+				</span> #{/if} #{elseif user.status.toString()=='INVALID'} <span
+					class="bold">您的VIP会员身份已过期~~</span> <span> <a
+					href="/user/member">[立即续费]</a>
+				</span> #{/elseif} #{else} <span class="bold">${msg}~~</span> #{/else}
+			</div>
+		</div>
+	</div>
+</div>
+#{/if}
+
+
+
+
+<form id="form">
+	<div class="contentCard">
+		<div class="contentTitle">任务进度</div>
+		<div class="contentBody" style="padding: 20px 40px;">
+			<div class="stepWrapper mt30">
+				<div class="stepWaiting"
+					style="position: absolute; top: 0; left: -5px;">
+					<div class="stepOn">1</div>
+					<div class="caption" style="width: 72px; margin-left: -36px;">选择推广类型</div>
+				</div>
+				<div class="stepWaiting" style="margin-left: 22%;">
+					2
+					<div class="caption" style="width: 72px; margin-left: -36px;">填写推广信息</div>
+				</div>
+				<div class="stepWaiting" style="margin-left: 22%;">
+					3
+					<div class="caption" style="width: 72px; margin-left: -36px;">填写推广数量</div>
+				</div>
+				<div class="stepWaiting" style="margin-left: 22%;">
+					4
+					<div class="caption" style="width: 60px; margin-left: -30px;">选增值服务</div>
+				</div>
+				<div class="stepWaiting"
+					style="position: absolute; top: 0; right: -5px;">
+					5
+					<div class="caption" style="width: 48px; margin-left: -24px;">支付</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="contentCard stepCard" style="" id="taskStep-1">
+		<div class="contentTitle">第一步：选择推广类型</div>
+		<div class="contentBody">
+			<div class="panelLine sec">
+				<span class="secondTile floatLeft mr20">选择平台</span> #{list
+				items:Platform2?.values(), as:'p'} <span
+					class="checkTextBtn ${p==task?.platform?'selectedCtb':''} platform"
+					href="javascript:;" value="${p}">${p.title}</span> #{/list}
+			</div>
+
+			<div class="panelLine sec">
+				<span class="secondTile floatLeft mr20">选择主体</span>
+				<div id="dianpuContainer" curr-shop="${task?.shopId}"></div>
+
+				<a href="/user/shop2" target="_blank" id="btnBindNewShop">
+					绑定新主体&nbsp;&nbsp; <span class="iconfont mr10">&#xf0154;</span>
+				</a>
+			</div>
+
+
+			<div class="panelLine sec">
+				<span class="secondTile floatLeft mr20">选择类型</span> #{list
+				items:TaskType2?.values(), as:'t'} <span
+					class="checkTextBtn ${t==task?.type?'selectedCtb':''} taskType"
+					href="javascript:;" value="${t}">${t.title}</span> #{/list}
+			</div>
+
+
+			<div class="panelLine sec">
+				<div class="panelLine clickable" id="delaySpan">
+					<span class="secondTile floatLeft mr20">延时发布</span> <select
+						class="floatLeft ls mt8" value="${task?.delaySpan}"
+						id="selDelaySpan">
+						<option value="0" ${task?.delaySpan==0?'selected':''}>立即发布</option>
+						<option value="60" ${task?.delaySpan==60?'selected':''}>1小时之后发布</option>
+						<option value="180" ${task?.delaySpan==180?'selected':''}>3小时之后发布</option>
+						<option value="360" ${task?.delaySpan==300?'selected':''}>6小时之后发布</option>
+						<option value="540" ${task?.delaySpan==540?'selected':''}>9小时之后发布</option>
+						<option value="720" ${task?.delaySpan==720?'selected':''}>12小时之后发布</option>
+						<option value="1080" ${task?.delaySpan==1080?'selected':''}>18小时之后发布</option>
+						<option value="1440" ${task?.delaySpan==1440?'selected':''}>1天之后发布</option>
+						<option value="2880" ${task?.delaySpan==2880?'selected':''}>2天之后发布</option>
+						<option value="4320" ${task?.delaySpan==4320?'selected':''}>3天之后发布</option>
+						<option value="5760" ${task?.delaySpan==5760?'selected':''}>4天之后发布</option>
+						<option value="7200" ${task?.delaySpan==7200?'selected':''}>5天之后发布</option>
+						<option value="8640" ${task?.delaySpan==8640?'selected':''}>6天之后发布</option>
+						<option value="10080" ${task?.delaySpan==10080?'selected':''}>7天之后发布</option>
+						<option value="11520" ${task?.delaySpan==11520?'selected':''}>8天之后发布</option>
+						<option value="12960" ${task?.delaySpan==12960?'selected':''}>9天之后发布</option>
+					</select>
+				</div>
+			</div>
+			<div class="buttonSection">
+				<a href="javascript:;" class="stdColorButton next confirmNextStep"
+					id="modifyShopLegal"> 下一步 <span class="iconfont">&#xf016d;</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="contentCard stepCard" style="display: none" id="taskStep-2">
+		<div class="contentTitle">第二步：设置推广任务信息</div>
+		<div class="contentBody">
+
+			<div id="itemInfo">
+				<div class="panelLine sec">
+					<span class="ls floatLeft"> 分享文字 </span>
+					<textarea rows="2" cols="71" class=" floatLeft required"
+						placeholder="填写需要分享的朋友圈内容" id="txtItemTitle" name="itemTitle"
+						value="${task?.itemTitle}"></textarea>
+					<span class="red bold">*</span>
+				</div>
+			</div>
+			<hr style="border: 1px solid #green;" />
+			<span style="color: red">商家发布任务：平台提供类型一、二服务选项，类型全选情况：系统默认用户选择第一种方式</span>
+			<hr style="border: 1px solid #green;" />
+			
+			
+			<div class="secondTile">类型一：文字+链接</div>
+			<div class="panelBox" style="border-bottom: dashed 1px #DEDEDE;">
+				<div style="margin-left: 60px; color: #808080;">如需要分享链接内容，将链接填入下列子框，如不需要则不用填</div>
+				<div class="panelLine sec">
+					<span class="ls floatLeft itemUrl"> 文章链接 </span> <input type="text"
+						class="inputText floatLeft ls long required" id="txtItemUrl"
+						name="itemUrl" value="${task?.itemUrl}" /> <span>(需要分享链接的选此栏)</span>
+				</div>
+
+			</div>
+			<div class="secondTile">类型二：文字+图片</div>
+			<div class="panelBox" style="border-bottom: dashed 1px #DEDEDE;">
+				<div id="itemInfo">
+					<div class="panelLine sec" style="margin-top: 35px;">
+						<span class="ls floatLeft itemPic"> 素材图片 </span> <span
+							class="red bold">*</span> <input type="text"
+							class="inputText floatLeft ls long required" id="txtItemPicUrl"
+							name="itemPicUrl" value="${task?.itemPicUrl}"
+							itemPic="${task?.itemPic}" /> <input type="button"
+							id="btnPickfiles" value="选择并上传素材图" />
+					</div>
+
+
+
+					<div class="pic-box" id="itemImgWrapperInStep1">
+						<img id="itemImg" name="itemImg" src="${task?.itemPic}" />
+					</div>
+
+				</div>
+
+
+				<div class="panelBox panelBox1" style="margin: 10px 0;"
+					id="subwayPancel">
+					<a class="subwayplusBlockBtn" id="subwayplusBlockBtn"
+						style="color: #1f9cd8;" href="javascript:;"> <i
+						class="iconfont" style="font-size: 20px;">&#xf0154;</i> <span>点击可多添加1个素材图（最多可添加9个素材图）</span>
+					</a>
+				</div>
+			</div>
+			<div style="display: none;" class="Prompt infoBox">
+				<span class="bold">图片上传成功！如果图片没有显示，可能是由于您当前网络问题，直接进行下一步即可</span>
+			</div>
+
+
+
+			<div style="margin-top: 50px;">
+				<div class="secondTile">设置客服联系方式</div>
+				<div class="panelBox">
+					<div class="panelLine sec">
+						<span class="floatLeft ls">客服微信号：<span class="red">*</span></span>
+						<input type="text" class="inputText floatLeft ls middle required"
+							name="qq" id="qq" aria-required="true" value="${task?.qq}"><span
+							class="grey">买手做任务碰到流程等问题的时候方便联系商家沟通</span>
+					</div>
+				</div>
+			</div>
+			<div class="secondTile">设置任务说明</div>
+			<span class="grey">如分享流程比较复杂，商家可在此用文字说明，买手做任务更容易懂，或者想对做任务的买手说点什么。</span>
+			<div class="panelBox">
+				<div class="panelLine" style="margin-bottom: 30px;">
+					<span class="ls floatLeft"> 任务说明： </span>
+					<textarea id="taskRequest" name="taskRequest" rows="3"
+						maxlength="100" cols="100">${task?.taskRequest}</textarea>
+				</div>
+			</div>
+			<div class="buttonSection">
+				<a href="javascript:;" class="stdColorButton prev"> <span
+					class="iconfont">&#xf016e;</span> 上一步
+				</a> <a href="javascript:;" class="stdColorButton next"> 下一步 <span
+					class="iconfont">&#xf016d;</span>
+				</a>
+			</div>
+			<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+				<div class="maskLayer"></div>
+				<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="contentCard stepCard" style="display: none" id="taskStep-3">
+		<div class="contentTitle">第三步：选择推广数量</div>
+		<div class="contentBody">
+
+			<div class="secondTile">选择推广数量</div>
+			<div class="panelBox">
+				<div class="panelLine sec trade-num-list">
+					#{list items:[3,5,10,20,100,250], as:'i'} #{if task} <input
+						class="rad ls floatLeft orderNum" type="radio" name="r_tade_num"
+						data-count="${i}" ${i==task.totalOrderNum? 'checked':''} /> <span
+						class="floatLeft ls">${i}单</span> #{/if} #{else} <input
+						class="rad ls floatLeft orderNum" type="radio" name="r_tade_num"
+						data-count="${i}" ${i==10? 'checked':''} /> <span
+						class="floatLeft ls">${i}单</span> #{/else} #{/list} 自定义数量 #{if
+					task && ![3,5,10,20,100,250].contains(task?.totalOrderNum)} <input
+						class="rad ls floatLeft orderNum" type="radio" name="r_tade_num"
+						checked="checked" id="radCustomOrderNum" /> <span
+						class="floatLeft ls">自定义</span> <input type="text"
+						class="inputText floatLeft ls short" id="txtCustomOrderNum"
+						value="${task?.totalOrderNum}" /> <span class="floatLeft ls">单</span>
+					#{/if} #{else} <input class="rad ls floatLeft orderNum"
+						type="radio" name="r_tade_num" id="radCustomOrderNum" /> <span
+						class="floatLeft ls">自定义</span> <input type="text"
+						class="inputText floatLeft ls short" name="customOrderNum"
+						id="txtCustomOrderNum" value="" /> <span class="floatLeft ls">单</span>
+					#{/else}
+				</div>
+			</div>
+
+
+
+
+			<div class="secondTile">设置推广分布</div>
+			<div class="panelBox">
+				<div class="panelLine sec">
+					<!-- <span class="floatLeft ls">电脑端</span>
+					<input type="text" class="inputText floatLeft ls short required" name="pcOrderNum" id="pcOrderNum"  disabled="disabled" value="${task?.pcOrderNum>
+					0?task?.pcOrderNum:0 }"/>
+					<span class="floatLeft ls">单</span> -->
+					<span class="floatLeft ls">手机|Pad客户端</span> <input type="text"
+						class="inputText floatLeft ls short required"
+						name="wirelessOrderNum" id="wirelessOrderNum" disabled="disabled"
+						value="${task?.totalOrderNum>
+					0?task?.totalOrderNum-task?.pcOrderNum:10 }" />
+					<span class="floatLeft mr10">单</span>
+
+				</div>
+				<div class="panelLine">&nbsp;</div>
+			</div>
+
+
+
+			<div class="legendPanel">
+				<div class="l_title">
+					<span class="iconfont">&#xe605;</span> 费用总计
+				</div>
+				<div class="panelLine" style="padding-left: 30px;">
+					费用：
+					<!-- <span class="spPcUnitPrice"></span>
+					金币/单 
+					x
+					<span class="num_spPcOrderCount">${task?.pcOrderNum>0?task?.pcOrderNum:0}</span>
+					单&nbsp;
+					
+					+ -->
+					<span class="spWirelessUnitPrice"></span> 金币/单 x <span
+						class="num_spWirelessUnitPrice">${task?.mobileOrderNum>0?task?.mobileOrderNum:10}</span>
+					单&nbsp; = <span class="num spSumCost"></span> 金币
+				</div>
+
+			</div>
+
+
+
+			<div class="buttonSection">
+				<a href="javascript:;" class="stdColorButton prev"> <span
+					class="iconfont">&#xf016e;</span> 上一步
+				</a> <a href="javascript:;" class="stdColorButton next"> 下一步 <span
+					class="iconfont">&#xf016d;</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="contentCard stepCard" style="display: none" id="taskStep-4">
+		<div class="contentTitle">第四步：选择增值服务</div>
+		<div class="contentBody">
+			<div class="secondTile">平台服务费</div>
+			<div class="panelBox">
+				<div class="panelLine sec trade-num-list" id="expressType">
+					#{list items:['YDKD','KJKD','SELLERKD'], as:'n'} #{if n=='YDKD'} <input
+						class="rad ls floatLeft" type="radio" ${null==task?
+						'checked':'checked'} ${n==task?.expressType.toString()?
+						'checked':''} name="expressType" data-type="YDKD" value="0.5" /><span
+						class="floatLeft ls">平台收取每单服务费0.5个金币</span> #{/if} #{/list}
+				</div>
+			</div>
+			<div class="secondTile">快速完成任务</div>
+			<div class="panelBox">
+				<div class="thirdTile">
+					加赏任务佣金 <span class="grey">增加金币数越多，买手完成任务的积极性越大，买手会优先做此类任务</span>
+				</div>
+				<div class="panelLine sec clickable">
+					<a href="javascript:;"
+						class="inputCheckBox ${task?.extraRewardIngot>
+						0?'inputCheckBox-checked':''} floatLeft"
+						style="margin-top: 2px;" id="cbExtraIngot">&nbsp; </a> <span
+						class="floatLeft ls">每单加赏佣金</span> <input type="text"
+						class="inputText floatLeft ls short"
+						value="${task?.extraRewardIngot>
+					0?task?.extraRewardIngot:''}"
+						id="extraRewardIngot" name="extraRewardIngot" /> <span
+						class="floatLeft ls">金币</span> ，共计： <span
+						class="green num totalOrderNum">${task?.itemBuyNum}</span>
+					单&nbsp;x <span class="green rewardIngotNum">0</span> 金币= <span
+						class="red totalExtraRewardIngot">0</span> 金币
+				</div>
+				<div class="thirdTile">
+					优先审单 <span class="grey">选择此服务后，平台将会优先审核您发布的任务</span>
+				</div>
+				<div class="panelLine sec clickable" id="speedExamine">
+					<a href="javascript:;"
+						class="inputCheckBox floatLeft ${task?.speedExamine?'inputCheckBox-checked':''}"
+						style="margin-top: 2px;">&nbsp;</a> <span class="floatLeft ls">订单优先审核（1金币）</span>
+				</div>
+
+				<div class="thirdTile">
+					<div class="secondTile">加粉</div>
+					<span class="grey">选择此服务后，平台将会强制买手添加微信号</span>
+				</div>
+				<div class="panelLine sec clickable" id="AddFen">
+					<a href="javascript:;"
+						class="inputCheckBox floatLeft ${task?.AddFen?'inputCheckBox-checked':''}"
+						style="margin-top: 2px;">&nbsp;</a> <span class="floatLeft ls">加粉（1金币）</span>
+				</div>
+
+			</div>
+
+			<div class="secondTile">追加朋友圈评论</div>
+			<div class="panelBox" id="goodCommentBox">
+				<div class="panelLine sec">
+					<span class="floatLeft ls"> <a href="javascript:;"
+						class="inputCheckBox " id="checkCommBox">&nbsp;</a>设置转发朋友圈评论下的评论（<span
+						class="red">1</span>金币）
+					</span> <span class="panelLine sec orange">选择此服务，将更好的补充转发朋友圈的内容或者步骤</span>
+				</div>
+				#{if task?.goodCommentWords}
+				<div class="panelLine sec">
+					#{list items:task?.goodCommentWords?.split(','), as:'cw'} <input
+						style="width: 550px;" type="text"
+						class="inputText floatLeft ls middle textGoodCommWord"
+						value="${cw}" name="goodcomword" /> #{if cw_isLast} #{/if}
+					#{/list}
+				</div>
+				#{/if} #{else}
+				<div class="panelLine sec">
+					<input style="width: 550px;" type="text"
+						class="inputText floatLeft ls middle textGoodCommWord" value=""
+						name="goodcomword" />
+				</div>
+				#{/else}
+
+				<div class="commpentBoxs commentPancel" style="display: none;">
+					<div class="secondTile">
+						买手评论所需上传的图（<span class="red">1</span>金币）
+					</div>
+					<div class="panelLine sec orange">
+						如果不需要上传评论图片，请退回到第一步，选择【普通好评】</div>
+					#{if task?.goodCommentImg} #{list
+					items:task?.goodCommentImg?.split(','), as:'cw'}
+					<div class="commentPic commentPicPancel">
+						<div class="panelLine sec comment">
+							<span class="ls floatLeft itemPic">评论图<span
+								class="red bold">*</span></span><input type="text"
+								class="inputText floatLeft ls long required"
+								id="txtCommentPicUrl1" name="itemCommentPicUrl1" value="${cw}"
+								commentpic1="${cw}">
+							<div class="floatLeft" id="CommentBox1">
+								<input type="button" id="btnCommentfiles1" value="选择并上传评论图"
+									style="position: relative; z-index: 1;">
+							</div>
+						</div>
+						<a href="javascript:;" class="close iconfont commentClose">&#xf0011;</a>
+						<div class="pic-box subway" id="imgCommentWrapperInStep1">
+							<img id="imgComment1" name="imgComment1" src="${cw}">
+						</div>
+					</div>
+					#{/list} #{/if} #{else}
+					<div class="commentPic commentPicPancel">
+						<div class="panelLine sec comment">
+							<span class="ls floatLeft itemPic">评论图<span
+								class="red bold">*</span></span><input type="text"
+								class="inputText floatLeft ls long required"
+								id="txtCommentPicUrl1" name="itemCommentPicUrl1" value=""
+								commentpic1="">
+							<div class="floatLeft" id="CommentBox1">
+								<input type="button" id="btnCommentfiles1" value="选择并上传评论图"
+									style="position: relative; z-index: 1;">
+							</div>
+						</div>
+						<a href="javascript:;" class="close iconfont commentClose"></a>
+						<div class="pic-box subway" id="imgCommentWrapperInStep1">
+							<img id="imgComment1" name="imgComment1" src="">
+						</div>
+					</div>
+					#{/else} <a class="commentplusBlockBtn" id="commentplusBlockBtn"
+						style="color: #1f9cd8;" href="javascript:;"> <i
+						class="iconfont" style="font-size: 20px;">&#xf0154;</i> <span>点击可多添加1个评论图（最多可添加3个评论图）</span>
+					</a>
+					<div style="display: none;" class="Prompt infoBox">
+						<span class="bold">图片上传成功！如果图片没有显示，可能是由于您当前网络问题，直接进行下一步即可</span>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="buttonSection">
+				<a href="javascript:;" class="stdColorButton prev"> <span
+					class="iconfont">&#xf016e;</span> 上一步
+				</a> <a href="javascript:;" class="stdColorButton next"> 下一步 <span
+					class="iconfont">&#xf016d;</span>
+				</a>
+			</div>
+
+			<div class="panelBox"
+				style="border-bottom: dashed 1px #DEDEDE; margin-top: 20px; margin-bottom: 10px;"></div>
+
+			<div class="secondTile">
+				费用总计&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="ls">金币：
+					#{if task?.totalIngot} <span
+					class="red bold spRow-total-4 mr4 ml4 ">${(task?.totalIngot/100).format("##0.00")}</span>
+					#{/if} #{else} <span class="red bold spRow-total-4 mr4 ml4 ">0.0</span>
+					#{/else} 个
+				</span>
+			</div>
+			<div class="taskSection">
+				<div id="taskTableTitle">
+					<table class="normTable">
+						<tbody>
+							<tr>
+								<td class="genre">分类</td>
+								<td class="feeDetail">项目明细</td>
+								<td class="r_price">每单费用小计</td>
+								<td class="taskNum">单数</td>
+								<td class="">合计</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="feeWrapper">
+					<div class="taskRow">
+						<table class="normTable">
+							<tbody>
+
+								<tr>
+									<td class="genre">金币</td>
+									<td class="feeDetail">无线端服务费： <span
+										class="red spWirelessUnitPrice">0</span> 金币/单 <br /> 平台服务费： <span
+										class="red totalIngot">0.5</span> 金币/单
+
+									</td>
+									<td class="r_price">
+										<!-- <span class="iconfont">&#xf0150;</span> --> <span
+										class="spRow-unit-2 ">——</span>
+									</td>
+									<td class="taskNum"><span class="totalOrderNum"></span></td>
+
+									<td class="r_commision">
+										<!-- <span class="spPcUnitPrice"></span>
+										金币/单 x
+										<span class="num spPcOrderCount"></span>
+										单&nbsp;
+										
+										
+										+ --> <span class="spWirelessUnitPrice"></span> 金币/单 x <span
+										class="num spWirelessOrderCount"></span> 单&nbsp; + <span
+										class="totalIngot">0.5</span> 金币/单 x <span
+										class="num totalOrderNum"></span> 单<!-- &nbsp;
+										<span class="spSearchWordCount">0</span>
+										金币 --> &nbsp;=&nbsp; <span class=" spRow-total-2 red">0</span>
+										金币
+									</td>
+								</tr>
+								<tr>
+									<td class="genre">增值服务</td>
+									<td class="feeDetail">合计 ： <span
+										class="red spPlatformRefundNum">0</span> 金币 <br /> 优先审核： <span
+										class="red priorIngot">0</span> 金币 <br /> 加粉： <span
+										class="red AddFenIngot">0</span> 金币 <br /> 加赏任务佣金： <span
+										class="red rewardIngotNum">0</span> 金币 <br /> 追加朋友圈评论： <span
+										class="red goodCommentKwd">0</span> 金币 <br />
+									</td>
+									<td class="r_price">
+										<!-- <span class="iconfont">&#xf0150;</span> --> <span
+										class="spRow-unit">——</span>
+									</td>
+									<td class="taskNum"><span class="totalOrderNum"></span></td>
+									<td class="r_commision"><span class="spPlatformRefundNum">0</span>
+										&nbsp;+&nbsp; <span class="speedTaskIngot">0</span>
+										&nbsp;+&nbsp; <span class="priorIngot">0</span> &nbsp;+&nbsp;
+										<!-- <span class="AddFenIngot">0</span>
+										&nbsp;x&nbsp;
+										<span class="totalOrderNum"></span>
+										&nbsp;+&nbsp; --> <span class="publishIntervalIngot">0</span>
+										&nbsp;+&nbsp; <span class="spRow-unit-3">0</span>
+										&nbsp;x&nbsp; <span class="totalOrderNum"></span>
+										&nbsp;=&nbsp; <span class="red spRow-total-3">0</span> 金币</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="totalcostBox secondTile">
+				<span class="floatRight">费用总计&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="ls">金币： <span
+						class="red bold spRow-total-4 mr4 ml4 ">0.00</span>个
+				</span>
+				</span>
+			</div>
+		</div>
+		<!-- // contentBody-->
+	</div>
+	<!--// step-4 end-->
+
+
+
+
+
+	<div class="contentCard stepCard" style="" id="taskStep-5">
+		<div class="contentTitle">第五步：支付</div>
+		<div class="contentBody">
+			<div class="panelLine sec" id="pay">
+				<span class="iconfont">&#xf0152;</span> <span class="mr10">本次任务需支付</span>
+				<span> 金币 #{if task?.totalIngot} <span
+					class="red bold spRow-total-4 mr4 ml4">${(task?.totalIngot/100).format("##0.00")}</span>
+					#{/if} #{else} <span class="red bold spRow-total-4 mr4 ml4">0.0</span>
+					#{/else} 个
+				</span>
+			</div>
+			<div class="secondTile">选择支付方式</div>
+			<div class="panelBox" id="payType">
+				<div class="panelLine sec">
+					<input class="rad ls floatLeft ingot" type="checkbox"
+						name="r_pay_type" checked="checked" /> <span
+						class="floatLeft ls "> 使用金币支付（可用金币： <span
+						class="red bold ingot seller">${(user?.ingot/100).format("##0.00")}</span>
+						个，1个金币价值为1元）
+					</span>
+				</div>
+				<div class="panelLine sec">
+					<input class="rad ls floatLeft pledge" type="checkbox"
+						name="r_pay_type" checked="checked" /> <span class="floatLeft ls ">
+						使用押金支付（可用押金 <span class="red bold pledge">${(user?.pledge/100).format("##0.00")}</span>
+						元）
+					</span>
+				</div>
+				<div class="panelLine sec" style="display: none">
+					<span class="floatLeft ls red ">余额不足，请选择银行卡支付</span>
+				</div>
+				<div class="clearfix bankListWrapper" id="platformSelect">
+					#{list payPlatforms, as: 'p'}
+					<div class="floatLeft panelLine sec pay checkTextBtn">
+						<input class="rad ls floatLeft bank" type="radio" name="pay_type"
+							value="${p}" />
+						<div class="wid floatLeft ls rad0">
+							<img src="/public/images/bank/${p}.gif" />
+						</div>
+					</div>
+					#{/list}
+				</div>
+
+				<div class="buttonSection">
+					<a href="javascript:;" class="stdColorButton prev"> <span
+						class="iconfont">&#xf016e;</span> 上一步
+					</a> <a href="javascript:;" class="stdColorButton next"
+						id="btnConfirmPayment" data-tid="${task?.id}"> 付款并发布任务 <span
+						class="iconfont">&#xf016d;</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="popWrapper" style="display: none;" id="tr_loading_mask">
+			<div class="maskLayer"></div>
+			<img class="tr_juhua" src="@{'/public/images/pre_loading.gif'}" />
+		</div>
+	</div>
+	<!--选择发货地区的悬浮窗口-->
+	<div id="regionFloatDiv">
+		<div class="most-location">
+			<span class="grey">上次使用</span> <a class="green" trace=""
+				id="spLocation" href="javascript:;"> #{if
+				task?.itemSearchLocation}${task.itemSearchLocation}#{/if}#{else}北京#{/else}
+			</a>
+		</div>
+		<div class="clearfix">
+			<div class="list-innerwrap clearfix">
+				<ul>
+					<li><a class="address country" href="javascript:;">[全国]</a></li>
+					<li><a class="address" href="javascript:;">北京</a></li>
+					<li><a class="address" href="javascript:;">上海</a></li>
+					<li><a class="address" href="javascript:;">广州</a></li>
+					<li><a class="address" href="javascript:;">深圳</a></li>
+					<li><a class="address" href="javascript:;">杭州</a></li>
+					<li><a class="address" href="javascript:;">海外</a></li>
+					<li><a class="address" href="javascript:;">江浙沪</a></li>
+					<li><a class="address" href="javascript:;">珠三角</a></li>
+					<li><a class="address" href="javascript:;">京津冀</a></li>
+					<li><a class="address" href="javascript:;">东三省</a></li>
+					<li><a class="address" href="javascript:;">港澳台</a></li>
+					<li><a class="address" href="javascript:;">江浙沪皖</a></li>
+				</ul>
+			</div>
+			<div class="list-innerwrap clearfix">
+				<ul>
+					<li><a class="address" href="javascript:;">长沙</a></li>
+					<li><a class="address" href="javascript:;">长春</a></li>
+					<li><a class="address" href="javascript:;">成都</a></li>
+					<li><a class="address" href="javascript:;">重庆</a></li>
+					<li><a class="address" href="javascript:;">大连</a></li>
+					<li><a class="address" href="javascript:;">东莞</a></li>
+					<li><a class="address" href="javascript:;">佛山</a></li>
+					<li><a class="address" href="javascript:;">福州</a></li>
+					<li><a class="address" href="javascript:;">贵阳</a></li>
+					<li><a class="address" href="javascript:;">合肥</a></li>
+					<li><a class="address" href="javascript:;">金华</a></li>
+					<li><a class="address" href="javascript:;">济南</a></li>
+					<li><a class="address" href="javascript:;">嘉兴</a></li>
+					<li><a class="address" href="javascript:;">昆明</a></li>
+					<li><a class="address" href="javascript:;">宁波</a></li>
+					<li><a class="address" href="javascript:;">南昌</a></li>
+					<li><a class="address" href="javascript:;">南京</a></li>
+					<li><a class="address" href="javascript:;">青岛</a></li>
+					<li><a class="address" href="javascript:;">泉州</a></li>
+					<li><a class="address" href="javascript:;">沈阳</a></li>
+					<li><a class="address" href="javascript:;">苏州</a></li>
+					<li><a class="address" href="javascript:;">天津</a></li>
+					<li><a class="address" href="javascript:;">温州</a></li>
+					<li><a class="address" href="javascript:;">无锡</a></li>
+					<li><a class="address" href="javascript:;">武汉</a></li>
+					<li><a class="address" href="javascript:;">西安</a></li>
+					<li><a class="address" href="javascript:;">厦门</a></li>
+					<li><a class="address" href="javascript:;">郑州</a></li>
+					<li><a class="address" href="javascript:;">中山</a></li>
+					<li><a class="address" href="javascript:;">石家庄</a></li>
+					<li><a class="address" href="javascript:;">哈尔滨</a></li>
+				</ul>
+			</div>
+			<div class="list-innerwrap clearfix">
+				<ul>
+					<li><a class="address" href="javascript:;">安徽</a></li>
+					<li><a class="address" href="javascript:;">福建</a></li>
+					<li><a class="address" href="javascript:;">甘肃</a></li>
+					<li><a class="address" href="javascript:;">广东</a></li>
+					<li><a class="address" href="javascript:;">广西</a></li>
+					<li><a class="address" href="javascript:;">贵州</a></li>
+					<li><a class="address" href="javascript:;">海南</a></li>
+					<li><a class="address" href="javascript:;">河北</a></li>
+					<li><a class="address" href="javascript:;">河南</a></li>
+					<li><a class="address" href="javascript:;">湖北</a></li>
+					<li><a class="address" href="javascript:;">湖南</a></li>
+					<li><a class="address" href="javascript:;">江苏</a></li>
+					<li><a class="address" href="javascript:;">江西</a></li>
+					<li><a class="address" href="javascript:;">吉林</a></li>
+					<li><a class="address" href="javascript:;">辽宁</a></li>
+					<li><a class="address" href="javascript:;">宁夏</a></li>
+					<li><a class="address" href="javascript:;">青海</a></li>
+					<li><a class="address" href="javascript:;">山东</a></li>
+					<li><a class="address" href="javascript:;">山西</a></li>
+					<li><a class="address" href="javascript:;">陕西</a></li>
+					<li><a class="address" href="javascript:;">云南</a></li>
+					<li><a class="address" href="javascript:;">四川</a></li>
+					<li><a class="address" href="javascript:;">西藏</a></li>
+					<li><a class="address" href="javascript:;">新疆</a></li>
+					<li><a class="address" href="javascript:;">浙江</a></li>
+					<li><a class="address" href="javascript:;">澳门</a></li>
+					<li><a class="address" href="javascript:;">香港</a></li>
+					<li><a class="address" href="javascript:;">台湾</a></li>
+					<li><a class="address" href="javascript:;">内蒙古</a></li>
+					<li><a class="address" href="javascript:;">黑龙江</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</form>
+
+
+<!-- 银行支付弹出模态窗口 -->
+<div class="popWrapper bankPayment" id="bankPayment">
+	<div class="maskLayer"></div>
+	<div class="modalWnd">
+		<a href="javascript:void(0);" class="wnd_Close_Icon" id="modifyclose"
+			title="关闭窗口"></a>
+		<!-- <div class="wnd_Flag_Icon"></div> -->
+		<div class="modalWndInner">
+			<h3 class="topTile">请到打开的新窗口进行银行卡支付：</h3>
+			<hr size="1" color="black" noshade="noshade" />
+			<div id="bankInfoShower">
+				<div class="panelLine">
+					<p>支付小贴士：</p>
+				</div>
+				<div class="panelLine">
+					<p>1. 付款未完成前请不要关闭本页面，您在银行端完成付款后本页面会自动刷新。</p>
+				</div>
+				<div style="margin-bottom: 20px;">
+					<p>2. 如果银行页面没有打开，请您设置您的浏览器为允许弹出，并确保已经安装了银行的 ActiveX 安全控件，
+						然后点击下面的“返回支付页面，重新选择”按钮，重新支付。</p>
+				</div>
+			</div>
+			<div class="wndBotButtonSection">
+				<a id="btnbankpay" href="javascript:;"
+					class="botButton btnConfirmSave">已完成付款</a> <a href="javascript:;"
+					class="return" id="btnpayerror">返回重新选择付款方式</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--keyword muban-->
+<textarea class="muban" id="keywordTemp">
+		<div class="legendPanel">
+			<div class="l_title">
+				<span class="iconfont">&#xf00fd;</span>
+				搜索关键字方案
+			</div>
+			<div class="panelLine wordPlan">
+				<span class="floatLeft ls">
+					关键词
+					<span class="red">*</span>
+				</span>
+				<input type="text" class="inputText floatLeft ls middle required"
+				name="word" />
+
+				<span class="floatLeft ls">筛选分类</span>
+				<input type="text" class="inputText floatLeft ls short" name="skus" />
+				<input type="text" class="inputText floatLeft ls short" name="skus" />
+				<input type="text" class="inputText floatLeft ls short" name="skus" />
+				<input type="text" class="inputText floatLeft ls short" name="skus" />
+				<a href="javascript:;" class="close iconfont">&#xf0011;</a>
+			</div>
+		</div>
+	</textarea>
+
+<textarea id="dianpuTempl" class="muban">
+		{{#results}}
+		<span class="checkTextBtn shop" href="javascript:;" value="{{id}}">{{nick}}</span>
+		{{/results}}
+	</textarea>
+<div id="bankPayment"></div>
+
+<!-- 开通会员后才能发布任务 -->
+#{if user.status.toString()=='VALID'} #{set 'moreScripts'}
+<script src="@{'/public/javascripts/plupload/plupload.full.min.js'}"
+	type="text/javascript"></script>
+<script src="@{'/public/javascripts/qiniu.min.js'}"
+	type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}"
+	type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.tipsy.js'}"
+	type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.number.min.js'}"
+	type="text/javascript"></script>
+<script type="text/javascript">App.flowNum="${user.flow}"</script>
+<script src="@{'/public/javascripts/task/publish2.js'}"
+	type="text/javascript"></script>
+<script type="text/javascript">
+		App.module = 'publishTask2';
+		App.initStep = ${task?.status?.toString() == 'WAITING_PAY'?5:1};
+		App.QnTaskFileBucket = '${upload_task_address}';
+	</script>
+#{/set} #{/if}

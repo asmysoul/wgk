@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords " content="兼职牛，淘宝刷单，刷单平台，爆款，信誉炒作，淘宝爆款"/>
+    <title>兼职牛 - #{get 'title' /}</title>
+    <link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/reset.css'}" media="all" />
+    <link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/frame.css'}" media="all" />
+    <link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/widget.css'}" media="all" />
+    <link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/main.css'}" media="all" />
+    <link rel="stylesheet" type="text/css" href="@{'/public/services/css/css.css'}" media="all" />
+    #{get 'moreStyles' /}
+    <link rel="shortcut icon" href="/favicon.ico"/>
+
+</head>
+<body>
+    <div id="container">
+        <div id="topBar">
+        #{if user}
+            <a href="/logout" class="floatRight btn_blue bar_btn mr20">退出</a>
+        #{/if}
+        #{else}
+            #{if request.url=='/regist'}
+            <a href="/login" class="floatRight btn_blue bar_btn mr20">登录</a>
+            #{/if}
+            #{elseif request.url=='/findPass'}
+            <a href="/regist" class="floatRight btn_blue bar_btn mr20">注册新账号</a>
+            #{/elseif}
+            #{elseif role=='admin'}
+            <a href="/admin/logout" class="floatRight btn_blue bar_btn mr20">退出登录</a>
+           
+            <nav class="nav floatRight bar_link">
+			  <ul class="nav__menu">
+			    <li class="nav__menu-item bar_link"> <a class="bar_link mr10"> 
+            ${admin.name}</a>
+			      <ul class="nav__submenu">
+			        <li class="nav__submenu-item bar_link">
+			        	<a href="/admin/takeTaskCount" >接单数统计</a>
+					</li>
+			        <li class="nav__submenu-item bar_link">
+			        	<a href="/admin/sellerPutTime" >商家放单统计</a>
+					</li>
+					<li class="nav__submenu-item bar_link">
+			        	<a href="/admin/buyerTakeTask" >买手接单统计</a>
+					</li>
+					<li class="nav__submenu-item bar_link">
+			        	<a href="/admin/expressCount" >快递单数统计</a>
+					</li>
+					<li class="nav__submenu-item bar_link">
+			        	<a href="/admin/flow/clickCount" >流量点击数统计</a>
+					</li>
+					#{if admin.type.toString()=='SUPERADMIN'}
+					<li class="nav__submenu-item bar_link">
+					 	<a href="/admin/findSysCount" >系统统计</a>
+					</li>
+					<li class="nav__submenu-item bar_link">
+					 	<a href="/admin/adminOperatorLog" >后台操作记录</a>
+					</li>
+					<li class="nav__submenu-item bar_link">
+					 	<a href="/admin/adminRegister" >用户注册</a>
+					</li>
+					<li class="nav__submenu-item bar_link">
+					 	<a href="/admin/sysConfig" >系统配置</a>
+					</li>
+					#{/if}
+					<li class="nav__submenu-item bar_link">
+					 	<a href="/admin/adminAccount" >后台用户管理</a>
+					</li>
+					<li class="nav__submenu-item bar_link">
+					 	<a href="/admin/rewardCount" >奖励统计</a>
+					</li>
+					<li class="nav__submenu-item bar_link">
+					 	<a href="/admin/financeReconciliation" >财务对账</a>
+					</li>
+					<li class="nav__submenu-item bar_link">
+					 	<a href="/admin/faBaoGuo" >牛包裹</a>
+					</li>
+			      </ul>
+			    </li>
+			  </ul>
+			</nav>
+            #{/elseif}
+            #{else}
+            <a href="/regist" class="floatRight btn_blue bar_btn mr20">立即注册</a>
+            <a href="/login" class="floatRight bar_link mr10">登录</a>
+            #{/else}
+        #{/else}
+            <div id="usrInfo">
+            #{if user}
+                <span class="grey mr10">${user.nick}</span>
+                <span class="iconfont mr4">&#xf0150;</span>
+                #{if user.isSeller()}
+                <span>押金</span>
+                <span class="bold red" id="pledge">${(user?.pledge/100).format("##0.00")}</span>
+                &nbsp;&nbsp;
+                <span>流量</span>
+                <span class="bold red" id="flow">${user?.flow}</span>
+                <a href="/user/money" class="bar_link">[充值]</a>
+                &nbsp;&nbsp;
+                #{/if}
+                #{else}
+                <span>本金</span>
+                <span class="bold red" id="pledge">${(user?.deposit/100).format("##0.00")}</span>
+                &nbsp;&nbsp;
+                #{/else}
+                
+                <span>金币</span>
+                <span class="bold red" id="allingot">${(user?.ingot/100).format("##0.00")}</span>
+                <a href="/user/money" class="bar_link">[充值]</a>
+                #{if user.isBuyer()}
+                <span>经验值</span>
+                <span class="bold red">${user?.experience}</span>
+                &nbsp;&nbsp;
+                <input type="hidden" id="T_bu" value="" />
+                #{/if}
+                <span class="iconfont mr4">&#xe618;</span>
+                <span class="mr4">会员到期时间</span>
+                <span class="red time">${user?.dueTime?.format('yyyy-MM-dd')}</span>
+                #{if user?.dueTime}
+                <a href="/user/member" class="bar_link">[续费]</a>
+                #{/if}
+                #{else}
+                <a href="/user/member" class="bar_link">[开通会员]</a>
+                #{/else}
+            #{/if}
+
+            #{if role=='admin'}
+                <a href="/admin" class="bar_link mr10" module="task">
+                    <span class="iconfont mr4">&#xf00be;</span>
+                    任务审核(0)
+                </a>
+                <a href="/admin/notice/add" class="bar_link mr10" module="notice">
+                    <span class="iconfont mr4">&#xf00b6;</span>
+                    发布公告
+                </a>
+                <a href="/admin/buyerAudit" class="bar_link mr10" module="buyer">
+                    <span class="iconfont mr4">&#xf00b0;</span>
+                    买号审核(0)
+                </a>
+               <a href="/admin/express" class="bar_link mr10" module="express">
+                    <span class="iconfont mr4">&#xe612;</span>
+                    快递单打印(0)
+                </a> 
+                <a href="/admin/withdraw" class="bar_link">
+                    <span class="iconfont mr4">&#xf0035;</span>
+                    提现处理(0)
+                </a>
+                <a href="/admin/buyerDepositWithdraw" class="bar_link">
+                    <span class="iconfont mr4">&#xf0032;</span>
+                   买手本金提现处理(0)
+                </a>
+            #{/if}
+            
+            #{if role=='kjkd'}
+            <a class="bar_link mr10" href="/express/waitExpressPrint" module="waitExpressPrint">
+				<em class="iconfont">&#xf0199;</em>
+				<span class="text" id="waitExpressPrintText">待打印订单</span>
+			</a>
+			<a class="bar_link mr10" href="/express/expressPrinting" module="printingOrders">
+				<em class="iconfont">&#xe607;</em>
+				<span class="text" id="expressPrintingText">正在打印订单</span>
+			</a>
+			<a class="bar_link mr10" href="/express/expressPrintFinish" module="expressPrintFinish">
+				<em class="iconfont">&#xf00c5;</em>
+				<span class="text" id="expressPrintFinishText">已经打印订单</span>
+			</a>
+            #{/if}
+            </div>
+
+            <div id="logo" class="floatLeft mr10 ml20">
+                <img src="/public/images/logo.png" />
+            </div>
+            
+            <div id="links" class="floatLeft">
+            #{if user}
+            <a href="/user" module="user">
+				<span class="text">个人中心</span>
+			</a>
+                <!-- <a href="/tasks">
+                    任务列表
+                </a>
+                <a href="/tasks2">
+                    推广列表
+                </a>
+                
+                 <a href="/tasks3">
+                    浏览列表
+                </a>
+                 -->
+                 
+                <a href="/notice">网站公告</a>
+                <a href="${user?.type.toString() == "BUYER"?'http://bbs.jzniu.cn/forum.php?mod=forumdisplay&fid=2':'http://bbs.jzniu.cn/forum.php?mod=forumdisplay&fid=36'}" target="_blank">帮助</a>
+             #{/if}
+             #{if role=='admin'}
+              <a href="/admin/task">
+                    任务列表
+                    (${taskNum>0?taskNum:0})
+                </a>
+                
+                
+                 <a href="/admin/task2">
+                    推广列表
+                    (${taskNum>0?taskNum:0})
+                </a>
+                
+                <a href="/admin/task3">
+                    浏览列表
+                    (${taskNum>0?taskNum:0})
+                </a>
+                
+             #{/if}
+            </div>
+            
+        </div>
+        #{doLayout /}
+        <div class="tc mt40">
+            Copyright (c) 2016 jzniu.cn Inc. All Rights.  闽ICP备16015652号-1
+        </div>
+    </div>
+
+    <div id="authenticityToken">#{authenticityToken /}</div>
+
+    <script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+    <!-- use jquery.validate.js default -->
+    <script src="@{'/public/javascripts/jquery.validate.js'}" type="text/javascript"></script>
+    <script type="text/javascript" src="@{'/public/javascripts/global.js'}"></script>
+    <script type="text/javascript" src="@{'/public/javascripts/main.js'}"></script>
+    <script type="text/javascript" src="@{'/public/javascripts/frame.js'}"></script>
+    #{get 'moreScripts' /}
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?a741e4adf2916ad2e891562ad8380cf7";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	#{if role!='admin' && role!='kjkd' && request.domain.endsWith('jzniu.cn')}
+   	 <script type="text/javascript" src="@{'/public/services/js/kefu.js'}"></script>
+   	#{/}
+</body>
+</html>

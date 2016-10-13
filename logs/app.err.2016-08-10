@@ -1,0 +1,7 @@
+[2016-08-10 09:24:32,521] ERROR [play-thread-1] controllers.TaskExecutor.take(TaskExecutor.java:678) - 买手=maimai违规注册多个账号，本次使用买号=test不属于当前登录用户！
+[2016-08-10 09:24:47,434] ERROR [play-thread-1] controllers.TaskExecutor.take(TaskExecutor.java:678) - 买手=maimai违规注册多个账号，本次使用买号=test不属于当前登录用户！
+[2016-08-10 09:25:01,682] ERROR [play-thread-1] controllers.TaskExecutor.take(TaskExecutor.java:678) - 买手=maimai违规注册多个账号，本次使用买号=test不属于当前登录用户！
+[2016-08-10 09:27:32,514] ERROR [play-thread-1] controllers.TaskExecutor.take(TaskExecutor.java:678) - 买手=maimai违规注册多个账号，本次使用买号=test不属于当前登录用户！
+[2016-08-10 09:28:11,187] ERROR [play-thread-1] controllers.TaskExecutor.take(TaskExecutor.java:678) - 买手=maimai违规注册多个账号，本次使用买号=test不属于当前登录用户！
+[2016-08-10 09:33:03,704] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null
+[2016-08-10 16:59:13,606] ERROR [play-thread-1] com.aton.base.secure.Secure.checkAuthentication(Secure.java:92) - Login admin not exists,admin_id=null

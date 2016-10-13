@@ -1,0 +1,234 @@
+.payOrg{
+}
+.taskWrapperHf{
+	padding-left: 10px;
+	background-color: #EEE;
+}
+.middle{
+	width: 200px;
+}
+.inputArea{
+	margin-top: 10px;
+}
+.buttonSection{
+	margin-top: 20px;
+}
+.moneyAccountBox{
+	width: 200px;
+	height: 60px;
+	text-align: center;
+}
+.m_name{
+	font-size: 16px;
+	color: #05424C;
+	line-height: 30px;
+	font-family: "Microsoft Yahei";
+	font-style: normal;
+	font-weight: normal;
+	position: relative;
+}
+.newAccount{
+	border: 2px dashed #cbcbcb;
+}
+.newAccount:hover{
+	color:#f90;
+}
+.newAccount .iconfont{
+	font-size:20px; 
+}
+.btnAddNewAccount{
+	margin-top: 14px;
+	font-family: "Microsoft Yahei";
+}
+.taskCell{
+	border-bottom:solid 1px #DEDEDE;
+	padding:10px;
+}
+.taskCell:first-child{
+	border-top:solid 1px #DEDEDE;	
+}
+.taskCell:hover{
+	background-color: #fefce8;
+}
+.taskCell .normTable thead td {
+	padding: 0 8px;
+}
+.normTable tbody tr td {
+	line-height: 24px;
+}
+.taskCell .title{
+	height: 40px;
+	line-height: 40px;
+	padding:0 10px;
+}
+.taskCell .shop{
+	float: left;
+	color: #111;
+}
+.taskCell .taskNo{
+	
+}
+.taskCell .operation{
+	float:right;
+}
+.taskCell .operation .btn{
+	color:#4083A9;
+}
+.taskCell .operation .btn:hover{
+	color:#AD6BAE;
+}
+.taskCell .view-detail{
+	color:#4083A9;
+}
+.taskCell .view-detail:hover{
+	color:#D94E75;
+}
+
+.taskCell .body{
+	padding:0 10px;
+
+}
+.taskCell .body td{
+	color: #666;
+}
+.taskCell .cap{
+	color: #888;
+	font-size: 12px;
+}
+.taskCell .body .item-list{
+	width: 100px;
+}
+.taskCell .body .item-list .item-box{
+	position: relative;
+	padding-left: 90px;
+	height: 90px;
+}
+.item-box .pic{
+	width:80px;
+	height: 80px;
+	position: absolute;
+	left:5px;
+	top:5px;
+}
+.item-box .pic img{
+	width:80px;
+	height: 80px;
+	border:solid 1px #DEDEDE;
+}
+.item-box .title{
+	text-align: left;
+	color:#5d5d5d;
+	font-weight: 700;
+	line-height: 24px;	
+	color:#3E88BE;
+}
+.taskCell .body .nick{
+	width: 150px;
+	vertical-align: middle;
+}
+.taskCell .body .price{
+	width: 100px;
+	color:#B77E5E;
+	vertical-align: middle;
+}
+.taskCell .body .commission{
+	width: 100px;
+	color:#B77E5E;
+	vertical-align: middle;
+}
+.taskCell .body .status{
+	width: 200px;
+	vertical-align: middle;
+}
+/*====================================================*/
+#bindForm label{
+	float: left;
+	width: 90px;
+	margin-right: 10px;
+}
+/*====================================================*/
+.fundRecordWrapper{
+	position: relative;
+	z-index: 1;
+	padding-top: 15px;
+}
+.normTable td{
+	vertical-align: middle;
+}
+.normTable thead td{
+	color: #777;
+	font-weight: 700;
+}
+/* 银行支付样式 */
+.bankWidth{
+	width: 121px;
+}
+/*充值套餐*/
+.package-container{
+
+}
+.package-container .checkTextBtn{
+	margin-right: 15px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+.package-box{
+	margin:20px 20px;
+}
+.font1{
+	font-size:14px; 
+	height:30px; 
+	font-family:"Microsoft Yahei"; 
+}
+.font2{
+	font-size:18px; 
+	height:30px; 
+	font-family:"Microsoft Yahei";
+	color:#64696E;
+}
+.lf{
+	text-align: left;
+}
+/*银行支付弹窗*/
+.bankPayment .modalWnd{
+	width:650px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -325px;
+	position: fixed;
+	z-index: 100;
+}
+.btnConfirmSave{
+	background-color: #26AA9F;
+	width: 20%;
+	text-align: center;
+}
+.btnConfirmSave:hover{
+	background-color: #2BBFB3;
+}
+.return{
+	line-height:32px
+}
+/*====================================================*/
+#confirmPlatformWnd .modalWnd{
+	width:400px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+#confirmPlatformWnd label{
+	float: left;
+	width: 80px;
+	margin-right: 10px;
+}
+#btnConfirm,#btnCancel{
+	background-color: #439ED7;
+}
+#btnConfirm:hover{
+	background-color: #439ED7;
+}
+#btnCancel:hover{
+	background-color: #439ED7;
+}

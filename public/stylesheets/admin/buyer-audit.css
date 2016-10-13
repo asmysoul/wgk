@@ -1,0 +1,60 @@
+.normTable{
+	margin-top: 10px;
+}
+.normTable tbody td{
+	border-bottom: solid 1px #DEDEDE;
+	vertical-align: middle;
+}
+.normTable thead td{
+	background: #DEDEDE;
+	border-bottom: solid 1px #BBB;
+	color: #999;
+}
+.access,.refuse{
+	padding:0 10px;
+	border-radius: 2px;
+}
+.access{
+	background-color:#069E2A;
+}
+.access:hover{
+	background-color:#07B630;
+}
+.refuse{
+	background-color:#D93B41;
+}
+.refuse:hover{
+	background-color:#DE4F54;
+}
+/*-----------------------------------*/
+#refuseReasonWnd .modalWnd{
+	width:400px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+#txtReason{
+	height: 70px;
+	width: 346px;
+}
+#btnRefuse{
+	background-color:  #26AA9F;
+}
+#btnRefuse:hover{
+	background-color: #2BBFB3;
+}
+th{
+	text-align: left;
+	padding: 3px 8px;
+	line-height: 34px;
+}
+/*弹出框样式*/
+.modalWnd{
+	left:60%;
+	top:40%;
+	margin:-150px 0 0 -325px;
+	position: fixed;
+	z-index: 100;
+}

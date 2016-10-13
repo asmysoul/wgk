@@ -1,0 +1,362 @@
+#{extends 'frame.html' /}
+#{set title:'个人中心' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/user-center.css'}" />
+#{/set}
+<div class="contentCard" id="userDetail" userId="${user.id}">
+	<div class="contentTitle">
+		个人信息
+	</div>
+	<div class="contentBody" id="personalInfoPanel">
+		<form id="modifyForm">
+		<div class="clearfix">
+			<span class="mr20 floatLeft">登录密码</span>
+			#{if user.password == '' || user.password == null}
+			<span class="floatLeft red mr-8">
+				<span class="iconfont">&#xf0155;</span>
+				未设置
+			</span>
+			#{/if}
+			#{else}
+			<span class=" floatLeft green mr-8">
+				<span class="iconfont">&#xf0156;</span>
+				已设置
+			</span>
+			#{/else}
+			<span class="mr20 floatLeft grey btnInfoEdit loginModifyBtn">修改</span>
+			<span class="mr20 floatLeft">支付密码</span>
+			#{if user.payPassword == '' || user.payPassword == null}
+			<span class="floatLeft red mr-8 noData">
+				<span class="iconfont">&#xf0155;</span>
+				未设置
+			</span>
+			<span class=" floatLeft green mr-8 hasData" style="display:none">
+				<span class="iconfont">&#xf0156;</span>
+				已设置
+			</span>
+			<span class="floatLeft grey btnInfoEdit payModifyBtn">添加</span>
+			#{/if}
+			#{else}
+			<span class=" floatLeft green mr-8">
+				<span class="iconfont">&#xf0156;</span>
+				已设置
+			</span>
+			#{/else}
+			
+		</div>
+		<div id="modifyModule1" class="mb10"></div>
+		<div class="clearfix">
+			<span class="mr20 floatLeft">
+				<span class="iconfont" title="qq">&#xe614;</span>
+				#{if user.qq == '' || user.qq == null}
+				<span class="red">未设置</span>
+				#{/if}
+				#{else}
+				<span class="num qqData mr-8">${user.qq}</span>
+				#{/else}
+				<span class="grey btnInfoEdit qqModifyBtn">[修改]</span>
+			</span>
+			<span class="mr20 floatLeft">
+				<span class="iconfont" title="手机">&#xf00a2;</span>
+				#{if user.mobile == '' || user.mobile == null}
+				<span class="red">未设置</span>
+				#{/if}
+				#{else}
+				<span class="num mobileData mr-8">${user.mobile}</span>
+				#{/else}
+				<span class="grey btnInfoEdit mobileModifyBtn">[修改]</span>
+			</span>
+			<span class="mr20 floatLeft">
+				<span class="iconfont" title="邮箱">&#xe603;</span>
+				#{if user.email == '' || user.email == null}
+				<span class="red">未设置</span>
+				#{/if}
+				#{else}
+				<span class="num emailData mr-8">${user.email}</span>
+				#{/else}
+				<!-- <span class="grey btnInfoEdit emailModifyBtn">[修改]</span> -->
+			</span>
+		</div>
+		<div id="modifyModule2"></div>
+	</form>
+	</div>
+</div>
+
+<div class="contentCard">
+	<div class="contentTitle">
+		我的财务情况
+		<span class="btnSection">
+			#{if user.type.toString()=='SELLER'}
+			<a href="/user/money"><span id="btnEditLoginPass" class="grey btn mr-8">押金充值</span></a>
+			<span class="mr-8 grey">|</span>
+			#{/if}
+			<a href="/user/money#task-family-on">
+				<span id="btnEditPayPass" class="grey btn mr-8">结算</span>
+			</a>
+			<span class="mr-8 grey">|</span>
+			<a href="/user/money">
+				<span id="btnEditPayPass" class="grey btn">购买金币</span>
+			</a>
+		</span>
+	</div>
+	#{if user.type.toString()=='SELLER'}
+	<div class="contentBody">
+		<div class="mb10"> 
+			<em class="mr20 floatLeft">可用押金：
+				<span class="red bold num">${(user?.pledge/100).format("##0.00")}</span>
+				元
+			</em>  
+			<em class="mr20 floatLeft">商家返款冻结押金：
+				<span class="red bold num">${(lockedPledage/100).format("##0.00")}</span>
+				元
+			</em> 
+			<em class="mr20 floatLeft">平台返款冻结押金：
+				<span class="red bold num">${(sysLockedPledage/100).format("##0.00")}</span>
+				元
+			</em> 
+			<a href="/user/money"><span id="btnEditLoginPass" class="grey btn mr-8">押金充值</span></a>
+			<input type="button" id="btnPublishTask" value="  发布任务  " />
+			<div class="clearFix"></div>
+		</div>
+		<div>
+			<em class="mr20 floatLeft">
+				可用金币：
+				<span class="red bold num">${(user?.ingot/100).format("##0.00")}</span>
+				个
+			</em>
+			<a href="/user/money"><span id="btnEditLoginPass" class="grey btn mr-8">购买金币</span></a>
+			<div class="clearFix"></div>
+		</div>
+		<div>
+			<em class="mr20 floatLeft">
+				可用流量：
+				<span class="red bold num">${user?.flow}</span>
+				个
+			</em>
+			<a href="/user/money"><span id="btnEditLoginPass" class="grey btn mr-8">购买流量</span></a>
+			<div class="clearFix"></div>
+		</div>
+	</div>
+    #{/if}
+    #{else}
+    <div class="contentBody">
+    	<div class="mb10"> 
+    		<em class="mr20 floatLeft">拥有金币：
+    			<span class="red bold num">${(user?.ingot/100).format("##0.00")}</span>
+    			个=
+    			<span class="red bold num">${(user?.ingot*0.95/100).format("##0.00")}</span>
+    			元
+    			<span class="grey">（做任务金币不够，可充值购买）</span>
+    		</em>
+    		<div class="clearFix"></div>
+    	</div>
+    	<div class="mb20"> 
+    		<em class="mr20 floatLeft">待返还笔数：
+    			<span class="red bold num">${waitRefundTaskCount}</span>
+    			笔
+    		</em> 
+    		<em class="mr20 floatLeft">待商家发放佣金：
+    			<span class="red bold num">${(unreceivedRewardIngot/100).format('##0.00')}</span>
+    			金币
+    		</em> 
+    		<em class="mr20 floatLeft">冻结金币：
+    			<span class="red bold num">${(lockedIngot/100).format('##0.00')}</span>
+    			个
+    		</em> 
+    		<span class="mr-8">|</span>
+    		<em class="mr20">经验值：
+    			<span class="red bold num">${(user?.experience).format("##0.00")}</span>
+    			点
+    		</em> 
+    	</div>
+
+    	<div class="mb10">
+    		<em class="mr20 floatLeft">
+    			垫付本金：
+    			<span class="red bold num">${(totalLockedDepositAmt/100).format("##0.00")}</span>
+    			元
+    			<span class="mr-8">|</span>
+    			可提现：
+    			<span class="red bold num">${(withDepositAmt/100).format("##0.00")}</span>
+    			元
+    			&nbsp;&nbsp;&nbsp;<input type="button" id="btnDepositWithdraw" value="  立即提现  " />
+    		</em>
+    		<div class="clearFix"></div>
+    	</div>
+    	<!-- 有些bug，暂时不显示
+    	<div class="mb10"> 
+    		<em class="mr20 floatLeft">由平台代商家返款：
+    			<span class="red bold num">${(lockedSysRefundDeposit.amount/100).format('##0.00')}</span>
+    			元
+    			（<span class="red bold num">${lockedSysRefundDeposit.count}笔</span>）
+    		</em> 
+    		<span class="mr-8 floatLeft">|</span>
+    		<em class="mr20 floatLeft">需核实确认的返款：
+    			<span class="red bold num">${(watiConfirmSysRefundDeposit.amount/100).format('##0.00')}</span>
+    			元
+    			（<span class="red bold num">${watiConfirmSysRefundDeposit.count}笔</span>）
+    		</em> 
+    		<div class="clearFix"></div>
+    	</div>
+    	<div class="mb10"> 
+    		<em class="mr20 floatLeft">由商家直接返款：
+    			<span class="red bold num">${(lockedSellerRefundDeposit.amount/100).format('##0.00')}</span>
+    			元
+    			（<span class="red bold num">${lockedSellerRefundDeposit.count}笔</span>）
+    		</em> 
+    		<span class="mr-8 floatLeft">|</span>
+    		<em class="mr20 floatLeft">需核实确认的返款：
+    			<span class="red bold num">${(watiConfirmSellerRefundDeposit.amount/100).format('##0.00')}</span>
+    			元
+    			（<span class="red bold num">${watiConfirmSellerRefundDeposit.count}笔</span>）
+    		</em> 
+    		<div class="clearFix"></div>
+    	</div>
+    	-->
+    </div>
+	#{/else}
+</div>
+
+<div class="contentCard">
+	<div class="contentTitle">
+		网站公告
+	</div>
+	<div class="contentBody">
+		<div class="" style="overflow: hidden;">
+			<ul class="announceList">
+			</ul>
+		</div>
+		<input type="hidden" id="durex_data" value="" />
+	</div>
+</div>
+
+<textarea id="noticeModule" class="muban">
+	{{#results}}
+	<li>
+		<div class="announceCell">
+			<a class="title text-overflow" href="/notice/{{id}}" target="_blank">{{title}}</a>
+			<span class="date text-overflow grey">{{createtime}}</span>
+		</div>
+	</li>
+	{{/results}}
+</textarea>
+
+<textarea id="loginModifyModule" class="muban">
+	<div class="panelLine sec">
+		<span class="mr20 floatLeft orange">请保管好您的登录密码</span>
+	</div>
+	<div class="panelLine sec">
+		<label class="floatLeft">旧密码：</label>
+		<input type="password" class="inputText floatLeft mr20 required" id="txtOldPassword" value="" name="oldPassword" data-reg-password/>
+	</div>
+	<div class="panelLine sec">
+		<label class="floatLeft">新密码：</label>
+		<input type="password" class="inputText floatLeft mr20 required" id="txtNewPassword" value="" name="newPassword" data-reg-password/>
+	</div>
+	<div class="panelLine sec">
+		<label class="floatLeft">确认新密码：</label>
+		<input type="password" class="inputText floatLeft mr20 required" id="txtCheckPassword" value="" name="checkPassword" data-reg-password data-reg-check-pass/>
+	</div>
+	<div class="buttonSection">
+		<a href="javascript:;" class="stdColorButton" id="modifyloginBtn">
+			保存&nbsp;&nbsp;
+			<span class="iconfont">&#xf016d;</span>
+		</a>
+	</div>
+	<div class="panelBox" style="border-bottom:dashed 1px #DEDEDE;margin-top:15px;margin-bottom:15px;"></div>
+</textarea>
+
+<textarea id="payModifyModule" class="muban">
+<!-- 	<div class="panelLine sec">
+	<span class="mr20 floatLeft orange">请保管好您的支付密码</span>
+</div>
+<div class="buttonSection">
+	<a href="#" class="stdColorButton">
+		发送验证邮件&nbsp;&nbsp;
+		<span class="iconfont">&#xf016d;</span>
+	</a>
+</div> -->
+	<div class="panelLine sec">
+		<label class="mr20 floatLeft">新密码：</label>
+		<input type="password" class="inputText floatLeft mr20 required" id="txtPayPass" value="" name="newPayPass" data-reg-password/>
+	</div>
+	<div class="panelLine sec">
+		<label class="mr20 floatLeft">确认新密码：</label>
+		<input type="password" class="inputText floatLeft mr20 required" id="txtCheckPayPass" value="" name="checkPayPass" data-reg-password data-reg-check-pay-pass/>
+	</div>
+	<div class="buttonSection">
+		<a href="javascript:;" class="stdColorButton" id="modifyPayBtn">
+			保存&nbsp;&nbsp;
+			<span class="iconfont">&#xf016d;</span>
+		</a>
+	</div>
+	<div class="panelBox" style="border-bottom:dashed 1px #DEDEDE;margin-top:15px;margin-bottom:15px;"></div>
+</textarea>
+
+<textarea id="qqModifyModule" class="muban">
+	<div class="panelLine sec">
+		<span class="mr20 floatLeft orange">为了便于商家与您联系，请填写您的常用QQ</span>
+	</div>
+	<div class="panelLine sec">
+		<span class="mr20 floatLeft">新的QQ号码</span>
+		<input type="text" class="inputText floatLeft mr20 long required" id="txtQq" name="qq" data-trim data-reg-qq></div>
+	<div class="buttonSection">
+		<a href="javascript:;" class="stdColorButton" id="modifyQqBtn">
+			保存&nbsp;&nbsp;
+			<span class="iconfont">&#xf016d;</span>
+		</a>
+	</div>
+	<div class="panelBox" style="border-bottom:dashed 1px #DEDEDE;margin-top:15px;margin-bottom:15px;"></div>
+</textarea>
+
+<textarea id="mobileModifyModule" class="muban">
+	<div class="panelLine sec">
+		<span class="mr20 floatLeft orange">为了便于商家与您联系，请填写您的常用手机号码</span>
+	</div>
+	<div class="panelLine sec">
+		<span class="mr20 floatLeft">新的手机号码</span>
+		<input type="text" class="inputText floatLeft mr20 long required" id="txtMobile" name="mobile" data-trim data-reg-mobile></div>
+	<div class="buttonSection">
+		<a href="javascript:;" class="stdColorButton" id="modifyMobileBtn">
+			保存&nbsp;&nbsp;
+			<span class="iconfont">&#xf016d;</span>
+		</a>
+	</div>
+	<div class="panelBox" style="border-bottom:dashed 1px #DEDEDE;margin-top:15px;margin-bottom:15px;"></div>
+</textarea>
+
+<textarea  id="emailModifyModule" class="muban">
+	<div class="panelLine sec">
+		<span class="mr20 floatLeft orange">为了您的账号信息安全，在变更重要信息时需要进行身份验证。</span>
+	</div>
+	<div class="panelLine sec">
+		<span class="mr20 floatLeft">已验证邮箱：sdfdsf@gmail.com</span>
+	</div>
+	<div class="buttonSection">
+		<a href="#" class="stdColorButton">
+			发送验证邮件&nbsp;&nbsp;
+			<span class="iconfont">&#xf016d;</span>
+		</a>
+	</div>
+	<div class="panelLine sec">
+		<span class="mr20 floatLeft">新邮箱：</span>
+		<input type="text" class="inputText floatLeft mr20 required" id="txtEmail" value="" name="email" data-trim data-email/>
+	</div>
+	<div class="buttonSection">
+		<a href="javascript:;" class="stdColorButton" id="modifyEmailBtn">
+			保存&nbsp;&nbsp;
+			<span class="iconfont">&#xf016d;</span>
+		</a>
+	</div>
+	<div class="panelBox" style="border-bottom:dashed 1px #DEDEDE;margin-top:15px;margin-bottom:15px;"></div>
+</textarea>
+
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/jquery.pagination.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/user/index.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/mustache.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/main.js'}" type="text/javascript"></script>
+
+<script type="text/javascript">App.module = 'user';</script>
+#{/set}

@@ -1,0 +1,70 @@
+.pagin-btm{
+    height:40px;
+    padding-top: 20px;
+    zoom:1;
+    display: block;
+}
+.pagination{
+	overflow: hidden;
+}
+.pagination span,.pagination a{
+	display: inline-block;
+	position: relative;
+	height: 24px;
+	margin-left: 4px;
+	font-family: arial;
+	line-height: 24px;
+	overflow: hidden;
+	padding: 3px 4px;
+}
+.pagination a{
+	cursor: pointer;
+	background-color: #ACB6BE;
+	color: #FFF;
+	font-weight: 700;	
+	padding: 3px 10px;
+}
+.pagination a:hover{
+	background-color: #819AB1;
+}
+.pagination .current{
+	color:#E57D57;
+}
+.pagination .current.prev, .pagination .current.next{
+	display: none;
+}
+.pagination .prev,.pagination .next{
+	font-weight: normal;
+}
+.pagination .prev{
+	padding-left:20px;
+	border-radius: 3px 0 0 3px;
+}
+.pagination .next{
+	padding-right:20px;
+	border-radius: 0 3px 3px 0;	
+}
+.pagination .prev b,.pagination .next b{
+	display:block;
+	position:absolute;
+	top:10px;
+	width: 0;
+	height: 0;
+	overflow:hidden;
+	background-color: transparent;
+	border-color: transparent transparent transparent transparent;
+	border-style: dashed dashed dashed dashed;
+	border-width: 5px;
+}
+.pagination .prev b{
+	background-position:-6px 0;
+	left:4px;
+	border-right-color: #fff;
+	border-right-style: solid;
+}
+.pagination .next b{
+	background-position:-1px 0;
+	right:4px;
+	border-left-color: #fff;
+	border-left-style: solid;
+}

@@ -1,0 +1,34 @@
+2016-10-13 10:32:57 Set value of cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT,expiration=30d
+2016-10-13 10:32:57 Set value of cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT,expiration=30d
+2016-10-13 10:32:57 Set value of cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT,expiration=30d
+2016-10-13 10:32:57 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME,expiration=30d
+2016-10-13 10:32:57 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME,expiration=30d
+2016-10-13 10:32:57 Set value of cache,key=SYS_CONFIGBUYER_AND_SHOP_TIME,expiration=30d
+2016-10-13 10:32:57 Set value of cache,key=SYS_CONFIGBUYER_AND_SELLER_TIME,expiration=30d
+2016-10-13 10:33:21 Get value from cache,key=USER_1677
+2016-10-13 10:33:21 Cache hit missing,key=USER_1677
+2016-10-13 10:33:22 Set value of cache,key=USER_1677,expiration=3d
+2016-10-13 10:33:23 Get value from cache,key=USER_1677
+2016-10-13 10:33:28 Get value from cache,key=USER_1677
+2016-10-13 10:33:28 Get value from cache,key=USER_1677
+2016-10-13 10:33:28 Get value from cache,key=USER_1677
+2016-10-13 10:34:29 Set value of cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT,expiration=30d
+2016-10-13 10:34:29 Set value of cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT,expiration=30d
+2016-10-13 10:34:29 Set value of cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT,expiration=30d
+2016-10-13 10:34:29 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME,expiration=30d
+2016-10-13 10:34:29 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME,expiration=30d
+2016-10-13 10:34:29 Set value of cache,key=SYS_CONFIGBUYER_AND_SHOP_TIME,expiration=30d
+2016-10-13 10:34:29 Set value of cache,key=SYS_CONFIGBUYER_AND_SELLER_TIME,expiration=30d
+2016-10-13 10:34:29 Get value from cache,key=USER_1677
+2016-10-13 10:34:29 Cache hit missing,key=USER_1677
+2016-10-13 10:34:29 Set value of cache,key=USER_1677,expiration=3d
+2016-10-13 10:34:31 Get value from cache,key=USER_1677
+2016-10-13 10:34:31 Get value from cache,key=USER_1677
+2016-10-13 10:34:39 Get value from cache,key=USER_1677
+2016-10-13 10:34:39 Get value from cache,key=USER_1677
+2016-10-13 10:34:39 Get value from cache,key=USER_1677
+2016-10-13 10:34:42 Get value from cache,key=USER_1677
+2016-10-13 10:34:42 Get value from cache,key=USER_1677
+2016-10-13 10:34:42 Get value from cache,key=USER_1677
+2016-10-13 10:34:48 Get value from cache,key=USER_1677
+2016-10-13 10:34:48 Get value from cache,key=USER_1677

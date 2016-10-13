@@ -1,0 +1,1777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.BuyerTaskMapper2">
+	<resultMap type="models.BuyerTask2" id="BaseResultMap"></resultMap>
+	<resultMap type="vos.SellerBalanceVo2" id="SellerBalanceVo"></resultMap>
+	<resultMap type="vos.BuyerTaskVo2" id="buyerTaskVo2"></resultMap>
+	<resultMap type="vos.ExpressCountVo" id="expressCountVo"></resultMap>
+	<resultMap type="vos.OrderExpress" id="orderExpress"></resultMap>
+	<resultMap type="domain.UserMoneyStats" id="UserMoneyStats"></resultMap>
+<!-- 商家对账统计 -->
+	<select id="findBuyerTaskBalance" resultMap="SellerBalanceVo">
+		SELECT
+		b.id,
+		b.task_id,
+		b.buyer_account_nick,
+		b.take_time,
+		b.order_id,
+		b.status,
+		b.device,
+		b.paid_fee,
+		t.item_price,
+		t.express_ingot,
+		t.item_buy_num,
+		t.seller_nick,
+		t.sys_refund,
+		t.extra_reward_ingot,
+		t.base_order_ingot,
+		t.is_free_shipping,
+		t.buy_time_interval,
+		t.speed_examine,
+		t.publish_timer_interval
+		from buyer_task2 b LEFT JOIN task2 t ON b.task_id=t.id
+		<where>
+			b.status != 'CANCLED'
+			<if test="sellerId!=null">AND b.seller_id=#{sellerId}</if>
+			<if test="platform2!=null">AND t.platform=#{platform}</if>
+			<if test="sellerNick!=null">AND t.seller_nick=#{sellerNick}</if>
+			<if test="shopName!=null"> AND t.shop_name=#{shopName}</if>
+			<if test="beginTakeTime!=null"> AND b.take_time >=#{beginTakeTime}</if>
+			<if test="endTakeTime!=null"> AND b.take_time &lt;= #{endTakeTime}</if>
+		</where>
+		limit #{startIndex}, #{pageSize}
+	</select>
+	
+	<select id="findExpenseSellerCount" resultType="java.lang.Integer">
+	SELECT
+	count(distinct seller_id) FROM task2 ta WHERE ta.status != 'CANCLED' AND
+	DATE_FORMAT(ta.publish_time, '%Y-%m-%d')=#{publishTime} GROUP BY
+	DATE_FORMAT(ta.publish_time, '%Y-%m-%d')
+	</select>
+
+	<select id="findNewBuyerCount" resultType="java.lang.Integer">
+		SELECT
+		 COUNT(distinct
+		buyer_id)
+		FROM
+		buyer_task2 b
+		LEFT JOIN `user` u ON u.id = b.buyer_id
+		WHERE
+		u.type = 'BUYER'
+		AND DATE_FORMAT(b.take_time, '%Y-%m-%d') = #{createTime}
+		AND b. STATUS != 'CANCLED'
+		AND buyer_id NOT IN (
+		SELECT
+		buyer_id
+		FROM
+		buyer_task2
+		WHERE
+		DATE_FORMAT(take_time, '%Y-%m-%d') &lt;#{createTime})
+	</select>
+
+	<select id="findNewSellerCount" resultType="java.lang.Integer">
+	SELECT count(DISTINCT u.id) FROM `user` u right join task2 t on u.id=t.seller_id where
+		u.type='SELLER' AND DATE_FORMAT(t.publish_time,
+		'%Y-%m-%d')=#{createTime} AND t.status != 'CANCLED' AND seller_id NOT IN(SELECT seller_id FROM task2 WHERE DATE_FORMAT(publish_time,'%Y-%m-%d')&lt;#{createTime})
+		
+	</select>
+	
+	<select id="exportBuyerTaskBalance" resultMap="SellerBalanceVo">
+		SELECT
+		b.id,
+		b.task_id,
+		b.buyer_account_nick,
+		b.take_time,
+		b.order_id,
+		b.status,
+		b.device,
+		b.paid_fee,
+		t.item_price,
+		t.express_ingot,
+		t.item_buy_num,
+		t.seller_nick,
+		t.sys_refund,
+		t.extra_reward_ingot,
+		t.base_order_ingot,
+		t.is_free_shipping,
+		t.buy_time_interval,
+		t.speed_examine,
+		t.publish_timer_interval
+		from buyer_task2 b LEFT JOIN task2 t ON b.task_id=t.id
+		<where>
+			b.status != 'CANCLED'
+			<if test="sellerId!=null">AND b.seller_id=#{sellerId}</if>
+			<if test="platform!=null">AND t.platform=#{platform}</if>
+			<if test="sellerNick!=null">AND t.seller_nick=#{sellerNick}</if>
+			<if test="shopName!=null"> AND t.shop_name=#{shopName}</if>
+			<if test="beginTakeTime!=null"> AND b.take_time >=#{beginTakeTime}</if>
+			<if test="endTakeTime!=null"> AND b.take_time &lt;= #{endTakeTime}</if>
+		</where>
+	</select>
+	
+	<select id="findBuyerTaskBalanceCount" resultType="java.lang.Integer">
+		SELECT
+		count(1)
+		from buyer_task2 b LEFT JOIN task2 t ON b.task_id=t.id
+		<where>
+			b.status != 'CANCLED'
+			<if test="sellerId!=null">AND b.seller_id=#{sellerId}</if>
+			<if test="platform!=null">AND t.platform=#{platform}</if>
+			<if test="sellerNick!=null">AND t.seller_nick=#{sellerNick}</if>
+			<if test="shopName!=null"> AND t.shop_name=#{shopName}</if>
+			<if test="beginTakeTime!=null"> AND b.take_time >=#{beginTakeTime}</if>
+			<if test="endTakeTime!=null"> AND b.take_time &lt;= #{endTakeTime}</if>
+		</where>
+	</select>
+	<!-- 后台商家对账 -->
+	<select id="findSellerTaskBalance" resultMap="SellerBalanceVo">
+		SELECT
+		id,
+		platform,
+		type,
+		item_price,
+		item_buy_num,
+		item_id,
+		is_free_shipping,
+		shop_name,
+		total_order_num,
+		pc_order_num,
+		mobile_order_num,
+		extra_reward_ingot,
+		speed_task_ingot,
+		speed_examine,
+		publish_timer_interval,
+		buy_time_interval,
+		total_pledge,
+		base_order_ingot,
+		total_ingot,
+		status,
+		sys_express,
+		seller_nick,
+		pc_taken_count,
+		mobile_taken_count,
+		finished_count,
+		sys_refund,
+		publish_time,
+		express_ingot
+		from task2
+		<where>
+		status IN (
+			'WAIT_PUBLISH',
+			'PUBLISHED',
+			'CANCLED',
+			'FINISHED'
+		)
+     AND (pc_taken_count + mobile_taken_count != 0 OR (pc_taken_count +mobile_taken_count = 0 AND status != 'CANCLED'))
+			
+			<if test="sellerId!=null">AND seller_id=#{sellerId}</if>
+			<if test="sellerNick!=null">AND seller_nick=#{sellerNick}</if>
+			<if test="beginPublishTime!=null"> AND publish_time >=#{beginPublishTime}</if>
+			<if test="endPublishTime!=null"> AND publish_time &lt;= #{endPublishTime}</if>
+		</where>
+		limit #{startIndex}, #{pageSize}
+	</select>
+	<select id="exportSellerTaskBalance" resultMap="SellerBalanceVo">
+		SELECT
+		id,
+		platform,
+		type,
+		item_price,
+		item_buy_num,
+		item_id,
+		shop_name,
+		is_free_shipping,
+		total_order_num,
+		pc_order_num,
+		mobile_order_num,
+		extra_reward_ingot,
+		speed_task_ingot,
+		speed_examine,
+		publish_timer_interval,
+		buy_time_interval,
+		total_pledge,
+		base_order_ingot,
+		total_ingot,
+		status,
+		seller_nick,
+		pc_taken_count,
+		mobile_taken_count,
+		finished_count,
+		sys_refund,
+		publish_time,
+		express_ingot
+		from task2
+		<where>
+			status IN (
+			'WAIT_PUBLISH',
+			'PUBLISHED',
+			'CANCLED',
+			'FINISHED'
+		)
+     AND (pc_taken_count + mobile_taken_count != 0 OR (pc_taken_count +mobile_taken_count = 0 AND status != 'CANCLED'))
+			<if test="sellerId!=null">AND seller_id=#{sellerId}</if>
+			<if test="sellerNick!=null">AND seller_nick=#{sellerNick}</if>
+			<if test="beginPublishTime!=null"> AND publish_time >=#{beginPublishTime}</if>
+			<if test="endPublishTime!=null"> AND publish_time &lt;= #{endPublishTime}</if>
+		</where>
+	</select>
+	<select id="findSellerTaskBalanceCount" resultType="java.lang.Integer">
+		SELECT
+		count(1)
+		from task2
+		<where>
+			status IN (
+			'WAIT_PUBLISH',
+			'PUBLISHED',
+			'CANCLED',
+			'FINISHED'
+		)
+     AND (pc_taken_count + mobile_taken_count != 0 OR (pc_taken_count +mobile_taken_count = 0 AND status != 'CANCLED'))
+			<if test="sellerId!=null">AND seller_id=#{sellerId}</if>
+			<if test="sellerNick!=null">AND seller_nick=#{sellerNick}</if>
+			<if test="beginPublishTime!=null"> AND publish_time >=#{beginPublishTime}</if>
+			<if test="endPublishTime!=null"> AND publish_time &lt;= #{endPublishTime}</if>
+		</where>
+	</select>
+	
+	<!-- 合计一组任务的垫付金额 -->
+	<select id="sumPaidFeeByBuyerIdAndIds" resultType="java.lang.Long">
+		select 
+		  sum(bt.paid_fee)
+		from
+		  buyer_task2 bt
+		<where>
+			bt.buyer_id = #{buyerId} 
+			and bt.id in 
+			<foreach collection="buyerTaskIds" item="id" open="(" close=")" separator="," >
+		    	#{id}
+		    </foreach>
+		</where>
+	</select>
+	
+	
+	<!-- 为买手、商家 统计“平台返款”类型的任务的总数 -->
+	<select id="countSysRefundByUserIdAndStatus" resultType="java.lang.Integer">
+		select 
+		  count(1)
+		from
+		  buyer_task2 bt 
+		  join
+		  task2 t 
+		  on t.id = bt.task_id 
+		<where>
+			t.sys_refund = 1 
+			<if test="statusList != null">
+				and bt.status in
+				<foreach collection="statusList" item="status" open="(" close=")" separator="," >
+     			#{status}
+     			</foreach>
+     		</if>
+			<if test="buyerId != null">
+				and bt.buyer_id = #{buyerId} 
+			</if>
+			<if test="sellerId != null">
+				and bt.seller_id = #{sellerId} 
+			</if>
+		</where>
+	</select>
+	
+	
+	<!-- 查询买手垫付的资金信息：任务数、垫付资金合计 -->
+	<select id="selectBuyerPaidFeeInfo" resultType="vos.PersonalInfoVo">
+		select 
+		  count(1) taskCount,
+		  sum(bt.paid_fee) sumPaidFee
+		from
+		  buyer_task2 bt 
+		where bt.buyer_id = #{buyerId} 
+		  and bt.status in
+		<foreach collection="statusList" item="status" open="(" close=")" separator="," >
+     		#{status}
+     	</foreach>
+	</select>
+	
+	<!-- 查询买手未完成的任务信息：任务数、佣金合计 -->
+	<select id="selectBuyerExcutingInfo" resultType="vos.PersonalInfoVo">
+		select 
+		  count(1) taskCount,
+		  sum(bt.reward_ingot) sumRewardIngot
+		from
+		  buyer_task2 bt 
+		where bt.buyer_id = #{buyerId} 
+			 and bt.status not in
+			<foreach collection="statusList" item="status" open="(" close=")" separator="," >
+	     		#{status}
+	     	</foreach>
+	</select>
+	
+	<!-- 统计【买手】当前尚未退款的任务数及垫付金额合计 -->
+	<select id="sumPaidFeeByBuyerIdAndStatusNotIn" resultMap="UserMoneyStats">
+		select 
+		  sum(bt.paid_fee) amount,
+		  ifnull(t.sys_refund, 0) sysRefund,
+		  count(bt.id) count
+		from
+		  buyer_task2 bt join task2 t on t.id = bt.task_id
+		<where>
+			bt.buyer_id = #{buyerId} 
+			and bt.status not in 
+			<foreach collection="statusList" item="status" open="(" close=")" separator="," >
+		    	#{status}
+		    </foreach>
+		</where>
+		group by t.sys_refund 
+	</select>
+	
+	<!-- 统计【买手】当前未进行“核实退款”的任务数及金额合计 -->
+	<select id="sumPaidFeeWaitConfirmByBuyerIdAndStatusIn" resultMap="UserMoneyStats">
+		select 
+		  bt.status status,
+		  sum(bt.reward_ingot) amount,
+		  count(1) count
+		from
+		  buyer_task2 bt 
+		<where> bt.buyer_id = #{buyerId} 
+			  and bt.status in
+			<foreach collection="statusList" item="status" open="(" close=")" separator="," >
+	     		#{status}
+	     	</foreach>
+     	</where>
+	</select>
+	
+	
+	
+	<select id="countExecute" resultType="java.lang.Long">
+		select id from buyer_task2
+		<where>
+			buyer_id  = #{buyerId} and status !='FINISHED' and status !='CANCLED'
+			<if test="accountId != 0">
+				and buyer_account_id = #{accountId}
+			</if>
+			limit 1
+		</where>
+	</select>
+	
+	<select id="hasTask" resultType="java.lang.Long">
+		select id from buyer_task2
+		<where>
+			buyer_id  = #{buyerId}
+			<if test="accountId != 0">
+				and buyer_account_id = #{accountId}
+			</if>
+			limit 1
+		</where>
+	</select>
+	
+	<!-- 获取买手“待确认收货”的任务 -->
+	<select id="selectListForBuyerConfirm" resultType="vos.BuyerTaskVo2">
+		select 
+		  bt.buyer_account_nick,
+		  t.id taskId,
+		  t.good_comment_words goodCommentWords,
+		  t.good_comment_img goodCommentImg,
+		  t.shop_name,
+		  t.item_id,
+		  t.item_title,
+		  t.item_pic,
+		  t.sys_express sysExpress,
+		  t.express_type,
+		  bt.order_id,
+		  bt.id 
+		from
+		  buyer_task2 bt 
+		  left join task2 t on t.id = bt.task_id 
+		<where>
+		  bt.buyer_id = #{buyerId} and bt.status = 'WAIT_CONFIRM'
+		  <if test="platform != null">
+		  	and t.platform = #{platform}
+		  </if>
+		  <if test="buyerTaskId !=null and buyerTaskId != 0">
+		  	and bt.id = #{buyerTaskId}
+		  </if>
+		</where>
+	</select>
+	
+	<!-- 买手做任务所需显示信息 -->
+	<select id="selectVoByIdForPerform" resultType="vos.BuyerTaskVo2">
+		select 
+		  t.shop_name,
+		  t.base_order_ingot,
+		  t.extra_reward_ingot,
+		  bt.take_time,
+		  bt.status,
+		  bt.buyer_account_id,
+		  bt.buyer_account_nick,
+		  bt.task_id,
+		  bt.device,
+		  t.platform,
+		  bt.take_time,
+		  bt.reward_ingot,
+		  p.word,
+		  p.skus,
+		  bt.search_plan_id searchPlanId,
+		  t.item_search_min_price,
+		  t.item_search_max_price,
+		  t.item_search_location,
+		  t.item_price,
+		  t.item_title,
+		  t.item_pic,
+		  t.task_request,
+		  t.item_pic_url,
+		  t.item_subway_pic,
+		  t.item_buy_num,
+		  t.item_url,
+		  t.is_free_shipping,
+		  t.order_messages,
+		  t.type taskType,
+		  t.sys_express sysExpress,
+		  t.express_type,
+		  t.qq,
+		  t.good_comment_words
+		from
+		  buyer_task2 bt 
+		  left join
+		  task_item_search_plan p 
+		  on p.buyer_task_id = bt.id 
+		  left join
+		  task2 t 
+		  on t.id = bt.task_id 
+		where bt.id = #{id} and bt.buyer_id = #{buyerId}
+		limit 1
+	</select>
+	
+	<!-- 查看买手任务详情（以及任务进度） -->
+	<select id="selectByIdForViewDetail" resultType="vos.BuyerTaskVo2">
+		select
+		  bt.buyer_id,
+		  bt.device,
+		  t.platform,
+		  bt.buyer_account_nick,
+		  bt.paid_fee,
+		  t.base_order_ingot,
+		  t.extra_reward_ingot,
+		  bt.experience,
+		  bt.reward_ingot,
+		  t.shop_name,
+		  t.good_comment_words,
+		  t.good_comment_img,
+		  t.id taskId,
+		  bt.id id,
+		  bt.order_id,
+		  bt.express_no,
+		  bt.take_time,
+		  bt.seller_id,
+		  t.seller_nick,
+		  t.sys_refund,
+		  t.type taskType,
+		  bt.status,
+		  bt.trans_no,
+		  bt.start_time,
+		  bt.finish_time,
+		  t.sys_express sysExpress,
+		  t.express_type,
+		  t.item_url,
+		  t.item_title,
+		  t.item_pic,
+		  t.item_price,
+		  t.item_buy_num,
+		  t.is_free_shipping,
+		  t.sys_refund,
+		  t.task_request,
+		  u.nick buyerNick
+		from
+		  buyer_task2 bt 
+		  left join task2 t on t.id = bt.task_id
+		  left join user u on u.id = bt.buyer_id
+		where bt.id = #{id}
+		limit 1
+	</select>
+
+
+	<!-- 【买手本金提现】-提现申请记录相关联的任务 -->
+	<select id="selectListForBuyerDepositWithdraw" resultMap="buyerTaskVo2">
+		select
+			bt.id id,
+			t.id taskId,
+			t.platform,
+			t.shop_name,
+			t.item_title,
+			t.item_pic,
+			bt.buyer_account_nick,
+			bt.paid_fee,
+			bt.modify_time,
+			bt.status
+		from buyer_task2 bt 
+			left join task2 t on bt.task_id = t.id
+		<include refid="listWhere"/>
+		order by bt.modify_time asc 
+		<if test="pageSize>1">
+			limit #{pageSize}
+		</if>
+	</select>
+	
+	
+	<!-- 商家-待系统退款任务列表  -->
+	<select id="sysRefundCount" resultType="java.lang.Integer">
+		select 
+		  count(1)
+		from buyer_task2 bt 
+			left join task2 t on bt.task_id = t.id 
+			left join buyer_task_step2 bts on bt.id = bts.buyer_task_id
+		<include refid="listSysRefoundWhere" />
+	</select>
+
+
+
+	<select id="selectListForSysRefund" resultMap="buyerTaskVo2">
+		select
+			bt.id id,
+			t.id taskId,
+			t.platform,
+			t.shop_name,
+			t.item_title,
+			t.item_pic,
+			t.seller_nick,
+			t.additional_item_title,
+			t.additional_item_pic_url,
+			t.additional_item_url,
+			bt.buyer_account_nick,
+			bt.order_id,
+			bt.seller_id,
+			bt.paid_fee,
+			bt.modify_time,
+			bt.status, 
+			bt.reward_ingot rewardIngot,
+			bts.content itemPicUrl
+		from buyer_task2 bt 
+			left join task2 t on bt.task_id = t.id 
+			left join buyer_task_step2 bts on bt.id = bts.buyer_task_id
+
+			<include refid="listSysRefoundWhere"/>
+		order by bt.modify_time asc
+		limit #{startIndex}, #{pageSize}
+	</select>
+
+	<sql id="listSysRefoundWhere">
+		<where>
+			<if test="sellerId != null">
+				t.seller_id = #{sellerId}
+			</if>
+			<if test="platform!= null">
+				and t.platform = #{platform}
+			</if>
+			<if test="orderId != null and orderId != ''">
+				and bt.order_id = #{orderId}
+			</if>
+			<if test="expressNo != null">
+				and bt.express_no = #{expressNo}
+			</if>
+			<if test="shopId != null">
+				and t.shop_id = #{shopId}
+			</if>
+			<if test="taskId != null">
+				and t.id = #{taskId}
+			</if>
+			<if test="buyerAccountId != null">
+				and bt.buyer_account_id = #{buyerAccountId}
+			</if>
+			<if test="buyerId != null">
+				and bt.buyer_id = #{buyerId}
+			</if>
+			<if test="taskType != null">
+				and t.type = #{taskType}
+			</if>
+			<if test="module !=null and module.name() != 'SELLER_REFUND'">
+				and (t.sys_refund = 1 or bt.trans_no is null) and bts.type='ORDER_AND_PAY' 
+				<if test="module.name() == 'REFUNDING'">
+					and (bt.status = 'WAIT_BUYER_CONFIRM_EDITED_SYS_REFUND' or bt.status='WAIT_BUYER_CONFIRM_SYS_REFUND')
+				</if>
+				<if test="module.name() == 'SYS_REFUND_WITHDRAW'">
+					and bt.status = #{status} and bt.user_withdraw_record_sn is null
+				</if>
+				<if test="module.name() != 'SYS_REFUND_WITHDRAW' and module.name() != 'REFUNDING'">
+					and bt.status = #{module}
+				</if>
+			</if>
+			<if test="buyerAccountNick != null and buyerAccountNick!= ''">
+				and bt.buyer_account_nick = #{buyerAccountNick}
+			</if>
+			<if test="tenpayNo!= null and tenpayNo != ''">
+				and f.no = #{tenpayNo}
+			</if>
+		</where>
+	</sql>
+
+	<!-- 商家-待退款任务列表 -->
+	<select id="selectListForSellerRefund" resultMap="buyerTaskVo2">
+		select
+			bt.id id,
+			t.id taskId,
+			t.platform,
+			t.shop_name,
+			t.item_title,
+			t.item_pic,
+			t.additional_item_title,
+			t.additional_item_pic_url,
+			t.additional_item_url,
+			t.sys_express sysExpress,
+			t.express_type,
+			bt.buyer_account_nick,
+			bt.order_id,
+			f.name refundAccountUser,
+			f.type refundAccountType,
+			f.no refundAccountNo,
+			bt.paid_fee,
+			bt.trans_no,
+			bt.modify_time,
+			bt.status
+		from buyer_task2 bt 
+			left join task2 t on bt.task_id = t.id 
+			left join fund_account f on f.user_id = bt.buyer_id
+		<include refid="listWhereForSellerRefund"/>
+		order by bt.modify_time asc
+		limit #{startIndex}, #{pageSize}
+	</select>
+	
+	<!-- 商家-待发货、退款任务列表 -->
+	<!-- 买手-我的任务列表 -->
+	<select id="selectList" resultMap="buyerTaskVo2">
+	select
+		bt.id id,
+		t.id taskId,
+		t.platform,
+		t.shop_id,
+		t.shop_name,
+		t.item_id,
+		t.item_title,
+		t.item_pic_url,
+		t.item_pic,
+		t.additional_item_title,
+		t.additional_item_pic_url,
+		t.additional_item_url,
+		t.item_buy_num,
+		t.sys_refund,
+		t.sys_express sysExpress,
+		t.express_type,
+		t.seller_nick,
+		bt.buyer_account_id,
+		bt.buyer_account_nick,
+		bt.order_id,
+		bt.express_company,
+		bt.express_no,
+		bt.trans_no,
+		bt.seller_id,
+		bt.buyer_id,
+		bt.take_time,
+		<if test="status != null and status.name() == 'WAIT_REFUND'">
+		f.type refundAccountType,
+		f.no refundAccountNo,
+		ba.consignee,
+		</if>
+		bt.paid_fee,
+		bt.reward_ingot,
+		t.base_order_ingot,
+		t.extra_reward_ingot,
+		bt.status 	
+	from buyer_task2 bt left join task2 t on bt.task_id = t.id 
+		<if test="status != null and (status.name() == 'WAIT_REFUND' or status.name() == 'REFUNDING')">
+		left join buyer_account ba on bt.buyer_account_id = ba.id 
+		left join fund_account f on f.user_id = bt.buyer_id
+		</if>
+	<include refid="listWhere"/>
+	<if test="status != null and (status.name() == 'EXPRESS_PRINT' or status.name() == 'REFUNDING')">
+		order by bt.modify_time asc
+	</if>
+	<if test="status == null ">
+		order by bt.modify_time desc
+	</if>
+	<if test="status != null and status.name() != 'EXPRESS_PRINT' and status.name() != 'REFUNDING'">
+		order by bt.modify_time desc
+	</if>
+	 limit #{startIndex}, #{pageSize}
+	</select>
+	
+	<select id="count" resultType="java.lang.Integer">
+		select count(1)
+		from buyer_task2 bt join task2 t on bt.task_id = t.id
+		<if test="status != null and (status.name() == 'WAIT_REFUND' or status.name() == 'REFUNDING')">
+			left join fund_account f on f.user_id = bt.buyer_id
+		</if>
+		<include refid="listWhere"/>
+	</select>
+	<sql id="listWhere">
+		<where>
+			<if test="sellerId != null">
+				t.seller_id = #{sellerId}
+			</if>
+			<if test="platform != null">
+				and t.platform = #{platform}
+			</if>
+			<if test="statusList != null">
+				and bt.status in
+				<foreach collection="statusList" item="status" open="(" close=")" separator="," >
+     			#{status}
+     			</foreach>
+     		</if>
+			<if test="statusExcluedeList != null">
+				and bt.status not in
+				<foreach collection="statusExcluedeList" item="status" open="(" close=")" separator="," >
+     			#{status}
+     			</foreach>
+     		</if>
+     		<if test="device != null">
+				and bt.device = #{device}
+			</if>
+			
+			<if test="status != null and (status.name() == 'WAIT_REFUND' or status.name() == 'REFUNDING')">
+				and f.type = 'TENPAY'
+			</if>
+			<if test="status != null and status.name() == '_WAIT_SEND_GOODS'">
+				and bt.status in ('WAIT_SEND_GOODS','EXPRESS_PRINT','WAIT_EXPRESS_PRINT')
+			</if>
+			<if test="status != null and status.name() == '_FINISHED'">
+				and bt.status in ('UNFREZZ_PLEGE','FINISHED')
+			</if>
+			
+			<if test="status != null and status.name() == '_RECIEVED'">
+				and bt.status in ('RECIEVED','WAIT_PAY')
+			</if>
+			<if test="status != null and statusExcluedeList == null and (status.name() != '_WAIT_SEND_GOODS' and status.name() != '_FINISHED' and status.name() != '_RECIEVED')">
+				and bt.status =#{status}
+			</if>
+			<if test="orderId != null and orderId != ''">
+				and bt.order_id = #{orderId}
+			</if>
+			<if test="expressNo != null">
+				and bt.express_no = #{expressNo}
+			</if>
+			<if test="expressType != null">
+				and t.express_type = #{expressType}
+			</if>
+			<if test="shopId != null">
+				and t.shop_id = #{shopId}
+			</if>
+			<if test="taskId != null">
+				and t.id = #{taskId}
+			</if>
+			<if test="buyerTaskId != null">
+				and bt.id = #{buyerTaskId}
+			</if>
+			<if test="buyerAccountId != null">
+				and bt.buyer_account_id = #{buyerAccountId}
+			</if>
+			<if test="buyerId != null">
+				and bt.buyer_id = #{buyerId}
+			</if>
+			<if test="taskType != null">
+				and t.type = #{taskType}
+			</if>
+			
+			<if test="takeTimeStart != null">
+				<![CDATA[ and bt.take_time>= #{takeTimeStart} ]]>
+			</if>
+			<if test="takeTimeEnd != null">
+				<![CDATA[ and bt.take_time<= #{takeTimeEnd} ]]>
+			</if>
+			
+			<if test="buyerAccountNick != null and buyerAccountNick!= ''">
+				and bt.buyer_account_nick = #{buyerAccountNick}
+			</if>
+			<if test="tenpayNo!= null and tenpayNo != '' and status != null and (status.name() == 'WAIT_REFUND' or status.name() == 'REFUNDING')">
+				and f.no = #{tenpayNo}
+			</if>
+			<!-- 查看本金提现相关的任务 -->
+			<if test="userWithdrawRecordSn != null">
+				and bt.user_withdraw_record_sn = #{userWithdrawRecordSn}
+			</if>
+			
+			<if test="modifyTimeStart != null">
+				<![CDATA[ and bt.modify_time>= #{modifyTimeStart} ]]>
+			</if>
+			<if test="modifyTimeEnd != null">
+				<![CDATA[ and bt.modify_time<= #{modifyTimeEnd} ]]>
+			</if>
+		</where>
+	</sql>
+	<sql id="listWhereForSellerRefund">
+		<where>
+			<if test="sellerId != null">
+				t.seller_id = #{sellerId}
+			</if>
+			<if test="platform != null">
+				and t.platform = #{platform}
+			</if>
+			<if test="status != null and (status.name() == 'WAIT_REFUND' or status.name() == 'REFUNDING' or status.name() == 'FINISHED')">
+				and f.type = 'TENPAY'
+			</if>
+			<if test="status != null and status.name() == '_WAIT_SEND_GOODS'">
+				and bt.status in ('WAIT_SEND_GOODS','EXPRESS_PRINT','WAIT_EXPRESS_PRINT')
+			</if>
+			<if test="status != null and status.name() == '_FINISHED'">
+				and bt.status in ('UNFREZZ_PLEGE','FINISHED')
+			</if>
+			<if test="status != null and status.name() == '_RECIEVED'">
+				and bt.status in ('RECIEVED','WAIT_PAY')
+			</if>
+			<if test="status != null and status.name()!= '_WAIT_SEND_GOODS' and status.name() != '_FINISHED' and status.name() != '_RECIEVED'">
+				and bt.status = #{status}
+			</if>
+			<if test="orderId != null and orderId != ''">
+				and bt.order_id = #{orderId}
+			</if>
+			<if test="expressNo != null">
+				and bt.express_no = #{expressNo}
+			</if>
+			<if test="shopId != null">
+				and t.shop_id = #{shopId}
+			</if>
+			<if test="taskId != null">
+				and t.id = #{taskId}
+			</if>
+			<if test="buyerTaskId != null">
+				and bt.id = #{buyerTaskId}
+			</if>
+			<if test="buyerAccountId != null">
+				and bt.buyer_account_id = #{buyerAccountId}
+			</if>
+			<if test="buyerId != null">
+				and bt.buyer_id = #{buyerId}
+			</if>
+			<if test="taskType != null">
+				and t.type = #{taskType}
+			</if>
+			
+			<if test="buyerAccountNick != null and buyerAccountNick!= ''">
+				and bt.buyer_account_nick = #{buyerAccountNick}
+			</if>
+			<if test="tenpayNo!= null and tenpayNo != ''">
+				and f.no = #{tenpayNo}
+			</if>
+			<!-- 查看本金提现相关的任务 -->
+			<if test="userWithdrawRecordSn != null">
+				and bt.user_withdraw_record_sn = #{userWithdrawRecordSn}
+			</if>
+			
+			<if test="modifyTimeStart != null">
+				<![CDATA[ and bt.modify_time>= #{modifyTimeStart} ]]>
+			</if>
+			<if test="modifyTimeEnd != null">
+				<![CDATA[ and bt.modify_time<= #{modifyTimeEnd} ]]>
+			</if>
+			
+		</where>
+	</sql>
+	<!-- 后台-买手任务管理-查询买手任务列表 -->
+	<!-- 后台-买手任务管理-导出“超过48小时未退款”的买手任务ID -->
+	<select id="selectListForAdmin" resultMap="buyerTaskVo2">
+		select 
+		  bt.id id,
+		  bt.task_id,
+		  <if test="module == null or (module != null and module.name() != 'SELLE_REFUND_OVERDUE')">
+		  t.item_title,
+		  t.item_pic,
+		  t.platform,
+		  a.name as sellerAdminName,
+		  ad.name as buyerAdminName,
+		  t.shop_name,
+		  t.seller_nick,
+		  t.type,
+		  t.sys_express sysExpress,
+		  t.express_type,
+		  bt.buyer_account_nick,
+		  bt.device,
+		  bt.status,
+		  bt.order_id,
+		  bt.express_company,
+		  bt.express_no,
+		  bt.paid_fee,
+		  bt.reward_ingot,
+		  bt.experience,
+		  bt.trans_no,
+		  bt.take_time,
+		  u.nick buyerNick,
+		  <if test="status != 'ALL' and status != null and status.name() != 'RECIEVED' and status.name() != 'WAIT_PAY'">
+		  	bts.content itemPicUrl,
+		  </if>
+		  </if>
+		  bt.modify_time modifyTime
+		from
+		  buyer_task2 bt
+		  left join task2 t on t.id = bt.task_id
+		  left join user u1 on bt.seller_id=u1.id 
+				left join admin a on u1.admin_id=a.id
+		  left join user u2 on bt.buyer_id=u2.id
+		  		left join admin ad on u2.admin_id=ad.id
+		  <if test="status != null and (status.name() == 'WAIT_REFUND' or status.name() == 'REFUNDING')">
+			left join fund_account f on f.user_id = bt.buyer_id
+		  </if>
+		  <if test="status != 'ALL' and status != null and status.name() != 'RECIEVED' and status.name() != 'WAIT_PAY'">
+		  	LEFT JOIN buyer_task_step2 bts ON bts.buyer_task_id=bt.id
+		  </if>
+		  left join user u on u.id=bt.buyer_id
+		<include refid="listWhereForAdmin"/>
+		<if test="status != 'ALL' and status != null and status.name() != 'RECIEVED' and status.name() != 'WAIT_PAY'">
+			AND bts.no = 3
+		</if>
+		order by
+		<if test="status != 'ALL' and status != null and status.name() != 'RECIEVED' and status.name() != 'WAIT_PAY'">
+			bt.modify_time,
+		</if>
+		<if test="status != null and status.name() == 'WAIT_REFUND'">
+			bt.task_id asc
+		</if>
+		<if test="status == null or (status != null and status.name() != 'WAIT_REFUND')">
+			bt.id desc
+		</if>
+		limit #{startIndex}, #{pageSize}
+	</select>
+
+<sql id="listWhereForAdmin">
+		<where>
+			<if test="sellerId != null">
+				t.seller_id = #{sellerId}
+			</if>
+			<if test="platform != null">
+				and t.platform = #{platform}
+			</if>
+			<if test="sellerNick != null">
+				and t.seller_nick = #{sellerNick}
+			</if>
+			<if test="buyerNick != null">
+				and u.nick = #{buyerNick}
+			</if>
+			<if test="shopName != null">
+				and t.shop_name = #{shopName}
+			</if>
+			<if test="status != null and (status.name() == 'WAIT_REFUND' or status.name() == 'REFUNDING')">
+				and f.type = 'TENPAY'
+			</if>
+			<if test="status != null and status.name() == '_WAIT_SEND_GOODS'">
+				and bt.status in ('WAIT_SEND_GOODS','EXPRESS_PRINT','WAIT_EXPRESS_PRINT')
+			</if>
+			<if test="status != null and status.name() == '_FINISHED'">
+				and bt.status in ('UNFREZZ_PLEGE','FINISHED')
+			</if>
+			<if test="status != null and status.name() == '_RECIEVED'">
+				and bt.status in ('RECIEVED','WAIT_PAY')
+			</if>
+			<if test="status != null and status.name()!= '_WAIT_SEND_GOODS' and status.name() != '_FINISHED' and status.name() != '_RECIEVED'">
+				and bt.status = #{status}
+			</if>
+			<if test="orderId != null and orderId != ''">
+				and bt.order_id = #{orderId}
+			</if>
+			<if test="expressNo != null">
+				and bt.express_no = #{expressNo}
+			</if>
+			<if test="shopId != null">
+				and t.shop_id = #{shopId}
+			</if>
+			<if test="taskId != null">
+				and t.id = #{taskId}
+			</if>
+			<if test="buyerTaskId != null">
+				and bt.id = #{buyerTaskId}
+			</if>
+			<if test="expressType != null">
+				and t.express_type = #{expressType}
+			</if>
+			<if test="buyerAccountId != null">
+				and bt.buyer_account_id = #{buyerAccountId}
+			</if>
+			<if test="buyerId != null">
+				and bt.buyer_id = #{buyerId}
+			</if>
+			<if test="taskType != null">
+				and t.type = #{taskType}
+			</if>
+			
+			<if test="buyerAccountNick != null and buyerAccountNick!= ''">
+				and bt.buyer_account_nick = #{buyerAccountNick}
+			</if>
+			<if test="tenpayNo!= null and tenpayNo != ''">
+				and f.no = #{tenpayNo}
+			</if>
+			<!-- 查看本金提现相关的任务 -->
+			<if test="userWithdrawRecordSn != null">
+				and bt.user_withdraw_record_sn = #{userWithdrawRecordSn}
+			</if>
+			
+			<if test="modifyTimeStart != null">
+				<![CDATA[ and bt.modify_time>= #{modifyTimeStart} ]]>
+			</if>
+			<if test="modifyTimeEnd != null">
+				<![CDATA[ and bt.modify_time<= #{modifyTimeEnd} ]]>
+			</if>
+			
+		</where>
+	</sql>
+
+	<!-- 卖家查看任务详情时，分页获取子任务列表 -->
+	<resultMap type="models.BuyerTask2" id="ResultMap">
+		<id property="id" column="id" />
+		<result property="buyerNick" column="buyerNick" />
+		<result property="buyerAccountNick" column="buyer_account_nick" />
+		<result property="device" column="device" />
+		<result property="orderId" column="order_id" />
+		<result property="status" column="status" />
+		<result property="expressCompany" column="express_company" />
+		<result property="expressNo" column="express_no" />
+		<result property="paidFee" column="paid_fee" />
+		<association property="refundAccount" javaType="models.FundAccount">
+			<result property="type" column="refundAccountType" />
+			<result property="no" column="refundAccountNo" />
+			<result property="name" column="refundAccountName" />
+		</association>
+	</resultMap>
+	<select id="selectListForTaskDetail" resultMap="ResultMap">
+		select 
+		  bt.id,
+		  bt.buyer_account_nick,
+		  bt.device,
+		  bt.order_id,
+		  bt.status,
+		  bt.express_company,
+		  bt.express_no,
+		  bt.paid_fee
+		  <if test="isSysRefundTask != true">
+		  ,
+		  f.type refundAccountType,
+		  f.no refundAccountNo
+		  </if>
+		from
+		  buyer_task2 bt
+		  <if test="isSysRefundTask != true"> 
+		  left join
+		  	fund_account f on f.user_id = bt.buyer_id 
+		  </if>
+		<include refid="whereForTaskDetail"/>
+		limit #{startIndex}, #{pageSize}
+	</select>
+	<select id="countForTaskDetail" resultType="java.lang.Integer">
+		select count(1)
+		from
+		  buyer_task2 bt 
+		  <if test="isSysRefundTask != true"> 
+		  left join
+		  	fund_account f on f.user_id = bt.buyer_id 
+		  </if>
+		<include refid="whereForTaskDetail"/>
+	</select>
+	<sql id="whereForTaskDetail">
+		<where>
+			<if test="isSysRefundTask != true"> 
+			f.type = 'TENPAY' and 
+		  	</if>
+		  	bt.task_id = #{taskId}
+			<if test="sellerId != null">
+		  		and bt.seller_id = #{sellerId} 
+			</if>
+		</where>
+	</sql>
+	<select id="selectOrdersCount" resultType="java.lang.Integer">
+		select 
+			count(1)
+		from buyer_task2 bt
+			join buyer_account ba on bt.buyer_account_id = ba.id
+			join task2 t on t.id = bt.task_id
+			join shop2 s on s.id = t.shop_id
+		<where>
+			<if test="status != null">
+				and bt.status = #{status}
+			</if>
+			<if test="orderId != null">
+				and bt.order_id = #{orderId}
+			</if>
+			<if test="expressNo != null">
+				and bt.express_no = #{expressNo}
+			</if>
+			<if test="buyerAccountId != null">
+				and bt.buyer_account_id = #{buyerAccountId}
+			</if>
+			<if test="buyerId != null">
+				and bt.buyer_id = #{buyerId}
+			</if>
+			<if test="expressType != null">
+				and t.express_type = #{expressType}
+			</if>
+			<if test="shopName != null">
+				and s.nick = #{shopName}
+			</if>
+		</where>
+	</select>
+	<select id="selectOrders" resultMap="orderExpress">
+		select 
+			bt.id, 
+			bt.task_id taskId, 
+			bt.order_id orderId, 
+			ba.consignee consignee, 
+			ba.state, ba.city, ba.region,
+			ba.address,
+			ba.mobile,
+			bt.express_no,
+			s.nick tbSellerNick,
+			bt.status,
+			bt.modify_Time modifyTime
+		from buyer_task2 bt
+			join buyer_account ba on bt.buyer_account_id = ba.id
+			join task2 t on t.id = bt.task_id
+			join shop2 s on s.id = t.shop_id
+		<where>
+			<if test="status != null">
+				and bt.status = #{status}
+			</if>
+			<if test="orderId != null">
+				and bt.order_id = #{orderId}
+			</if>
+			<if test="expressNo != null">
+				and bt.express_no = #{expressNo}
+			</if>
+			<if test="buyerAccountId != null">
+				and bt.buyer_account_id = #{buyerAccountId}
+			</if>
+			<if test="status.name() =='EXPRESS_PRINT'">
+				and t.sys_express=1
+			</if>
+			<if test="expressType != null">
+				and t.express_type = #{expressType}
+			</if>
+			<if test="buyerId != null">
+				and bt.buyer_id = #{buyerId}
+			</if>
+			<if test="shopName != null">
+				and s.nick = #{shopName}
+			</if>
+		</where>
+		<if test="status.name() =='WAIT_EXPRESS_PRINT'">
+		order by s.nick ,bt.id
+		</if>
+		<if test="status.name() =='EXPRESS_PRINT'">
+		order by -bt.express_no
+		</if>
+		<if test="exportNo != null">
+			limit #{exportNo}
+		</if>
+		<if test="pageSize > 1">
+			limit #{startIndex}, #{pageSize}
+		</if>
+	</select>
+	<!-- 韵达快递查询 -->
+	<select id="selectYDOrders" resultMap="orderExpress">
+		select 
+			bt.id, 
+			bt.task_id taskId, 
+			bt.order_id orderId, 
+			ba.consignee consignee, 
+			ba.state, ba.city, ba.region,
+			ba.address,
+			ba.mobile mobile,
+			bt.express_no,
+			s.nick tbSellerNick,
+			bt.status,
+			t.express_weight weight,
+			s.address sellerAddress,
+			s.street sellerStreet,
+			s.mobile sellerMobile,
+			s.seller_name shipper,
+			s.branch,
+			bt.modify_Time modifyTime
+		from buyer_task2 bt
+			join buyer_account ba on bt.buyer_account_id = ba.id
+			join task2 t on t.id = bt.task_id
+			join shop2 s on s.id = t.shop_id
+		<where>
+			<if test="status != null">
+				and bt.status = #{status}
+			</if>
+			<if test="orderId != null">
+				and bt.order_id = #{orderId}
+			</if>
+			<if test="expressNo != null">
+				and bt.express_no = #{expressNo}
+			</if>
+			<if test="buyerAccountId != null">
+				and bt.buyer_account_id = #{buyerAccountId}
+			</if>
+			<if test="expressType != null">
+				and t.express_type = #{expressType}
+			</if>
+			<if test="buyerId != null">
+				and bt.buyer_id = #{buyerId}
+			</if>
+			<if test="shopName != null">
+				and s.nick = #{shopName}
+			</if>
+		</where>
+		<if test="status.name() =='WAIT_EXPRESS_PRINT'">
+		order by s.nick ,bt.id
+		</if>
+		<if test="status.name() =='EXPRESS_PRINT'">
+		order by -bt.express_no
+		</if>
+		<if test="exportNo != null">
+			limit #{exportNo}
+		</if>
+		<if test="pageSize > 1">
+			limit #{startIndex}, #{pageSize}
+		</if>
+	</select>
+	
+	<select id="selectYDOrderCount" resultType="java.lang.Integer">
+		select 
+			count(1)
+		from buyer_task2 bt
+			join buyer_account ba on bt.buyer_account_id = ba.id
+			join task2 t on t.id = bt.task_id
+			join shop2 s on s.id = t.shop_id
+		<where>
+			<if test="status != null">
+				and bt.status = #{status}
+			</if>
+			<if test="orderId != null">
+				and bt.order_id = #{orderId}
+			</if>
+			<if test="expressNo != null">
+				and bt.express_no = #{expressNo}
+			</if>
+			<if test="buyerAccountId != null">
+				and bt.buyer_account_id = #{buyerAccountId}
+			</if>
+			<if test="expressType != null">
+				and t.express_type = #{expressType}
+			</if>
+			<if test="buyerId != null">
+				and bt.buyer_id = #{buyerId}
+			</if>
+			<if test="shopName != null">
+				and s.nick = #{shopName}
+			</if>
+		</where>
+	</select>
+	
+	<select id="selectById" resultMap="BaseResultMap">
+		select * from buyer_task2 where id = #{id}
+	</select>
+	
+	<select id="select" resultMap="BaseResultMap">
+		select 
+			<if test="fields != null"> ${fields} </if>
+			<if test="fields == null"> * </if>
+			from buyer_task2
+		<where>
+			<if test="status != null">
+				and status = #{status}
+			</if>
+			<if test="orderId != null">
+				and order_id = #{orderId}
+			</if>
+			<if test="expressNo != null">
+				and express_no = #{expressNo}
+			</if>
+			<if test="buyerAccountId != null">
+				and buyer_account_id = #{buyerAccountId}
+			</if>
+			<if test="buyerId != null">
+				and buyer_id = #{buyerId}
+			</if>
+			<if test="modifyTimeEnd != null">
+				<![CDATA[ 
+				and modify_time<= #{modifyTimeEnd}
+				]]>
+			</if>
+			<if test="pageSize > 1">
+				limit #{pageSize}
+			</if>
+		</where>
+	</select>
+	
+	<select id="selectByIdForTaskType" resultMap="buyerTaskVo2">
+		select t.recommend_ingot, t.extra_reward_ingot, u.regist_time, t.id taskId 
+		from
+			buyer_task2 bt
+			left join task2 t on bt.task_id = t.id 
+			left join user u on u.id = t.seller_id 
+		where bt.id = #{id}
+	</select>
+
+	<select id="selectUntradeBuyerDeposit" resultType="vos.BuyerDepositVo">
+		select
+		r.id,
+		r.apply_time applyTime,
+		r.memo,
+		r.trade_no tradeNo,
+		fa.name fundUserName,
+		fa.opening_bank fundOpeningBank,
+		fa.no fundNo,
+		fa.type,
+		fa.address,
+		r.apply_amount applyAmount,
+		bt.buyer_account_nick buyerAccountNick,
+		bt.task_id taskId,
+		u.nick buyerNick,
+		s.nick shopNick
+		from user_withdraw_record r
+		left join buyer_task2 bt on bt.user_withdraw_record_sn = r.sn
+		right join fund_account fa on r.fund_account_id = fa.id
+		left join user u on r.user_id = u.id
+		left join task2 t
+		on t.id = bt.task_id
+		left join shop2 s
+		on t.shop_id = s.id
+		where r.status = 'WAIT' and r.is_buyer_deposit = true group by r.id
+		;
+	</select>
+	
+	<select id="selectUntradeBuyerWidthdraw" resultType="vos.BuyerDepositVo">
+		select
+		r.id,
+		r.apply_time applyTime,
+		r.memo,
+		r.trade_no tradeNo,
+		fa.name fundUserName,
+		fa.opening_bank fundOpeningBank,
+		fa.no fundNo,
+		fa.type,
+		fa.address,
+		r.amount applyAmount,
+		u.nick buyerNick
+		from user_withdraw_record r
+		right join fund_account fa on r.fund_account_id = fa.id
+		left join user u on r.user_id = u.id
+		where r.status = 'WAIT' and (r.is_buyer_deposit = false or r.is_buyer_deposit is null) group by r.id
+		;
+	</select>
+
+	<select id="selectListForTaskDetailExportCsv" resultMap="ResultMap">
+		select
+			bt.id id,
+        	u.nick buyerNick,
+        	bt.buyer_account_nick,
+        	bt.order_id,
+        	bt.status,
+        	bt.express_no,
+        	bt.paid_fee
+        <if test="!isSysRefundTask">
+        	,
+        	f.no refundAccountNo,
+        	f.name refundAccountName
+        </if>
+        from 
+        	buyer_task2 bt
+        	left join user u on u.id=bt.buyer_id
+        <if test="!isSysRefundTask">
+        	left join fund_account f on f.user_id=bt.buyer_id
+        </if>
+        where 
+        	bt.task_id = #{taskId} and bt.status != 'CANCLED'
+ 		<if test="!isSysRefundTask">
+        	and f.type='TENPAY'
+        </if>
+	</select>
+
+	<insert id="insert" statementType="PREPARED" useGeneratedKeys="true" keyProperty="id">
+		<selectKey keyProperty="id" resultType="long" order="AFTER">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey>
+		insert into `buyer_task2`
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			`task_id`,
+			`device`,
+			`seller_id`,
+			`buyer_id`,
+			`buyer_account_id`,
+			 pledge_ingot,
+			 reward_ingot,
+			 experience,
+			<if test="buyerAccountNick != null">
+				`buyer_account_nick`,
+			</if>
+			<if test="orderId != null">
+				`order_id`,
+			</if>
+			<if test="expressNo != null">
+				`express_no`,
+			</if>
+			<if test="expressCompany != null">
+				`express_company`,
+			</if>
+			<if test="paidFee != null">
+				`paid_fee`,
+			</if>
+			<if test="startTime != null">
+				`start_time`,
+			</if>
+			<if test="searchPlanId != null">
+				`search_plan_id`,
+			</if>
+			<if test="finishTime != null">
+				`finish_time`,
+			</if>
+			`status`,
+			`take_time`,
+			`modify_time`
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			#{taskId},
+			#{device},
+			#{sellerId},
+			#{buyerId},
+			#{buyerAccountId},
+			#{pledgeIngot},
+			#{rewardIngot},
+			#{experience},
+			<if test="buyerAccountNick !=null">#{buyerAccountNick},</if>
+			<if test="orderId !=null">#{orderId},</if>
+			<if test="expressNo !=null">#{expressNo},</if>
+			<if test="expressCompany !=null">#{expressCompany},</if>
+			<if test="paidFee !=null">#{paidFee},</if>
+			<if test="startTime !=null">#{startTime},</if>
+			<if test="searchPlanId != null">
+				#{searchPlanId},
+			</if>
+			<if test="finishTime !=null">#{finishTime},</if>
+			#{status},
+			#{takeTime},
+			#{modifyTime}
+		</trim>
+	</insert>
+
+	<update id="updateById" parameterType="models.BuyerTask2">
+		update buyer_task2
+		<set>
+			modify_time = #{modifyTime},
+			<if test="status != null">
+				status = #{status},
+			</if>
+			<if test="transNo != null">
+				trans_no = #{transNo},
+			</if>
+			<if test="takeTime != null">
+				take_time = #{takeTime},
+			</if>
+			<if test="paidFee != null">
+				paid_fee = #{paidFee},
+			</if>
+			<if test="userWithdrawRecordSn != null">
+				user_withdraw_record_sn = #{userWithdrawRecordSn},
+			</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<update id="updateByIdAndBuyerId" parameterType="models.BuyerTask2">
+		update buyer_task2
+		<set>
+			modify_time = #{modifyTime},
+			<if test="status != null">
+				status = #{status},
+			</if>
+			<if test="messageId != null">
+				message_id = #{messageId},
+			</if>
+			<if test="paidFee != null">
+				paid_fee = #{paidFee},
+			</if>
+			<if test="orderId != null">
+				order_id = #{orderId},
+			</if>
+		</set>
+		where id = #{id} and buyer_id=#{buyerId}
+	</update>
+	
+	<update id="update" parameterType="models.BuyerTask2">
+		update buyer_task2
+		<set>
+				modify_time = #{modifyTime}
+			<if test="status != null">
+				,status = #{status}
+			</if>
+			<if test="orderId != null">
+				,order_id = #{orderId}
+			</if>
+			<if test="transNo != null">
+				,trans_no = #{transNo}
+			</if>
+			<if test="expressNo != null">
+				,express_no = #{expressNo}
+			</if>
+		</set>
+		<where>
+			<if test="id != null">
+				and id = #{id}
+			</if>
+			<if test="status != null and status.name() == 'EXPRESS_PRINT'">
+				and status = 'WAIT_EXPRESS_PRINT'
+			</if>
+			<if test="status !=null and status.name() == 'WAIT_EXPRESS_PRINT'">
+				and status = 'WAIT_SEND_GOODS'
+			</if>
+			
+			<if test="taskId != null">
+				and task_id = #{taskId}
+			</if>
+			<if test="buyerId != null">
+				and buyer_id = #{buyerId}
+			</if>
+			<if test="sellerId != null">
+				and seller_id = #{sellerId}
+			</if>
+		</where>
+	</update>
+	
+	<update id="modifyYDKD" parameterType="models.BuyerTask2">
+		update buyer_task2
+		<set>
+				modify_time = #{modifyTime}
+			<if test="status != null">
+				,status = #{status}
+			</if>
+			<if test="orderId != null">
+				,order_id = #{orderId}
+			</if>
+			<if test="transNo != null">
+				,trans_no = #{transNo}
+			</if>
+			<if test="expressNo != null">
+				,express_no = #{expressNo}
+			</if>
+		</set>
+		<where>
+			<if test="id != null">
+				and id = #{id}
+			</if>
+			<if test="status != null and status.name() == 'EXPRESS_PRINT'">
+				and status = 'WAIT_SEND_GOODS'
+			</if>
+			<if test="taskId != null">
+				and task_id = #{taskId}
+			</if>
+			<if test="buyerId != null">
+				and buyer_id = #{buyerId}
+			</if>
+			<if test="sellerId != null">
+				and seller_id = #{sellerId}
+			</if>
+		</where>
+	</update>
+
+	<update id="batchUpdateStatus">
+		update buyer_task2
+		set status = #{status}, modify_time=#{modifyTime}
+		where id in
+		<foreach collection="ids" item="id" open="(" close=")"
+			separator=",">
+			#{id}
+		</foreach>
+	</update>
+	
+	<update id="batchUpdateStatusSafty">
+		update buyer_task2
+		set status = #{status}, modify_time=#{modifyTime}
+		where id in
+		<foreach collection="ids" item="id" open="(" close=")"
+			separator=",">
+			#{id}
+		</foreach>
+		<if test="buyerId != null">
+			and buyer_id = #{buyerId}
+		</if>
+		<if test="sellerId != null">
+			and seller_id = #{sellerId}
+		</if>
+	</update>
+	
+	<select id="selectOrdersByIds" resultMap="orderExpress">
+		select 
+			bt.id, 
+			bt.task_id taskId, 
+			bt.order_id orderId, 
+			ba.consignee consignee, 
+			ba.state, ba.city, ba.region,
+			ba.address, 
+			ba.mobile,
+			s.nick tbSellerNick,
+			bt.status,
+			bt.modify_Time modifyTime
+		from buyer_task2 bt
+			join buyer_account ba on bt.buyer_account_id = ba.id
+			join task2 t on t.id = bt.task_id
+			join shop2 s on s.id = t.shop_id
+		<where>
+			bt.id in 
+			<foreach collection="ids" item="id" open="(" close=")"
+			separator=",">
+			#{id}
+			</foreach>
+			<if test="status != null">
+				and bt.status = #{status}
+			</if>
+		</where>
+	</select>
+	
+	<update id="updateExpressNoById" parameterType="models.BuyerTask2">
+		update buyer_task2
+		<set>
+			modify_time = #{modifyTime}
+			<if test="expressNo != null">
+				,express_no = #{expressNo}
+			</if>
+		</set>
+		where id = #{id} 
+		and status = 'EXPRESS_PRINT'
+	</update>
+	
+	<resultMap id="faBaoGuoVo" type="vos.FaBaoGuoVo">
+		<id property="id" column="id" />
+		<result property="order_sn" column="order_sn" />
+		<result property="send_addr" column="send_addr" />
+		<result property="send_name" column="send_name" />
+		<result property="send_tel" column="send_tel" />
+		<result property="receive_addr" column="receive_addr" />
+		<result property="receive_name" column="receive_name" />
+		<result property="receive_tel" column="receive_tel" />
+		<result property="goods_name" column="goods_name" />
+		<result property="comment" column="comment" />
+		<result property="expressNo" column="express_no" />
+		<result property="send_time" column="send_time" />
+		<result property="weight" column="weight" />
+		<result property="net_no" column="net_no" />
+		<result property="batch_num" column="batch_num" />
+		<result property="status" column="status" />
+	</resultMap>
+	
+	<!--发包裹  -->
+	<select id="findFaBaoGuoOrders" resultMap="faBaoGuoVo">
+		SELECT * FROM fabaoguo
+		<where>
+		1=1
+			<if test="status != null">
+				and status = #{status}
+			</if>
+			<if test="batchNum != null">
+				and batch_num = #{batchNum}
+			</if>
+		</where>
+		order by id
+		<if test="exportNo != null">
+			limit #{exportNo}
+		</if>
+		<if test="pageSize > 1">
+			limit #{startIndex}, #{pageSize}
+		</if>
+	</select>
+	
+	
+	<select id="findFaBaoGuoOrdersCount" resultType="java.lang.Integer">
+		SELECT count(1) FROM fabaoguo
+		<where>
+		1=1
+			<if test="status != null">
+				and status = #{status}
+			</if>
+			<if test="batchNum != null">
+				and batch_num = #{batchNum}
+			</if>
+		</where>
+		order by id
+	</select>
+	
+	<update id="batchFaBaoGuoModifyStatus">
+		update fabaoguo
+		set status = #{status}
+		where id in
+		<foreach collection="ids" item="id" open="(" close=")"
+			separator=",">
+			#{id}
+		</foreach>
+	</update>
+	
+	<delete id="batchDeleteFaBaoGuo">
+	DELETE FROM fabaoguo WHERE id in 
+		<foreach collection="ids" item="id" open="(" close=")"
+			separator=",">
+			#{id}
+		</foreach>
+	 AND status=#{status}
+	</delete>
+	
+	<insert id="inserFabaoguoOrders" statementType="PREPARED" useGeneratedKeys="true" keyProperty="id">
+		<selectKey keyProperty="id" resultType="long" order="AFTER">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey>
+		insert into `fabaoguo`
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			`order_sn`,
+			`send_addr`,
+			`send_name`,
+			`send_tel`,
+			`receive_addr`,
+			 receive_name,
+			 receive_tel,
+			 goods_name,
+			 comment,
+			 express_no,
+			 send_time,
+			 weight,
+			 net_no,
+			 batch_num,
+			 status
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			#{order_sn},
+			#{send_addr},
+			#{send_name},
+			#{send_tel},
+			#{receive_addr},
+			#{receive_name},
+			#{receive_tel},
+			#{goods_name},
+			#{comment},
+			#{expressNo},
+			 #{send_time},
+			#{weight},
+			#{net_no},
+			#{batch_num},
+			#{status}
+		</trim>
+	</insert>
+	<select id="findExpressCount" resultType="java.lang.Integer">
+	SELECT COUNT(express_type) FROM buyer_task2 bt LEFT JOIN task2 t ON
+	t.id=bt.task_id
+	<where>
+		bt.`status` NOT IN('CANCLED','WAIT_PAY','RECIEVED')
+		<if test="expressType != null">
+			AND t.express_type=#{expressType}
+		</if>
+		<if test="sellerNick != null">
+			AND t.seller_nick=#{sellerNick}
+		</if>
+		<if test="takeTime != null">
+			AND DATE_FORMAT(bt.take_time, '%Y-%m-%d')=#{takeTime}
+		</if>
+		<if test="startTime != null">
+			AND DATE_FORMAT(bt.take_time, '%Y-%m-%d')>=#{startTime}
+		</if>
+		<if test="endTime != null">
+			AND DATE_FORMAT(bt.take_time, '%Y-%m-%d')&lt;=#{endTime}
+		</if>
+	</where>
+</select>
+
+<select id="findFaBaoGuoCount" resultType="java.lang.Integer">
+	SELECT COUNT(*) FROM fabaoguo  
+	<where>
+		1=1
+		<if test="takeTime != null">
+			AND DATE_FORMAT(send_time, '%Y-%m-%d')=#{takeTime}
+		</if>
+		<if test="startTime != null">
+			AND DATE_FORMAT(send_time, '%Y-%m-%d')>=#{startTime}
+		</if>
+		<if test="endTime != null">
+			AND DATE_FORMAT(send_time, '%Y-%m-%d')&lt;=#{endTime}
+		</if>
+	</where>
+</select>
+</mapper>
+	

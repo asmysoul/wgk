@@ -1,0 +1,80 @@
+.normTable{
+	margin-top: 10px;
+}
+.normTable tbody td{
+	border-bottom: solid 1px #DEDEDE;
+	vertical-align: middle;
+}
+.normTable thead td{
+	background: #DEDEDE;
+	border-bottom: solid 1px #BBB;
+	color: #999;
+}
+/*-----------------------------------*/
+th{
+	text-align: left;
+	padding: 3px 8px;
+	line-height: 34px;
+}
+#taskFilterPanel{
+	height: 34px;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+#taskFilterPanel .stdColorButton{
+	line-height: 14px;
+}
+/*-----------------------------------*/
+#editWnd .modalWnd{
+	width:400px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+#txtFundAccountNo{
+	width:260px;
+	color:red
+}
+#btnSave{
+	background-color:  #26AA9F;
+}
+#btnSave:hover{
+	background-color: #2BBFB3;
+}
+/*-----------------------------------*/
+#bankEditWnd .modalWnd{
+	width:500px;
+	left:50%;
+	top:40%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+#bankEditWnd label{
+	float: left;
+	width: 90px;
+	margin-right: 10px;
+}
+#btnBankSave{
+	background-color:  #26AA9F;
+}
+#btnBankSave:hover{
+	background-color: #2BBFB3;
+}
+/*-----------------------------------*/
+#alipayEditWnd .modalWnd{
+	width:400px;
+	left:50%;
+	top:50%;
+	margin:-150px 0 0 -200px;
+	position: fixed;
+	z-index: 100;
+}
+#btnAlipaySave{
+	background-color:  #26AA9F;
+}
+#btnAlipaySave:hover{
+	background-color: #2BBFB3;
+}

@@ -1,0 +1,719 @@
+16-08-05 14:38:00 Set value of cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT,expiration=30d
+16-08-05 14:38:00 Set value of cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT,expiration=30d
+16-08-05 14:38:00 Set value of cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT,expiration=30d
+16-08-05 14:38:00 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME,expiration=30d
+16-08-05 14:38:00 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME,expiration=30d
+16-08-05 14:38:00 Set value of cache,key=SYS_CONFIGBUYER_AND_SHOP_TIME,expiration=30d
+16-08-05 14:38:00 Set value of cache,key=SYS_CONFIGBUYER_AND_SELLER_TIME,expiration=30d
+16-08-05 14:38:08 Get value from cache,key=TASK_NUM
+16-08-05 14:38:08 Cache hit missing,key=TASK_NUM
+16-08-05 14:38:08 Get from db and set cache TASK_NUM=429
+16-08-05 14:38:08 Set value of cache,key=TASK_NUM,expiration=1d
+16-08-05 14:38:08 Get value from cache,key=TASK_NUM
+16-08-05 14:38:08 Cache hit TASK_NUM=429
+16-08-05 14:38:12 Get value from cache,key=TASK_NUM
+16-08-05 14:38:12 Cache hit TASK_NUM=429
+16-08-05 14:38:12 Get value from cache,key=BUYER_TASK_STATS_256
+16-08-05 14:38:12 Cache hit missing,key=BUYER_TASK_STATS_256
+16-08-05 14:38:13 Set value of cache,key=BUYER_TASK_STATS_256,expiration=33706s
+16-08-05 14:38:13 Get value from cache,key=BUYER_TASK_STATS_512
+16-08-05 14:38:13 Cache hit missing,key=BUYER_TASK_STATS_512
+16-08-05 14:38:13 Set value of cache,key=BUYER_TASK_STATS_512,expiration=33706s
+16-08-05 14:38:13 Get value from cache,key=BUYER_TASK_STATS_768
+16-08-05 14:38:13 Cache hit missing,key=BUYER_TASK_STATS_768
+16-08-05 14:38:13 Set value of cache,key=BUYER_TASK_STATS_768,expiration=33706s
+16-08-05 14:38:13 Get value from cache,key=BUYER_TASK_STATS_1
+16-08-05 14:38:13 Cache hit missing,key=BUYER_TASK_STATS_1
+16-08-05 14:38:13 Set value of cache,key=BUYER_TASK_STATS_1,expiration=33706s
+16-08-05 14:38:13 Get value from cache,key=BUYER_TASK_STATS_257
+16-08-05 14:38:13 Cache hit missing,key=BUYER_TASK_STATS_257
+16-08-05 14:38:13 Set value of cache,key=BUYER_TASK_STATS_257,expiration=33706s
+16-08-05 14:38:23 Get value from cache,key=BUYER_TASK_STATS_511
+16-08-05 14:38:23 Cache hit missing,key=BUYER_TASK_STATS_511
+16-08-05 14:38:23 Set value of cache,key=BUYER_TASK_STATS_511,expiration=33696s
+16-08-05 14:38:23 Get value from cache,key=BUYER_TASK_STATS_767
+16-08-05 14:38:23 Cache hit missing,key=BUYER_TASK_STATS_767
+16-08-05 14:38:23 Set value of cache,key=BUYER_TASK_STATS_767,expiration=33696s
+16-08-05 14:38:26 Get value from cache,key=BUYER_TASK_STATS_765
+16-08-05 14:38:26 Cache hit missing,key=BUYER_TASK_STATS_765
+16-08-05 14:38:26 Set value of cache,key=BUYER_TASK_STATS_765,expiration=33693s
+16-08-05 14:38:26 Get value from cache,key=BUYER_TASK_STATS_254
+16-08-05 14:38:26 Cache hit missing,key=BUYER_TASK_STATS_254
+16-08-05 14:38:26 Set value of cache,key=BUYER_TASK_STATS_254,expiration=33693s
+16-08-05 14:38:26 Get value from cache,key=BUYER_TASK_STATS_510
+16-08-05 14:38:26 Cache hit missing,key=BUYER_TASK_STATS_510
+16-08-05 14:38:26 Set value of cache,key=BUYER_TASK_STATS_510,expiration=33693s
+16-08-05 14:38:26 Get value from cache,key=BUYER_TASK_STATS_766
+16-08-05 14:38:26 Cache hit missing,key=BUYER_TASK_STATS_766
+16-08-05 14:38:26 Set value of cache,key=BUYER_TASK_STATS_766,expiration=33693s
+16-08-05 14:38:26 Get value from cache,key=BUYER_TASK_STATS_255
+16-08-05 14:38:26 Cache hit missing,key=BUYER_TASK_STATS_255
+16-08-05 14:38:26 Set value of cache,key=BUYER_TASK_STATS_255,expiration=33693s
+16-08-05 14:38:27 Get value from cache,key=BUYER_TASK_STATS_511
+16-08-05 14:38:28 Get value from cache,key=BUYER_TASK_STATS_767
+16-08-05 14:39:16 Get value from cache,key=USER_1677
+16-08-05 14:39:16 Cache hit missing,key=USER_1677
+16-08-05 14:39:16 Set value of cache,key=USER_1677,expiration=3d
+16-08-05 14:39:17 Get value from cache,key=USER_1677
+16-08-05 14:39:19 Get value from cache,key=USER_1677
+16-08-05 14:39:20 Get value from cache,key=USER_1677
+16-08-05 14:39:20 Get value from cache,key=USER_1677
+16-08-05 14:39:48 Get value from cache,key=TASK_NUM
+16-08-05 14:39:48 Cache hit TASK_NUM=429
+16-08-05 14:39:48 Get value from cache,key=BUYER_TASK_STATS_256
+16-08-05 14:39:48 Get value from cache,key=BUYER_TASK_STATS_512
+16-08-05 14:39:48 Get value from cache,key=BUYER_TASK_STATS_768
+16-08-05 14:39:48 Get value from cache,key=BUYER_TASK_STATS_1
+16-08-05 14:39:48 Get value from cache,key=BUYER_TASK_STATS_257
+16-08-05 14:40:04 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 14:40:04 Cache hit missing,key=BUYER_TASK_STATS_836
+16-08-05 14:40:04 Set value of cache,key=BUYER_TASK_STATS_836,expiration=33595s
+16-08-05 14:40:04 Get value from cache,key=BUYER_TASK_STATS_838
+16-08-05 14:40:04 Cache hit missing,key=BUYER_TASK_STATS_838
+16-08-05 14:40:04 Set value of cache,key=BUYER_TASK_STATS_838,expiration=33595s
+16-08-05 14:40:14 Get value from cache,key=USER_1678
+16-08-05 14:40:14 Cache hit missing,key=USER_1678
+16-08-05 14:40:14 Set value of cache,key=USER_1678,expiration=3d
+16-08-05 14:40:15 Get value from cache,key=USER_1678
+16-08-05 14:40:15 Get value from cache,key=USER_1678
+16-08-05 14:40:17 Get value from cache,key=USER_1678
+16-08-05 14:40:17 Get value from cache,key=USER_1678
+16-08-05 14:40:19 Get value from cache,key=USER_1678
+16-08-05 14:40:19 Get value from cache,key=USER_1678
+16-08-05 14:40:20 Get value from cache,key=USER_1678
+16-08-05 14:40:42 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 14:43:29 Get value from cache,key=USER_1678
+16-08-05 14:43:31 Get value from cache,key=USER_1678
+16-08-05 14:43:33 Get value from cache,key=USER_1678
+16-08-05 14:43:34 Get value from cache,key=USER_1678
+16-08-05 14:43:37 Get value from cache,key=TASK_NUM
+16-08-05 14:43:37 Cache hit TASK_NUM=429
+16-08-05 14:43:38 Get value from cache,key=BUYER_TASK_STATS_256
+16-08-05 14:43:38 Get value from cache,key=BUYER_TASK_STATS_512
+16-08-05 14:43:38 Get value from cache,key=BUYER_TASK_STATS_768
+16-08-05 14:43:38 Get value from cache,key=BUYER_TASK_STATS_1
+16-08-05 14:43:38 Get value from cache,key=BUYER_TASK_STATS_257
+16-08-05 14:43:44 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 14:43:44 Get value from cache,key=BUYER_TASK_STATS_838
+16-08-05 14:43:44 Get value from cache,key=BUYER_TASK_STATS_839
+16-08-05 14:43:44 Cache hit missing,key=BUYER_TASK_STATS_839
+16-08-05 14:43:44 Set value of cache,key=BUYER_TASK_STATS_839,expiration=33375s
+16-08-05 14:47:06 Get value from cache,key=TASK_NUM
+16-08-05 14:47:06 Cache hit TASK_NUM=429
+16-08-05 14:47:18 Get value from cache,key=TASK_NUM
+16-08-05 14:47:18 Cache hit TASK_NUM=429
+16-08-05 14:47:18 Get value from cache,key=TASK_NUM
+16-08-05 14:47:18 Cache hit TASK_NUM=429
+16-08-05 14:47:19 Get value from cache,key=TASK_NUM
+16-08-05 14:47:19 Cache hit TASK_NUM=429
+16-08-05 14:47:26 Get value from cache,key=USER_1703
+16-08-05 14:47:26 Cache hit missing,key=USER_1703
+16-08-05 14:47:26 Set value of cache,key=USER_1703,expiration=3d
+16-08-05 14:47:26 Get value from cache,key=USER_1703
+16-08-05 14:47:26 Get value from cache,key=USER_1703
+16-08-05 14:47:28 Get value from cache,key=USER_1703
+16-08-05 14:47:28 Get value from cache,key=USER_1703
+16-08-05 14:47:40 Get value from cache,key=USER_1703
+16-08-05 14:47:41 Get value from cache,key=USER_1703
+16-08-05 14:47:50 Get value from cache,key=USER_1703
+16-08-05 14:47:51 Get value from cache,key=USER_1703
+16-08-05 14:47:54 Get value from cache,key=TASK_NUM
+16-08-05 14:47:54 Cache hit TASK_NUM=429
+16-08-05 14:47:54 Get value from cache,key=TASK_NUM
+16-08-05 14:47:54 Cache hit TASK_NUM=429
+16-08-05 14:47:56 Get value from cache,key=TASK_NUM
+16-08-05 14:47:56 Cache hit TASK_NUM=429
+16-08-05 14:47:57 Get value from cache,key=USER_1697
+16-08-05 14:47:57 Cache hit missing,key=USER_1697
+16-08-05 14:47:57 Set value of cache,key=USER_1697,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1674
+16-08-05 14:47:57 Cache hit missing,key=USER_1674
+16-08-05 14:47:57 Set value of cache,key=USER_1674,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1673
+16-08-05 14:47:57 Cache hit missing,key=USER_1673
+16-08-05 14:47:57 Set value of cache,key=USER_1673,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1672
+16-08-05 14:47:57 Cache hit missing,key=USER_1672
+16-08-05 14:47:57 Set value of cache,key=USER_1672,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1671
+16-08-05 14:47:57 Cache hit missing,key=USER_1671
+16-08-05 14:47:57 Set value of cache,key=USER_1671,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1668
+16-08-05 14:47:57 Cache hit missing,key=USER_1668
+16-08-05 14:47:57 Set value of cache,key=USER_1668,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1667
+16-08-05 14:47:57 Cache hit missing,key=USER_1667
+16-08-05 14:47:57 Set value of cache,key=USER_1667,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1666
+16-08-05 14:47:57 Cache hit missing,key=USER_1666
+16-08-05 14:47:57 Set value of cache,key=USER_1666,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1665
+16-08-05 14:47:57 Cache hit missing,key=USER_1665
+16-08-05 14:47:57 Set value of cache,key=USER_1665,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1664
+16-08-05 14:47:57 Cache hit missing,key=USER_1664
+16-08-05 14:47:57 Set value of cache,key=USER_1664,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1663
+16-08-05 14:47:57 Cache hit missing,key=USER_1663
+16-08-05 14:47:57 Set value of cache,key=USER_1663,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1662
+16-08-05 14:47:57 Cache hit missing,key=USER_1662
+16-08-05 14:47:57 Set value of cache,key=USER_1662,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1661
+16-08-05 14:47:57 Cache hit missing,key=USER_1661
+16-08-05 14:47:57 Set value of cache,key=USER_1661,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1660
+16-08-05 14:47:57 Cache hit missing,key=USER_1660
+16-08-05 14:47:57 Set value of cache,key=USER_1660,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1658
+16-08-05 14:47:57 Cache hit missing,key=USER_1658
+16-08-05 14:47:57 Set value of cache,key=USER_1658,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1657
+16-08-05 14:47:57 Cache hit missing,key=USER_1657
+16-08-05 14:47:57 Set value of cache,key=USER_1657,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1656
+16-08-05 14:47:57 Cache hit missing,key=USER_1656
+16-08-05 14:47:57 Set value of cache,key=USER_1656,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1654
+16-08-05 14:47:57 Cache hit missing,key=USER_1654
+16-08-05 14:47:57 Set value of cache,key=USER_1654,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1653
+16-08-05 14:47:57 Cache hit missing,key=USER_1653
+16-08-05 14:47:57 Set value of cache,key=USER_1653,expiration=3d
+16-08-05 14:47:57 Get value from cache,key=USER_1652
+16-08-05 14:47:57 Cache hit missing,key=USER_1652
+16-08-05 14:47:57 Set value of cache,key=USER_1652,expiration=3d
+16-08-05 14:48:12 Get value from cache,key=USER_1697
+16-08-05 14:48:12 Get value from cache,key=USER_1674
+16-08-05 14:48:12 Get value from cache,key=USER_1673
+16-08-05 14:48:12 Get value from cache,key=USER_1672
+16-08-05 14:48:12 Get value from cache,key=USER_1671
+16-08-05 14:48:12 Get value from cache,key=USER_1668
+16-08-05 14:48:12 Get value from cache,key=USER_1667
+16-08-05 14:48:12 Get value from cache,key=USER_1666
+16-08-05 14:48:12 Get value from cache,key=USER_1665
+16-08-05 14:48:12 Get value from cache,key=USER_1664
+16-08-05 14:48:12 Get value from cache,key=USER_1663
+16-08-05 14:48:12 Get value from cache,key=USER_1662
+16-08-05 14:48:12 Get value from cache,key=USER_1661
+16-08-05 14:48:12 Get value from cache,key=USER_1660
+16-08-05 14:48:12 Get value from cache,key=USER_1658
+16-08-05 14:48:12 Get value from cache,key=USER_1657
+16-08-05 14:48:12 Get value from cache,key=USER_1656
+16-08-05 14:48:12 Get value from cache,key=USER_1654
+16-08-05 14:48:12 Get value from cache,key=USER_1653
+16-08-05 14:48:12 Get value from cache,key=USER_1652
+16-08-05 14:48:30 Get value from cache,key=TASK_NUM
+16-08-05 14:48:30 Cache hit TASK_NUM=429
+16-08-05 14:48:30 Get value from cache,key=USER_1697
+16-08-05 14:48:30 Get value from cache,key=USER_1674
+16-08-05 14:48:30 Get value from cache,key=USER_1673
+16-08-05 14:48:30 Get value from cache,key=USER_1672
+16-08-05 14:48:30 Get value from cache,key=USER_1671
+16-08-05 14:48:30 Get value from cache,key=USER_1668
+16-08-05 14:48:30 Get value from cache,key=USER_1667
+16-08-05 14:48:30 Get value from cache,key=USER_1666
+16-08-05 14:48:30 Get value from cache,key=USER_1665
+16-08-05 14:48:30 Get value from cache,key=USER_1664
+16-08-05 14:48:30 Get value from cache,key=USER_1663
+16-08-05 14:48:30 Get value from cache,key=USER_1662
+16-08-05 14:48:30 Get value from cache,key=USER_1661
+16-08-05 14:48:30 Get value from cache,key=USER_1660
+16-08-05 14:48:30 Get value from cache,key=USER_1658
+16-08-05 14:48:30 Get value from cache,key=USER_1657
+16-08-05 14:48:30 Get value from cache,key=USER_1656
+16-08-05 14:48:30 Get value from cache,key=USER_1654
+16-08-05 14:48:30 Get value from cache,key=USER_1653
+16-08-05 14:48:30 Get value from cache,key=USER_1652
+16-08-05 14:48:34 Get value from cache,key=USER_212
+16-08-05 14:48:34 Cache hit missing,key=USER_212
+16-08-05 14:48:34 Set value of cache,key=USER_212,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_1117
+16-08-05 14:48:39 Cache hit missing,key=USER_1117
+16-08-05 14:48:39 Set value of cache,key=USER_1117,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_174
+16-08-05 14:48:39 Cache hit missing,key=USER_174
+16-08-05 14:48:39 Set value of cache,key=USER_174,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_1699
+16-08-05 14:48:39 Cache hit missing,key=USER_1699
+16-08-05 14:48:39 Set value of cache,key=USER_1699,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_837
+16-08-05 14:48:39 Cache hit missing,key=USER_837
+16-08-05 14:48:39 Set value of cache,key=USER_837,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_1223
+16-08-05 14:48:39 Cache hit missing,key=USER_1223
+16-08-05 14:48:39 Set value of cache,key=USER_1223,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_138
+16-08-05 14:48:39 Cache hit missing,key=USER_138
+16-08-05 14:48:39 Set value of cache,key=USER_138,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_182
+16-08-05 14:48:39 Cache hit missing,key=USER_182
+16-08-05 14:48:39 Set value of cache,key=USER_182,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_961
+16-08-05 14:48:39 Cache hit missing,key=USER_961
+16-08-05 14:48:39 Set value of cache,key=USER_961,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_1675
+16-08-05 14:48:39 Cache hit missing,key=USER_1675
+16-08-05 14:48:39 Set value of cache,key=USER_1675,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_20
+16-08-05 14:48:39 Cache hit missing,key=USER_20
+16-08-05 14:48:39 Set value of cache,key=USER_20,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_202
+16-08-05 14:48:39 Cache hit missing,key=USER_202
+16-08-05 14:48:39 Set value of cache,key=USER_202,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_169
+16-08-05 14:48:39 Cache hit missing,key=USER_169
+16-08-05 14:48:39 Set value of cache,key=USER_169,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_1681
+16-08-05 14:48:39 Cache hit missing,key=USER_1681
+16-08-05 14:48:39 Set value of cache,key=USER_1681,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_524
+16-08-05 14:48:39 Cache hit missing,key=USER_524
+16-08-05 14:48:39 Set value of cache,key=USER_524,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_178
+16-08-05 14:48:39 Cache hit missing,key=USER_178
+16-08-05 14:48:39 Set value of cache,key=USER_178,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_933
+16-08-05 14:48:39 Cache hit missing,key=USER_933
+16-08-05 14:48:39 Set value of cache,key=USER_933,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_187
+16-08-05 14:48:39 Cache hit missing,key=USER_187
+16-08-05 14:48:39 Set value of cache,key=USER_187,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_1670
+16-08-05 14:48:39 Cache hit missing,key=USER_1670
+16-08-05 14:48:39 Set value of cache,key=USER_1670,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_1232
+16-08-05 14:48:39 Cache hit missing,key=USER_1232
+16-08-05 14:48:39 Set value of cache,key=USER_1232,expiration=3d
+16-08-05 14:48:39 Get value from cache,key=USER_1582
+16-08-05 14:48:39 Cache hit missing,key=USER_1582
+16-08-05 14:48:39 Set value of cache,key=USER_1582,expiration=3d
+16-08-05 14:48:53 Get value from cache,key=TASK_NUM
+16-08-05 14:48:53 Cache hit TASK_NUM=429
+16-08-05 14:48:53 Get value from cache,key=USER_1697
+16-08-05 14:48:53 Get value from cache,key=USER_1674
+16-08-05 14:48:53 Get value from cache,key=USER_1673
+16-08-05 14:48:53 Get value from cache,key=USER_1672
+16-08-05 14:48:53 Get value from cache,key=USER_1671
+16-08-05 14:48:53 Get value from cache,key=USER_1668
+16-08-05 14:48:53 Get value from cache,key=USER_1667
+16-08-05 14:48:53 Get value from cache,key=USER_1666
+16-08-05 14:48:53 Get value from cache,key=USER_1665
+16-08-05 14:48:53 Get value from cache,key=USER_1664
+16-08-05 14:48:53 Get value from cache,key=USER_1663
+16-08-05 14:48:53 Get value from cache,key=USER_1662
+16-08-05 14:48:53 Get value from cache,key=USER_1661
+16-08-05 14:48:53 Get value from cache,key=USER_1660
+16-08-05 14:48:53 Get value from cache,key=USER_1658
+16-08-05 14:48:53 Get value from cache,key=USER_1657
+16-08-05 14:48:53 Get value from cache,key=USER_1656
+16-08-05 14:48:53 Get value from cache,key=USER_1654
+16-08-05 14:48:53 Get value from cache,key=USER_1653
+16-08-05 14:48:53 Get value from cache,key=USER_1652
+16-08-05 14:49:02 Get value from cache,key=USER_1703
+16-08-05 15:11:12 Get value from cache,key=TASK_NUM
+16-08-05 15:11:12 Cache hit TASK_NUM=429
+16-08-05 15:11:12 Get value from cache,key=BUYER_TASK_STATS_818
+16-08-05 15:11:12 Cache hit missing,key=BUYER_TASK_STATS_818
+16-08-05 15:11:12 Set value of cache,key=BUYER_TASK_STATS_818,expiration=31727s
+16-08-05 15:11:12 Get value from cache,key=BUYER_TASK_STATS_820
+16-08-05 15:11:12 Cache hit missing,key=BUYER_TASK_STATS_820
+16-08-05 15:11:13 Set value of cache,key=BUYER_TASK_STATS_820,expiration=31726s
+16-08-05 15:11:13 Get value from cache,key=BUYER_TASK_STATS_830
+16-08-05 15:11:13 Cache hit missing,key=BUYER_TASK_STATS_830
+16-08-05 15:11:13 Set value of cache,key=BUYER_TASK_STATS_830,expiration=31726s
+16-08-05 15:11:13 Get value from cache,key=BUYER_TASK_STATS_831
+16-08-05 15:11:13 Cache hit missing,key=BUYER_TASK_STATS_831
+16-08-05 15:11:13 Set value of cache,key=BUYER_TASK_STATS_831,expiration=31726s
+16-08-05 15:11:13 Get value from cache,key=BUYER_TASK_STATS_832
+16-08-05 15:11:13 Cache hit missing,key=BUYER_TASK_STATS_832
+16-08-05 15:11:13 Set value of cache,key=BUYER_TASK_STATS_832,expiration=31726s
+16-08-05 15:11:15 Get value from cache,key=BUYER_TASK_STATS_833
+16-08-05 15:11:15 Cache hit missing,key=BUYER_TASK_STATS_833
+16-08-05 15:11:15 Set value of cache,key=BUYER_TASK_STATS_833,expiration=31724s
+16-08-05 15:11:15 Get value from cache,key=BUYER_TASK_STATS_834
+16-08-05 15:11:15 Cache hit missing,key=BUYER_TASK_STATS_834
+16-08-05 15:11:15 Set value of cache,key=BUYER_TASK_STATS_834,expiration=31724s
+16-08-05 15:11:15 Get value from cache,key=BUYER_TASK_STATS_839
+16-08-05 15:11:15 Get value from cache,key=BUYER_TASK_STATS_840
+16-08-05 15:11:15 Cache hit missing,key=BUYER_TASK_STATS_840
+16-08-05 15:11:15 Set value of cache,key=BUYER_TASK_STATS_840,expiration=31724s
+16-08-05 15:11:21 Get value from cache,key=BUYER_TASK_STATS_818
+16-08-05 15:11:21 Get value from cache,key=BUYER_TASK_STATS_820
+16-08-05 15:11:21 Get value from cache,key=BUYER_TASK_STATS_830
+16-08-05 15:11:21 Get value from cache,key=BUYER_TASK_STATS_831
+16-08-05 15:11:21 Get value from cache,key=BUYER_TASK_STATS_832
+16-08-05 15:11:26 Get value from cache,key=BUYER_TASK_STATS_833
+16-08-05 15:11:26 Get value from cache,key=BUYER_TASK_STATS_834
+16-08-05 15:11:26 Get value from cache,key=BUYER_TASK_STATS_839
+16-08-05 15:11:26 Get value from cache,key=BUYER_TASK_STATS_840
+16-08-05 15:11:32 Get value from cache,key=BUYER_TASK_STATS_818
+16-08-05 15:11:32 Get value from cache,key=BUYER_TASK_STATS_820
+16-08-05 15:11:32 Get value from cache,key=BUYER_TASK_STATS_830
+16-08-05 15:11:32 Get value from cache,key=BUYER_TASK_STATS_831
+16-08-05 15:11:32 Get value from cache,key=BUYER_TASK_STATS_832
+16-08-05 15:14:16 Get value from cache,key=USER_1677
+16-08-05 15:14:16 Get value from cache,key=USER_1677
+16-08-05 15:14:18 Get value from cache,key=USER_1677
+16-08-05 15:14:18 Get value from cache,key=USER_1677
+16-08-05 15:14:20 Get value from cache,key=USER_1677
+16-08-05 15:14:20 Get value from cache,key=USER_1677
+16-08-05 15:14:20 Get value from cache,key=FILE_UPTOKEN_
+16-08-05 15:14:20 Cache hit missing,key=FILE_UPTOKEN_
+16-08-05 15:14:20 Set value of cache,key=FILE_UPTOKEN_,expiration=3h
+16-08-05 16:54:04 Set value of cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT,expiration=30d
+16-08-05 16:54:04 Set value of cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT,expiration=30d
+16-08-05 16:54:04 Set value of cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT,expiration=30d
+16-08-05 16:54:04 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME,expiration=30d
+16-08-05 16:54:04 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME,expiration=30d
+16-08-05 16:54:04 Set value of cache,key=SYS_CONFIGBUYER_AND_SHOP_TIME,expiration=30d
+16-08-05 16:54:04 Set value of cache,key=SYS_CONFIGBUYER_AND_SELLER_TIME,expiration=30d
+16-08-05 16:54:19 Get value from cache,key=USER_1678
+16-08-05 16:54:19 Cache hit missing,key=USER_1678
+16-08-05 16:54:19 Set value of cache,key=USER_1678,expiration=3d
+16-08-05 16:54:21 Get value from cache,key=USER_1678
+16-08-05 16:54:21 Get value from cache,key=USER_1678
+16-08-05 16:54:27 Get value from cache,key=USER_1678
+16-08-05 16:54:27 Get value from cache,key=USER_1678
+16-08-05 16:54:28 Get value from cache,key=USER_1678
+16-08-05 16:54:28 Get value from cache,key=USER_1678
+16-08-05 16:54:28 Get value from cache,key=USER_1678
+16-08-05 16:54:34 Get value from cache,key=USER_1678
+16-08-05 16:54:34 Get value from cache,key=USER_1678
+16-08-05 16:54:36 Get value from cache,key=USER_1678
+16-08-05 16:54:36 Get value from cache,key=USER_1678
+16-08-05 16:54:37 Get value from cache,key=USER_1678
+16-08-05 16:54:37 Get value from cache,key=USER_1678
+16-08-05 16:54:37 Get value from cache,key=USER_1678
+16-08-05 16:54:37 Get value from cache,key=USER_1678
+16-08-05 16:54:39 Get value from cache,key=USER_1678
+16-08-05 16:54:40 Get value from cache,key=USER_1678
+16-08-05 16:54:40 Get value from cache,key=USER_1678
+16-08-05 16:54:40 Get value from cache,key=USER_1678
+16-08-05 16:54:40 Get value from cache,key=USER_1678
+16-08-05 16:54:40 Get value from cache,key=USER_65
+16-08-05 16:54:40 Cache hit missing,key=USER_65
+16-08-05 16:54:40 Set value of cache,key=USER_65,expiration=3d
+16-08-05 16:54:40 Get value from cache,key=USER_65
+16-08-05 16:54:40 Get value from cache,key=USER_65
+16-08-05 16:54:40 Get value from cache,key=USER_65
+16-08-05 16:54:40 Get value from cache,key=USER_698
+16-08-05 16:54:40 Cache hit missing,key=USER_698
+16-08-05 16:54:40 Set value of cache,key=USER_698,expiration=3d
+16-08-05 16:54:40 Get value from cache,key=USER_698
+16-08-05 16:54:40 Get value from cache,key=USER_112
+16-08-05 16:54:40 Cache hit missing,key=USER_112
+16-08-05 16:54:40 Set value of cache,key=USER_112,expiration=3d
+16-08-05 16:54:40 Get value from cache,key=USER_65
+16-08-05 16:54:40 Get value from cache,key=USER_65
+16-08-05 16:54:40 Get value from cache,key=USER_66
+16-08-05 16:54:40 Cache hit missing,key=USER_66
+16-08-05 16:54:40 Set value of cache,key=USER_66,expiration=3d
+16-08-05 16:54:40 Get value from cache,key=USER_898
+16-08-05 16:54:40 Cache hit missing,key=USER_898
+16-08-05 16:54:40 Set value of cache,key=USER_898,expiration=3d
+16-08-05 16:54:40 Get value from cache,key=USER_898
+16-08-05 16:54:40 Get value from cache,key=USER_712
+16-08-05 16:54:40 Cache hit missing,key=USER_712
+16-08-05 16:54:40 Set value of cache,key=USER_712,expiration=3d
+16-08-05 16:54:40 Get value from cache,key=USER_712
+16-08-05 16:54:40 Get value from cache,key=USER_712
+16-08-05 16:54:40 Get value from cache,key=USER_712
+16-08-05 16:54:40 Get value from cache,key=USER_712
+16-08-05 16:54:40 Get value from cache,key=USER_481
+16-08-05 16:54:40 Cache hit missing,key=USER_481
+16-08-05 16:54:40 Set value of cache,key=USER_481,expiration=3d
+16-08-05 16:54:40 Get value from cache,key=USER_117
+16-08-05 16:54:40 Cache hit missing,key=USER_117
+16-08-05 16:54:40 Set value of cache,key=USER_117,expiration=3d
+16-08-05 16:54:40 Get value from cache,key=USER_1068
+16-08-05 16:54:40 Cache hit missing,key=USER_1068
+16-08-05 16:54:40 Set value of cache,key=USER_1068,expiration=3d
+16-08-05 16:54:40 Get value from cache,key=USER_276
+16-08-05 16:54:40 Cache hit missing,key=USER_276
+16-08-05 16:54:40 Set value of cache,key=USER_276,expiration=3d
+16-08-05 16:54:40 Get value from cache,key=USER_712
+16-08-05 16:54:40 Get value from cache,key=USER_712
+16-08-05 16:54:40 Get value from cache,key=USER_712
+16-08-05 16:54:40 Get value from cache,key=USER_712
+16-08-05 16:54:40 Get value from cache,key=USER_712
+16-08-05 16:54:40 Get value from cache,key=USER_712
+16-08-05 16:54:40 Get value from cache,key=USER_712
+16-08-05 16:54:40 Get value from cache,key=USER_909
+16-08-05 16:54:40 Cache hit missing,key=USER_909
+16-08-05 16:54:40 Set value of cache,key=USER_909,expiration=3d
+16-08-05 16:54:40 Get value from cache,key=USER_1490
+16-08-05 16:54:40 Cache hit missing,key=USER_1490
+16-08-05 16:54:40 Set value of cache,key=USER_1490,expiration=3d
+16-08-05 16:54:41 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:41 Cache hit missing,key=BUYER_TASK_STATS_836
+16-08-05 16:54:41 Set value of cache,key=BUYER_TASK_STATS_836,expiration=25518s
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:41 Get value from cache,key=USER_65
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:41 Get value from cache,key=USER_65
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:41 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:41 Get value from cache,key=USER_65
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:41 Get value from cache,key=USER_65
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:41 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:41 Get value from cache,key=USER_65
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:41 Get value from cache,key=USER_65
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:41 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:41 Get value from cache,key=USER_65
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:41 Get value from cache,key=USER_65
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:41 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:41 Get value from cache,key=USER_698
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:41 Get value from cache,key=USER_698
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:41 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:41 Get value from cache,key=USER_698
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:41 Get value from cache,key=USER_698
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:41 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:41 Get value from cache,key=USER_112
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:41 Get value from cache,key=USER_112
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:41 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:41 Get value from cache,key=USER_65
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:41 Get value from cache,key=USER_65
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:41 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:41 Get value from cache,key=USER_65
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:41 Get value from cache,key=USER_65
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:41 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:41 Get value from cache,key=USER_66
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:41 Get value from cache,key=USER_66
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:41 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:41 Get value from cache,key=USER_898
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:41 Get value from cache,key=USER_898
+16-08-05 16:54:41 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:42 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:42 Get value from cache,key=USER_898
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:42 Get value from cache,key=USER_898
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:42 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:42 Get value from cache,key=USER_712
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:42 Get value from cache,key=USER_712
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:42 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:42 Get value from cache,key=USER_712
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:42 Get value from cache,key=USER_712
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:42 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:42 Get value from cache,key=USER_712
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:42 Get value from cache,key=USER_712
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:42 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:42 Get value from cache,key=USER_712
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:42 Get value from cache,key=USER_712
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:42 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:42 Get value from cache,key=USER_712
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:42 Get value from cache,key=USER_712
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:42 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:42 Get value from cache,key=USER_481
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:42 Get value from cache,key=USER_481
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:42 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:42 Get value from cache,key=USER_117
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:42 Get value from cache,key=USER_117
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:42 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:42 Get value from cache,key=USER_1068
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:42 Get value from cache,key=USER_1068
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:42 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:42 Get value from cache,key=USER_276
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:42 Get value from cache,key=USER_276
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:42 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:42 Get value from cache,key=USER_712
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:42 Get value from cache,key=USER_712
+16-08-05 16:54:42 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:43 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:43 Get value from cache,key=USER_712
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:43 Get value from cache,key=USER_712
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:43 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:43 Get value from cache,key=USER_712
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:43 Get value from cache,key=USER_712
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:43 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:43 Get value from cache,key=USER_712
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:43 Get value from cache,key=USER_712
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:43 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:43 Get value from cache,key=USER_712
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:43 Get value from cache,key=USER_712
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:43 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:43 Get value from cache,key=USER_712
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:43 Get value from cache,key=USER_712
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:43 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:43 Get value from cache,key=USER_712
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:43 Get value from cache,key=USER_712
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:43 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:43 Get value from cache,key=USER_909
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:43 Get value from cache,key=USER_909
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:43 Get value from cache,key=BUYER_TASK_STATS_836
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT
+16-08-05 16:54:43 Get value from cache,key=USER_1490
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME
+16-08-05 16:54:43 Get value from cache,key=USER_1490
+16-08-05 16:54:43 Get value from cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME
+16-08-05 16:54:43 Get value from cache,key=USER_1678
+16-08-05 16:56:06 Set value of cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT,expiration=30d
+16-08-05 16:56:06 Set value of cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT,expiration=30d
+16-08-05 16:56:06 Set value of cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT,expiration=30d
+16-08-05 16:56:06 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME,expiration=30d
+16-08-05 16:56:06 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME,expiration=30d
+16-08-05 16:56:06 Set value of cache,key=SYS_CONFIGBUYER_AND_SHOP_TIME,expiration=30d
+16-08-05 16:56:06 Set value of cache,key=SYS_CONFIGBUYER_AND_SELLER_TIME,expiration=30d
+16-08-05 16:57:18 Get value from cache,key=USER_1678
+16-08-05 16:57:18 Cache hit missing,key=USER_1678
+16-08-05 16:57:18 Set value of cache,key=USER_1678,expiration=3d
+16-08-05 17:05:29 Get value from cache,key=USER_1678
+16-08-05 17:09:51 Get value from cache,key=USER_1678
+16-08-05 17:16:08 Set value of cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT,expiration=30d
+16-08-05 17:16:08 Set value of cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT,expiration=30d
+16-08-05 17:16:08 Set value of cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT,expiration=30d
+16-08-05 17:16:08 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME,expiration=30d
+16-08-05 17:16:08 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME,expiration=30d
+16-08-05 17:16:08 Set value of cache,key=SYS_CONFIGBUYER_AND_SHOP_TIME,expiration=30d
+16-08-05 17:16:08 Set value of cache,key=SYS_CONFIGBUYER_AND_SELLER_TIME,expiration=30d
+16-08-05 17:21:06 Set value of cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT,expiration=30d
+16-08-05 17:21:06 Set value of cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT,expiration=30d
+16-08-05 17:21:06 Set value of cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT,expiration=30d
+16-08-05 17:21:06 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME,expiration=30d
+16-08-05 17:21:06 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME,expiration=30d
+16-08-05 17:21:06 Set value of cache,key=SYS_CONFIGBUYER_AND_SHOP_TIME,expiration=30d
+16-08-05 17:21:06 Set value of cache,key=SYS_CONFIGBUYER_AND_SELLER_TIME,expiration=30d
+16-08-05 17:21:12 Get value from cache,key=USER_1678
+16-08-05 17:21:12 Cache hit missing,key=USER_1678
+16-08-05 17:21:12 Set value of cache,key=USER_1678,expiration=3d

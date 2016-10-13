@@ -1,0 +1,20 @@
+16-07-12 15:47:46 Set value of cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT,expiration=30d
+16-07-12 15:47:46 Set value of cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT,expiration=30d
+16-07-12 15:47:46 Set value of cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT,expiration=30d
+16-07-12 15:47:46 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME,expiration=30d
+16-07-12 15:47:46 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME,expiration=30d
+16-07-12 15:47:46 Set value of cache,key=SYS_CONFIGBUYER_AND_SHOP_TIME,expiration=30d
+16-07-12 15:47:46 Set value of cache,key=SYS_CONFIGBUYER_AND_SELLER_TIME,expiration=30d
+16-07-12 15:48:43 Get value from cache,key=TASK_NUM
+16-07-12 15:48:43 Cache hit missing,key=TASK_NUM
+16-07-12 15:48:43 Get from db and set cache TASK_NUM=427
+16-07-12 15:48:43 Set value of cache,key=TASK_NUM,expiration=1d
+16-07-12 15:48:44 Get value from cache,key=TASK_NUM
+16-07-12 15:48:44 Cache hit TASK_NUM=427
+16-07-12 16:48:55 Set value of cache,key=SYS_CONFIGBUYER_TASK_MONTH_COUNT,expiration=30d
+16-07-12 16:48:55 Set value of cache,key=SYS_CONFIGBUYER_TASK_WEEK_COUNT,expiration=30d
+16-07-12 16:48:55 Set value of cache,key=SYS_CONFIGBUYER_TASK_DAY_COUNT,expiration=30d
+16-07-12 16:48:55 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_ITEM_TIME,expiration=30d
+16-07-12 16:48:55 Set value of cache,key=SYS_CONFIGBUYER_ACOUNT_AND_SHOP_TIME,expiration=30d
+16-07-12 16:48:55 Set value of cache,key=SYS_CONFIGBUYER_AND_SHOP_TIME,expiration=30d
+16-07-12 16:48:55 Set value of cache,key=SYS_CONFIGBUYER_AND_SELLER_TIME,expiration=30d

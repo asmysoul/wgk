@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.ShopMapper">
+	<resultMap id="BaseResultMapVo" type="vos.ShopSearchVo">
+	</resultMap>
+	
+	<sql id="where">
+		<where>
+			<if test="userNick !=null">
+				and u.nick like '%${userNick}%'
+			</if>
+			<if test="nick !=null">
+				and s.nick like '%${nick}%'
+			</if>
+			<if test="createTimeStart !=null">
+				<![CDATA[ and s.create_time>=#{createTimeStart} ]]>
+			</if>
+			<if test="createTimeEnd !=null">
+				<![CDATA[ and s.create_time<=#{createTimeEnd} ]]>
+			</if>
+		</where>
+	</sql>
+	
+	<select id="selectAll" resultMap="BaseResultMapVo">
+		select u.nick userNick,s.id,s.platform,s.url,s.name,s.nick,s.address,s.create_time,s.seller_name,s.mobile,s.street,s.branch from shop s
+		left join user u on u.id = s.seller_id
+		<include refid="where"/>
+		order by s.create_time desc
+		limit #{startIndex}, #{pageSize}
+	</select>
+	<select id="count" resultType="java.lang.Integer">
+		select count(1) from shop s left join user u on u.id = s.seller_id
+		<include refid="where"/>
+	</select>
+</mapper>
+	

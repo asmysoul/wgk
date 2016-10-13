@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="models.mappers.BuyerConfigMapper">
+	<resultMap id="BaseResultMap" type="models.BuyerConfig">
+	</resultMap>
+	<update id="updateByConfig" parameterType="models.BuyerConfig">
+		update buyer_config
+		<set>
+			<if test="isClearView !=null">
+				is_clear_view = #{isClearView},
+			</if>
+		</set>
+		where buyer_id = #{buyerId}
+	</update>
+	
+	<insert id="insert" parameterType="models.BuyerConfig">
+		insert into buyer_config
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			id,
+			<if test="buyerId != null">
+				buyer_id,
+			</if> 
+			<if test="isClearView != null">
+				is_clear_view,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			#{id,jdbcType=BIGINT},
+			<if test="buyerId != null">
+				#{buyerId},
+			</if> 
+			<if test="isClearView != null">
+				#{isClearView},
+			</if>
+		</trim>
+	</insert>
+
+</mapper>
+	
